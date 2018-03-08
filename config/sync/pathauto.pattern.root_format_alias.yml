@@ -1,0 +1,23 @@
+uuid: 409b813e-6f4e-4183-b4c9-4a08fb8cd88d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: root_format_alias
+label: 'Root Format Alias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  5fb84ac1-2b9c-4680-992c-0add72f2388b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      edam_bioimaging_format: edam_bioimaging_format
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 5fb84ac1-2b9c-4680-992c-0add72f2388b
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,111 @@
+uuid: 2350e950-6470-424b-ad64-84f4f408a1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.software.body
+    - field.field.node.software.field_attribution_instructions
+    - field.field.node.software.field_free_tagging
+    - field.field.node.software.field_give_feedback_on_this_soft
+    - field.field.node.software.field_has_author
+    - field.field.node.software.field_has_biological_terms
+    - field.field.node.software.field_has_comparison
+    - field.field.node.software.field_has_documentation
+    - field.field.node.software.field_has_doi
+    - field.field.node.software.field_has_entry_curator
+    - field.field.node.software.field_has_function
+    - field.field.node.software.field_has_interaction_level
+    - field.field.node.software.field_has_license
+    - field.field.node.software.field_has_location
+    - field.field.node.software.field_has_programming_language
+    - field.field.node.software.field_has_reference_publication
+    - field.field.node.software.field_has_topic
+    - field.field.node.software.field_has_usage_example
+    - field.field.node.software.field_image
+    - field.field.node.software.field_is_compatible_with
+    - field.field.node.software.field_is_covered_by_training_mat
+    - field.field.node.software.field_is_dependent_of
+    - field.field.node.software.field_license_openness
+    - field.field.node.software.field_platform
+    - field.field.node.software.field_supported_image_dimension
+    - field.field.node.software.field_type
+    - image.style.thumbnail
+    - node.type.software
+  module:
+    - image
+    - text
+    - user
+id: node.software.teaser
+targetEntityType: node
+bundle: software
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_has_function:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_has_topic:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+  field_type:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_attribution_instructions: true
+  field_free_tagging: true
+  field_give_feedback_on_this_soft: true
+  field_has_author: true
+  field_has_biological_terms: true
+  field_has_comparison: true
+  field_has_documentation: true
+  field_has_doi: true
+  field_has_entry_curator: true
+  field_has_interaction_level: true
+  field_has_license: true
+  field_has_location: true
+  field_has_programming_language: true
+  field_has_reference_publication: true
+  field_has_usage_example: true
+  field_is_compatible_with: true
+  field_is_covered_by_training_mat: true
+  field_is_dependent_of: true
+  field_license_openness: true
+  field_platform: true
+  field_supported_image_dimension: true

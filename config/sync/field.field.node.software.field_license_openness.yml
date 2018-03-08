@@ -1,0 +1,28 @@
+uuid: 0b1d1f0b-fc54-4d59-a45d-8f43f05bcd57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_license_openness
+    - node.type.software
+    - taxonomy.vocabulary.licence_openness
+id: node.software.field_license_openness
+field_name: field_license_openness
+entity_type: node
+bundle: software
+label: License/Openness
+description: 'If a software have two version (one free, one commecrial) select both.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licence_openness: licence_openness
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

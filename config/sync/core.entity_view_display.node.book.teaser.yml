@@ -1,0 +1,32 @@
+uuid: ea9a58d1-bb28-4d94-9003-cb19b4780721
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - field.field.node.book.field_is_training_material_of
+    - node.type.book
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 8NARVQ-lU87ljX8WBrVPdmrTPMCjlkG3-7hoVWlkAFs
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  field_is_training_material_of: true

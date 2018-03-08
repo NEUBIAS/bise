@@ -1,0 +1,14 @@
+uuid: 0fc13d50-caee-4d0c-85cd-b411fa6bcb6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.confirmed_ta
+  module:
+    - user
+id: user_add_role_action.confirmed_ta
+label: 'Add the Confirmed tagger role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: confirmed_ta

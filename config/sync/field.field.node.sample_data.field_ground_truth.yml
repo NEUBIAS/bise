@@ -1,0 +1,22 @@
+uuid: 61342682-0875-481e-a101-f8e64089def8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ground_truth
+    - node.type.sample_data
+  module:
+    - text
+id: node.sample_data.field_ground_truth
+field_name: field_ground_truth
+entity_type: node
+bundle: sample_data
+label: 'has Ground truth'
+description: "A description of optional ground truth.\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

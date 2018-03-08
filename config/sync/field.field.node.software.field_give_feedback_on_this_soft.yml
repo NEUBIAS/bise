@@ -1,0 +1,33 @@
+uuid: 2736ee87-10ee-4913-a73d-51dd64b72eb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_give_feedback_on_this_soft
+    - node.type.software
+  module:
+    - comment
+id: node.software.field_give_feedback_on_this_soft
+field_name: field_give_feedback_on_this_soft
+entity_type: node
+bundle: software
+label: comments
+description: 'Give feedback on this software, or on the curation itself'
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 10
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

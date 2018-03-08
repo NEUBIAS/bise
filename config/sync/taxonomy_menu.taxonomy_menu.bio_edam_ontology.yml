@@ -1,0 +1,14 @@
+uuid: e52284d5-2c6b-426f-819f-b527a2e2acbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.search-by-taxonomy
+    - taxonomy.vocabulary.edam_bioimaging_topic
+id: bio_edam_ontology
+label: 'Bio Edam Ontology Topics'
+vocabulary: edam_bioimaging_topic
+menu: search-by-taxonomy
+expanded: false
+depth: 8
+menu_parent: 'search-by-taxonomy:'

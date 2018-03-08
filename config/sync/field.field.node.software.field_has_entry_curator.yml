@@ -1,0 +1,29 @@
+uuid: cd215835-b941-4866-aef1-2f99e99138f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_entry_curator
+    - node.type.software
+id: node.software.field_has_entry_curator
+field_name: field_has_entry_curator
+entity_type: node
+bundle: software
+label: 'has entry curator'
+description: 'name of the person responsible for the curation of the entry, to be contacted if needed to correct information. Only confirmed taggers or administrator '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

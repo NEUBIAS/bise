@@ -1,0 +1,41 @@
+uuid: ab23e6a2-a488-42c9-92b1-31ead7d15fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.forum2.body
+    - field.field.node.forum2.field_comments
+    - field.field.node.forum2.taxonomy_forums
+    - node.type.forum2
+  module:
+    - text
+    - user
+id: node.forum2.teaser
+targetEntityType: node
+bundle: forum2
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  taxonomy_forums:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_comments: true

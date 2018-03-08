@@ -1,0 +1,23 @@
+uuid: 023ac639-6b9c-4f30-811a-544575da2f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_location
+    - node.type.sample_data
+  module:
+    - link
+id: node.sample_data.field_has_location
+field_name: field_has_location
+entity_type: node
+bundle: sample_data
+label: 'has location'
+description: ' link to web resources giving access or description to the datasets.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

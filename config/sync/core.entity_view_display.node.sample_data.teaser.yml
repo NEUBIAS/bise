@@ -1,0 +1,40 @@
+uuid: b3045e40-27db-4956-b0e2-5ff241eba0a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sample_data.body
+    - field.field.node.sample_data.field_ground_truth
+    - field.field.node.sample_data.field_has_biological_terms
+    - field.field.node.sample_data.field_has_format
+    - field.field.node.sample_data.field_has_imaging_details
+    - field.field.node.sample_data.field_has_location
+    - field.field.node.sample_data.field_image
+    - node.type.sample_data
+  module:
+    - text
+    - user
+id: node.sample_data.teaser
+targetEntityType: node
+bundle: sample_data
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_ground_truth: true
+  field_has_biological_terms: true
+  field_has_format: true
+  field_has_imaging_details: true
+  field_has_location: true
+  field_image: true

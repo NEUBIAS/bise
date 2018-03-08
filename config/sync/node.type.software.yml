@@ -1,0 +1,18 @@
+uuid: 54008715-4695-438a-9893-5da3c88d8f5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Software
+type: software
+description: ' an implementation of a component or of a workflow. '
+help: ' an implementation of a component or of a workflow.  '
+new_revision: true
+preview_mode: 1
+display_submitted: true

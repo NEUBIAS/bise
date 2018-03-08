@@ -1,0 +1,20 @@
+langcode: en
+id: autocompletion_for_input_edit_field_is_dependent_of_target_id_fo
+uuid: 341ffb6f-5349-4400-821b-4b811414d8b0
+label: 'Autocompletion for input#edit-field-is-dependent-of-target-id.form-text'
+selector: 'input#edit-field-is-dependent-of-target-id.form-text'
+status: true
+minChar: 3
+autoSubmit: true
+autoRedirect: false
+maxSuggestions: 10
+noResultLabel: 'No results found for [search-phrase]. Click to perform full search.'
+noResultValue: '[search-phrase]'
+noResultLink: ''
+moreResultsLabel: 'View all results for [search-phrase].'
+moreResultsValue: '[search-phrase]'
+moreResultsLink: ''
+source: 'autocompletion_callbacks_nodes::nodes_autocompletion_callback'
+theme: basic-blue.css
+editable: true
+deletable: true

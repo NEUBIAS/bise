@@ -1,0 +1,21 @@
+uuid: 219da1e2-65a2-4ba4-9c3c-373ed491b4f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attribution_instructions
+    - node.type.software
+  module:
+    - text
+id: node.software.field_attribution_instructions
+field_name: field_attribution_instructions
+entity_type: node
+bundle: software
+label: 'attribution instructions'
+description: 'In addition to any reference, please add here any specific advice (for example in Fiji/ImageJ/Icy, in addition to the main publication, remind to cite also the plugins used specifically).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,28 @@
+uuid: 000b54d4-6681-4214-87e8-f2878d978a0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_topic
+    - node.type.software
+    - taxonomy.vocabulary.edam_bioimaging_topic
+id: node.software.field_has_topic
+field_name: field_has_topic
+entity_type: node
+bundle: software
+label: 'has topic'
+description: ' application domain'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      edam_bioimaging_topic: edam_bioimaging_topic
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: 31b8bf2e-dd2c-4158-84ca-d5d5655f8bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_compatible_with
+    - node.type.software
+id: node.software.field_is_compatible_with
+field_name: field_is_compatible_with
+entity_type: node
+bundle: software
+label: 'is compatible with'
+description: 'ONLY for confirmed taggers (not displayed as an input but just accessible by everyone) can also be called from another software or any programming language such as macro , visual programming that it can be called from. Example: IJ Macros, Icy Protocols'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

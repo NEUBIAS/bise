@@ -1,0 +1,9 @@
+uuid: 2a185d40-0ac6-4fac-8ce7-03adcd18ec71
+langcode: en
+status: true
+dependencies: {  }
+name: 'Implementation type'
+vid: implementation_type
+description: 'Type of implementation'
+hierarchy: 0
+weight: 0

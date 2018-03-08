@@ -1,0 +1,92 @@
+uuid: e930309b-ac8e-42d1-8782-45720027279c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.forum.body
+    - field.field.node.forum.comment_forum
+    - field.field.node.forum.taxonomy_forums
+    - node.type.forum
+  module:
+    - comment
+    - path
+    - text
+_core:
+  default_config_hash: XEvo30OCEpNoqn9kqhGc-yKvimWu7lSFxySsw7AUf3U
+id: node.forum.default
+targetEntityType: node
+bundle: forum
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 27
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  comment_forum:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+    region: content
+  taxonomy_forums:
+    type: options_select
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,15 @@
+uuid: 23d44abc-2aff-430c-9dd5-7d0eb448d5c9
+langcode: en
+status: true
+dependencies: {  }
+name: sidebar
+label: Sidebar
+effects:
+  cc408e69-50ad-447a-884c-7442efbda580:
+    uuid: cc408e69-50ad-447a-884c-7442efbda580
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false

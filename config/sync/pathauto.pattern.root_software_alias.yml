@@ -1,0 +1,22 @@
+uuid: 79ede942-60d1-4a53-9a46-d2bab459176f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: root_software_alias
+label: 'Root Software Alias'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  62dd47ea-31e3-4288-8360-996316392f28:
+    id: node_type
+    bundles:
+      software: software
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 62dd47ea-31e3-4288-8360-996316392f28
+selection_logic: and
+weight: -5
+relationships: {  }

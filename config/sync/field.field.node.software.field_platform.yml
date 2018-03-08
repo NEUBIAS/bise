@@ -1,0 +1,28 @@
+uuid: 5b5f66ad-2aad-4591-9d82-3e14abd000b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_platform
+    - node.type.software
+    - taxonomy.vocabulary.execution_platform_os_
+id: node.software.field_platform
+field_name: field_platform
+entity_type: node
+bundle: software
+label: 'Execution Platform'
+description: 'Operating System compatibility'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      execution_platform_os_: execution_platform_os_
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

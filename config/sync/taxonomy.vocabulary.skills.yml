@@ -1,0 +1,9 @@
+uuid: 55a4dd00-6fcc-430f-bb39-a90725e76e0e
+langcode: en
+status: true
+dependencies: {  }
+name: skills
+vid: skills
+description: 'your own definition in the neubias ecosystem'
+hierarchy: 0
+weight: 0

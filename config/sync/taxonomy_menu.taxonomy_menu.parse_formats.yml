@@ -1,0 +1,14 @@
+uuid: c1a942ea-9ede-4a1b-b4c9-4ba484e41219
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.search-by-taxonomy
+    - taxonomy.vocabulary.edam_bioimaging_format
+id: parse_formats
+label: 'Parse Formats'
+vocabulary: edam_bioimaging_format
+menu: search-by-taxonomy
+expanded: false
+depth: 0
+menu_parent: 'search-by-taxonomy:'

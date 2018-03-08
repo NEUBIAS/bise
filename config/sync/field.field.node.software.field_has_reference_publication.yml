@@ -1,0 +1,23 @@
+uuid: bfeee298-fc15-4fc7-8e6a-4903ee9b83a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_reference_publication
+    - node.type.software
+  module:
+    - link
+id: node.software.field_has_reference_publication
+field_name: field_has_reference_publication
+entity_type: node
+bundle: software
+label: 'has reference publication'
+description: "publication that describes entry (or the related methods) and should be cited.\r\nUse the DOI of the publication."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,9 @@
+uuid: 86dc51f9-735b-4039-9b0d-1ff5edd1888b
+langcode: en
+status: true
+dependencies: {  }
+name: EDAM-Bioimaging-Topic
+vid: edam_bioimaging_topic
+description: 'Edam extension for BioImaging- topic class'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 9a4d73b0-62cd-4c96-a6cc-efe5cc534619
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_usage_example
+    - node.type.software
+  module:
+    - link
+id: node.software.field_has_usage_example
+field_name: field_has_usage_example
+entity_type: node
+bundle: software
+label: 'has usage example'
+description: 'publication (scientific publication or training material) that describes how the software, dataset, etc. has been used. PUBLICATION NOT IMPLEMENTED YET, DO NOT FILL.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,28 @@
+uuid: 9b7f6f82-6229-4a2e-9622-a1a153d37bf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_covered_by_training_mat
+    - node.type.book
+    - node.type.software
+id: node.software.field_is_covered_by_training_mat
+field_name: field_is_covered_by_training_mat
+entity_type: node
+bundle: software
+label: 'is covered by training material'
+description: "Training material content in the site covering this software\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      book: book
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 415b73c3-0fc8-4018-8029-fff7e273aecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_training_material_of
+    - node.type.book
+    - node.type.software
+id: node.book.field_is_training_material_of
+field_name: field_is_training_material_of
+entity_type: node
+bundle: book
+label: 'is training material of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

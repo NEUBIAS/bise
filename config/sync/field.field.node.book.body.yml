@@ -1,0 +1,24 @@
+uuid: e3999560-79b6-4631-ace1-2ec0de01a4d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.book
+  module:
+    - text
+_core:
+  default_config_hash: AiTQTXl5A774TltS4-nZcpLmnMuEEtRq5lxnLYVtG6U
+id: node.book.body
+field_name: body
+entity_type: node
+bundle: book
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

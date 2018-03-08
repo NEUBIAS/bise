@@ -1,0 +1,28 @@
+uuid: a9f7c7ca-ef4c-40e0-bc0d-b181fd6b0bb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_interaction_level
+    - node.type.software
+    - taxonomy.vocabulary.level_of_user_interaction
+id: node.software.field_has_interaction_level
+field_name: field_has_interaction_level
+entity_type: node
+bundle: software
+label: 'has interaction level'
+description: "Manual means completely interactive.\r\nSemi-automated means user input needed at some point.\r\nAutomated means predefined parameters working in most most of the case."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      level_of_user_interaction: level_of_user_interaction
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

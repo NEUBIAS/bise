@@ -1,0 +1,22 @@
+uuid: dc537574-a634-4ac7-863d-678138c00b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_imaging_details
+    - node.type.sample_data
+  module:
+    - text
+id: node.sample_data.field_has_imaging_details
+field_name: field_has_imaging_details
+entity_type: node
+bundle: sample_data
+label: 'has imaging details'
+description: 'Description of images (channels, resolution, other technical details).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,20 @@
+uuid: a17eff9b-0b7d-4a7b-926c-a731287e3426
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_soft
+field_name: field_soft
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

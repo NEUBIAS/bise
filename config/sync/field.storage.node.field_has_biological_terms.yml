@@ -1,0 +1,20 @@
+uuid: e0a6fd11-3677-4094-89e5-0f60312380d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_has_biological_terms
+field_name: field_has_biological_terms
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

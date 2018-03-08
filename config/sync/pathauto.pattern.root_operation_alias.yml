@@ -1,0 +1,23 @@
+uuid: f761e017-7db7-4973-8bc0-aec78df80ebb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: root_operation_alias
+label: 'Root Operation Alias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  d6020fb5-ad5d-4cd2-9427-067669ade2ca:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      edam_bioimaging_operation: edam_bioimaging_operation
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: d6020fb5-ad5d-4cd2-9427-067669ade2ca
+selection_logic: and
+weight: -5
+relationships: {  }

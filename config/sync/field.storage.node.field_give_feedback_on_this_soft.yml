@@ -1,0 +1,20 @@
+uuid: d86dbed7-95bb-4868-bc89-0e344e2aa620
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.field_give_feedback_on_this_soft
+field_name: field_give_feedback_on_this_soft
+entity_type: node
+type: comment
+settings:
+  comment_type: ''
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

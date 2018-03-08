@@ -1,0 +1,31 @@
+uuid: e67041ee-7f93-4622-9af0-c76f3723bd8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.statistics_counter
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__statistics_counter_block_1
+theme: zircon
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:statistics_counter-block_1'
+settings:
+  id: 'views_block:statistics_counter-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

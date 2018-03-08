@@ -1,0 +1,27 @@
+uuid: c96352eb-533e-46ab-a6a8-daa9dbab8241
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_forum
+    - field.field.comment.comment_forum.comment_body
+  module:
+    - text
+_core:
+  default_config_hash: eh8_QYaTLHjPm6GwXHI8xLgIYeV4ZEZvCBdViQT-JDA
+id: comment.comment_forum.default
+targetEntityType: comment
+bundle: comment_forum
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

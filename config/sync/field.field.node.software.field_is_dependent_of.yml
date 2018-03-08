@@ -1,0 +1,27 @@
+uuid: 41b76c7d-1e52-4728-8691-1af3079237b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_dependent_of
+    - node.type.software
+id: node.software.field_is_dependent_of
+field_name: field_is_dependent_of
+entity_type: node
+bundle: software
+label: requires
+description: "<li> for plugins,  ex: software platform where it can be used (example: ImageJ, Icy…), <\\li>\r\n<li>for workflows, indicates the list of tools used<\\li>\r\nanother required software for the first one to run correctly. For example, an ImageJ plugin requires ImageJ.\r\nType: I don't know if you do not know\r\nType : None if totally independent.\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

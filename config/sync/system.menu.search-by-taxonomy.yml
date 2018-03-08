@@ -1,0 +1,8 @@
+uuid: a17d24e3-f6bb-45c6-a444-6406d38e7d2b
+langcode: en
+status: true
+dependencies: {  }
+id: search-by-taxonomy
+label: 'Parse Edam Bio imaging'
+description: ''
+locked: false

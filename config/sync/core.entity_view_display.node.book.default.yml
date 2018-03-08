@@ -1,0 +1,37 @@
+uuid: bf424720-c18f-486c-85db-ae27ea2baeff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book.body
+    - field.field.node.book.field_is_training_material_of
+    - node.type.book
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 7UKHHzhlAE0hzKaKG_KHqUXXOp85mAQ1nZTOep8quTc
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_training_material_of:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden: {  }

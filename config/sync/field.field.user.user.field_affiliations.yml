@@ -1,0 +1,20 @@
+uuid: 241beb55-9f31-43a2-8160-53d9d2f616a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_affiliations
+  module:
+    - user
+id: user.user.field_affiliations
+field_name: field_affiliations
+entity_type: user
+bundle: user
+label: Affiliations
+description: 'Your institute. You can add several in case of several affiliations. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

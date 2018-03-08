@@ -1,0 +1,28 @@
+uuid: 2a916bf7-0dba-4268-904e-08539717e738
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_format
+    - node.type.sample_data
+    - taxonomy.vocabulary.edam_bioimaging_format
+id: node.sample_data.field_has_format
+field_name: field_has_format
+entity_type: node
+bundle: sample_data
+label: 'has format'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      edam_bioimaging_format: edam_bioimaging_format
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

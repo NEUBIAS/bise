@@ -1,0 +1,19 @@
+uuid: f7a8bbe8-78b2-4920-b152-61cf8b1e60ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_is_training_material_of
+field_name: field_is_training_material_of
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

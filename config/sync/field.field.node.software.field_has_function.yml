@@ -1,0 +1,28 @@
+uuid: 47e5e4f2-5526-42a4-9aa3-924af7ac435e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_function
+    - node.type.software
+    - taxonomy.vocabulary.edam_bioimaging_operation
+id: node.software.field_has_function
+field_name: field_has_function
+entity_type: node
+bundle: software
+label: 'has function'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      edam_bioimaging_operation: edam_bioimaging_operation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: edam_bioimaging_operation
+field_type: entity_reference

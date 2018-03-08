@@ -1,0 +1,9 @@
+uuid: 5be03f7d-ffbe-4fde-80b6-80ac4ce2be02
+langcode: en
+status: true
+dependencies: {  }
+name: 'Programming Language'
+vid: programming_language
+description: 'list of programming language'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,23 @@
+uuid: f4bf0cbc-b47b-437a-8799-909bee319614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_doi
+    - node.type.software
+  module:
+    - link
+id: node.software.field_has_doi
+field_name: field_has_doi
+entity_type: node
+bundle: software
+label: 'has doi'
+description: 'if the ressource has his own Digital Object Identifier, copy it here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

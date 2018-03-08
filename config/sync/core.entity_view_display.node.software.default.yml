@@ -1,0 +1,287 @@
+uuid: 617e7cc3-bcb4-4394-b748-e6701c23e201
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.software.body
+    - field.field.node.software.field_attribution_instructions
+    - field.field.node.software.field_free_tagging
+    - field.field.node.software.field_give_feedback_on_this_soft
+    - field.field.node.software.field_has_author
+    - field.field.node.software.field_has_biological_terms
+    - field.field.node.software.field_has_comparison
+    - field.field.node.software.field_has_documentation
+    - field.field.node.software.field_has_doi
+    - field.field.node.software.field_has_entry_curator
+    - field.field.node.software.field_has_function
+    - field.field.node.software.field_has_implementation
+    - field.field.node.software.field_has_interaction_level
+    - field.field.node.software.field_has_license
+    - field.field.node.software.field_has_location
+    - field.field.node.software.field_has_programming_language
+    - field.field.node.software.field_has_reference_publication
+    - field.field.node.software.field_has_topic
+    - field.field.node.software.field_has_usage_example
+    - field.field.node.software.field_image
+    - field.field.node.software.field_is_compatible_with
+    - field.field.node.software.field_is_covered_by_training_mat
+    - field.field.node.software.field_is_dependent_of
+    - field.field.node.software.field_license_openness
+    - field.field.node.software.field_platform
+    - field.field.node.software.field_supported_image_dimension
+    - field.field.node.software.field_type
+    - image.style.large
+    - node.type.software
+  module:
+    - comment
+    - image
+    - link
+    - text
+    - user
+id: node.software.default
+targetEntityType: node
+bundle: software
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attribution_instructions:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_free_tagging:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_give_feedback_on_this_soft:
+    weight: 25
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_has_author:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_has_biological_terms:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_comparison:
+    weight: 10
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_has_documentation:
+    weight: 22
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_has_doi:
+    weight: 23
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_has_entry_curator:
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_function:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_implementation:
+    weight: 26
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_interaction_level:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_license:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_has_location:
+    weight: 17
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_has_programming_language:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_reference_publication:
+    weight: 21
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_has_topic:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_has_usage_example:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: large
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_is_compatible_with:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_is_covered_by_training_mat:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_is_dependent_of:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_license_openness:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_platform:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_supported_image_dimension:
+    weight: 6
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  links: true

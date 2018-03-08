@@ -1,0 +1,30 @@
+uuid: ec3a53d9-8249-478e-92a7-d3a6a3be9502
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.trending
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__trending_block_1
+theme: zircon
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:trending-block_1'
+settings:
+  id: 'views_block:trending-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '5'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

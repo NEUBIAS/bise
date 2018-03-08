@@ -1,0 +1,19 @@
+uuid: 36a49674-166b-4b3b-bb0a-c297c740203c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ground_truth
+field_name: field_ground_truth
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

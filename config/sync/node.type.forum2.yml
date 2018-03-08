@@ -1,0 +1,18 @@
+uuid: 73f8d8a4-0789-44b1-bcdc-f7907a0fcff5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Forum
+type: forum2
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

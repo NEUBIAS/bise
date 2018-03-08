@@ -1,0 +1,28 @@
+uuid: c52dce4c-fbaf-4636-b64b-9e0ebee03e8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_implementation
+    - node.type.software
+    - taxonomy.vocabulary.implementation_type
+id: node.software.field_has_implementation
+field_name: field_has_implementation
+entity_type: node
+bundle: software
+label: 'has implementation'
+description: "A textual value representing the technical form of the software. It can be a standalone software, a web application, a library (or API), a plugin. \r\nFor example: ImageJ is a standalone software but can also be used as a library through its java API. Both library and standalone sofwtare should be checked."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      implementation_type: implementation_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

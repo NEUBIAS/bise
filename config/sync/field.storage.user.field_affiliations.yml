@@ -1,0 +1,19 @@
+uuid: f9f54d71-5ccc-48c4-a9cc-d6ac05dc3149
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_affiliations
+field_name: field_affiliations
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 1d9286de-8e39-4488-965c-5c36b594dc36
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.search-by-taxonomy
+    - taxonomy.vocabulary.edam_bioimaging_operation
+id: bio_edam_ontology_operations
+label: 'Bio Edam Ontology Operations'
+vocabulary: edam_bioimaging_operation
+menu: search-by-taxonomy
+expanded: false
+depth: 8
+menu_parent: 'search-by-taxonomy:'

@@ -1,0 +1,9 @@
+uuid: 78deac31-6d0e-48e2-8d29-8dbd33f20340
+langcode: en
+status: true
+dependencies: {  }
+name: Licence/Openness
+vid: licence_openness
+description: 'rough type of license '
+hierarchy: 0
+weight: 0

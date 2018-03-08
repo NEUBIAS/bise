@@ -1,0 +1,28 @@
+uuid: 60eccfee-b670-4e14-af57-f92c2f9abc63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.software
+    - taxonomy.vocabulary.software_artifact
+id: node.software.field_type
+field_name: field_type
+entity_type: node
+bundle: software
+label: Type
+description: "A workflow is a set of components assembled in some specific order to process bioimages and estimate some numerical parameters relevant to the biological system under study. Workflows take image data as input and output either processed images or numerical values. Workflows can be a combination of  components from the same or different software packages.\r\nA Component is an implementation of certain image processing / analysis algorithms. Each component alone does not solve a Bioimage Analysis problem. These problems can be addressed by combining such components into workflows.\r\nA collection is a software that encapsulate a set of bioimage components and/or workflows."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      software_artifact: software_artifact
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

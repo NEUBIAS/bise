@@ -1,0 +1,22 @@
+uuid: 291c4318-78a4-4ef1-9215-b1fe95eff2b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.software
+  module:
+    - text
+id: node.software.body
+field_name: body
+entity_type: node
+bundle: software
+label: Description
+description: 'Short text description'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

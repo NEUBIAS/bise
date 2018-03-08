@@ -1,0 +1,25 @@
+uuid: 3680986e-c87c-4506-be8b-e67faf4b72c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.forums.forum_container
+    - taxonomy.vocabulary.forums
+  module:
+    - text
+_core:
+  default_config_hash: kUskhDPnS0o2N2LFEqVAL4AsT0DsSu6oOBdi9IwstpA
+id: taxonomy_term.forums.default
+targetEntityType: taxonomy_term
+bundle: forums
+mode: default
+content:
+  description:
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    label: above
+    region: content
+hidden:
+  forum_container: true

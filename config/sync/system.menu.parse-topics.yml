@@ -1,0 +1,8 @@
+uuid: 472692d6-bc73-48d0-b645-39ea85cddcb5
+langcode: en
+status: true
+dependencies: {  }
+id: parse-topics
+label: 'Parse Topics'
+description: 'Parse Edam extension for BioImaging- topic class'
+locked: false

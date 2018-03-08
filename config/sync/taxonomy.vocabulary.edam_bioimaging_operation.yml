@@ -1,0 +1,9 @@
+uuid: 4061642e-682c-4964-b6b2-faf9c46117e6
+langcode: en
+status: true
+dependencies: {  }
+name: EDAM-Bioimaging-Operation
+vid: edam_bioimaging_operation
+description: 'Edam extension for BioImaging- operation class'
+hierarchy: 2
+weight: 0

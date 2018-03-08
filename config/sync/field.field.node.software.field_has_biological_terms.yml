@@ -1,0 +1,28 @@
+uuid: 67ad0728-c00c-4696-b462-b93c77f3eff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_biological_terms
+    - node.type.software
+    - taxonomy.vocabulary.biological_problems
+id: node.software.field_has_biological_terms
+field_name: field_has_biological_terms
+entity_type: node
+bundle: software
+label: 'has biological terms'
+description: 'Here states the common term defining the biological context (e.g. cell type, compartment, taxon etc...) associated to the tool. Please select from existing list, and add suggestion that will help us to associate this field with a controlled vocabulary from a standard ontology.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      biological_problems: biological_problems
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

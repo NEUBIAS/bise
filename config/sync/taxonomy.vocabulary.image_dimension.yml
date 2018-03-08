@@ -1,0 +1,9 @@
+uuid: f6190720-5b50-4a4d-945c-18ce3a013ee2
+langcode: en
+status: true
+dependencies: {  }
+name: 'image dimension'
+vid: image_dimension
+description: 'type of data based on dimension description'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 6a83f9f6-d9b6-42d1-95a8-66a8c2ced23d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Level of user interaction'
+vid: level_of_user_interaction
+description: ''
+hierarchy: 0
+weight: 0

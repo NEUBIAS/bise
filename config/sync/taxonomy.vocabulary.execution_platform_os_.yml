@@ -1,0 +1,9 @@
+uuid: 486c1aed-bdbb-4f1e-9c79-05f86d40a810
+langcode: en
+status: true
+dependencies: {  }
+name: 'Execution platform (OS)'
+vid: execution_platform_os_
+description: 'OS on which to use this software'
+hierarchy: 0
+weight: 0

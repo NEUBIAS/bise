@@ -1,0 +1,14 @@
+uuid: 0059891b-fbcd-438a-8535-6452ff134359
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.confirmed_ta
+  module:
+    - user
+id: user_remove_role_action.confirmed_ta
+label: 'Remove the Confirmed tagger role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: confirmed_ta

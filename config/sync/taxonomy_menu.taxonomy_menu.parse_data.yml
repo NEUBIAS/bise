@@ -1,0 +1,14 @@
+uuid: 6ddeae6d-e575-4aec-a20c-a1ae82388965
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.search-by-taxonomy
+    - taxonomy.vocabulary.edam_bioimaging_data
+id: parse_data
+label: 'Parse data'
+vocabulary: edam_bioimaging_data
+menu: search-by-taxonomy
+expanded: false
+depth: 8
+menu_parent: 'search-by-taxonomy:'

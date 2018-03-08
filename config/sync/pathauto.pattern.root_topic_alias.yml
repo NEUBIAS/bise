@@ -1,0 +1,23 @@
+uuid: 3a713748-55bf-448d-ac7f-fd849b32992a
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: root_topic_alias
+label: 'Root Topic Alias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  a5c085cf-b166-4192-a913-b396ea1021cf:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      edam_bioimaging_topic: edam_bioimaging_topic
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: a5c085cf-b166-4192-a913-b396ea1021cf
+selection_logic: and
+weight: -5
+relationships: {  }

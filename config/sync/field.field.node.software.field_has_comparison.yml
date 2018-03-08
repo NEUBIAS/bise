@@ -1,0 +1,23 @@
+uuid: 77a8089a-bb53-4a49-9833-a40ef3a94095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_comparison
+    - node.type.software
+  module:
+    - link
+id: node.software.field_has_comparison
+field_name: field_has_comparison
+entity_type: node
+bundle: software
+label: 'has comparison'
+description: 'SHould give you the possibility of entering a Publication here. NOT IMPLEMENTED YET, DO NOT FILL.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,28 @@
+uuid: aa7e6e9d-b106-4bcf-b210-091c23f4d0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_programming_language
+    - node.type.software
+    - taxonomy.vocabulary.programming_language
+id: node.software.field_has_programming_language
+field_name: field_has_programming_language
+entity_type: node
+bundle: software
+label: 'has programming language'
+description: 'programming (coding) language supported by the software or used for its implementation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programming_language: programming_language
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

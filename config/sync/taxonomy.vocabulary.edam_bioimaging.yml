@@ -1,0 +1,9 @@
+uuid: b46ddda9-33e9-4f17-8ce2-3b5a46e0751c
+langcode: en
+status: true
+dependencies: {  }
+name: EDAM-Bioimaging
+vid: edam_bioimaging
+description: 'Bioimaging operations, data types, formats, identifiers and topics. EDAM-Bioimaging is an extension to the EDAM ontology'
+hierarchy: 0
+weight: 0

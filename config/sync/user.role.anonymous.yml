@@ -1,0 +1,26 @@
+uuid: 15c25cb0-0f0f-47ce-ba68-c3e8a170874d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access news feeds'
+  - 'access printer-friendly version'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access synonyms entity autocomplete'
+  - 'access user profiles'
+  - 'search content'
+  - 'use advanced search'
+  - 'use search autocomplete'
+  - 'view all revisions'
+  - 'view post access counter'

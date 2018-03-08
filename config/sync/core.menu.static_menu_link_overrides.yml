@@ -1,0 +1,21 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__bio_edam_ontology__1735':
+    enabled: false
+    menu_name: search-by-taxonomy
+    parent: ''
+    expanded: false
+    weight: 0
+  user__page:
+    menu_name: account
+    parent: ''
+    weight: -10
+    expanded: true
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

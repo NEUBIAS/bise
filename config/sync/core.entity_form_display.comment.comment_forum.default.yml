@@ -1,0 +1,36 @@
+uuid: faf800cc-8439-4c84-b4d9-b471f9bd9d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_forum
+    - field.field.comment.comment_forum.comment_body
+  module:
+    - text
+_core:
+  default_config_hash: EMa4-jXqGoooiV0X2bgOJxBI7RVBhpXWc_780E4YwGQ
+id: comment.comment_forum.default
+targetEntityType: comment
+bundle: comment_forum
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+  comment_body:
+    type: text_textarea
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  subject:
+    type: string_textfield
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

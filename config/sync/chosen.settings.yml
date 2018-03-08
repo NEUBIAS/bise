@@ -1,0 +1,16 @@
+minimum_single: 0
+minimum_multiple: 0
+disable_search_threshold: 4
+minimum_width: 200
+jquery_selector: select
+search_contains: true
+disable_search: false
+placeholder_text_multiple: 'Choose some values (one or more)'
+placeholder_text_single: 'Choose a value'
+no_results_text: 'No results match'
+disabled_themes:
+  seven: '0'
+  zircon: '0'
+chosen_include: 2
+_core:
+  default_config_hash: 8OBgqA1x01J7SgSvBzOELfxP9Bu998XgnQjf4EN40mo

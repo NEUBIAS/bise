@@ -1,0 +1,28 @@
+uuid: 0e35dcc3-959d-4223-b1c7-13803911662b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supported_image_dimension
+    - node.type.software
+    - taxonomy.vocabulary.image_dimension
+id: node.software.field_supported_image_dimension
+field_name: field_supported_image_dimension
+entity_type: node
+bundle: software
+label: 'Supported image dimension'
+description: "Uncheck any dimension type for which it is not working\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      image_dimension: image_dimension
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 4c997a26-5aee-4adc-8049-0af5d4ca4103
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_supported_image_dimension
+field_name: field_supported_image_dimension
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

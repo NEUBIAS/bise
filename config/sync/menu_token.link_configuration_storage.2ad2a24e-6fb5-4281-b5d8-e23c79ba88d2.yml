@@ -1,0 +1,8 @@
+uuid: e922e8b8-d31d-4a2f-bcf3-616d2bfb7cdb
+langcode: en
+status: true
+dependencies: {  }
+id: 2ad2a24e-6fb5-4281-b5d8-e23c79ba88d2
+label: 'Menu token link configuration'
+linkid: 'internal:/user/[current-user:uid]/activity'
+configurationSerialized: 'a:4:{s:18:"menu_token_enabled";i:1;s:36:"remove_if_replacement_is_not_present";i:0;s:4:"node";a:2:{i:0;s:4:"none";i:1;i:0;}s:4:"user";a:2:{i:0;s:4:"none";i:1;i:0;}}'

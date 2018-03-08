@@ -1,0 +1,28 @@
+uuid: 87f4084c-eed6-4a67-89a6-8aad42a43a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_free_tagging
+    - node.type.software
+    - taxonomy.vocabulary.tags
+id: node.software.field_free_tagging
+field_name: field_free_tagging
+entity_type: node
+bundle: software
+label: 'Additional keywords'
+description: 'Add new terms here if the bio edam ontology tags were not sufficient in your opinion. They will be considered for extending the bio edam ontology.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

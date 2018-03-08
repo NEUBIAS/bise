@@ -1,0 +1,9 @@
+uuid: cf951753-1540-4cae-ac59-6ae7704c8507
+langcode: en
+status: true
+dependencies: {  }
+name: EDAM-Bioimaging-Data
+vid: edam_bioimaging_data
+description: 'not used for now'
+hierarchy: 2
+weight: 0

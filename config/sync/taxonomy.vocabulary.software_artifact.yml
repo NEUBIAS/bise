@@ -1,0 +1,9 @@
+uuid: 0bd1b6e0-6bba-494f-98a3-af38bdcf4912
+langcode: en
+status: true
+dependencies: {  }
+name: 'Software artifact'
+vid: software_artifact
+description: 'Type of software'
+hierarchy: 0
+weight: 0
