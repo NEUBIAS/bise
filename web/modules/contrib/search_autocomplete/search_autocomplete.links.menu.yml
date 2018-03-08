@@ -1,0 +1,7 @@
+# Add a link in "Search and Metadata" section of Configuration page.
+search_autocomplete.admin.list:
+  route_name: autocompletion_configuration.list
+  title: 'Search Autocomplete settings'
+  weight: 0
+  description: 'Choose settings and suggestion items for autocompleting your fields.'
+  parent: system.admin_config_search

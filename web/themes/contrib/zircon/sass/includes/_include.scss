@@ -1,0 +1,73 @@
+/* */
+$dark_grey: #555;
+$red: #c01700;
+$white: #fff;
+$fontsize_14: 1.076em;
+$border_grey: 1px solid #dadada;
+$light_grey: #999;
+$light_grey_2: #aaa;
+$light_grey_3: #ddd;
+
+/*  */
+.box_shadow {
+  box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+}
+.border_radius{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.font_oswald{
+  font-family: 'oswaldregular';
+}
+
+/* BUTTON */
+
+.form-actions .form-submit {
+  margin: 0 10px 10px 0;
+  border: none;
+  padding: 8px 20px;
+  color: #fff;
+  background: $red;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: $dark_grey;
+  }
+}
+
+.font_awesome {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@mixin clearfix{
+  &:after{
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+@mixin transition($time...) {
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -o-transition: $time;
+    transition: $time;
+}
+
+@mixin scale($scale-size, $milisecond) {
+    -moz-transform: scale($scale-size, $scale-size);
+    -moz-transition-duration: $milisecond;
+    -webkit-transform: scale($scale-size, $scale-size);
+    -webkit-transition-duration: $milisecond;
+    -ms-transform: scale($scale-size, $milisecond);
+    -ms-transition-duration: $milisecond;
+}

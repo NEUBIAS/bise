@@ -1,0 +1,6 @@
+# Add some local task links to facilitate navigation.
+search_autocomplete.add_action:
+  route_name: autocompletion_configuration.add
+  title: 'Add new Autocompletion Configuration'
+  appears_on:
+    - autocompletion_configuration.list

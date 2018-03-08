@@ -1,0 +1,15 @@
+synonyms.synonyms.behavior.select:
+  type: mapping
+  label: 'Settings of select synonyms behavior'
+  mapping:
+    wording:
+      type: string
+      label: 'Wording for select entry'
+
+synonyms.synonyms.behavior.autocomplete:
+  type: mapping
+  label: 'Settings of autocomplete synonyms behavior'
+  mapping:
+    wording:
+      type: string
+      label: 'Wording for autocomplete suggestion'

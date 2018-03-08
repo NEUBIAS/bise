@@ -1,0 +1,14 @@
+synonyms.provider.field:
+  type: mapping
+  label: 'Settings of field synonyms provider'
+  mapping:
+
+synonyms.provider.base_field:
+  type: mapping
+  label: 'Settings of base field synonyms provider'
+  mapping:
+
+synonyms.provider.entityreference_field:
+  type: mapping
+  label: 'Settings of entity reference field synonyms provider'
+  mapping:

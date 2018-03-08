@@ -1,0 +1,13 @@
+type: module
+name: 'Views Bulk Edit'
+description: 'Allows bulk edition of entity field values.'
+package: 'Views Bulk Operations'
+# core: 8.x
+dependencies:
+  - drupal:views_bulk_operations
+
+# Information added by Drupal.org packaging script on 2018-02-06
+version: '8.x-2.0-beta4'
+core: '8.x'
+project: 'views_bulk_edit'
+datestamp: 1517947086

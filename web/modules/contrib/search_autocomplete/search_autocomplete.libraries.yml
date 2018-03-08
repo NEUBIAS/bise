@@ -1,0 +1,10 @@
+search_autocomplete.admin.helper:
+  version: VERSION
+  js:
+    js/search_autocomplete.admin.js: {}
+  css:
+    theme:
+      css/admin_helpers/search_autocomplete.admin.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

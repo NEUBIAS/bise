@@ -1,0 +1,26 @@
+# This file defines a default autocompletion configuration for autocompleting 
+# the default Drupal search blockv'out of the box'.
+
+# This default configuration is created in Drupal when this module is enabled.
+# It is removed when the module is uninstalled.
+
+# See schema/search_autocomplete.schema.yml for field definition
+
+id: search_form_users
+label: 'Search Form (users tab)'
+selector: ''
+status: TRUE
+minChar: 3
+autoSubmit: TRUE
+autoRedirect: TRUE
+maxSuggestions: 10
+noResultLabel: 'No users found for [search-phrase]. Click to perform full search.'
+noResultValue: '[search-phrase]'
+noResultLink: ''
+moreResultsLabel: 'View all users for [search-phrase].'
+moreResultsValue: '[search-phrase]'
+moreResultsLink: ''
+source: 'autocompletion_callbacks_users::users_autocompletion_callback'
+theme: 'basic-blue.css'
+editable: TRUE
+deletable: FALSE

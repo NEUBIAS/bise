@@ -1,0 +1,64 @@
+# The routing.yml file defines the paths for our module.
+# Here we define the paths for our entity type's admin UI.
+
+# This is the router item for listing all entities.
+autocompletion_configuration.list:
+  path: '/admin/config/search/search_autocomplete'
+  defaults:
+    # '_entity_list' tells Drupal to use an entity list controller.
+    # We give the entity ID here. Drupal then looks in the entity's annotation
+    # and looks for the "list" entry under "controllers" for the class to load.
+    # @see \Drupal\Core\Entity\Enhancer\EntityRouteEnhancer
+    _entity_list: 'autocompletion_configuration'
+    _title: 'Search Autocomplete settings'
+  requirements:
+    _permission: 'administer search autocomplete'
+
+# This is the router item for adding our entity.
+autocompletion_configuration.add:
+  path: '/admin/config/search/search_autocomplete/add'
+  defaults:
+    _title: 'Add new Autocompletion Configuration'
+    # Like _entity_list above, _entity_form gives the entity type ID, only this
+    # time also lists the form separated by a period. Drupal looks in the
+    # annotation for the entity and locates the "add" entry under "form" for
+    # the form class to load.
+    # @see \Drupal\Core\Entity\Enhancer\EntityRouteEnhancer
+    _entity_form: autocompletion_configuration.add
+  requirements:
+    _entity_create_access: autocompletion_configuration
+
+# This is the router item for editing our entity.
+entity.autocompletion_configuration.edit_form:
+  # Parameters may be passed to the form via the URL path. We name the
+  # parameter in the path by enclosing it in curly braces. For entity forms,
+  # we include the entity ID in the path by including a parameter with the
+  # same name as the entity type ID.
+  path: '/admin/config/search/search_autocomplete/manage/{autocompletion_configuration}'
+  defaults:
+    _title: 'Edit Autocompletion Configuration'
+    # List our add entry above, this _entity_form entry instructs Drupal to
+    # read our entity type's annonation, and look for the "edit" entry under
+    # "form".
+    _entity_form: autocompletion_configuration.edit
+  requirements:
+    # This uses our entity access controller.
+    # @see \Drupal\Core\Entity\EntityAccessCheck
+    _entity_access: autocompletion_configuration.update
+
+# This is the router item for deleting an instance of our entity.
+entity.autocompletion_configuration.delete_form:
+  path: '/admin/config/search/search_autocomplete/manage/{autocompletion_configuration}/delete'
+  defaults:
+    _title: 'Delete Autocompletion Configuration'
+    _entity_form: autocompletion_configuration.delete
+  requirements:
+    _entity_access: autocompletion_configuration.delete
+
+# This is router for autocompletion callback to autocomplete the view.
+search_autocomplete.view_autocomplete:
+  path: '/view_autocomplete'
+  defaults:
+    _controller: '\Drupal\search_autocomplete\Form\AutocompletionConfigurationEditForm::viewAutocomplete'
+  requirements:
+    _permission: 'administer search autocomplete'

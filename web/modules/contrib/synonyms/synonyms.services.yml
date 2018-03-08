@@ -1,0 +1,46 @@
+services:
+  plugin.manager.synonyms_provider:
+    class: Drupal\synonyms\SynonymsProviderPluginManager
+    parent: default_plugin_manager
+
+  synonyms.behaviors:
+    class: Drupal\synonyms\SynonymsService\BehaviorService
+    tags:
+      - { name: service_collector, tag: synonyms_behavior, call: addBehaviorService }
+    arguments: [ '@entity_type.manager' ]
+
+  synonyms.provider.field_type_to_synonyms:
+    class: Drupal\synonyms\SynonymsService\FieldTypeToSynonyms
+    arguments: [ '@module_handler' ]
+
+  synonyms.synonyms_find:
+    class: Drupal\synonyms\SynonymsService\SynonymsFind
+    arguments: [ '@synonyms.behaviors', '@entity_type.bundle.info' ]
+
+  synonyms.synonyms_entity_get:
+    class: Drupal\synonyms\SynonymsService\EntityGet
+    arguments: [ '@synonyms.synonyms_find', '@entity_type.manager', '@entity.query' ]
+
+  synonyms.behavior.autocomplete:
+    class: Drupal\synonyms\SynonymsService\Behavior\AutocompleteService
+    arguments: [ '@keyvalue', '@plugin.manager.entity_reference_selection', '@synonyms.behaviors', '@database', '@entity_type.manager', '@renderer' ]
+    tags:
+      - { name: synonyms_behavior }
+
+  synonyms.behavior.select:
+    class: Drupal\synonyms\SynonymsService\Behavior\SelectService
+    arguments: [ '@synonyms.behaviors', '@renderer' ]
+    tags:
+      - { name: synonyms_behavior }
+
+  synonyms.param_converter.entity_type:
+    class: Drupal\synonyms\ParamConverter\EntityTypeParamConverter
+    tags:
+      - { name: paramconverter }
+    arguments: [ '@entity_type.manager' ]
+
+  synonyms.param_converter.synonyms_behavior:
+    class: Drupal\synonyms\ParamConverter\SynonymsBehaviorServiceParamConverter
+    tags:
+      - { name: paramconverter }
+    arguments: [ '@synonyms.behaviors' ]

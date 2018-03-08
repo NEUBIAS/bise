@@ -1,0 +1,31 @@
+# Schema for the views plugins of the Entity Reference module.
+
+views.display.autocompletion_callback:
+  type: views_display_path
+  label: 'Autocompletion Callback'
+
+views.row.callback_fields:
+  type: views_row
+  label: 'Callback inline fields'
+  mapping:
+    field_options:
+      type: sequence
+      label: 'Options'
+      sequence:
+        type: mapping
+        label: 'Row'
+        mapping:
+          alias:
+            type: string
+            label: 'Alias for ID'
+
+views.style.callback_serializer:
+  type: views_style
+  label: 'Callback Serializer'
+  mapping:
+    input_label:
+      type: string
+      label: 'Input Label'
+    input_link:
+      type: string
+      label: 'Input Link'

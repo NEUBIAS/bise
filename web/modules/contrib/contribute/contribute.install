@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Contribute module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function contribute_install() {
+  // Load contribute module after the system module and any module that
+  // may want to alter the status report.
+  module_set_weight('contribute', 1);
+}

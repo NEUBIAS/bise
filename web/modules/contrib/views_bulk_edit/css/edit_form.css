@@ -1,0 +1,5 @@
+.views-bulk-edit-form .form-type-checkbox,
+.views-bulk-edit-form .js-form-type-checkbox {
+  float: left;
+  margin-right: 20px;
+}

@@ -1,0 +1,18 @@
+name: Menu token
+type: module
+description: Menu Token module provides tokens, that can be used in title or in path of menu items (links).
+# core: 8.x
+package: Custom
+configure: menu_token.available_entities_configuration_form
+dependencies:
+  - token
+  - contribute
+enforced:
+  module:
+   - menu_token
+
+# Information added by Drupal.org packaging script on 2018-01-19
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'menu_token'
+datestamp: 1516392486

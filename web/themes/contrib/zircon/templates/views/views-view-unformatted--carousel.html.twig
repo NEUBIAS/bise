@@ -1,0 +1,11 @@
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+  
+<div class="slider responsive carousel-responsive">
+    {% for row in rows %}
+      <div{{ row.attributes }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}    
+</div>  

@@ -1,0 +1,12 @@
+name: Contribute
+type: module
+description: Encourages people to join and contribute to the Drupal community.
+# core: 8.x
+package: Community
+configure: contribute.settings
+
+# Information added by Drupal.org packaging script on 2018-01-12
+version: '8.x-5.0-beta3'
+core: '8.x'
+project: 'contribute'
+datestamp: 1515761288

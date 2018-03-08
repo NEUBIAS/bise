@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bartik theme.
+
+zircon.settings:
+  type: theme_settings
+  label: 'Zircon settings'

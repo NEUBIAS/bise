@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains menu_token.install.
+ */
+
+/**
+ * Implements _uninstall().
+ */
+function menu_token_uninstall() {
+
+  // Remove the styles directory and generated images.
+  \Drupal::service('config.factory')->getEditable('menu_token.link_configuration_storage')->delete();
+  \Drupal::service('config.factory')->getEditable('menu_token.availableentitiesconfiguration')->delete();
+
+}

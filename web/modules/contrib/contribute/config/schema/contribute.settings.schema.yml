@@ -1,0 +1,13 @@
+contribute.settings:
+  type: config_object
+  label: 'Contribute settings'
+  mapping:
+    status:
+      type: boolean
+      label: 'Enable the Contribute module'
+    account_type:
+      type: string
+      label: 'Account type'
+    account_id:
+      type: string
+      label: 'Account ID'

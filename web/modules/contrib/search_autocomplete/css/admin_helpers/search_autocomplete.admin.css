@@ -1,0 +1,25 @@
+#sa_admin_menu {
+  background-color: #ededed;
+  margin: 0px;
+  padding: 3px 10px;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  display: none;
+}
+.sa_title {
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+#sa_admin_menu li {
+  list-style: none;
+  text-align: center;
+  padding: 0px 5px 0px 25px;
+  cursor: pointer;
+  background: url(input.png) no-repeat 4px 2px;
+}
+#sa_admin_menu li:hover {
+  background-color: grey;
+  color: white;
+}

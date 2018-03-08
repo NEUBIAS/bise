@@ -1,0 +1,14 @@
+{
+  "name": "drupal/contribute",
+  "type": "drupal-module",
+  "description": "Provides status report message which encourage users or organizations to join the Drupal community, become a member of Drupal Association, and contribute back to Drupal.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/contribute",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/contribute",
+    "source": "http://cgit.drupalcode.org/contribute"
+  },
+  "require": { }
+}

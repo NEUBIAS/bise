@@ -1,0 +1,11 @@
+{
+  "name": "drupal/views_bulk_edit",
+  "type": "drupal-module",
+  "description": "Allows bulk edition of entity field values.",
+  "homepage": "http://drupal.org/project/views_bulk_edit",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/views_bulk_operations": "~1.0 | ~2.0"
+  },
+  "minimum-stability": "dev"
+}

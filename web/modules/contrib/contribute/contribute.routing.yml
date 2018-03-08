@@ -1,0 +1,14 @@
+contribute.settings:
+  path: '/admin/reports/status/contribute'
+  defaults:
+    _form: '\Drupal\contribute\Form\ContributeSettingsForm'
+    _title: 'Community information'
+  requirements:
+    _permission: 'administer site configuration'
+
+contribute.autocomplete:
+  path: '/admin/reports/status/contribute/autocomplete/{account_type}'
+  defaults:
+    _controller: '\Drupal\contribute\Controller\ContributeController::autocomplete'
+  requirements:
+    _permission: 'administer site configuration'

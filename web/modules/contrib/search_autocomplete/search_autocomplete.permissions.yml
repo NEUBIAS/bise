@@ -1,0 +1,6 @@
+administer search autocomplete:
+  title: Administer Search Autocomplete
+  description: Access administration panel for autocompletion settings.
+use search autocomplete:
+  title: Use Search Autocomplete
+  description: Allow usage of autocompletion on configured fields.

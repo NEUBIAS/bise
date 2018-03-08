@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'oswaldregular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('oswald-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-webfont.woff') format('woff'), url('oswald-webfont.ttf') format('truetype'), url('oswald-webfont.svg#oswaldregular') format('svg');
+}

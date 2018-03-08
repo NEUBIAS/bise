@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Encourages people to join and contribute to the Drupal community.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function contribute_page_attachments(&$page) {
+  if (\Drupal::routeMatch()->getRouteName() != 'system.status') {
+    return;
+  }
+
+  /** @var \Drupal\contribute\ContributeManagerInterface $contribute_manager */
+  $contribute_manager = \Drupal::service('contribute.manager');
+
+  $value = '';
+
+  $account = $contribute_manager->getAccount();
+  if ($account && !empty($account['image'])) {
+    $value .= '#contribute-info-account:before {background-image: url(' . $account['image'] . ')}';
+  }
+
+  $membership = $contribute_manager->getMembership();
+  if ($membership && !empty($membership['badge'])) {
+    $value .= '#contribute-info-membership:before {background-image: url(' . $membership['badge'] . ')}';
+  }
+
+  $contribution = $contribute_manager->getContribution();
+  if ($contribution  && !empty($contribution['status'])) {
+    $url = base_path() . drupal_get_path('module', 'contribute') . '/images/icons/drupal.svg';
+    $value .= '#contribute-info-contribution:before {background-image: url(' . $url . ')}';
+  }
+
+  $page['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'style',
+      '#value' => $value,
+    ],
+    'contribute',
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function contribute_theme() {
+  return [
+    'status_report_contribute_info' => [
+      'variables' => [
+        'account' => [],
+        'membership' => [],
+        'contribution' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Process variables for status-report-page.html.twig.
+ *
+ * @see system/templates/status-report-page.html.twig
+ */
+function contribute_preprocess_status_report_page(&$variables) {
+  /** @var \Drupal\contribute\ContributeManagerInterface $contribute_manager */
+  $contribute_manager = \Drupal::service('contribute.manager');
+
+  if ($contribute_manager->getStatus()) {
+    $variables['general_info'] = [
+      'contribute_info' => [
+        '#theme' => 'status_report_contribute_info',
+        '#account' => $contribute_manager->getAccount(),
+        '#membership' => $contribute_manager->getMembership(),
+        '#contribution' => $contribute_manager->getContribution(),
+      ],
+      'general_info' => $variables['general_info'],
+    ];
+  }
+}

@@ -1,0 +1,79 @@
+# Schema for the configuration files of the Autocompletion Configuration.
+
+# This schema tells the config system how to read our config YML files.
+# Our default configurations are stored in files 
+# config/search_autocomplete.autocompletion_configuration.%.yml
+
+# Documentation for schema files like this one is located here:
+# https://drupal.org/node/1905070
+
+search_autocomplete.autocompletion_configuration.*:
+  type: config_object
+  label: 'Autocompletion Configuration'
+  mapping:
+    id:
+      type: string
+      label: 'Autocompletion Configuration ID'
+    uuid:
+      type: string
+      label: 'UUID'
+    label:
+      type: label
+      label: 'Label'
+    selector:
+      type: string
+      label: 'Field Selector'
+    status:
+      type: boolean
+      label: 'Enabled'
+    minChar:
+      type: integer
+      label: 'Number of char before autocompletion'
+    autoSubmit:
+      type: boolean
+      label: 'Auto Submit the form when suggestion is selected'
+    autoRedirect:
+      type: boolean
+      label: 'Redirects user to suggestion when suggestion is selected'
+    maxSuggestions:
+      type: integer
+      label: 'Maximum number of displayed suggestions'
+    noResultLabel:
+      type: label
+      label: 'Custom "no result" message label'
+    noResultValue:
+      type: string
+      label: 'Custom "no result" message value'
+    noResultLink:
+      type: uri
+      label: 'Custom "no result" URL redirection'
+    moreResultsLabel:
+      type: label
+      label: 'Custom "view all results" message label'
+    moreResultsValue:
+      type: string
+      label: 'Custom "view all results" message value'
+    moreResultsLink:
+      type: uri
+      label: 'Custom "view all results" URL redirection'
+    source:
+      type: uri
+      label: 'Source of the suggestions'
+    theme:
+      type: string
+      label: 'Name of the CSS filename.'
+    editable:
+      type: boolean
+      label: 'Define if users can edit this configuration.'
+    deletable:
+      type: boolean
+      label: 'Define if users can delete this configuration.'
+      
+search_autocomplete.settings:
+  type: config_object
+  label: 'Search Autocomplete module settings'
+  mapping:
+    admin_helper:
+      type: boolean
+      label: 'Use admin tool'
+      

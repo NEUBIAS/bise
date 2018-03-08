@@ -1,0 +1,92 @@
+/*
+ * SEARCH AUTOCOMPLETE
+ * Basic blue theme.
+ */
+
+/**
+ * THEME BASIC BLUE
+ */
+
+/* Input box */
+.js input.form-autocomplete {
+  border: 1px solid #ccc;
+}
+
+/* Suggestion menu style */
+ul[data-sa-theme="basic-blue"] {
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 15px;
+  background: white;
+  border-bottom: 1px solid #bfbfbf;
+  text-align: left;
+  font-family: 'Lucida Grande', Helvetica, Arial, Verdana, sans-serif;
+  min-width: 350px;
+}
+
+/* Suggestion menu elements */
+ul[data-sa-theme="basic-blue"] > *,
+ul[data-sa-theme="basic-blue"] > *.ui-state-focus,
+ul[data-sa-theme="basic-blue"] > *:hover {
+  border-color: #bfbfbf;
+  border-width: 1px 0px 0 0px;
+  border-style: solid;
+  margin: 0px;
+  padding: 5px 7px;
+}
+
+/* Suggestion group header */
+ul[data-sa-theme="basic-blue"] > div.ui-autocomplete-field-group {
+  opacity: 1;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background-color: #CCCCCC;
+  padding: 1px 5px;
+  margin: 0px;
+}
+
+/* Suggestion menu items */
+ul[data-sa-theme="basic-blue"] > li.ui-menu-item {
+  background: white;
+}
+/* Suggestion menu items hovering */
+ul[data-sa-theme="basic-blue"] > li.ui-menu-item.ui-state-focus,
+ul[data-sa-theme="basic-blue"] > li.ui-menu-item:hover {
+  background: #0072b9;
+  border-top-color: #1f4a64;
+}
+
+/* Searched term whithin a suggestion item */
+ul[data-sa-theme="basic-blue"] .ui-autocomplete-field-term {
+  font-weight: bold;
+  border-bottom: 1px dotted;
+}
+
+/* Suggestion item fields */
+ul[data-sa-theme="basic-blue"] .ui-autocomplete-fields > *:first-child {
+  font-weight: bold;
+  color: black;
+}
+ul[data-sa-theme="basic-blue"] .ui-autocomplete-fields > * {
+  font-size: 0.85em;
+  line-height: 1.3em;
+  color: #6f6f6f;
+}
+
+/* Suggestion focused fields */
+ul[data-sa-theme="basic-blue"] > li.ui-menu-item.ui-state-focus .ui-autocomplete-fields > *,
+ul[data-sa-theme="basic-blue"] > li.ui-menu-item:hover .ui-autocomplete-fields > * {
+  color: white;
+}
+
+/* Suggestion "no result" and "more resul" customizations */
+ul[data-sa-theme="basic-blue"] > div.ui-autocomplete-field-group.no_results + li.ui-menu-item,
+ul[data-sa-theme="basic-blue"] > div.ui-autocomplete-field-group.more_results + li.ui-menu-item {
+  padding: 0px;
+}
+ul[data-sa-theme="basic-blue"] > div.ui-autocomplete-field-group.no_results + li.ui-menu-item .ui-autocomplete-fields > *:first-child,
+ul[data-sa-theme="basic-blue"] > div.ui-autocomplete-field-group.more_results + li.ui-menu-item .ui-autocomplete-fields > *:first-child {
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+}

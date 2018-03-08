@@ -1,0 +1,41 @@
+global-styling:
+  version: 8.0.0-rc1
+  css:
+    base:
+      includes/bootstrap/css/bootstrap.css: {}
+      includes/bootstrap/css/bootstrap-theme.css: {}
+      includes/fonts/oswald_regular/stylesheet.css: {}
+      includes/fontawesome/css/font-awesome.min.css: {}
+      includes/slick/slick/slick.css: {}
+      includes/slick/css/style.css: {}
+      includes/monokai/monokai.min/css: {}
+      includes/flexslider/flexslider.css: {}
+      css/html.css: {}
+      css/page.css: {}
+      css/block.css: {}
+      css/view.css: {}
+      css/slideshow.css: {}
+      css/responsive.css: {}
+      css/print.css: { media: print }
+  js:
+    js/scripts.js: {}
+    includes/respond/respond.min.js: {}
+    includes/respond/html5shiv.min.js: {}
+    includes/js/jquery.smooth-scroll.js: {}
+    includes/jssor/js/jssor.core.js: {}
+    includes/jssor/js/jssor.utils.js: {}
+    includes/jssor/js/jssor.slider.js: {}
+    includes/slick/slick/slick.js: {}
+    includes/bootstrap/js/bootstrap.js: {}
+    includes/flexslider/jquery.flexslider.js: {}
+    includes/flexslider/jquery.flexslider-min.js: {}
+    js/slideshow.js: {}
+    js/carousel.js: {}
+    js/zircon.js: {}
+    js/fix_script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
