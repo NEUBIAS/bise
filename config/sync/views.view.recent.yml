@@ -256,7 +256,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h4
           element_class: views-grid-element-alignment
           element_label_type: ''
           element_label_class: ''
