@@ -1,5 +1,0 @@
-synonyms.configure:
-  title: 'Synonyms'
-  route_name: entity.synonym.overview
-  description: 'Manage entity synonyms.'
-  parent: system.admin_structure

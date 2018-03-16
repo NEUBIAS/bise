@@ -1,5 +1,0 @@
-entity.synonym.entity_type.bundle.behavior.add_form:
-  route_name: 'entity.synonym.entity_type.bundle.behavior.add_form'
-  title: 'Add synonym configuration'
-  appears_on:
-    - entity.synonym.overview.entity_type.bundle.behavior

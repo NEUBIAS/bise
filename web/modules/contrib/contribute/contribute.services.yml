@@ -1,4 +1,0 @@
-services:
-  contribute.manager:
-    class: Drupal\contribute\ContributeManager
-    arguments: ['@cache.default', '@http_client', '@date.formatter', '@config.factory']

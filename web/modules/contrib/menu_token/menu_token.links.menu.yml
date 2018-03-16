@@ -1,6 +1,0 @@
-menu_token.available_entities_configuration_form:
-  title: 'Menu token, used entities.'
-  route_name: menu_token.available_entities_configuration_form
-  description: 'A description for the menu entry'
-  parent: system.modules_list
-  weight: 99
