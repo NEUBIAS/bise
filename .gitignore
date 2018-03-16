@@ -11,6 +11,10 @@
 # including Drupal core.
 web/core
 
+# Ignore add-on modules, instead handled by Composer. 
+# added by Kota
+web/modules
+
 # Core's dependencies are managed with Composer.
 vendor
 
