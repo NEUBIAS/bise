@@ -63,6 +63,6 @@ class PathRedirectTest extends MigrateDrupalTestBase {
    */
   public function testPathRedirect() {
     $this->assertEntity(5, '/test/source/url', 'base:test/redirect/url', '301');
-    $this->assertEntity(7, '/test/source/url2', 'http://test/external/redirect/url?foo=bar&biz=buz', '307');
+    $this->assertEntity(7, '/test/source/url2', 'http://test/external/redirect/url?foo=bar&biz=buz#fragment-1', '307');
   }
 }

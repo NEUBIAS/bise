@@ -149,6 +149,23 @@ class RedirectAPITest extends KernelTestBase {
   }
 
   /**
+   * Test slash is removed from source path in findMatchingRedirect.
+   */
+  public function testDuplicateRedirectEntry() {
+    $redirect = $this->controller->create();
+    $redirect->setSource('/foo/foo', []);
+    $redirect->setRedirect('foo');
+    $redirect->save();
+
+    $redirect_repository = \Drupal::service('redirect.repository');
+    $matched_redirect = $redirect_repository->findMatchingRedirect('/foo/foo', [], 'en-AU');
+    $this->assertNotNull($matched_redirect);
+
+    $null_redirect = $redirect_repository->findMatchingRedirect('/foo/foo-bar', [], 'en-AU');
+    $this->assertNull($null_redirect);
+  }
+
+  /**
    * Test redirect_sort_recursive().
    */
   public function testSortRecursive() {

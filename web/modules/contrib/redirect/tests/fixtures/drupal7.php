@@ -113,7 +113,7 @@ $connection->insert('redirect')
     'source' => 'test/source/url2',
     'source_options' => '',
     'redirect' => 'http://test/external/redirect/url',
-    'redirect_options' => 'a:1:{s:5:"query";a:2:{s:3:"foo";s:3:"bar";s:3:"biz";s:3:"buz";}}',
+    'redirect_options' => 'a:2:{s:5:"query";a:2:{s:3:"foo";s:3:"bar";s:3:"biz";s:3:"buz";}s:8:"fragment";s:10:"fragment-1";}',
     'language' => 'und',
     'status_code' => 0,
     'count' => 419,

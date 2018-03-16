@@ -63,6 +63,7 @@ class RedirectRepository {
    * @throws \Drupal\redirect\Exception\RedirectLoopException
    */
   public function findMatchingRedirect($source_path, array $query = [], $language = Language::LANGCODE_NOT_SPECIFIED) {
+    $source_path = ltrim($source_path, '/');
     $hashes = [Redirect::generateHash($source_path, $query, $language)];
     if ($language != Language::LANGCODE_NOT_SPECIFIED) {
       $hashes[] = Redirect::generateHash($source_path, $query, Language::LANGCODE_NOT_SPECIFIED);

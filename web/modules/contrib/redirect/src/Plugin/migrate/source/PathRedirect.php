@@ -8,7 +8,8 @@ use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
  * Drupal 6 path redirect source from database.
  *
  * @MigrateSource(
- *   id = "d6_path_redirect"
+ *   id = "d6_path_redirect",
+ *   source_module = "redirect"
  * )
  */
 class PathRedirect extends DrupalSqlBase {

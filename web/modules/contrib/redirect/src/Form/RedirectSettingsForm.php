@@ -63,7 +63,7 @@ class RedirectSettingsForm extends ConfigFormBase {
     );
     $form['globals']['redirect_ignore_admin_path'] = array(
       '#type' => 'checkbox',
-      '#title' => $this->t('Allow redirections on admin paths.'),
+      '#title' => $this->t('Ignore redirections on admin paths.'),
       '#default_value' => $config->get('ignore_admin_path'),
     );
     $form['globals']['redirect_access_check'] = array(
