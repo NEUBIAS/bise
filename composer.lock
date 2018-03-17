@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c94733060b4194b26c77eba125804a0",
+    "content-hash": "021aebab92ffb26598d4819ec0c01c99",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2925,6 +2925,61 @@
             "homepage": "https://www.drupal.org/project/shs",
             "support": {
                 "source": "http://cgit.drupalcode.org/shs"
+            }
+        },
+        {
+            "name": "drupal/structure_sync",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/structure_sync",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/structure_sync-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "2f0ce7b0b738f55e339f2dfca398eb849f0f792b"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1520240584",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fidodido06",
+                    "homepage": "https://www.drupal.org/user/1494332"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "timKruijsen",
+                    "homepage": "https://www.drupal.org/user/3513437"
+                }
+            ],
+            "description": "Tool for syncing structural data that is stored as content.",
+            "homepage": "https://www.drupal.org/project/structure_sync",
+            "support": {
+                "source": "http://cgit.drupalcode.org/structure_sync"
             }
         },
         {
