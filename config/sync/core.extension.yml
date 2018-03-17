@@ -54,6 +54,7 @@ module:
   serialization: 0
   shortcut: 0
   statistics: 0
+  structure_sync: 0
   synonyms: 0
   system: 0
   taxonomy: 0
