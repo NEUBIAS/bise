@@ -13,7 +13,10 @@ web/core
 
 # Ignore add-on modules, instead handled by Composer. 
 # added by Kota
-web/modules
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
 
 # Core's dependencies are managed with Composer.
 vendor
