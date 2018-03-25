@@ -1,0 +1,30 @@
+uuid: 75563bb3-f549-488b-bc25-b1600a3c91d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent
+  module:
+    - system
+    - views
+  theme:
+    - bise
+id: bise_views_block__recent_block_1
+theme: bise
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:recent-block_1'
+settings:
+  id: 'views_block:recent-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '5'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

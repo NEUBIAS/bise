@@ -1,0 +1,22 @@
+uuid: b37a1278-04a2-43b5-bd59-04df9485e11e
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bise
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bise_help
+theme: bise
+region: header
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

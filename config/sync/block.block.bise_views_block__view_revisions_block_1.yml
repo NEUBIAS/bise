@@ -1,0 +1,33 @@
+uuid: 38be45cb-fa0d-4014-afc6-366efaa6f671
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.view_revisions
+  module:
+    - ctools
+    - views
+  theme:
+    - bise
+id: bise_views_block__view_revisions_block_1
+theme: bise
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:view_revisions-block_1'
+settings:
+  id: 'views_block:view_revisions-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      software: software
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
