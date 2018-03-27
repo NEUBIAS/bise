@@ -1,0 +1,25 @@
+uuid: 614da23d-286c-4ed5-a7e5-71ec68566059
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fd094f86-753a-4ddf-be9f-0b74a064e0bc'
+  module:
+    - block_content
+  theme:
+    - bise
+id: bise_bise
+theme: bise
+region: header
+weight: -8
+provider: null
+plugin: 'block_content:fd094f86-753a-4ddf-be9f-0b74a064e0bc'
+settings:
+  id: 'block_content:fd094f86-753a-4ddf-be9f-0b74a064e0bc'
+  label: 'BISE Bio Imaging Search Engine: a  Bio Image Information Index'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: f84a245c-02e9-4bd8-94bc-b2fcafeba833
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.testsearch
+  module:
+    - views
+  theme:
+    - bise
+id: bise_exposedformtestsearchpage_1
+theme: bise
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:testsearch-page_1'
+settings:
+  id: 'views_exposed_filter_block:testsearch-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }
