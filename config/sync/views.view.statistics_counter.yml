@@ -194,7 +194,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Statistics counter'
+      title: Category
       header: {  }
       footer: {  }
       empty: {  }
@@ -242,6 +242,13 @@ display:
           entity_field: type
           plugin_id: node_type
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      use_more: false
+      use_more_always: false
+      use_more_text: more
     cache_metadata:
       max-age: -1
       contexts:
