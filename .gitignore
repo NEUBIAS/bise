@@ -46,3 +46,4 @@ web/sites/simpletest
 # simpletest
 *.DS_Store
 private
+.env
