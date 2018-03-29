@@ -47,3 +47,4 @@ web/sites/simpletest
 *.DS_Store
 private
 .env
+drush/bise.aliases.drushrc.php
