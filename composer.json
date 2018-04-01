@@ -49,7 +49,6 @@
         "drupal/honeypot": "^1.27",
         "drupal/menu_token": "^1.0",
         "drupal/pathauto": "^1.1",
-        "drupal/popular_tags": "^1.0@alpha",
         "drupal/redirect": "^1.0",
         "drupal/restui": "^1.1",
         "drupal/search_api": "^1.7",
