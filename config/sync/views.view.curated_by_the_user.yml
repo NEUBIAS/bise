@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - tracker
     - user
 id: curated_by_the_user
 label: 'Curated by the user'

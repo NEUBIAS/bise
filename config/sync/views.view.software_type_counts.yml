@@ -7,6 +7,7 @@ dependencies:
   module:
     - node
     - taxonomy
+    - tracker
     - user
 id: software_type_counts
 label: 'Software Type Counts'
@@ -253,7 +254,7 @@ display:
       display_extenders: {  }
       group_by: true
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -268,7 +269,7 @@ display:
       display_extenders: {  }
       block_description: 'Software Type Counter'
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

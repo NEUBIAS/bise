@@ -10,6 +10,7 @@ dependencies:
     - image
     - node
     - taxonomy
+    - tracker
     - user
 id: recent
 label: Recent
@@ -490,6 +491,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -526,6 +528,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

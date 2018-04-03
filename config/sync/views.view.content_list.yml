@@ -11,6 +11,7 @@ dependencies:
     - image
     - node
     - text
+    - tracker
     - user
 id: content_list
 label: 'Content List'
@@ -524,7 +525,7 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -544,7 +545,7 @@ display:
       display_extenders: {  }
       path: content-list
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
