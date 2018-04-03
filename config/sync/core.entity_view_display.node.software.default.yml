@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.software.field_is_compatible_with
     - field.field.node.software.field_is_covered_by_training_mat
     - field.field.node.software.field_is_dependent_of
+    - field.field.node.software.field_is_using
     - field.field.node.software.field_license_openness
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
@@ -51,7 +52,7 @@ content:
     third_party_settings: {  }
     region: content
   field_attribution_instructions:
-    weight: 20
+    weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -66,7 +67,7 @@ content:
     type: entity_reference_label
     region: content
   field_give_feedback_on_this_soft:
-    weight: 25
+    weight: 27
     label: above
     settings:
       view_mode: default
@@ -75,7 +76,7 @@ content:
     type: comment_default
     region: content
   field_has_author:
-    weight: 18
+    weight: 20
     label: above
     settings:
       link_to_entity: false
@@ -83,7 +84,7 @@ content:
     type: string
     region: content
   field_has_biological_terms:
-    weight: 15
+    weight: 17
     label: above
     settings:
       link: true
@@ -103,7 +104,7 @@ content:
     type: link
     region: content
   field_has_documentation:
-    weight: 22
+    weight: 24
     label: above
     settings:
       trim_length: 80
@@ -115,7 +116,7 @@ content:
     type: link
     region: content
   field_has_doi:
-    weight: 23
+    weight: 25
     label: above
     settings:
       trim_length: 80
@@ -127,7 +128,7 @@ content:
     type: link
     region: content
   field_has_entry_curator:
-    weight: 19
+    weight: 21
     label: above
     settings:
       link: true
@@ -143,7 +144,7 @@ content:
     type: entity_reference_label
     region: content
   field_has_implementation:
-    weight: 26
+    weight: 13
     label: above
     settings:
       link: true
@@ -159,7 +160,7 @@ content:
     type: entity_reference_label
     region: content
   field_has_license:
-    weight: 24
+    weight: 26
     label: above
     settings:
       link_to_entity: false
@@ -167,7 +168,7 @@ content:
     type: string
     region: content
   field_has_location:
-    weight: 17
+    weight: 19
     label: above
     settings:
       trim_length: 80
@@ -179,7 +180,7 @@ content:
     type: link
     region: content
   field_has_programming_language:
-    weight: 13
+    weight: 14
     label: above
     settings:
       link: true
@@ -187,7 +188,7 @@ content:
     type: entity_reference_label
     region: content
   field_has_reference_publication:
-    weight: 21
+    weight: 23
     label: above
     settings:
       trim_length: 80
@@ -199,7 +200,7 @@ content:
     type: link
     region: content
   field_has_topic:
-    weight: 16
+    weight: 18
     label: above
     settings:
       link: true
@@ -207,7 +208,7 @@ content:
     type: entity_reference_label
     region: content
   field_has_usage_example:
-    weight: 14
+    weight: 16
     label: above
     settings:
       trim_length: 80
@@ -246,6 +247,14 @@ content:
   field_is_dependent_of:
     weight: 4
     label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_is_using:
+    weight: 15
+    label: above
     settings:
       link: true
     third_party_settings: {  }
