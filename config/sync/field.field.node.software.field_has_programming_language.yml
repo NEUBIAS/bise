@@ -10,7 +10,7 @@ id: node.software.field_has_programming_language
 field_name: field_has_programming_language
 entity_type: node
 bundle: software
-label: 'has programming language'
+label: 'Programming Language'
 description: 'programming (coding) language supported by the software or used for its implementation.'
 required: false
 translatable: false

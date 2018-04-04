@@ -11,7 +11,7 @@ id: node.software.field_has_reference_publication
 field_name: field_has_reference_publication
 entity_type: node
 bundle: software
-label: 'has reference publication'
+label: 'Reference Publication Link'
 description: "publication that describes entry (or the related methods) and should be cited.\r\nUse the DOI of the publication."
 required: false
 translatable: false

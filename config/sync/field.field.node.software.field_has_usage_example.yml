@@ -11,7 +11,7 @@ id: node.software.field_has_usage_example
 field_name: field_has_usage_example
 entity_type: node
 bundle: software
-label: 'has usage example'
+label: 'Usage Example Link'
 description: 'publication (scientific publication or training material) that describes how the software, dataset, etc. has been used. PUBLICATION NOT IMPLEMENTED YET, DO NOT FILL.'
 required: false
 translatable: false

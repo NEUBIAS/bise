@@ -9,7 +9,7 @@ id: node.software.field_has_entry_curator
 field_name: field_has_entry_curator
 entity_type: node
 bundle: software
-label: 'has entry curator'
+label: 'Entry Curator'
 description: 'name of the person responsible for the curation of the entry, to be contacted if needed to correct information. Only confirmed taggers or administrator '
 required: false
 translatable: false
