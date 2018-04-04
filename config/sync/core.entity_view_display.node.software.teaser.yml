@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.software.field_has_doi
     - field.field.node.software.field_has_entry_curator
     - field.field.node.software.field_has_function
+    - field.field.node.software.field_has_implementation
     - field.field.node.software.field_has_interaction_level
     - field.field.node.software.field_has_license
     - field.field.node.software.field_has_location
@@ -26,65 +27,99 @@ dependencies:
     - field.field.node.software.field_is_compatible_with
     - field.field.node.software.field_is_covered_by_training_mat
     - field.field.node.software.field_is_dependent_of
+    - field.field.node.software.field_is_using
     - field.field.node.software.field_license_openness
+    - field.field.node.software.field_part_of
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
-    - image.style.thumbnail
     - node.type.software
   module:
-    - image
+    - ds
+    - responsive_image
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - node_title
+        - field_type
+        - body
+        - field_has_topic
+        - field_has_function
+        - links
+      right:
+        - field_image
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
 id: node.software.teaser
 targetEntityType: node
 bundle: software
 mode: teaser
 content:
   body:
-    label: hidden
-    type: text_summary_or_trimmed
+    type: text_default
     weight: 2
-    settings:
-      trim_length: 600
+    region: left
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    region: content
   field_has_function:
     type: entity_reference_label
-    weight: 5
-    region: content
-    label: hidden
+    weight: 4
+    region: left
+    label: above
     settings:
       link: true
     third_party_settings: {  }
   field_has_topic:
     type: entity_reference_label
-    weight: 4
-    region: content
-    label: hidden
+    weight: 3
+    region: left
+    label: above
     settings:
       link: true
     third_party_settings: {  }
   field_image:
-    type: image
-    weight: 1
-    region: content
+    type: responsive_image
+    weight: 6
+    region: right
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: content
+      responsive_image_style: ''
+      image_link: ''
     third_party_settings: {  }
   field_type:
     type: entity_reference_label
-    weight: 3
-    region: content
+    weight: 1
+    region: left
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 0
-    region: content
+    weight: 5
+    region: left
     settings: {  }
     third_party_settings: {  }
 hidden:
@@ -97,6 +132,7 @@ hidden:
   field_has_documentation: true
   field_has_doi: true
   field_has_entry_curator: true
+  field_has_implementation: true
   field_has_interaction_level: true
   field_has_license: true
   field_has_location: true
@@ -106,6 +142,8 @@ hidden:
   field_is_compatible_with: true
   field_is_covered_by_training_mat: true
   field_is_dependent_of: true
+  field_is_using: true
   field_license_openness: true
+  field_part_of: true
   field_platform: true
   field_supported_image_dimension: true
