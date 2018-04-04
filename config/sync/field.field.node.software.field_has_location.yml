@@ -11,7 +11,7 @@ id: node.software.field_has_location
 field_name: field_has_location
 entity_type: node
 bundle: software
-label: 'has location'
+label: 'Download Page'
 description: 'URL to download the implementation'
 required: false
 translatable: true

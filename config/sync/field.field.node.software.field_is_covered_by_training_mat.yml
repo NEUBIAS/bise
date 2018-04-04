@@ -10,7 +10,7 @@ id: node.software.field_is_covered_by_training_mat
 field_name: field_is_covered_by_training_mat
 entity_type: node
 bundle: software
-label: 'is covered by training material'
+label: 'Training Material'
 description: "Training material content in the site covering this software\r\n"
 required: false
 translatable: false

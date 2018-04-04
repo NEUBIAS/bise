@@ -9,7 +9,7 @@ id: node.software.field_has_license
 field_name: field_has_license
 entity_type: node
 bundle: software
-label: 'has license'
+label: License
 description: 'if you know it, indicate the license name (GPL, Creative Commons etc...)'
 required: false
 translatable: false

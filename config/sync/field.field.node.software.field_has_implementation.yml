@@ -10,7 +10,7 @@ id: node.software.field_has_implementation
 field_name: field_has_implementation
 entity_type: node
 bundle: software
-label: 'has implementation'
+label: 'Implementation Type'
 description: "A textual value representing the technical form of the software. It can be a standalone software, a web application, a library (or API), a plugin. \r\nFor example: ImageJ is a standalone software but can also be used as a library through its java API. Both library and standalone sofwtare should be checked."
 required: false
 translatable: false

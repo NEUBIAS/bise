@@ -1,0 +1,33 @@
+uuid: 9a4f0d5c-f9aa-4e25-8b7f-b57c888f5b5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_part_of
+    - node.type.book
+    - node.type.software
+  content:
+    - 'node:software:8ed3e9cf-f517-4bd8-b082-da47dedc6d41'
+id: node.software.field_part_of
+field_name: field_part_of
+entity_type: node
+bundle: software
+label: 'Part of / Used by'
+description: 'If this entity is a part of other component / workflow / collection / teaching material, please indicate here! For example, Gaussian blur (component) is a "part of"  ImageJ (collection). This will link the relationship between collections, workflows, and components, which eventually will be very useful!'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 8ed3e9cf-f517-4bd8-b082-da47dedc6d41
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+      book: book
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: software
+field_type: entity_reference

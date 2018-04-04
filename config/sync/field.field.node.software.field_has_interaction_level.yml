@@ -10,9 +10,9 @@ id: node.software.field_has_interaction_level
 field_name: field_has_interaction_level
 entity_type: node
 bundle: software
-label: 'has interaction level'
+label: 'Interaction Level'
 description: "Manual means completely interactive.\r\nSemi-automated means user input needed at some point.\r\nAutomated means predefined parameters working in most most of the case."
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

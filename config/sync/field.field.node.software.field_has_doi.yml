@@ -11,7 +11,7 @@ id: node.software.field_has_doi
 field_name: field_has_doi
 entity_type: node
 bundle: software
-label: 'has doi'
+label: 'DOI link'
 description: 'if the ressource has his own Digital Object Identifier, copy it here.'
 required: false
 translatable: false

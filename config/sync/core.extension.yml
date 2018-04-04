@@ -23,7 +23,9 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  eva: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -33,6 +35,7 @@ module:
   honeypot: 0
   image: 0
   kint: 0
+  layout_discovery: 0
   link: 0
   menu_token: 0
   menu_ui: 0
@@ -73,6 +76,7 @@ module:
   views_bulk_operations: 0
   views_bulk_operations_example: 0
   views_ui: 0
+  ds: 1
   forum: 1
   menu_link_content: 1
   shs: 1
