@@ -63,6 +63,7 @@ third_party_settings:
     regions:
       header:
         - field_image
+        - what_links_here_entity_view_1
       left:
         - field_type
         - field_has_location
@@ -193,7 +194,9 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
     type: entity_reference_label
     region: right
   field_has_implementation:
@@ -345,6 +348,11 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: left
+  what_links_here_entity_view_1:
+    weight: 10
+    region: header
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_is_using: true
   links: true
