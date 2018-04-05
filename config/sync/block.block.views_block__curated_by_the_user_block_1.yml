@@ -12,7 +12,7 @@ dependencies:
 id: views_block__curated_by_the_user_block_1
 theme: bise
 region: sidebar_second
-weight: 0
+weight: -9
 provider: null
 plugin: 'views_block:curated_by_the_user-block_1'
 settings:
