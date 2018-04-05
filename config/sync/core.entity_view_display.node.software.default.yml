@@ -39,7 +39,6 @@ dependencies:
     - ds
     - image
     - link
-    - taxonomy
     - text
     - user
 third_party_settings:
@@ -116,9 +115,10 @@ content:
   field_free_tagging:
     weight: 18
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: entity_reference_rss_category
+    type: entity_reference_label
     region: right
   field_give_feedback_on_this_soft:
     weight: 27
@@ -140,9 +140,10 @@ content:
   field_has_biological_terms:
     weight: 17
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: entity_reference_rss_category
+    type: entity_reference_label
     region: right
   field_has_comparison:
     weight: 25
@@ -190,9 +191,10 @@ content:
   field_has_function:
     weight: 15
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: entity_reference_rss_category
+    type: entity_reference_label
     region: right
   field_has_implementation:
     weight: 7
@@ -253,9 +255,10 @@ content:
   field_has_topic:
     weight: 16
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: entity_reference_rss_category
+    type: entity_reference_label
     region: right
   field_has_usage_example:
     weight: 22
