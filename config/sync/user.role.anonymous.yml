@@ -22,5 +22,6 @@ permissions:
   - 'search content'
   - 'use advanced search'
   - 'use search autocomplete'
+  - 'use text format markdown'
   - 'view all revisions'
   - 'view post access counter'

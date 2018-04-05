@@ -37,6 +37,7 @@ module:
   kint: 0
   layout_discovery: 0
   link: 0
+  markdown: 0
   menu_token: 0
   menu_ui: 0
   migrate: 0
