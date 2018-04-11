@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:fd094f86-753a-4ddf-be9f-0b74a064e0bc'
 settings:
   id: 'block_content:fd094f86-753a-4ddf-be9f-0b74a064e0bc'
-  label: 'BISE Bio Imaging Search Engine: a  Bio Image Information Index'
+  label: 'BISE Bioimage Informatics Search Engine: a BioImage Informatics Index'
   provider: block_content
   label_display: visible
   status: true
