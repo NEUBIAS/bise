@@ -58,6 +58,7 @@ module:
   search_autocomplete: 0
   serialization: 0
   shortcut: 0
+  social_media: 0
   statistics: 0
   structure_sync: 0
   synonyms: 0
