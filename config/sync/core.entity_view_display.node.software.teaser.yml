@@ -122,6 +122,9 @@ content:
     region: left
     settings: {  }
     third_party_settings: {  }
+  what_links_here_entity_view_1:
+    weight: 10
+    region: content
 hidden:
   field_attribution_instructions: true
   field_free_tagging: true
