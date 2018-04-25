@@ -27,9 +27,7 @@ dependencies:
     - field.field.node.software.field_is_compatible_with
     - field.field.node.software.field_is_covered_by_training_mat
     - field.field.node.software.field_is_dependent_of
-    - field.field.node.software.field_is_using
     - field.field.node.software.field_license_openness
-    - field.field.node.software.field_part_of
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
@@ -145,8 +143,6 @@ hidden:
   field_is_compatible_with: true
   field_is_covered_by_training_mat: true
   field_is_dependent_of: true
-  field_is_using: true
   field_license_openness: true
-  field_part_of: true
   field_platform: true
   field_supported_image_dimension: true

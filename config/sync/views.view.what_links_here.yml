@@ -1,6 +1,6 @@
 uuid: ebb99325-6c6b-4cbc-9770-a7fa34e640ad
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_type

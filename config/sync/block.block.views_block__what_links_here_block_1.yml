@@ -1,12 +1,9 @@
 uuid: 35e6873c-0ef5-4665-8414-3740de6d7735
 langcode: en
-status: true
+status: false
 dependencies:
-  config:
-    - views.view.what_links_here
   module:
     - ctools
-    - views
   theme:
     - bise
 id: views_block__what_links_here_block_1

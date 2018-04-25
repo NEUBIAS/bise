@@ -26,9 +26,7 @@ dependencies:
     - field.field.node.software.field_is_compatible_with
     - field.field.node.software.field_is_covered_by_training_mat
     - field.field.node.software.field_is_dependent_of
-    - field.field.node.software.field_is_using
     - field.field.node.software.field_license_openness
-    - field.field.node.software.field_part_of
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
@@ -63,12 +61,10 @@ third_party_settings:
     regions:
       header:
         - field_image
-        - what_links_here_entity_view_1
       left:
         - field_type
         - field_has_location
         - field_has_author
-        - field_part_of
         - field_is_dependent_of
         - field_platform
         - field_has_implementation
@@ -102,19 +98,19 @@ content:
   body:
     label: above
     type: text_default
-    weight: 14
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     region: right
   field_attribution_instructions:
-    weight: 26
+    weight: 25
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: footer
   field_free_tagging:
-    weight: 18
+    weight: 17
     label: above
     settings:
       link: true
@@ -122,7 +118,7 @@ content:
     type: entity_reference_label
     region: right
   field_give_feedback_on_this_soft:
-    weight: 27
+    weight: 26
     label: above
     settings:
       view_mode: default
@@ -139,7 +135,7 @@ content:
     type: string
     region: left
   field_has_biological_terms:
-    weight: 17
+    weight: 16
     label: above
     settings:
       link: true
@@ -147,30 +143,6 @@ content:
     type: entity_reference_label
     region: right
   field_has_comparison:
-    weight: 25
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: footer
-  field_has_documentation:
-    weight: 20
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: footer
-  field_has_doi:
     weight: 24
     label: above
     settings:
@@ -182,15 +154,39 @@ content:
     third_party_settings: {  }
     type: link
     region: footer
-  field_has_entry_curator:
+  field_has_documentation:
     weight: 19
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: footer
+  field_has_doi:
+    weight: 23
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: footer
+  field_has_entry_curator:
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: author
     region: right
   field_has_function:
-    weight: 15
+    weight: 14
     label: above
     settings:
       link: true
@@ -200,7 +196,7 @@ content:
     type: entity_reference_label
     region: right
   field_has_implementation:
-    weight: 7
+    weight: 6
     label: above
     settings:
       link: true
@@ -208,7 +204,7 @@ content:
     type: entity_reference_label
     region: left
   field_has_interaction_level:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link: true
@@ -216,7 +212,7 @@ content:
     type: entity_reference_label
     region: left
   field_has_license:
-    weight: 13
+    weight: 12
     label: above
     settings:
       link_to_entity: false
@@ -236,7 +232,7 @@ content:
     type: link
     region: left
   field_has_programming_language:
-    weight: 8
+    weight: 7
     label: above
     settings:
       link: true
@@ -244,7 +240,7 @@ content:
     type: entity_reference_label
     region: left
   field_has_reference_publication:
-    weight: 21
+    weight: 20
     label: above
     settings:
       trim_length: 80
@@ -256,7 +252,7 @@ content:
     type: link
     region: footer
   field_has_topic:
-    weight: 16
+    weight: 15
     label: above
     settings:
       link: true
@@ -264,7 +260,7 @@ content:
     type: entity_reference_label
     region: right
   field_has_usage_example:
-    weight: 22
+    weight: 21
     label: above
     settings:
       trim_length: 80
@@ -285,7 +281,7 @@ content:
     type: image
     region: header
   field_is_compatible_with:
-    weight: 9
+    weight: 8
     label: above
     settings:
       link: true
@@ -293,7 +289,7 @@ content:
     type: entity_reference_label
     region: left
   field_is_covered_by_training_mat:
-    weight: 23
+    weight: 22
     label: above
     settings:
       link: true
@@ -301,22 +297,6 @@ content:
     type: entity_reference_label
     region: footer
   field_is_dependent_of:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: left
-  field_license_openness:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: left
-  field_part_of:
     weight: 4
     label: above
     settings:
@@ -324,8 +304,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: left
+  field_license_openness:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: left
   field_platform:
-    weight: 6
+    weight: 5
     label: above
     settings:
       link: true
@@ -333,7 +321,7 @@ content:
     type: entity_reference_label
     region: left
   field_supported_image_dimension:
-    weight: 10
+    weight: 9
     label: above
     settings:
       link: true
@@ -348,11 +336,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: left
-  what_links_here_entity_view_1:
-    weight: 10
-    region: header
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_is_using: true
   links: true
+  what_links_here_entity_view_1: true

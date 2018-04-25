@@ -26,9 +26,7 @@ dependencies:
     - field.field.node.software.field_is_compatible_with
     - field.field.node.software.field_is_covered_by_training_mat
     - field.field.node.software.field_is_dependent_of
-    - field.field.node.software.field_is_using
     - field.field.node.software.field_license_openness
-    - field.field.node.software.field_part_of
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
@@ -310,15 +308,6 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_part_of:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_platform:
     weight: 20
     settings: {  }
@@ -368,7 +357,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_has_author: true
-  field_is_using: true
   path: true
   promote: true
   sticky: true
