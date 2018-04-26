@@ -11,8 +11,8 @@ id: node.software.field_has_documentation
 field_name: field_has_documentation
 entity_type: node
 bundle: software
-label: 'has documentation'
-description: 'optional link to external documentation. '
+label: 'Documentation Link'
+description: 'Link to external documentation, e.g. user guide or manual. '
 required: false
 translatable: false
 default_value: {  }

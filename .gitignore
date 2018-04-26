@@ -46,3 +46,7 @@ web/sites/simpletest
 # simpletest
 *.DS_Store
 private
+.env
+drush/bise.aliases.drushrc.php
+drushrc.php
+drush/sites/*.site.yml

@@ -9,7 +9,7 @@ id: node.software.field_has_author
 field_name: field_has_author
 entity_type: node
 bundle: software
-label: 'has author'
+label: Author
 description: "Add names of software author , ideally also their ORCID Id with the following template: \r\nName FirstName orcid.org/xxxx-xxxx-xxxx-xxxx \r\nso they can be contacted more easily \r\n( to get the Orcid , google orcid + author name to get it. orcid.org/xxxx-xxxx-xxxx-xxxx).\r\nAdd one item per author.\r\n"
 required: false
 translatable: false

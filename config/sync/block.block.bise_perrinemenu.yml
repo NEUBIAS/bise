@@ -1,0 +1,24 @@
+uuid: 8579bd35-cef3-4e93-9bed-a3798b741115
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.perrine-menu
+  module:
+    - system
+  theme:
+    - bise
+id: bise_perrinemenu
+theme: bise
+region: main_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:perrine-menu'
+settings:
+  id: 'system_menu_block:perrine-menu'
+  label: 'Perrine menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

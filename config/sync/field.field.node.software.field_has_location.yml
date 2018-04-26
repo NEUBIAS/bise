@@ -11,13 +11,13 @@ id: node.software.field_has_location
 field_name: field_has_location
 entity_type: node
 bundle: software
-label: 'has location'
-description: ''
+label: 'Download Page'
+description: 'URL to download the implementation'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  title: 1
   link_type: 17
+  title: 1
 field_type: link

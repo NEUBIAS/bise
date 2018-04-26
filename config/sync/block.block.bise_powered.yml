@@ -1,0 +1,22 @@
+uuid: b745c31f-09b2-425a-9554-d75239cd27f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bise
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: bise_powered
+theme: bise
+region: footer
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Neubias Cost Action CA15124'
+  provider: system
+  label_display: visible
+visibility: {  }

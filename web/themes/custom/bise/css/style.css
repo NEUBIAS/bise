@@ -1,0 +1,12 @@
+.view-page_1 table {
+  table-layout: fixed;
+  width: 700px;
+}
+
+.view-page_1 td, th {
+  padding:10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

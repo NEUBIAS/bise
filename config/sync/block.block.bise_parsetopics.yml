@@ -1,0 +1,29 @@
+uuid: 7439b3c7-66b0-4fc7-b23c-8753c0e5bb56
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.parse-topics
+  module:
+    - system
+  theme:
+    - bise
+id: bise_parsetopics
+theme: bise
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:parse-topics'
+settings:
+  id: 'system_menu_block:parse-topics'
+  label: 'Parse Topics'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n/forum/*"
+    negate: true
+    context_mapping: {  }

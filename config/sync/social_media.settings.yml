@@ -1,0 +1,62 @@
+social_media:
+  facebook_share:
+    enable: 1
+    text: Facebook
+    api_url: 'http://www.facebook.com/share.php?u=[current-page:url]&title=[current-page:title]'
+    api_event: href
+    default_img: 1
+    weight: 1
+    attributes: "target|_blank\nclass|facebook-share"
+  facebook_msg:
+    enable: 1
+    api_url: 'FB.ui({method: ''send'',link: ''[current-page:url]''})'
+    api_event: onclick
+    drupalSettings: 'application_id|Your Application ID'
+    library: social_media/facebook
+    text: 'Facebook messenger'
+    default_img: 1
+    weight: 2
+    attributes: "target|_blank\nclass|facebook-msg"
+  linkedin:
+    enable: 1
+    api_url: 'http://www.linkedin.com/shareArticle?mini=true&url=[current-page:url]&title=[current-page:title]&source=[current-page:url]'
+    api_event: href
+    text: Linkedin
+    default_img: 1
+    weight: 3
+    attributes: "target|_blank\nclass|linkedin"
+  twitter:
+    enable: 1
+    api_url: 'https://twitter.com/intent/tweet?url=[current-page:url]&status=[current-page:title]+[current-page:url]'
+    api_event: href
+    text: Twitter
+    default_img: 1
+    weight: 4
+    attributes: "target|_blank\nclass|twitter"
+  pinterest:
+    enable: 1
+    api_url: 'https://www.pinterest.com/pin/create/button/?url=[current-page:url]&description=[current-page:title]'
+    api_event: href
+    text: Pinterest
+    default_img: 1
+    weight: 5
+    attributes: "target|_blank\nclass|pinterest"
+  google_plus:
+    enable: 1
+    text: 'Google Plus'
+    api_url: 'https://plus.google.com/share?url=[current-page:url]'
+    api_event: href
+    default_img: 1
+    weight: 6
+    attributes: "target|_blank\nclass|google-plus"
+  email:
+    enable: 1
+    api_url: 'mailto:?subject=[current-page:title]&body=Check out this site [current-page:url]'
+    api_event: href
+    text: Email
+    default_img: 1
+    weight: 7
+    attributes: class|email
+langcode: en
+_core:
+  default_config_hash: NxysIX37ZMurlmOlFNtEN51CTRK1cIwA50bnN49mGGE

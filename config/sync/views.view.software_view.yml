@@ -8,6 +8,7 @@ dependencies:
     - node
     - rest
     - serialization
+    - tracker
     - user
 id: software_view
 label: 'software view'

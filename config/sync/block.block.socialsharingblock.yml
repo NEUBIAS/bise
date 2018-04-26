@@ -1,0 +1,33 @@
+uuid: 3a282a41-e7bd-477a-bde5-988dd02c3332
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - social_media
+  theme:
+    - bise
+id: socialsharingblock
+theme: bise
+region: footer
+weight: 0
+provider: null
+plugin: social_sharing_block
+settings:
+  id: social_sharing_block
+  label: 'Social Sharing block'
+  provider: social_media
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      book: book
+      forum: forum
+      page: page
+      sample_data: sample_data
+      software: software
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

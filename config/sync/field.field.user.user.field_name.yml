@@ -10,8 +10,8 @@ id: user.user.field_name
 field_name: field_name
 entity_type: user
 bundle: user
-label: 'Name (true name)'
-description: 'Your name and first name will be display on your information page.'
+label: 'Last name'
+description: 'Last name (family name, surname). Your name and first name will be display on your information page.'
 required: false
 translatable: false
 default_value: {  }

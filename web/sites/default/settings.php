@@ -549,7 +549,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = 'sites/default/files/private';
 
 /**
  * Session write interval:
@@ -783,5 +783,6 @@ $settings['entity_update_batch_size'] = 50;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
 $config_directories['sync'] = '../config/sync';
 $settings['install_profile'] = 'standard';
