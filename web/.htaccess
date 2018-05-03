@@ -141,7 +141,6 @@ AddEncoding gzip svgz
   RewriteCond %{REQUEST_URI} !=/favicon.ico
   RewriteRule ^ index.php [L]
 
-
   # For security reasons, deny access to other PHP files on public sites.
   # Note: The following URI conditions are not anchored at the start (^),
   # because Drupal may be located in a subdirectory. To further improve
@@ -203,4 +202,3 @@ AddEncoding gzip svgz
 ## Redirect request to your development or production server.
     #RewriteRule ^/sites/default/files/(.*)$ https://biii.eu/sites/default/files/$1 [L]
 #</ifmodule>
-
