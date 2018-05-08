@@ -46,8 +46,8 @@ third_party_settings:
         - field_type
         - uid
         - body
+        - field_has_author
         - field_image
-        - field_part_of
         - field_license_openness
         - field_has_entry_curator
       parent_name: ''
@@ -138,7 +138,7 @@ content:
     third_party_settings: {  }
     region: content
   field_attribution_instructions:
-    weight: 28
+    weight: 36
     settings:
       size: 60
       placeholder: ''
@@ -146,7 +146,7 @@ content:
     type: text_textfield
     region: content
   field_free_tagging:
-    weight: 12
+    weight: 31
     settings:
       match_operator: CONTAINS
       size: 60
@@ -160,8 +160,16 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_has_author:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_has_biological_terms:
-    weight: 11
+    weight: 30
     settings:
       match_operator: CONTAINS
       size: 60
@@ -194,7 +202,7 @@ content:
     type: link_default
     region: content
   field_has_entry_curator:
-    weight: 8
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -203,25 +211,25 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_has_function:
-    weight: 8
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_has_implementation:
-    weight: 21
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_has_interaction_level:
-    weight: 27
+    weight: 35
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_has_license:
-    weight: 22
+    weight: 31
     settings:
       size: 60
       placeholder: ''
@@ -237,7 +245,7 @@ content:
     type: link_default
     region: content
   field_has_programming_language:
-    weight: 23
+    weight: 32
     settings:
       match_operator: CONTAINS
       size: 60
@@ -254,7 +262,7 @@ content:
     type: link_default
     region: content
   field_has_topic:
-    weight: 10
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -268,7 +276,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -276,7 +284,7 @@ content:
     type: image_image
     region: content
   field_is_compatible_with:
-    weight: 24
+    weight: 33
     settings:
       match_operator: CONTAINS
       size: 60
@@ -294,7 +302,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_is_dependent_of:
-    weight: 19
+    weight: 28
     settings:
       match_operator: CONTAINS
       size: 60
@@ -303,19 +311,19 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_license_openness:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_platform:
-    weight: 20
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_supported_image_dimension:
-    weight: 25
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -356,7 +364,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_has_author: true
   path: true
   promote: true
   sticky: true
