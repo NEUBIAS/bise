@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c4bd99fa4caffc035e175afa7bce7c",
+    "content-hash": "6a53cd773113718692b4b921d162eec2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4346,7 +4346,7 @@
             "version": "1.8.3",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.3/chosen_v1.8.3.zip",
+                "url": "/homez.60/biiieudinm/repo/chosen_v1.8.3.zip",
                 "reference": null,
                 "shasum": null
             },
