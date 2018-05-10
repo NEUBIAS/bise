@@ -1,0 +1,12 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: sites/default/files/NEUBIASlogo.png
+favicon:
+  use_default: 0
+  path: sites/default/files/NEUBIASlogo-ConvertImage.ico
+  mimetype: image/vnd.microsoft.icon
