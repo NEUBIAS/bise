@@ -10,8 +10,8 @@ id: node.book.field_is_training_material_of
 field_name: field_is_training_material_of
 entity_type: node
 bundle: book
-label: 'is training material of'
-description: ''
+label: 'Tool(s) used for training'
+description: 'this material is trainning material of the following entries in BISE'
 required: false
 translatable: false
 default_value: {  }
