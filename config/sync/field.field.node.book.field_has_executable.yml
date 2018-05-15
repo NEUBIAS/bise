@@ -1,0 +1,23 @@
+uuid: 66f8ec83-a771-4a79-a648-10802486fe12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_executable
+    - node.type.book
+  module:
+    - link
+id: node.book.field_has_executable
+field_name: field_has_executable
+entity_type: node
+bundle: book
+label: 'has executable'
+description: 'any docker image, binder site, jupiter link that can be used directly whatever the student computer configuration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

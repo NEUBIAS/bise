@@ -1100,7 +1100,7 @@ display:
       path: all-content
       menu:
         type: normal
-        title: 'Filter content'
+        title: 'Advanced Search'
         menu_name: perrine-menu
         description: 'All database content with filters'
         parent: ''

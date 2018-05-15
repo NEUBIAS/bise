@@ -1,0 +1,19 @@
+uuid: 3f1bdb16-618e-4026-8332-d9718c2042d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_has_image_data
+field_name: field_has_image_data
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
