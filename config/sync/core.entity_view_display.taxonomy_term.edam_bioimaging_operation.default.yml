@@ -1,0 +1,30 @@
+uuid: f876a7d7-7c17-44b5-ab2c-4900f12b0d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.edam_bioimaging_operation.field_synonyms
+    - taxonomy.vocabulary.edam_bioimaging_operation
+  module:
+    - text
+id: taxonomy_term.edam_bioimaging_operation.default
+targetEntityType: taxonomy_term
+bundle: edam_bioimaging_operation
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_synonyms:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
