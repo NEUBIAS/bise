@@ -34,6 +34,7 @@ module:
   history: 0
   honeypot: 0
   image: 0
+  image_captcha: 0
   kint: 0
   layout_discovery: 0
   link: 0
@@ -48,6 +49,7 @@ module:
   pathauto: 0
   quickedit: 0
   rdf: 0
+  recaptcha: 0
   redirect: 0
   responsive_image: 0
   rest: 0
