@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 formId: user_register_form
-captchaType: default
-label: null
+captchaType: recaptcha/reCAPTCHA
+label: user_register_form
