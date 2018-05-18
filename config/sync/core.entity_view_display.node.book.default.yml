@@ -9,6 +9,47 @@ dependencies:
   module:
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          top: div
+          first: div
+          second: div
+          bottom: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      top:
+        - body
+        - links
+        - field_is_training_material_of
+        - field_title
+        - field_url
+        - field_doi
+        - field_author_s_
+        - field_trainer_s_presenter_s_
+        - field_date
+        - field_prerequisites
+        - field_topics_covered
+        - field_format
+        - field_content_type
+        - field_parent
+        - field_has_license
+        - field_expected
+        - field_event
+        - field_has_slides
+        - field_has_practical_exercices
+        - field_has_image_data
+        - field_free_tagging
 _core:
   default_config_hash: 7UKHHzhlAE0hzKaKG_KHqUXXOp85mAQ1nZTOep8quTc
 id: node.book.default
