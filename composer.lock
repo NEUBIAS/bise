@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb2ff2fc35a4c030e01d2a5d691dcc8d",
+    "content-hash": "e7e1c8ec51b47f78744456a6bfb5935e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2796,6 +2796,52 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/honeypot"
             }
+        },
+        {
+            "name": "drupal/httpbl",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/httpbl",
+                "reference": "ce8c3050574e89a186eea4030476f358569aa006"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1491852543",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bryrock",
+                    "homepage": "https://www.drupal.org/user/346823"
+                },
+                {
+                    "name": "praseodym",
+                    "homepage": "https://www.drupal.org/user/18413"
+                }
+            ],
+            "description": "Implements the http:BL blacklisting service from Project Honey Pot",
+            "homepage": "https://www.drupal.org/project/httpbl",
+            "support": {
+                "source": "http://cgit.drupalcode.org/httpbl"
+            },
+            "time": "2017-04-10T19:24:18+00:00"
         },
         {
             "name": "drupal/markdown",
@@ -9996,6 +10042,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/contribute": 10,
+        "drupal/httpbl": 20,
         "drupal/drupal-extension": 20
     },
     "prefer-stable": true,

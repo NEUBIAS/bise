@@ -49,6 +49,7 @@
         "drupal/feeds": "^3.0",
         "drupal/google_analytics": "^2.2",
         "drupal/honeypot": "^1.27",
+        "drupal/httpbl": "1.x-dev",
         "drupal/markdown": "^1.2",
         "drupal/menu_token": "^1.0",
         "drupal/pathauto": "^1.1",
