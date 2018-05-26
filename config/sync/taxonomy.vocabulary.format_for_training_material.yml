@@ -1,9 +1,0 @@
-uuid: 99eb2593-a014-46ec-9b71-f6797598ea74
-langcode: en
-status: true
-dependencies: {  }
-name: 'Format for training material'
-vid: format_for_training_material
-description: 'In which format is presented this training material'
-hierarchy: 0
-weight: 0

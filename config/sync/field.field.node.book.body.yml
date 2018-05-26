@@ -13,8 +13,8 @@ id: node.book.body
 field_name: body
 entity_type: node
 bundle: book
-label: Synopsis
-description: 'Free text description of the training material purpose, (such as learning outcomes), the summary field can be used as a short description for teaser views.'
+label: Body
+description: ''
 required: false
 translatable: true
 default_value: {  }

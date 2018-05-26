@@ -56,17 +56,8 @@ display:
           offset: 0
       style:
         type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
         type:
           id: type
@@ -274,7 +265,6 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Statistics counter'
     cache_metadata:
       max-age: -1
       contexts:
