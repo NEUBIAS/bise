@@ -1,0 +1,13 @@
+uuid: c7744e82-04c4-41ad-8097-7c5dc0ea79c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - httpbl
+_core:
+  default_config_hash: k7BsmCUovqaAv4ABLgON5ipARbJcbD77pklxIJsdtWo
+id: host_multiple_greylist_action
+label: 'Grey-list host(s)'
+type: host
+plugin: host_multiple_greylist_action
+configuration: {  }
