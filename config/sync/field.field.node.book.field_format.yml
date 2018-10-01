@@ -1,0 +1,29 @@
+uuid: d7176613-32ac-45e1-9452-f60d42f0053f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_format
+    - node.type.book
+    - taxonomy.vocabulary.format_for_training_material
+id: node.book.field_format
+field_name: field_format
+entity_type: node
+bundle: book
+label: Format
+description: "Which format ? \r\nBook /Book chapter / workshop material / video tutorial (or webinar) / Tutorial (short explanation about specific topic) /web... \r\nIt is a taxonomy for now, for which terms can be added in this test version.\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      format_for_training_material: format_for_training_material
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

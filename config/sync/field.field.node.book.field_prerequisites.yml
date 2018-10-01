@@ -1,0 +1,21 @@
+uuid: 18200edb-8d11-4e60-aab9-d54333558d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prerequisites
+    - node.type.book
+  module:
+    - text
+id: node.book.field_prerequisites
+field_name: field_prerequisites
+entity_type: node
+bundle: book
+label: Prerequisites
+description: 'could also be seen as Target Audience. For example it can point to link to training material that would be recommended to follow first, or a usage level recommended.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

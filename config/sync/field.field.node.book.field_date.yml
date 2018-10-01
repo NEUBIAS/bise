@@ -1,0 +1,21 @@
+uuid: 7fc02181-1486-4d77-8bb2-1fa3ed704e91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.book
+  module:
+    - datetime
+id: node.book.field_date
+field_name: field_date
+entity_type: node
+bundle: book
+label: Date
+description: 'start date of the event where it was presented, or last modified date for the materia at the time of the curation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
