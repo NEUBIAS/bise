@@ -1,0 +1,19 @@
+spambot_whitelist_email: ''
+spambot_whitelist_username: ''
+spambot_whitelist_ip: ''
+spambot_user_register_protect: true
+spambot_check_blocked_accounts: true
+spambot_log_blocked_registration: true
+spambot_sfs_api_key: ''
+spambot_blocked_message: false
+spambot_cron_user_limit: '0'
+spambot_spam_account_action: '1'
+spambot_criteria_email: '1'
+spambot_criteria_username: '1'
+spambot_criteria_ip: '5'
+spambot_blacklisted_delay: '20'
+spambot_blocked_message_email: 'Your email address or username or IP address is blacklisted.'
+spambot_blocked_message_username: 'Your email address or username or IP address is blacklisted.'
+spambot_blocked_message_ip: 'Your email address or username or IP address is blacklisted.'
+_core:
+  default_config_hash: b9OvMaqhiWpAAs2BrXcpft6SNGb4PffGIm2124S1YPs

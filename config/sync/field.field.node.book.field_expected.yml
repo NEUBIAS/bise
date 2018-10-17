@@ -1,0 +1,25 @@
+uuid: 619df29b-dbef-441f-b78c-f3940484e9f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expected
+    - node.type.book
+id: node.book.field_expected
+field_name: field_expected
+entity_type: node
+bundle: book
+label: 'Expected duration'
+description: 'Time needed to go trough this training, in hours. may be modified in the form by a proper duration field.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: hours
+field_type: integer

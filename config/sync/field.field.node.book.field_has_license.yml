@@ -1,0 +1,19 @@
+uuid: aaf492b9-41a3-4040-8fcd-fc8668144624
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_license
+    - node.type.book
+id: node.book.field_has_license
+field_name: field_has_license
+entity_type: node
+bundle: book
+label: License
+description: 'The name of the license indicating the rights for reuse/modification of this training material'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

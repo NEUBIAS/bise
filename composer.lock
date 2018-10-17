@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a53cd773113718692b4b921d162eec2",
+    "content-hash": "75c79233808f5ed226629085bebea8af",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2798,6 +2798,52 @@
             }
         },
         {
+            "name": "drupal/httpbl",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/httpbl",
+                "reference": "1cc5ca1c80aa920af777d3ae09fc1bfd16e868ab"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1534063680",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bryrock",
+                    "homepage": "https://www.drupal.org/user/346823"
+                },
+                {
+                    "name": "praseodym",
+                    "homepage": "https://www.drupal.org/user/18413"
+                }
+            ],
+            "description": "Implements the http:BL blacklisting service from Project Honey Pot",
+            "homepage": "https://www.drupal.org/project/httpbl",
+            "support": {
+                "source": "http://cgit.drupalcode.org/httpbl"
+            },
+            "time": "2018-08-13T23:25:33+00:00"
+        },
+        {
             "name": "drupal/markdown",
             "version": "1.2.0",
             "source": {
@@ -3377,6 +3423,60 @@
                 "source": "http://cgit.drupalcode.org/social_media",
                 "issues": "https://www.drupal.org/project/issues/social_media"
             }
+        },
+        {
+            "name": "drupal/spambot",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/spambot",
+                "reference": "ca4a7b99e761517770c7e066b052e7bc572c881c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1521875884",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bengtan",
+                    "homepage": "https://www.drupal.org/user/132729"
+                },
+                {
+                    "name": "kala4ek",
+                    "homepage": "https://www.drupal.org/user/1945174"
+                },
+                {
+                    "name": "me-taras",
+                    "homepage": "https://www.drupal.org/user/2526320"
+                },
+                {
+                    "name": "miiimooo",
+                    "homepage": "https://www.drupal.org/user/62954"
+                }
+            ],
+            "description": "Anti-spam module that uses data from www.stopforumspam.com to protect the user registration form against known spammers and spambots.",
+            "homepage": "https://www.drupal.org/project/spambot",
+            "support": {
+                "source": "http://cgit.drupalcode.org/spambot"
+            },
+            "time": "2018-03-24T08:11:33+00:00"
         },
         {
             "name": "drupal/structure_sync",
@@ -9996,6 +10096,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/contribute": 10,
+        "drupal/httpbl": 20,
+        "drupal/spambot": 20,
         "drupal/drupal-extension": 20
     },
     "prefer-stable": true,
