@@ -80,7 +80,6 @@ hidden:
   field_expected: true
   field_format: true
   field_free_tagging: true
-  field_has_executable: true
   field_has_image_data: true
   field_has_license: true
   field_has_practical_exercices: true
