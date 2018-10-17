@@ -16,9 +16,13 @@ content:
   items:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   more_link:
     weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   checked: true
   description: true
