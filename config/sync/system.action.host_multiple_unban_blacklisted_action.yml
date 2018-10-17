@@ -1,0 +1,13 @@
+uuid: 8fa83aa7-4b26-488a-b329-ab4e909cc8d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - httpbl
+_core:
+  default_config_hash: rN9DKxJ8uHauEbjTXo0Mk86yCvspVS0Byh2guEHQ8vg
+id: host_multiple_unban_blacklisted_action
+label: 'Unban Blacklisted host(s)'
+type: host
+plugin: host_multiple_unban_blacklisted_action
+configuration: {  }

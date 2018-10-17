@@ -1,0 +1,19 @@
+uuid: 6d67a8ff-355d-4450-a210-f8ff6bd74d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_synonyms
+    - taxonomy.vocabulary.edam_bioimaging_operation
+id: taxonomy_term.edam_bioimaging_operation.field_synonyms
+field_name: field_synonyms
+entity_type: taxonomy_term
+bundle: edam_bioimaging_operation
+label: Synonyms
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

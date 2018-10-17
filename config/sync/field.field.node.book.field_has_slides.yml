@@ -1,0 +1,23 @@
+uuid: f9e46e6c-041d-4bd6-87a1-3b1d96927cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_slides
+    - node.type.book
+  module:
+    - link
+id: node.book.field_has_slides
+field_name: field_has_slides
+entity_type: node
+bundle: book
+label: 'has slides'
+description: 'link to any slides, or text form used by this training material'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
