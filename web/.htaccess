@@ -131,16 +131,12 @@ AddEncoding gzip svgz
   # Rewrite install.php during installation to see if mod_rewrite is working
   RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
 
-# Redirect request to image files under /sites/default/files/ to the production server. (Kota)
-  RewriteRule ^(sites/default/files/.*\.(?:jpg|jpeg|JPG|png|PNG|gif|GIF|txt|csv|ico))$ https://biii.eu/$1 [L]
-
   # Pass all requests not referring directly to files in the filesystem to
   # index.php.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
   RewriteRule ^ index.php [L]
-
 
   # For security reasons, deny access to other PHP files on public sites.
   # Note: The following URI conditions are not anchored at the start (^),
@@ -191,16 +187,3 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
-
-# to redirect request to files under site/default/files to production site. 
-#<ifmodule mod_rewrite.c="">
-    #RewriteEngine on
-    #RewriteCond %{REQUEST_FILENAME} -f [OR]
-    #RewriteCond %{REQUEST_FILENAME} -d
-    #RewriteRule (.*) - [L]
-## Request resides in your 'sites/default/files' folder.
-    #RewriteCond %{REQUEST_URI} ^/sites/default/files/(.*)$
-## Redirect request to your development or production server.
-    #RewriteRule ^/sites/default/files/(.*)$ https://biii.eu/sites/default/files/$1 [L]
-#</ifmodule>
-
