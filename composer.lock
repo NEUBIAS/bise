@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f3168e41f2308ae75a87cf382493241",
+    "content-hash": "842f188472b7ab0f06ebf0b80d4f89f4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3276,6 +3276,57 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
+            }
+        },
+        {
+            "name": "drupal/popular_tags",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/popular_tags",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/popular_tags-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "ecfe1b8f98eeaa8393a76c1a49da3bf6c5c6d623"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1499376544",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jitesh Doshi",
+                    "homepage": "https://www.drupal.org/user/1799550"
+                },
+                {
+                    "name": "brooke_heaton",
+                    "homepage": "https://www.drupal.org/user/402231"
+                }
+            ],
+            "description": "Allows the users to select taxonomy terms/tags by just clicking on them rather than typing them (auto-complete) or selecting them from a select box/checkbox/radio etc. It shows them a list of tag links, sorted by popularity (defined as how many nodes are tagged with it), up to a configurable maximum number.",
+            "homepage": "https://www.drupal.org/project/popular_tags",
+            "support": {
+                "source": "http://cgit.drupalcode.org/popular_tags"
             }
         },
         {
@@ -10401,6 +10452,7 @@
     "stability-flags": {
         "drupal/contribute": 10,
         "drupal/httpbl": 20,
+        "drupal/popular_tags": 15,
         "drupal/spambot": 20,
         "drupal/drupal-extension": 20
     },
