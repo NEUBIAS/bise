@@ -9,7 +9,7 @@ dependencies:
     - bise
 id: socialsharingblock
 theme: bise
-region: footer
+region: sidebar_second
 weight: 0
 provider: null
 plugin: social_sharing_block
