@@ -4,8 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.software
+    - field.storage.node.field_has_entry_curator
     - taxonomy.vocabulary.edam_bioimaging_operation
+    - taxonomy.vocabulary.edam_bioimaging_topic
     - user.role.administrator
     - user.role.confirmed_ta
   module:
@@ -45,7 +46,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: input_required
         options:
           submit_button: Apply
           reset_button: false
@@ -54,6 +55,8 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
       pager:
         type: mini
         options:
@@ -212,43 +215,97 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        field_has_entry_curator:
+          id: field_has_entry_curator
+          table: node__field_has_entry_curator
+          field: field_has_entry_curator
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            software: software
+          label: 'Entry Curator'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        field_has_author_value:
+          id: field_has_author_value
+          table: node__field_has_author
+          field: field_has_author_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
+            operator_id: field_has_author_value_op
+            label: 'Author (field_has_author)'
+            description: 'A particular author? Select is empty for empty field'
+            use_operator: true
+            operator: field_has_author_value_op
+            identifier: field_has_author_value
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            placeholder: 'Enter an author name, or choose operator is empty'
           is_grouped: false
           group_info:
             label: ''
@@ -261,9 +318,52 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+          plugin_id: string
+        field_has_entry_curator_target_id:
+          id: field_has_entry_curator_target_id
+          table: node__field_has_entry_curator
+          field: field_has_entry_curator_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_entry_curator_target_id_op
+            label: 'Entry Curator '
+            description: 'Entry curator (a particular one? chosse is empty fo no curator set)'
+            use_operator: true
+            operator: field_has_entry_curator_target_id_op
+            identifier: field_has_entry_curator_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            placeholder: 'Enter an CURATOR name, or choose operator is empty'
+            min_placeholder: curator
+            max_placeholder: curator
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
         field_has_function_target_id:
           id: field_has_function_target_id
           table: node__field_has_function
@@ -271,29 +371,32 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: empty
+          operator: or
           value: {  }
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
+            operator_id: field_has_function_target_id_op
+            label: 'has function (field_has_function)'
+            description: operation
+            use_operator: true
+            operator: field_has_function_target_id_op
+            identifier: field_has_function_target_id
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
             reduce: false
-            chosen_override: false
-            disable_search: false
-            search_contains: false
-            placeholder_text_multiple: ''
-            placeholder_text_single: ''
-            no_results_text: ''
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
           is_grouped: false
           group_info:
             label: ''
@@ -310,6 +413,58 @@ display:
           type: textfield
           limit: true
           vid: edam_bioimaging_operation
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_has_topic_target_id:
+          id: field_has_topic_target_id
+          table: node__field_has_topic
+          field: field_has_topic_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_topic_target_id_op
+            label: 'has topic (field_has_topic)'
+            description: Topic
+            use_operator: true
+            operator: field_has_topic_target_id_op
+            identifier: field_has_topic_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            reduce: false
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: edam_bioimaging_topic
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -337,19 +492,20 @@ display:
       arguments: {  }
       display_extenders: {  }
       filter_groups:
-        operator: OR
-        groups:
-          1: AND
+        operator: AND
+        groups: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - user
         - 'user.node_grants:view'
         - user.roles
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_has_entry_curator'
   page_1:
     display_plugin: page
     id: page_1
@@ -358,13 +514,16 @@ display:
     display_options:
       display_extenders: {  }
       path: tag-me-
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - user
         - 'user.node_grants:view'
         - user.roles
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_has_entry_curator'
