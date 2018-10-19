@@ -1,0 +1,38 @@
+uuid: 2795038f-7028-4685-8a00-223adafdabeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tag_me_
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bise
+id: exposedformtag_me_page_1
+theme: bise
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:tag_me_-page_1'
+settings:
+  id: 'views_exposed_filter_block:tag_me_-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: tag-me-
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      confirmed_ta: confirmed_ta
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

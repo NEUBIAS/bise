@@ -11,7 +11,7 @@ dependencies:
 id: bise_useraccountmenu
 theme: bise
 region: sidebar_first
-weight: -8
+weight: -12
 provider: null
 plugin: 'system_menu_block:account'
 settings:
