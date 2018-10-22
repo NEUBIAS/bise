@@ -21,15 +21,23 @@ content:
   description:
     weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   feed_icon:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   image:
     weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   items:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   link:
     type: uri_link
     weight: 4
