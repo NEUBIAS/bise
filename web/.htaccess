@@ -132,6 +132,8 @@ AddEncoding gzip svgz
   RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
 
 # Redirect request to image files under /sites/default/files/ to the production server. (Kota)
+  #RewriteCond %{HTTP_REFERER} !^https://biii\.eu
+  #RewriteCond %{HTTP_REFERER} !^http://biii\.eu
   RewriteRule ^(sites/default/files/.*\.(?:jpg|jpeg|JPG|png|PNG|gif|GIF|txt|csv|ico))$ https://biii.eu/$1 [L]
 
   # Pass all requests not referring directly to files in the filesystem to
