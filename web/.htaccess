@@ -131,8 +131,15 @@ AddEncoding gzip svgz
   # Rewrite install.php during installation to see if mod_rewrite is working
   RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
 
-# Redirect request to image files under /sites/default/files/ to the production server. (Kota)
-  #RewriteRule ^(sites/default/files/.*\.(?:jpg|jpeg|JPG|png|PNG|gif|GIF|txt|csv|ico))$ https://biii.eu/$1 [L]
+  # Redirect request to image files under /sites/default/files/ to the production server. (Kota)
+  # If the request is to the files directory. 
+  RewriteCond %{REQUEST_URI} ^/sites/default/files/(.*)$ 
+  # and the environment is not production 
+  RewriteCond %{HTTP_HOST} !^biii.eu$ [NC] 
+  RewriteCond %{REQUEST_FILENAME} !-f 
+  RewriteCond %{REQUEST_FILENAME} !-d 
+# Redirect the request to the production server. 
+  RewriteRule ^(sites/default/files/.*\.(?:jpg|jpeg|JPG|png|PNG|gif|GIF|txt|csv|ico))$ https://biii.eu/$1 [L]
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php.
