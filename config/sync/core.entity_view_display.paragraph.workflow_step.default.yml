@@ -1,0 +1,23 @@
+uuid: 07ce8ed0-2899-477f-a71f-529557178ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.workflow_step.field_current_workflow_step_
+    - field.field.paragraph.workflow_step.field_previous_workflow_step
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.default
+targetEntityType: paragraph
+bundle: workflow_step
+mode: default
+content:
+  field_current_workflow_step_:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_previous_workflow_step: true
