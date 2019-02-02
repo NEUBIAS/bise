@@ -1,5 +1,6 @@
 <?php
 
+echo "hello";
 /** database settings
 **/
 $databases['default']['default'] = array (
