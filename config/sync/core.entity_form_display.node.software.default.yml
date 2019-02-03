@@ -30,6 +30,7 @@ dependencies:
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
+    - field.field.node.software.field_workflow_steps
     - image.style.thumbnail
     - node.type.software
   module:
@@ -37,6 +38,7 @@ dependencies:
     - field_group
     - image
     - link
+    - paragraphs
     - text
 third_party_settings:
   field_group:
@@ -333,6 +335,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_workflow_steps:
+    type: entity_reference_paragraphs
+    weight: 37
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox

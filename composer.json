@@ -52,6 +52,7 @@
         "drupal/httpbl": "1.x-dev",
         "drupal/markdown": "^1.2",
         "drupal/menu_token": "^1.0",
+        "drupal/paragraphs": "^1.5",
         "drupal/pathauto": "^1.1",
         "drupal/popular_tags": "^1.0@alpha",
         "drupal/recaptcha": "^2.3",
