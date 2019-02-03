@@ -1,0 +1,28 @@
+uuid: a2b4b789-1a65-4269-b69a-e91cabc8bb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_current_workflow_step_
+    - node.type.software
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.field_current_workflow_step_
+field_name: field_current_workflow_step_
+entity_type: paragraph
+bundle: workflow_step
+label: 'current workflow step '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
