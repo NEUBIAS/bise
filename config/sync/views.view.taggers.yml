@@ -453,56 +453,19 @@ display:
             operator: ''
           group: 1
       sorts:
-        access:
-          id: access
+        name:
+          id: name
           table: users_field_data
-          field: access
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
           order: ASC
           exposed: true
           expose:
-            label: 'Last access'
-          granularity: second
+            label: Name
           entity_type: user
-          entity_field: access
-          plugin_id: date
-        field_skill_target_id:
-          id: field_skill_target_id
-          table: user__field_skill
-          field: field_skill_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: 'User skills (field_skill)'
-          plugin_id: standard
-        field_name_value:
-          id: field_name_value
-          table: user__field_name
-          field: field_name_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: 'Last name (field_name)'
-          plugin_id: standard
-        field_first_name_value:
-          id: field_first_name_value
-          table: user__field_first_name
-          field: field_first_name_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: 'First name (field_first_name)'
+          entity_field: name
           plugin_id: standard
       title: Taggers
       header: {  }

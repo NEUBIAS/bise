@@ -24,7 +24,6 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
-  entity_reference_revisions: 0
   eva: 0
   field: 0
   field_group: 0
@@ -90,7 +89,6 @@ module:
   shs: 1
   shs_chosen: 1
   views: 10
-  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
