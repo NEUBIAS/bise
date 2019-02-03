@@ -4544,12 +4544,20 @@
             ],
             "authors": [
                 {
-                    "name": "HaiNN",
+                    "name": "Hai Nguyen",
                     "homepage": "https://www.drupal.org/user/1229130"
+                },
+                {
+                    "name": "MegaChriz",
+                    "homepage": "https://www.drupal.org/user/654114"
                 },
                 {
                     "name": "WeebPal",
                     "homepage": "https://www.drupal.org/user/1861072"
+                },
+                {
+                    "name": "buivankim2020",
+                    "homepage": "https://www.drupal.org/user/2959439"
                 }
             ],
             "description": "A flexible, recolorable theme with many regions and a responsive, mobile-first layout.",
