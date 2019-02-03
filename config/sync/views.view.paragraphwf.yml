@@ -503,9 +503,8 @@ display:
       display_extenders: {  }
       path: wfsteps
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       defaults:
         style: true
