@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: workflow_step
-label: 'workflow steps (components)'
+label: 'workflow steps'
 icon_uuid: null
-description: 'description of one specific step of a workflow.'
+description: 'description of one specific step of a workflow =  component, and previous component to link them'
 behavior_plugins: {  }
