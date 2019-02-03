@@ -1,0 +1,10 @@
+uuid: 458d152b-45a3-4223-964e-6ef8fd5334c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.paragraph_jsonview
+label: paragraph_jsonview
+targetEntityType: paragraph
+cache: true
