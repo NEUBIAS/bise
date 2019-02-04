@@ -1,0 +1,28 @@
+uuid: 9fe2f8d3-d9cf-40c7-b22e-245a162e3dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_previous_workflow_step
+    - node.type.software
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.field_previous_workflow_step
+field_name: field_previous_workflow_step
+entity_type: paragraph
+bundle: workflow_step
+label: 'previous workflow step'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      software: software
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
