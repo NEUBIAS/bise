@@ -1,6 +1,6 @@
 uuid: 5195082d-4994-4282-8373-7d287ea0aec6
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: bise_breadcrumbs
 theme: bise
-region: breadcrumb
+region: navigation
 weight: 0
 provider: null
 plugin: system_breadcrumb_block

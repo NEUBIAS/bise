@@ -1,6 +1,6 @@
 uuid: 8579bd35-cef3-4e93-9bed-a3798b741115
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.perrine-menu
@@ -10,7 +10,7 @@ dependencies:
     - bise
 id: bise_perrinemenu
 theme: bise
-region: main_menu
+region: navigation
 weight: 0
 provider: null
 plugin: 'system_menu_block:perrine-menu'

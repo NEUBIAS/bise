@@ -10,8 +10,8 @@ dependencies:
     - bise
 id: bise_exposedformtestsearchpage_1
 theme: bise
-region: sidebar_first
-weight: -14
+region: header
+weight: -5
 provider: null
 plugin: 'views_exposed_filter_block:testsearch-page_1'
 settings:

@@ -13,7 +13,7 @@ _core:
 id: bise_footer
 theme: bise
 region: header
-weight: -9
+weight: -13
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: bise_main_menu
 theme: bise
-region: primary_menu
-weight: -9
+region: navigation_collapsible
+weight: -14
 provider: null
 plugin: 'system_menu_block:main'
 settings:

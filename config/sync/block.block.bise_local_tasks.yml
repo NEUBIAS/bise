@@ -9,7 +9,7 @@ _core:
 id: bise_local_tasks
 theme: bise
 region: header
-weight: -6
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:

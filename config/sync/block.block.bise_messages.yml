@@ -12,7 +12,7 @@ _core:
 id: bise_messages
 theme: bise
 region: header
-weight: -9
+weight: -14
 provider: null
 plugin: system_messages_block
 settings:

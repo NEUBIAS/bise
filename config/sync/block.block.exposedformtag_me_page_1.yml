@@ -2,12 +2,9 @@ uuid: 2795038f-7028-4685-8a00-223adafdabeb
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.tag_me_
   module:
     - system
     - user
-    - views
   theme:
     - bise
 id: exposedformtag_me_page_1
