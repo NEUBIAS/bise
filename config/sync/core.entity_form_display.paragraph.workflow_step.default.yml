@@ -1,0 +1,44 @@
+uuid: bdc0c17d-a05a-4377-b389-a11e9f831c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.workflow_step.field_current_workflow_step_
+    - field.field.paragraph.workflow_step.field_previous_workflow_step
+    - field.field.paragraph.workflow_step.field_title_of_the_setp
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.default
+targetEntityType: paragraph
+bundle: workflow_step
+mode: default
+content:
+  field_current_workflow_step_:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_previous_workflow_step:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title_of_the_setp:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
