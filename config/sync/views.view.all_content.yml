@@ -1231,7 +1231,7 @@ display:
       menu:
         type: normal
         title: 'Advanced Search'
-        menu_name: perrine-menu
+        menu_name: main
         description: 'All database content with filters'
         parent: ''
         weight: 0

@@ -1,0 +1,23 @@
+uuid: a974c761-b5ad-4938-be58-da871d8701b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.testsearch
+  module:
+    - views
+  theme:
+    - bootstrap
+id: exposedformtestsearchpage_1_2
+theme: bootstrap
+region: header
+weight: -6
+provider: null
+plugin: 'views_exposed_filter_block:testsearch-page_1'
+settings:
+  id: 'views_exposed_filter_block:testsearch-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }
