@@ -98,6 +98,7 @@ theme:
   seven: 0
   zircon: 0
   bise: 0
+  bootstrap: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 profile: standard
