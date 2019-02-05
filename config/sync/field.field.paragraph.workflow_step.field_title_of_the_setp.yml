@@ -9,8 +9,8 @@ id: paragraph.workflow_step.field_title_of_the_setp
 field_name: field_title_of_the_setp
 entity_type: paragraph
 bundle: workflow_step
-label: 'Title of the step'
-description: "Please add a title such as Step 1: Threshold the image\r\nThen select the component used below, and the previous step as well"
+label: 'Current workflow step title'
+description: "Please add a title such as Step 1: Threshold the image\r\nThen select the component used below, the operation that it is doing, and the previous step as well"
 required: false
 translatable: false
 default_value:
