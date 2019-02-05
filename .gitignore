@@ -48,6 +48,7 @@ web/sites/simpletest
 private
 .env
 .env-template
+.lando.yml
 drush/bise.aliases.drushrc.php
 drushrc.php
 drush/sites/*.site.yml
