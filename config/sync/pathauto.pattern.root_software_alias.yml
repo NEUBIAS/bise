@@ -9,14 +9,16 @@ label: 'Root Software Alias'
 type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
-  62dd47ea-31e3-4288-8360-996316392f28:
+  688e97d2-88a7-4946-8d13-c3555e7705f8:
     id: node_type
     bundles:
+      book: book
+      sample_data: sample_data
       software: software
     negate: false
     context_mapping:
       node: node
-    uuid: 62dd47ea-31e3-4288-8360-996316392f28
+    uuid: 688e97d2-88a7-4946-8d13-c3555e7705f8
 selection_logic: and
 weight: -5
 relationships: {  }
