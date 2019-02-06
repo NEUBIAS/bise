@@ -10,7 +10,7 @@ field_name: field_is_compatible_with
 entity_type: node
 bundle: software
 label: 'is compatible with'
-description: 'ONLY for confirmed taggers (not displayed as an input but just accessible by everyone) can also be called from another software or any programming language such as macro , visual programming that it can be called from. Example: IJ Macros, Icy Protocols'
+description: "ONLY for confirmed taggers (not displayed as an input but just accessible by everyone) can also be called from another software or any programming language such as macro , visual programming that it can be called from. Example: IJ Macros, Icy Protocols\r\n\r\n<li>If you can not find the software entry, please create the missing entry <a href=\"/node/add/software\" target=\"_blank\">Add New Software Entry</a></li>"
 required: false
 translatable: false
 default_value: {  }

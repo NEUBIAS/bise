@@ -11,7 +11,7 @@ field_name: field_current_workflow_step_
 entity_type: paragraph
 bundle: workflow_step
 label: 'Component or tool used in this step'
-description: 'If the entry does not exist, please add a new content: "software " for it in biii.eu.'
+description: '<li>If you can not find the component (software entry), please create the missing entry <a href="/node/add/software" target="_blank">Add New Software Entry</a></li>'
 required: false
 translatable: false
 default_value: {  }
