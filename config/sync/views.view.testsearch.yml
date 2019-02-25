@@ -45,7 +45,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -55,7 +55,7 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 10
+          items_per_page: 0
           offset: 0
           id: 0
           total_pages: null
@@ -63,7 +63,7 @@ display:
             previous: ‹‹
             next: ››
           expose:
-            items_per_page: true
+            items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: true
@@ -532,8 +532,8 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
-            description: ''
+            label: ''
+            description: 'Look also to Advanced Search '
             use_operator: false
             operator: search_api_fulltext_op
             identifier: search_api_fulltext

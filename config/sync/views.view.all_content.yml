@@ -15,6 +15,7 @@ dependencies:
     - node.type.sample_data
     - node.type.software
     - system.menu.perrine-menu
+    - taxonomy.vocabulary.biological_problems
     - taxonomy.vocabulary.edam_bioimaging_operation
     - taxonomy.vocabulary.edam_bioimaging_topic
     - taxonomy.vocabulary.image_dimension
@@ -713,6 +714,51 @@ display:
           field_api_classes: false
           plugin_id: field
       filters:
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            sample_data: sample_data
+            software: software
+            book: book
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
         status:
           value: '1'
           table: node_field_data
@@ -763,6 +809,162 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: string
+        field_has_function_target_id:
+          id: field_has_function_target_id
+          table: node__field_has_function
+          field: field_has_function_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_function_target_id_op
+            label: 'For which operation?'
+            description: 'Select the function of the content you are looking for'
+            use_operator: false
+            operator: field_has_function_target_id_op
+            identifier: field_has_function_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: true
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: edam_bioimaging_operation
+          hierarchy: true
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_has_topic_target_id_1:
+          id: field_has_topic_target_id_1
+          table: node__field_has_topic
+          field: field_has_topic_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_topic_target_id_1_op
+            label: 'for which topic?'
+            description: 'broad domain or field of interest, of study, application, work, data, or technology'
+            use_operator: false
+            operator: field_has_topic_target_id_1_op
+            identifier: field_has_topic_target_id_1
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: edam_bioimaging_topic
+          hierarchy: true
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_supported_image_dimension_target_id:
+          id: field_supported_image_dimension_target_id
+          table: node__field_supported_image_dimension
+          field: field_supported_image_dimension_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_supported_image_dimension_target_id_op
+            label: 'Supported image dimension '
+            description: ''
+            use_operator: false
+            operator: field_supported_image_dimension_target_id_op
+            identifier: field_supported_image_dimension_target_id
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: image_dimension
+          hierarchy: false
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
         field_type_target_id:
           id: field_type_target_id
           table: node__field_type
@@ -812,165 +1014,9 @@ display:
               2: {  }
               3: {  }
           reduce_duplicates: false
-          type: shs_chosen
+          type: select
           limit: true
           vid: software_artifact
-          hierarchy: false
-          error_message: true
-          plugin_id: shs_chosen_taxonomy_index_tid
-        field_has_function_target_id:
-          id: field_has_function_target_id
-          table: node__field_has_function
-          field: field_has_function_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_has_function_target_id_op
-            label: 'Type of function'
-            description: ''
-            use_operator: false
-            operator: field_has_function_target_id_op
-            identifier: field_has_function_target_id
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: administrator
-              confirmed_ta: confirmed_ta
-              anonymous: '0'
-            reduce: false
-            chosen_override: false
-            disable_search: false
-            search_contains: false
-            placeholder_text_multiple: 'Choose some options'
-            placeholder_text_single: 'Choose an option'
-            no_results_text: 'No results match'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: edam_bioimaging_operation
-          hierarchy: true
-          error_message: true
-          plugin_id: shs_chosen_taxonomy_index_tid
-        field_has_topic_target_id_1:
-          id: field_has_topic_target_id_1
-          table: node__field_has_topic
-          field: field_has_topic_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_has_topic_target_id_1_op
-            label: 'has topic (field_has_topic)'
-            description: ''
-            use_operator: false
-            operator: field_has_topic_target_id_1_op
-            identifier: field_has_topic_target_id_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              confirmed_ta: '0'
-            reduce: false
-            chosen_override: false
-            disable_search: false
-            search_contains: false
-            placeholder_text_multiple: 'Choose some options'
-            placeholder_text_single: 'Choose an option'
-            no_results_text: 'No results match'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: edam_bioimaging_topic
-          hierarchy: true
-          error_message: true
-          plugin_id: shs_chosen_taxonomy_index_tid
-        field_supported_image_dimension_target_id:
-          id: field_supported_image_dimension_target_id
-          table: node__field_supported_image_dimension
-          field: field_supported_image_dimension_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_supported_image_dimension_target_id_op
-            label: 'Supported image dimension '
-            description: ''
-            use_operator: false
-            operator: field_supported_image_dimension_target_id_op
-            identifier: field_supported_image_dimension_target_id
-            required: false
-            remember: true
-            multiple: true
-            remember_roles:
-              anonymous: anonymous
-              authenticated: authenticated
-              administrator: administrator
-              confirmed_ta: confirmed_ta
-            reduce: false
-            chosen_override: false
-            disable_search: false
-            search_contains: false
-            placeholder_text_multiple: 'Choose some options'
-            placeholder_text_single: 'Choose an option'
-            no_results_text: 'No results match'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: shs_chosen
-          limit: true
-          vid: image_dimension
           hierarchy: false
           error_message: true
           plugin_id: shs_chosen_taxonomy_index_tid
@@ -993,8 +1039,8 @@ display:
             operator: field_has_interaction_level_target_id_op
             identifier: field_has_interaction_level_target_id
             required: false
-            remember: true
-            multiple: false
+            remember: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -1020,7 +1066,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: shs_chosen
+          type: select
           limit: true
           vid: level_of_user_interaction
           hierarchy: false
@@ -1045,8 +1091,8 @@ display:
             operator: field_license_openness_target_id_op
             identifier: field_license_openness_target_id
             required: false
-            remember: true
-            multiple: false
+            remember: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               administrator: administrator
@@ -1097,8 +1143,8 @@ display:
             operator: field_has_programming_language_target_id_op
             identifier: field_has_programming_language_target_id
             required: false
-            remember: true
-            multiple: false
+            remember: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               administrator: administrator
@@ -1124,33 +1170,30 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: shs_chosen
+          type: select
           limit: true
           vid: programming_language
           hierarchy: false
           error_message: true
           plugin_id: shs_chosen_taxonomy_index_tid
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        field_has_biological_terms_target_id:
+          id: field_has_biological_terms_target_id
+          table: node__field_has_biological_terms
+          field: field_has_biological_terms_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            sample_data: sample_data
-            software: software
-            book: book
+          operator: or
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
+            operator_id: field_has_biological_terms_target_id_op
+            label: 'specific biological term'
+            description: 'Let blank if your term does not appear in the list'
             use_operator: false
-            operator: type_op
-            identifier: type
+            operator: field_has_biological_terms_target_id_op
+            identifier: field_has_biological_terms_target_id
             required: false
             remember: false
             multiple: true
@@ -1159,7 +1202,13 @@ display:
               anonymous: '0'
               administrator: '0'
               confirmed_ta: '0'
-            reduce: true
+            reduce: false
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
           is_grouped: false
           group_info:
             label: ''
@@ -1172,9 +1221,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: biological_problems
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -1192,7 +1245,17 @@ display:
             label: ''
           granularity: second
       title: 'all content'
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          content: 'Displaying @start - @end of @total. Total number of pages: @page_count '
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships: {  }

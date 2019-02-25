@@ -275,7 +275,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Type of Resource'
+      title: 'Type of Software Resource'
       header: {  }
       footer: {  }
       empty: {  }

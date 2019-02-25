@@ -119,7 +119,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -228,7 +228,7 @@ display:
             argument: ''
           default_argument_skip_url: false
           summary_options:
-            base_path: all-content/%
+            base_path: all-content
             count: true
             items_per_page: 25
             override: false

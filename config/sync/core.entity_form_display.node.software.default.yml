@@ -34,6 +34,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.software
   module:
+    - chosen_field
     - comment
     - field_group
     - image
@@ -248,12 +249,9 @@ content:
     region: content
   field_has_programming_language:
     weight: 32
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_has_reference_publication:
     weight: 9
@@ -287,30 +285,21 @@ content:
     region: content
   field_is_compatible_with:
     weight: 33
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_is_covered_by_training_mat:
     weight: 15
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_is_dependent_of:
     weight: 28
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_license_openness:
     weight: 6

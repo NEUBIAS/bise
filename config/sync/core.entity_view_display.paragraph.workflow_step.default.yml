@@ -5,8 +5,26 @@ dependencies:
   config:
     - field.field.paragraph.workflow_step.field_current_workflow_step_
     - field.field.paragraph.workflow_step.field_previous_workflow_step
+    - field.field.paragraph.workflow_step.field_step_opera
     - field.field.paragraph.workflow_step.field_title_of_the_setp
     - paragraphs.paragraphs_type.workflow_step
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol_bricks
+      library: layout_discovery/twocol_bricks
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      top:
+        - field_title_of_the_setp
+      first_above:
+        - field_current_workflow_step_
+      second_above:
+        - field_step_opera
 id: paragraph.workflow_step.default
 targetEntityType: paragraph
 bundle: workflow_step
@@ -19,7 +37,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: first_above
+  field_step_opera:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: second_above
   field_title_of_the_setp:
     weight: 0
     label: hidden
@@ -27,6 +53,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
 hidden:
   field_previous_workflow_step: true
