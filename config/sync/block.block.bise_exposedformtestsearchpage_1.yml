@@ -18,6 +18,6 @@ settings:
   id: 'views_exposed_filter_block:testsearch-page_1'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
 visibility: {  }

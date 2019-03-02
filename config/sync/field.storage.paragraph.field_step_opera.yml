@@ -1,0 +1,20 @@
+uuid: fd670fff-bbe9-4f40-bdbc-c4b9435b96a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_step_opera
+field_name: field_step_opera
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
