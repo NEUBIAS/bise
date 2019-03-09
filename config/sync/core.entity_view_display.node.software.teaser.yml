@@ -146,3 +146,4 @@ hidden:
   field_license_openness: true
   field_platform: true
   field_supported_image_dimension: true
+  field_workflow_steps: true

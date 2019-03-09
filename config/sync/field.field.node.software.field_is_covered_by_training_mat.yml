@@ -11,7 +11,7 @@ field_name: field_is_covered_by_training_mat
 entity_type: node
 bundle: software
 label: 'Training Material'
-description: "Training material content in the site covering this software\r\n"
+description: "Training material content in the site covering this software\r\n<li>If you can not find the Training entry, please create the missing entry <a href=\"/node/add/book\" target=\"_blank\">Add New Training Material Entry</a></li>\r\n"
 required: false
 translatable: false
 default_value: {  }
@@ -23,6 +23,6 @@ settings:
       book: book
     sort:
       field: _none
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
