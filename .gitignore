@@ -36,7 +36,7 @@ web/sites/simpletest
 # or delete the previous settings and uncomment the following ones, instead.
 
 # Ignore configuration files that may contain sensitive information.
-# */settings*.php
+*/settings*.php
 
 # Ignore paths that contain user-generated content.
 # */files
