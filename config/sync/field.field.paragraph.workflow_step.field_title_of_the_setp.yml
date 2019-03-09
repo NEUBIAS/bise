@@ -1,0 +1,21 @@
+uuid: f13bcc90-dccd-4589-9564-b339ad26b654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_of_the_setp
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.field_title_of_the_setp
+field_name: field_title_of_the_setp
+entity_type: paragraph
+bundle: workflow_step
+label: 'Current workflow step title'
+description: "Please add a title such as Step 1: Threshold the image\r\nThen select the component used below, the operation that it is doing, and the previous step as well"
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Step number:  purpose'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,33 @@
+uuid: 5691ad6a-32c7-46d6-b582-024813b03f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_step_opera
+    - paragraphs.paragraphs_type.workflow_step
+    - taxonomy.vocabulary.edam_bioimaging_operation
+  content:
+    - 'taxonomy_term:edam_bioimaging_operation:http://edamontology.org/operation_Image_processing'
+id: paragraph.workflow_step.field_step_opera
+field_name: field_step_opera
+entity_type: paragraph
+bundle: workflow_step
+label: 'step operation'
+description: 'Enter the purpose of this step as an EDAM bioimaging operation'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 'http://edamontology.org/operation_Image_processing'
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      edam_bioimaging_operation: edam_bioimaging_operation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
