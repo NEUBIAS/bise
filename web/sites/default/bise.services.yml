@@ -1,5 +1,5 @@
 #To enable CORS, allowing external site to make scripted requests
-services:
+parameters:
   cors.config:
     enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
