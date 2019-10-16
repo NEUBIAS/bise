@@ -1,2 +1,3 @@
 RewriteEngine On
 RewriteRule ^$ /web [L]
+Header set Access-Control-Allow-Origin "*"
