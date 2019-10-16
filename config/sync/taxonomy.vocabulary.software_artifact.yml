@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Software artifact'
 vid: software_artifact
 description: 'Type of software'
-hierarchy: 0
 weight: 0

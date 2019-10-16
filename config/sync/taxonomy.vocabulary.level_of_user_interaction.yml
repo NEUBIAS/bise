@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Level of user interaction'
 vid: level_of_user_interaction
 description: ''
-hierarchy: 0
 weight: 0
