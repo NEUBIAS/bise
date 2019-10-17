@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700');
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*********************/
+/* ### variables ### */
+/*********************/
+$font-source: 'Source Sans Pro', sans-serif;
+$blue: #5cbae9;
+$green: #70ea54;
+
+/* reset boostrap */
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+/****************/
+/* reset divers */
+/****************/
+#auth_box input[type="text"], #auth_box input[type="password"] {
+  width: 100%;
+}
+
+#block-projet-search {
+  #edit-keys--description {
+    display: none;
+  }
+}
+
+/* ckeditor utilities */
+.content {
+  .field.field--name-body {
+    .quotebox {
+      .row, &.row {
+        margin: 0;
+      }
+    }
+
+    .two-col-left, .two-col-right, .two-col, .three-col {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/****************/
+/* basics */
+/****************/
+.full_header {
+  background: url(../img/header.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+
+.top {
+  overflow: hidden;
+
+  .logo {
+    width: 100%;
+
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .block-views-exposed-filter-blocktestsearch-page-1 {
+    left: 50%;
+    margin: 0 0 0 -175px;
+
+    .form-item {
+      float: left;
+
+      input {
+        height: 50px;
+        padding: 6px 12px;
+        border-radius: 25px 0 0 25px;
+      }
+    }
+
+    #edit-actions {
+      float: left;
+
+      button {
+        height: 50px;
+        border-radius: 0 25px 25px 0;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        background-color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+#navbar {
+  clear: both;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+
+  a {
+    color: #fff;
+
+    &:hover, &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+  }
+
+  .expanded.open {
+    a.dropdown-toggle {
+      color: #000;
+    }
+  }
+
+  nav#block-projet-useraccountmenu {
+    border-top: 1px solid #fff;
+  }
+}
+
+.main-container.container-fluid {
+  max-width: 1200px;
+}
+
+.bottom {
+  padding: 15px;
+  background-color: #3C3C3C;
+  color: #fff;
+}
+
+/*****************************/
+/* ##### media queries ##### */
+/*****************************/
+/* Extra Small Devices, Phones */
+@media (min-width: $screen-xs-min) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  #navbar {
+    margin-top: 15px;
+
+    ul.menu {
+      li ul.dropdown-menu {
+        li {
+          background-color: #3c3c3c;
+
+          a {
+            color: gainsboro;
+          }
+
+          &:hover {
+            background-color: gainsboro;
+
+            a {
+              color: #3c3c3c;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  .top {
+    .logo {
+      float: left;
+      width: 420px;
+      margin: 25px 0 25px 40px;
+
+      img {
+        max-width: 90%;
+      }
+    }
+
+    .block-views-exposed-filter-blocktestsearch-page-1 {
+      left: 0;
+      padding: 110px 0 0 66%;
+
+      .form-item input {
+        width: 360px;
+      }
+    }
+  }
+  #navbar {
+
+  }
+}
+
+/****************/
+/* home */
+/****************/
+.path-frontpage {
+  .block-views {
+    h2 {
+      padding: 10px;
+      margin-bottom: 0;
+      background: #3c3c3c;
+      border-radius: 10px 10px 0 0;
+      color: #fff
+    }
+
+    .views-view-grid {
+      .views-col {
+        min-height: 320px;
+        margin-bottom: 5px;
+        background-color: gainsboro;
+        border: 1px solid black;
+
+        .views-field-field-image {
+          padding: 8px 5px 0 5px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        h4 {
+
+        }
+
+        .views-field-term-node-tid {
+
+        }
+
+        a {
+          color: #3c3c3c;
+
+          &:hover {
+            background-color: #3c3c3c;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  #block-projet-views-block-statistics-counter-block-1, #block-projet-views-block-software-type-counts-block-1 {
+    .form-group {
+      border-left: 1px solid #3c3c3c;
+      border-right: 1px solid #3c3c3c;
+      border-bottom: 1px solid #3c3c3c;
+    }
+  }
+}
+
+/*****************************/
+/* ##### media queries ##### */
+/*****************************/
+/* Extra Small Devices, Phones */
+@media (min-width: $screen-xs-min) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+}
+
+/**********************/
+/* #####  ##### */
+/**********************/
