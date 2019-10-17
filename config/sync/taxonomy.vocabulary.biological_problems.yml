@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Biological problems'
 vid: biological_problems
 description: ''
-hierarchy: 0
 weight: 0

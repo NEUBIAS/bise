@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Implementation type'
 vid: implementation_type
 description: 'Type of implementation'
-hierarchy: 0
 weight: 0
