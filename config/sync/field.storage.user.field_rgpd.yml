@@ -1,0 +1,18 @@
+uuid: cc1f12a2-fa9f-40e0-b6c7-751c3831cbc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_rgpd
+field_name: field_rgpd
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

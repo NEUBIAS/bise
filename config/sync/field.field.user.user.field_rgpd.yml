@@ -1,0 +1,24 @@
+uuid: 1d9d177c-b7e6-4c26-872a-5fd31a6061ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_rgpd
+  module:
+    - user
+id: user.user.field_rgpd
+field_name: field_rgpd
+entity_type: user
+bundle: user
+label: 'Accept Display of your data'
+description: "Note that the data you have entered may be displayed in the tagger page .\r\nBy creating an account you agree that your name, first name , institution and picture will be displayed.\r\nhttps://gdpr-info.eu/ "
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

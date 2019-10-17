@@ -1,0 +1,23 @@
+uuid: 493c0f8b-9f00-41f3-8b7b-a37c709b49e0
+langcode: en
+status: true
+dependencies: {  }
+name: home_style
+label: 'home style (scale and crop to 240x240)'
+effects:
+  e55e9508-f1ab-4507-9ca2-1a6d7f18f7c6:
+    uuid: e55e9508-f1ab-4507-9ca2-1a6d7f18f7c6
+    id: image_scale
+    weight: 2
+    data:
+      width: 300
+      height: 300
+      upscale: false
+  e01043a6-3f29-4e25-8364-a576cf99bddd:
+    uuid: e01043a6-3f29-4e25-8364-a576cf99bddd
+    id: image_crop
+    weight: 2
+    data:
+      width: 240
+      height: 240
+      anchor: center-center

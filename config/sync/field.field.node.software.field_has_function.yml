@@ -11,7 +11,7 @@ field_name: field_has_function
 entity_type: node
 bundle: software
 label: 'has function'
-description: ''
+description: 'Function is the operation(s) that the sofwtare is designed to do (e.g segmentation, visualisation,...) STart typing what you have in mind and see if you can find what you had in mind. If you can not find it, add the term in ADDITIONAL KEYWORD below. If it is a biological model on which it has been successfully used or designed for, use the HAS BIOLOGICAL TERM.'
 required: false
 translatable: false
 default_value: {  }

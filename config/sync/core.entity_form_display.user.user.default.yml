@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.field_affiliations
     - field.field.user.user.field_first_name
     - field.field.user.user.field_name
+    - field.field.user.user.field_rgpd
     - field.field.user.user.field_skill
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -53,6 +54,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_rgpd:
+    weight: 31
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_skill:
     weight: 7
