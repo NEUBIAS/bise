@@ -2,12 +2,12 @@
 
 
 branch: neubias/bise master  
-[![Build Status](https://travis-ci.org/neubias/bise.svg?branch=master)](https://travis-ci.org/neubias/bise)
+[![Build Status](https://travis-ci.org/NeuBIAS/bise.svg?branch=master)](https://travis-ci.org/NeuBIAS/bise)
 
 <https://biii.eu>
 
 branch: neubias/bise dev  
-[![Build Status](https://travis-ci.org/neubias/bise.svg?branch=dev)](https://travis-ci.org/neubias/bise)
+[![Build Status](https://travis-ci.org/NeuBIAS/bise.svg?branch=dev)](https://travis-ci.org/NeuBIAS/bise)
 
 <https://test/biii.eu>
 
