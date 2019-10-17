@@ -53,13 +53,6 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 <div class="full_header">
-  {% if page.top_bar %}
-    {% block top_bar %}
-      <div id="top-bar" class="top">
-        {{ page.top_bar }}
-      </div>
-    {% endblock %}
-  {% endif %}
   {# Navbar #}
   {% if page.navigation or page.navigation_collapsible %}
     {% block navbar %}
@@ -95,6 +88,13 @@
         </div>
         {% endif %}
       </header>
+    {% endblock %}
+  {% endif %}
+  {% if page.top_bar %}
+    {% block top_bar %}
+      <div id="top-bar" class="top">
+        {{ page.top_bar }}
+      </div>
     {% endblock %}
   {% endif %}
 </div>
