@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.book.field_expected
     - field.field.node.book.field_format
     - field.field.node.book.field_free_tagging
+    - field.field.node.book.field_has_executable
     - field.field.node.book.field_has_image_data
     - field.field.node.book.field_has_license
     - field.field.node.book.field_has_practical_exercices
@@ -91,3 +92,4 @@ hidden:
   field_topics_covered: true
   field_url: true
   links: true
+  search_api_excerpt: true

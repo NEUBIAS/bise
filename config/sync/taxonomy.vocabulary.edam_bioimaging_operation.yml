@@ -5,5 +5,4 @@ dependencies: {  }
 name: EDAM-Bioimaging-Operation
 vid: edam_bioimaging_operation
 description: 'Edam extension for BioImaging- operation class'
-hierarchy: 2
 weight: 0
