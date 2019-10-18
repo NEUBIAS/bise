@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.book
     - node.type.sample_data
     - node.type.software
@@ -55,35 +55,19 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: some
         options:
-          items_per_page: 1
+          items_per_page: 6
           offset: 0
-          id: 0
-          total_pages: 1
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
       style:
         type: grid
         options:
           grouping: {  }
-          columns: 5
-          automatic_width: true
+          columns: 6
+          automatic_width: false
           alignment: horizontal
           col_class_default: true
-          col_class_custom: ''
+          col_class_custom: 'col-xs-6 col-sm-4 col-md-3 col-lg-2'
           row_class_default: true
           row_class_custom: ''
       row:
@@ -210,7 +194,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: thumbnail
+            image_style: medium
             image_link: content
           group_column: ''
           group_columns: {  }
@@ -528,7 +512,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -542,13 +525,12 @@ display:
       display_extenders: {  }
       block_description: Recent
       allow:
-        items_per_page: true
+        items_per_page: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

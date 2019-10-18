@@ -14,7 +14,7 @@ dependencies:
     - node.type.book
     - node.type.sample_data
     - node.type.software
-    - system.menu.perrine-menu
+    - system.menu.main
     - taxonomy.vocabulary.biological_problems
     - taxonomy.vocabulary.edam_bioimaging_operation
     - taxonomy.vocabulary.edam_bioimaging_topic
@@ -1294,12 +1294,12 @@ display:
       menu:
         type: normal
         title: 'Advanced Search'
-        menu_name: perrine-menu
         description: 'All database content with filters'
+        expanded: false
         parent: ''
         weight: 0
-        expanded: false
-        enabled: true
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

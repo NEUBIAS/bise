@@ -1,0 +1,6 @@
+global-styling:
+  js:
+    js/van11y-accessible-accordion-aria.es6.js: {}
+  css:
+    theme:
+      scss/style.css: {}
