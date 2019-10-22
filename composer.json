@@ -59,6 +59,20 @@
                     "composer/installers": "^1.2.0"
                 }
             }
+        },{
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2"
+                }
+            }
         }
 
     ],
@@ -121,11 +135,12 @@
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "^1.0",
         "drush/drush": "^9.0.0",
+        "fontawesome/fontawesome": "5.9.0",
         "harvesthq/chosen": "^1.8",
+        "jackmoore/colorbox": "master",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "fontawesome/fontawesome": "5.9.0"
+        "webmozart/path-util": "^2.3"
     },
     "require-dev": {
         "behat/mink-extension": "v2.2",
