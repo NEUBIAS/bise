@@ -91,3 +91,4 @@ hidden:
   field_topics_covered: true
   field_url: true
   links: true
+  search_api_excerpt: true

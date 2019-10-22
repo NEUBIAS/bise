@@ -3,18 +3,12 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - user
     - taxonomy
     - search_api
+    - node
+    - paragraphs
+    - user
   config:
-    - field.storage.node.field_tags
-    - field.storage.node.body
-    - field.storage.node.field_has_function
-    - field.storage.node.field_has_topic
-    - field.storage.node.field_free_tagging
-    - field.storage.user.field_first_name
-    - field.storage.user.field_name
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
 _core:
@@ -24,74 +18,6 @@ name: 'Default content index'
 description: 'Default content index created by the Database Search Defaults module'
 read_only: false
 field_settings:
-  author:
-    label: 'Author name'
-    datasource_id: 'entity:node'
-    property_path: 'uid:entity:name'
-    type: text
-    dependencies:
-      module:
-        - node
-        - user
-        - user
-  field_first_name:
-    label: 'First name'
-    datasource_id: 'entity:user'
-    property_path: field_first_name
-    type: text
-    dependencies:
-      config:
-        - field.storage.user.field_first_name
-  field_free_tagging:
-    label: 'Additional keywords'
-    datasource_id: 'entity:node'
-    property_path: field_free_tagging
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_free_tagging
-  field_has_function:
-    label: 'has function'
-    datasource_id: 'entity:node'
-    property_path: field_has_function
-    type: text
-    boost: !!float 2
-    dependencies:
-      config:
-        - field.storage.node.field_has_function
-  field_has_topic:
-    label: 'has topic'
-    datasource_id: 'entity:node'
-    property_path: field_has_topic
-    type: text
-    boost: !!float 2
-    dependencies:
-      config:
-        - field.storage.node.field_has_topic
-  field_name:
-    label: 'Name (true name)'
-    datasource_id: 'entity:user'
-    property_path: field_name
-    type: text
-    dependencies:
-      config:
-        - field.storage.user.field_name
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_tags
-  format:
-    label: 'Body » Text format'
-    datasource_id: 'entity:node'
-    property_path: 'body:format'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
   name:
     label: Name
     datasource_id: 'entity:taxonomy_term'
@@ -100,21 +26,6 @@ field_settings:
     dependencies:
       module:
         - taxonomy
-  node_grants:
-    label: 'Node access information'
-    property_path: search_api_node_grants
-    type: string
-    indexed_locked: true
-    type_locked: true
-    hidden: true
-  processed:
-    label: 'Body » Processed text'
-    datasource_id: 'entity:node'
-    property_path: 'body:processed'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
   rendered_item:
     label: 'Rendered item'
     property_path: rendered_item
@@ -126,37 +37,15 @@ field_settings:
         'entity:node':
           article: search_index
           page: search_index
-  status:
-    label: 'Publishing status'
-    datasource_id: 'entity:node'
-    property_path: status
-    type: boolean
-    indexed_locked: true
-    type_locked: true
-    dependencies:
-      module:
-        - node
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: text
-    boost: !!float 2
-    dependencies:
-      module:
-        - node
-  uid:
-    label: 'Author ID'
-    datasource_id: 'entity:node'
-    property_path: uid
-    type: integer
-    indexed_locked: true
-    type_locked: true
-    dependencies:
-      module:
-        - node
 datasource_settings:
   'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:paragraph':
     bundles:
       default: true
       selected: {  }
@@ -181,10 +70,6 @@ processor_settings:
   aggregated_field:
     weights:
       add_properties: 20
-  content_access:
-    weights:
-      preprocess_index: -6
-      preprocess_query: -4
   entity_status:
     weights:
       preprocess_index: -10
@@ -217,7 +102,6 @@ processor_settings:
     all_fields: false
     fields:
       - rendered_item
-      - title
     weights:
       preprocess_index: -5
       preprocess_query: -8
@@ -281,18 +165,8 @@ processor_settings:
   tokenizer:
     all_fields: true
     fields:
-      - author
-      - field_first_name
-      - field_free_tagging
-      - field_has_function
-      - field_has_topic
-      - field_name
-      - field_tags
-      - format
       - name
-      - processed
       - rendered_item
-      - title
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -303,14 +177,13 @@ processor_settings:
     all_fields: false
     fields:
       - rendered_item
-      - title
     weights:
       preprocess_index: -4
       preprocess_query: -7
 tracker_settings:
   default:
-    indexing_order: fifo
+    indexing_order: lifo
 options:
   index_directly: true
-  cron_limit: 50
+  cron_limit: -1
 server: default_server
