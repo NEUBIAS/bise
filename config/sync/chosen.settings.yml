@@ -10,7 +10,13 @@ placeholder_text_single: 'Choose a value'
 no_results_text: 'No results match'
 disabled_themes:
   seven: '0'
+  bootstrap: '0'
   zircon: '0'
+  bise: '0'
+  projet: '0'
 chosen_include: 2
 _core:
   default_config_hash: 8OBgqA1x01J7SgSvBzOELfxP9Bu998XgnQjf4EN40mo
+max_shown_results: null
+use_relative_width: false
+allow_single_deselect: false

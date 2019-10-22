@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - colorbox
     - comment
     - image
     - text
@@ -40,11 +41,16 @@ content:
     third_party_settings: {  }
     region: content
   field_image:
-    type: image
+    type: colorbox
     weight: -1
     settings:
-      image_style: large
-      image_link: ''
+      colorbox_node_style: ''
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
     third_party_settings: {  }
     label: hidden
     region: content
@@ -79,5 +85,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_image: true
-  field_tags: true
+  search_api_excerpt: true
