@@ -12,7 +12,7 @@ field_name: field_image
 entity_type: node
 bundle: software
 label: 'Illustrative Image'
-description: "an illustrative image. If no single image can represent the main software functionality chose the logo of the software Tools if it has any, Otherwise the logo of the collection it is part of. If it has no logo, let it empty..\r\nOne file only.\r\nNote that this entry will not be promoted on the front page without this image."
+description: "an illustrative image. If no single image can represent the main software functionality chose the logo.\r\nOne file only.\r\nNote that this entry will not be promoted on the front page without this image."
 required: false
 translatable: true
 default_value: {  }

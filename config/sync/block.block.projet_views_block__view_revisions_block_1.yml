@@ -1,0 +1,33 @@
+uuid: 6d1ac4e7-9b42-496a-9442-c73fdc26cb3e
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.view_revisions
+  module:
+    - ctools
+    - views
+  theme:
+    - projet
+id: projet_views_block__view_revisions_block_1
+theme: projet
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:view_revisions-block_1'
+settings:
+  id: 'views_block:view_revisions-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      software: software
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

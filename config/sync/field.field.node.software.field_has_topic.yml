@@ -11,7 +11,7 @@ field_name: field_has_topic
 entity_type: node
 bundle: software
 label: 'has topic'
-description: ' application domain : you can add several main topic (e.g. bio image informatics, machine Learning, image analysis, data sharing...) and the application domain such as example of modality to which it was specific or for which it has been used successfully (e.g. Light Sheet Microscopy, multimodal Imaging, …). '
+description: ' application domain'
 required: false
 translatable: false
 default_value: {  }

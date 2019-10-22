@@ -1,0 +1,30 @@
+uuid: 2afed998-8426-4700-a71b-6a05a2f6e69a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - projet
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: projet_messages
+theme: projet
+region: header
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: status
+  provider: system
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

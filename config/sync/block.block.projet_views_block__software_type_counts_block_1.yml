@@ -1,0 +1,34 @@
+uuid: 6fb5d34f-59da-4448-80d9-078fc4c635df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.software_type_counts
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - projet
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-8'
+id: projet_views_block__software_type_counts_block_1
+theme: projet
+region: footer
+weight: -8
+provider: null
+plugin: 'views_block:software_type_counts-block_1'
+settings:
+  id: 'views_block:software_type_counts-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

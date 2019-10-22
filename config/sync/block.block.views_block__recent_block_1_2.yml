@@ -1,0 +1,30 @@
+uuid: 7e668e0a-b13b-4245-9146-5e7ed5c987d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent
+  module:
+    - system
+    - views
+  theme:
+    - projet
+id: views_block__recent_block_1_2
+theme: projet
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:recent-block_1'
+settings:
+  id: 'views_block:recent-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

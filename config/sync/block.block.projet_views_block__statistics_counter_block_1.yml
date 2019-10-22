@@ -1,0 +1,35 @@
+uuid: c0be3bde-f92f-4010-837e-62617e760780
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.statistics_counter
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - projet
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-4'
+id: projet_views_block__statistics_counter_block_1
+theme: projet
+region: footer
+weight: -9
+provider: null
+plugin: 'views_block:statistics_counter-block_1'
+settings:
+  id: 'views_block:statistics_counter-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

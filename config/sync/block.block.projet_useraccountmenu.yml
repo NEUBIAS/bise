@@ -1,0 +1,25 @@
+uuid: 84e4008b-5e4d-4aaa-a414-d7844c0eac8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - projet
+id: projet_useraccountmenu
+theme: projet
+region: navigation_collapsible
+weight: -8
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
