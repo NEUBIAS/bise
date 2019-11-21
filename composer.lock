@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4740f9265da471eeb0060e6d7e357f59",
+    "content-hash": "646e679d75a1a303f654bdbf3b1aa302",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1153,6 +1153,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -6591,6 +6592,20 @@
             },
             "require": {
                 "composer/installers": "^1.2.0"
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jackmoore/colorbox",
+            "version": "master",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.2"
             },
             "type": "drupal-library"
         },
