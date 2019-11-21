@@ -149,7 +149,8 @@
         "drupal/coder": "^8.2",
         "drupal/drupal-extension": "master-dev",
         "drupal/field_group": "^3.0",
-        "php-coveralls/php-coveralls": "^2.0"
+        "php-coveralls/php-coveralls": "^2.0",
+        "phpunit/phpunit": "^7"
     },
     "conflict": {
         "drupal/drupal": "*"
