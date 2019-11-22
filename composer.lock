@@ -6346,9 +6346,7 @@
             "version": "5.9.0",
             "dist": {
                 "type": "zip",
-                "url": "https://use.fontawesome.com/releases/v5.9.0/fontawesome-free-5.9.0-web.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://use.fontawesome.com/releases/v5.9.0/fontawesome-free-5.9.0-web.zip"
             },
             "require": {
                 "composer/installers": "^1.2.0"
@@ -6642,9 +6640,7 @@
             "version": "1.8.3",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.3/chosen_v1.8.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.3/chosen_v1.8.3.zip"
             },
             "require": {
                 "composer/installers": "^1.2.0"
@@ -6656,9 +6652,7 @@
             "version": "master",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip"
             },
             "require": {
                 "composer/installers": "^1.2"
