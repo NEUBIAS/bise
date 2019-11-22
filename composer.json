@@ -138,7 +138,7 @@
         "fontawesome/fontawesome": "5.9.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
-        "phpunit/phpunit": "~7.4.0",
+        "phpunit/phpunit": "^8.4",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
