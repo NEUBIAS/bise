@@ -10,6 +10,11 @@ body {
 /****************/
 /* reset divers */
 /****************/
+#auth_box h1 img {
+  max-width: 100%;
+  height: auto; }
+#auth_box h2.title {
+  display: none; }
 #auth_box input[type="text"], #auth_box input[type="password"] {
   width: 100%; }
 
@@ -173,8 +178,69 @@ footer a {
 /*****************************/
 /* ##### special pages ##### */
 /*****************************/
-.path-show-taggers .views-row:nth-child(2n) {
-  background-color: gainsboro; }
+.path-show-taggers h1 {
+  display: none; }
+.path-show-taggers .view-header {
+  margin: 10px 0 20px 0;
+  font-size: 36px;
+  font-weight: bold;
+  border-bottom: 1px solid #eeeeee; }
+.path-show-taggers .views-row {
+  margin-bottom: 10px; }
+  .path-show-taggers .views-row .views-col {
+    padding: 10px 15px; }
+    .path-show-taggers .views-row .views-col .views-field-name {
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+      text-transform: capitalize; }
+    .path-show-taggers .views-row .views-col .views-field-user-picture img {
+      margin: 0 auto; }
+.path-show-taggers .views-row:nth-child(odd) .views-col:nth-child(odd) {
+  background-color: #EAE1DA; }
+.path-show-taggers .views-row:nth-child(odd) .views-col:nth-child(even) {
+  background-color: transparent; }
+.path-show-taggers .views-row:nth-child(even) .views-col:nth-child(even) {
+  background-color: #EAE1DA; }
+.path-show-taggers .views-row:nth-child(even) .views-col:nth-child(odd) {
+  background-color: transparent; }
+
+.path-all-content h1 {
+  text-transform: capitalize; }
+.path-all-content .view-filters {
+  padding: 10px;
+  background-color: #EAE1DA;
+  border-radius: 10px; }
+.path-all-content form#views-exposed-form-all-content-page-1 .form-item {
+  margin-bottom: 10px; }
+  .path-all-content form#views-exposed-form-all-content-page-1 .form-item label {
+    margin-right: 5px; }
+  .path-all-content form#views-exposed-form-all-content-page-1 .form-item .chosen-container {
+    padding: 0; }
+  .path-all-content form#views-exposed-form-all-content-page-1 .form-item .chosen-choices {
+    border: none;
+    padding: 5px 10px 0 10px;
+    border-radius: 10px; }
+  .path-all-content form#views-exposed-form-all-content-page-1 .form-item .select-wrapper::after {
+    color: #EAE1DA; }
+.path-all-content form#views-exposed-form-all-content-page-1 #edit-actions {
+  display: block;
+  clear: both;
+  text-align: center; }
+  .path-all-content form#views-exposed-form-all-content-page-1 #edit-actions button {
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+    font-weight: bold; }
+.path-all-content .view-content thead {
+  background: #EAE1DA;
+  color: #FF8686; }
+.path-all-content .view-content tbody a {
+  color: #000; }
+
+#WF_vis {
+  width: 100%;
+  min-height: 650px; }
 
 /**************************/
 /* accordions accessibles */

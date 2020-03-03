@@ -1,6 +1,11 @@
 global-styling:
   js:
     js/van11y-accessible-accordion-aria.es6.js: {}
+    js/bise-core-ontology-master/wf-html-vis/node_modules/cytoscape/dist/cytoscape.min.js: {}
+    https://unpkg.com/dagre@0.7.4/dist/dagre.js: { type: external}
+    js/bise-core-ontology-master/wf-html-vis/node_modules/cytoscape-dagre/cytoscape-dagre.js: {}
+    js/bise-core-ontology-master/wf-html-vis/node_modules/cytoscape-node-html-label/dist/cytoscape-node-html-label.js: {}
+    js/bise-core-ontology-master/wf-html-vis/main.js: {}
   css:
     theme:
       scss/style.css: {}

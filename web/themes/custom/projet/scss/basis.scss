@@ -25,8 +25,21 @@ $screen-lg-min: 1200px;
 /****************/
 /* reset divers */
 /****************/
-#auth_box input[type="text"], #auth_box input[type="password"] {
-  width: 100%;
+#auth_box {
+  h1 {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  h2.title {
+    display: none;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+  }
 }
 
 #block-projet-search {
@@ -303,10 +316,131 @@ footer {
 /* ##### special pages ##### */
 /*****************************/
 .path-show-taggers {
+  h1 {
+    display: none
+  }
+
+  .view-header {
+    margin: 10px 0 20px 0;
+    font-size: 36px;
+    font-weight: bold;
+    border-bottom: 1px solid #eeeeee;
+  }
+
   .views-row {
-    &:nth-child(2n) {
-      background-color: gainsboro;
+    margin-bottom: 10px;
+
+    .views-col {
+      padding: 10px 15px;
+
+      .views-field-name {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1em;
+        text-transform: capitalize;
+      }
+
+      .views-field-user-picture img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .views-row:nth-child(odd) {
+    .views-col:nth-child(odd) {
+      background-color: #EAE1DA;
     }
 
+    .views-col:nth-child(even) {
+      background-color: transparent;
+    }
   }
+
+  .views-row:nth-child(even) {
+    .views-col:nth-child(even) {
+      background-color: #EAE1DA;
+    }
+
+    .views-col:nth-child(odd) {
+      background-color: transparent;
+    }
+  }
+
+}
+
+.path-search {
+
+}
+
+.path-all-content {
+  h1 {
+    text-transform: capitalize;
+  }
+
+  .view-filters {
+    padding: 10px;
+    background-color: #EAE1DA;
+    border-radius: 10px;
+  }
+
+  form#views-exposed-form-all-content-page-1 {
+
+    .form-item {
+      margin-bottom: 10px;
+
+      label {
+        margin-right: 5px;
+      }
+
+      .chosen-container {
+        padding: 0;
+      }
+
+      .chosen-choices {
+        border: none;
+        padding: 5px 10px 0 10px;
+        border-radius: 10px;
+      }
+
+      .chosen-drop {
+
+      }
+
+      .select-wrapper::after {
+        color: #EAE1DA;
+      }
+    }
+
+    #edit-actions {
+      display: block;
+      clear: both;
+      text-align: center;
+
+      button {
+        background-color: #fff;
+        border-color: #000;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .view-content {
+    thead {
+      background: #EAE1DA;
+      color: #FF8686;
+    }
+
+    tbody {
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+#WF_vis {
+  //display: block;
+  width: 100%;
+  min-height: 650px;
 }
