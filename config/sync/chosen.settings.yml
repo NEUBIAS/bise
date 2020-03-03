@@ -1,6 +1,6 @@
-minimum_single: 0
-minimum_multiple: 0
-disable_search_threshold: 4
+minimum_single: 10
+minimum_multiple: 4
+disable_search_threshold: 6
 minimum_width: 200
 jquery_selector: select
 search_contains: true
@@ -11,8 +11,6 @@ no_results_text: 'No results match'
 disabled_themes:
   seven: '0'
   bootstrap: '0'
-  zircon: '0'
-  bise: '0'
   projet: '0'
 chosen_include: 2
 _core:
