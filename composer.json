@@ -135,7 +135,6 @@
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "^1.0",
         "drush/drush": "^9.0.0",
-        "fontawesome/fontawesome": "5.9.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
         "phpunit/phpunit": "^8.4",
