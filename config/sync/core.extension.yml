@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   aggregator: 0
@@ -61,6 +62,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   pathauto: 0
   quickedit: 0
   rdf: 0

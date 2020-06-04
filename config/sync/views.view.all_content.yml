@@ -41,7 +41,6 @@ description: 'List all content'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -761,6 +760,8 @@ display:
               administrator: '0'
               confirmed_ta: '0'
             reduce: true
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -786,6 +787,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         title:
           id: title
@@ -811,6 +814,8 @@ display:
             remember_roles:
               authenticated: authenticated
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -859,6 +864,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -911,6 +918,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -963,6 +972,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1015,6 +1026,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: 'Type (field_type)'
@@ -1070,6 +1083,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1122,6 +1137,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1174,6 +1191,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1226,6 +1245,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
