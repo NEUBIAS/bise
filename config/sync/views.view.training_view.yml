@@ -249,7 +249,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'list of software'
+      title: 'List of Training Materials'
       header: {  }
       footer: {  }
       empty: {  }

@@ -1,6 +1,6 @@
 uuid: a01d5f8f-d9a5-49ca-a9a1-36d92ba66206
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.curated_by_the_user

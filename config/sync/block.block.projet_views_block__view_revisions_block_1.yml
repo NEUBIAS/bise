@@ -1,6 +1,6 @@
 uuid: 6d1ac4e7-9b42-496a-9442-c73fdc26cb3e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.view_revisions
@@ -11,8 +11,8 @@ dependencies:
     - projet
 id: projet_views_block__view_revisions_block_1
 theme: projet
-region: sidebar_first
-weight: -10
+region: footer
+weight: -6
 provider: null
 plugin: 'views_block:view_revisions-block_1'
 settings:
