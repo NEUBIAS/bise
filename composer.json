@@ -44,21 +44,6 @@
                     "reference": "1.8.2"
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "fontawesome/fontawesome",
-                "type": "drupal-library",
-                "version": "5.9.0",
-                "dist": {
-                    "url": "https://use.fontawesome.com/releases/v5.9.0/fontawesome-free-5.9.0-web.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "^1.2.0"
-                }
-            }
         }
 
     ],
@@ -124,8 +109,7 @@
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "fontawesome/fontawesome": "5.9.0"
+        "webmozart/path-util": "^2.3"
     },
     "require-dev": {
         "behat/mink-extension": "v2.2",
