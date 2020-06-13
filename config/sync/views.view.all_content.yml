@@ -1320,7 +1320,7 @@ display:
         description: 'All database content with filters'
         expanded: false
         parent: ''
-        weight: 0
+        weight: -49
         context: '0'
         menu_name: main
       filters:

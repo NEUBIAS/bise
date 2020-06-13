@@ -7,6 +7,7 @@ dependencies:
     - field.storage.user.field_skill
     - field.storage.user.user_picture
     - image.style.sidebar
+    - system.menu.main
   module:
     - image
     - user
@@ -436,6 +437,15 @@ display:
     display_options:
       display_extenders: {  }
       path: show-taggers
+      menu:
+        type: normal
+        title: Taggers
+        description: 'List of Taggers'
+        expanded: true
+        parent: ''
+        weight: -47
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
