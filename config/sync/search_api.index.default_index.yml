@@ -2,21 +2,25 @@ uuid: 5cc640c8-9e35-478f-b084-cb7d509c570b
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_free_tagging
+    - field.storage.node.field_has_author
+    - field.storage.node.field_author_s_
+    - field.storage.node.body
+    - field.storage.node.field_has_entry_curator
+    - field.storage.node.field_has_function
+    - field.storage.taxonomy_term.field_synonyms
+    - field.storage.node.field_has_topic
+    - field.storage.node.field_tags
+    - field.storage.user.field_first_name
+    - field.storage.user.field_name
+    - search_api.server.default_server
+    - core.entity_view_mode.node.search_index
   module:
     - node
     - user
     - taxonomy
     - search_api
-  config:
-    - field.storage.node.field_tags
-    - field.storage.node.body
-    - field.storage.node.field_has_function
-    - field.storage.node.field_has_topic
-    - field.storage.node.field_free_tagging
-    - field.storage.user.field_first_name
-    - field.storage.user.field_name
-    - search_api.server.default_server
-    - core.entity_view_mode.node.search_index
 _core:
   default_config_hash: CeQvQFFCLtBV14W1topZP19nFUlS3bSckwuryffgkgk
 id: default_index
@@ -33,6 +37,14 @@ field_settings:
       module:
         - node
         - user
+  field_author_s_:
+    label: Author(s)
+    datasource_id: 'entity:node'
+    property_path: field_author_s_
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_author_s_
   field_first_name:
     label: 'First name'
     datasource_id: 'entity:user'
@@ -49,6 +61,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_free_tagging
+  field_has_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_has_author
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_author
   field_has_function:
     label: 'has function'
     datasource_id: 'entity:node'
@@ -75,6 +95,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.user.field_name
+  field_synonyms:
+    label: 'has function » Taxonomy term » Synonyms'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_function:entity:field_synonyms'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_function
+        - field.storage.taxonomy_term.field_synonyms
+      module:
+        - taxonomy
+  field_synonyms_1:
+    label: 'has topic » Taxonomy term » Synonyms'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_topic:entity:field_synonyms'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_topic
+        - field.storage.taxonomy_term.field_synonyms
+      module:
+        - taxonomy
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -97,6 +139,38 @@ field_settings:
     property_path: name
     type: text
     dependencies:
+      module:
+        - taxonomy
+  name_1:
+    label: 'Entry Curator » User » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_entry_curator:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_entry_curator
+      module:
+        - user
+  name_function:
+    label: 'has function » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_function:entity:name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_has_function
+      module:
+        - taxonomy
+  name_topic:
+    label: 'has topic » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_topic:entity:name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_has_topic
       module:
         - taxonomy
   node_grants:
@@ -282,14 +356,21 @@ processor_settings:
     all_fields: true
     fields:
       - author
+      - field_author_s_
       - field_first_name
       - field_free_tagging
+      - field_has_author
       - field_has_function
       - field_has_topic
       - field_name
+      - field_synonyms
+      - field_synonyms_1
       - field_tags
       - format
       - name
+      - name_1
+      - name_function
+      - name_topic
       - processed
       - rendered_item
       - title
