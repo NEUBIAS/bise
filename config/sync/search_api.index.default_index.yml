@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_free_tagging
+    - field.storage.node.field_has_author
+    - field.storage.node.field_author_s_
     - field.storage.node.body
+    - field.storage.node.field_has_entry_curator
     - field.storage.node.field_has_function
     - field.storage.taxonomy_term.field_synonyms
     - field.storage.node.field_has_topic
@@ -34,6 +37,14 @@ field_settings:
       module:
         - node
         - user
+  field_author_s_:
+    label: Author(s)
+    datasource_id: 'entity:node'
+    property_path: field_author_s_
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_author_s_
   field_first_name:
     label: 'First name'
     datasource_id: 'entity:user'
@@ -50,6 +61,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_free_tagging
+  field_has_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_has_author
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_author
   field_has_function:
     label: 'has function'
     datasource_id: 'entity:node'
@@ -122,6 +141,16 @@ field_settings:
     dependencies:
       module:
         - taxonomy
+  name_1:
+    label: 'Entry Curator » User » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_entry_curator:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_entry_curator
+      module:
+        - user
   name_function:
     label: 'has function » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -327,8 +356,10 @@ processor_settings:
     all_fields: true
     fields:
       - author
+      - field_author_s_
       - field_first_name
       - field_free_tagging
+      - field_has_author
       - field_has_function
       - field_has_topic
       - field_name
@@ -337,6 +368,7 @@ processor_settings:
       - field_tags
       - format
       - name
+      - name_1
       - name_function
       - name_topic
       - processed
