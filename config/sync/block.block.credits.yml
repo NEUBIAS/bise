@@ -1,11 +1,7 @@
 uuid: 33e78358-3503-48c1-8c69-bc632f0e4e40
 langcode: en
-status: true
+status: false
 dependencies:
-  content:
-    - 'block_content:title_block:11ae5660-6a8e-43fe-b597-5ef5fc18665e'
-  module:
-    - block_content
   theme:
     - projet
 id: credits

@@ -1,11 +1,8 @@
 uuid: bcfe0109-f3f2-4b1a-a87e-17a1f70d137b
 langcode: en
-status: true
+status: false
 dependencies:
-  content:
-    - 'block_content:basic_block:db1e4f51-2d9f-4a38-835f-17db38c0e009'
   module:
-    - block_content
     - system
   theme:
     - projet
