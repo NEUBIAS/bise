@@ -16,6 +16,8 @@ dependencies:
     - field.storage.user.field_name
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.taxonomy_term.full
+    - core.entity_view_mode.user.compact
   module:
     - node
     - user
@@ -198,7 +200,32 @@ field_settings:
       view_mode:
         'entity:node':
           article: search_index
+          book: search_index
+          forum: search_index
+          forum2: search_index
           page: search_index
+          sample_data: search_index
+          software: search_index
+        'entity:taxonomy_term':
+          biological_problems: full
+          edam_bioimaging: full
+          edam_bioimaging_data: full
+          edam_bioimaging_format: full
+          edam_bioimaging_operation: full
+          edam_bioimaging_topic: full
+          execution_platform_os_: full
+          format_for_training_material: full
+          forums: full
+          image_dimension: ''
+          implementation_type: full
+          level_of_user_interaction: full
+          licence_openness: full
+          programming_language: full
+          skills: full
+          software_artifact: full
+          tags: full
+        'entity:user':
+          user: compact
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
