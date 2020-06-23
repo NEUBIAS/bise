@@ -101,7 +101,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h3
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -116,7 +116,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -274,7 +274,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: training-view
+      path: training-material
     cache_metadata:
       max-age: -1
       contexts:
