@@ -1,0 +1,25 @@
+uuid: 783cdf00-9d97-4de5-91a4-f9ac40b3bea5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - projet
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: projet_branding
+theme: projet
+region: top_bar
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: visible
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

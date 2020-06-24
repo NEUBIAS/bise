@@ -1,0 +1,25 @@
+uuid: b2bea5fc-b027-499d-99cc-9af816e245db
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - projet
+id: mainnavigation
+theme: projet
+region: navigation_collapsible
+weight: -9
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

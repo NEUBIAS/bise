@@ -1,6 +1,6 @@
-minimum_single: 0
-minimum_multiple: 0
-disable_search_threshold: 4
+minimum_single: 10
+minimum_multiple: 4
+disable_search_threshold: 6
 minimum_width: 200
 jquery_selector: select
 search_contains: true
@@ -10,7 +10,11 @@ placeholder_text_single: 'Choose a value'
 no_results_text: 'No results match'
 disabled_themes:
   seven: '0'
-  zircon: '0'
+  bootstrap: '0'
+  projet: '0'
 chosen_include: 2
 _core:
   default_config_hash: 8OBgqA1x01J7SgSvBzOELfxP9Bu998XgnQjf4EN40mo
+max_shown_results: null
+use_relative_width: false
+allow_single_deselect: false

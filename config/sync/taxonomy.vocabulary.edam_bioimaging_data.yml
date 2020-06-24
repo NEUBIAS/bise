@@ -5,5 +5,4 @@ dependencies: {  }
 name: EDAM-Bioimaging-Data
 vid: edam_bioimaging_data
 description: 'not used for now'
-hierarchy: 2
 weight: 0

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Execution platform (OS)'
 vid: execution_platform_os_
 description: 'OS on which to use this software'
-hierarchy: 0
 weight: 0

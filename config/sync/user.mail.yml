@@ -23,7 +23,7 @@ status_blocked:
   body: "[user:display-name],\r\n\r\nYour account on [site:name] has been blocked.\r\n\r\n--  [site:name] team"
   subject: 'Account details for [user:display-name] at [site:name] (blocked)'
 status_canceled:
-  body: "[user:display-name],\r\n\r\nYour account on [site:name] has been canceled.\r\n\r\n--  [site:name] team"
+  body: "[user:display-name],\r\n\r\nBecause of the absence of activity, your account on [site:name] has been canceled. You can create a new account using the same email if needed. You do not need to be Registered to browse the website, only to add content. If you want to do so, please create a new account, Otherwise just ignore this email.\r\n\r\n--  [site:name] team"
   subject: 'Account details for [user:display-name] at [site:name] (canceled)'
 langcode: en
 _core:
