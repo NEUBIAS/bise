@@ -1,0 +1,33 @@
+uuid: ed8e81d4-c87b-4622-832d-c1d294a932b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - social_media
+  theme:
+    - projet
+id: projet_socialsharingblock
+theme: projet
+region: bot_bar
+weight: -9
+provider: null
+plugin: social_sharing_block
+settings:
+  id: social_sharing_block
+  label: 'Social Sharing block'
+  provider: social_media
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      book: book
+      forum: forum
+      page: page
+      sample_data: sample_data
+      software: software
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

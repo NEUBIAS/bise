@@ -1,0 +1,27 @@
+uuid: 5a7808b6-538b-4bcf-91ef-be168c93b98d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - projet
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: projet_page_title
+theme: projet
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

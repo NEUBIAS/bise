@@ -5,5 +5,4 @@ dependencies: {  }
 name: Licence/Openness
 vid: licence_openness
 description: 'rough type of license '
-hierarchy: 0
 weight: 0

@@ -42,7 +42,7 @@ social_media:
     weight: 5
     attributes: "target|_blank\nclass|pinterest"
   google_plus:
-    enable: 1
+    enable: 0
     text: 'Google Plus'
     api_url: 'https://plus.google.com/share?url=[current-page:url]'
     api_event: href

@@ -1,0 +1,142 @@
+/**************************/
+/* accordions accessibles */
+/**************************/
+
+.js-accordion__header,
+.js-noanim-accordion__header {
+  display: block;
+  background: none;
+  border: 0;
+  /** fix typo inputs **/
+  font-family: inherit;
+  font-size: 2em;
+  line-height: 1.8462;
+  margin: 0;
+  padding: .25em 0;
+  text-align: left;
+  width: 100%;
+  font-weight: normal;
+}
+
+.vert {
+  color: #148297;
+}
+
+.violet {
+  color: #56618e;
+}
+
+.bleu {
+  color: #2c88b1;
+}
+
+.js-accordion__header:focus,
+.js-noanim-accordion__header:focus {
+  outline: 1px dotted;
+}
+
+.js-accordion__header::before,
+.js-noanim-accordion__header::before {
+  content: '';
+  display: inline-block;
+  width: .9em;
+  height: .9em;
+  background-image: url(../images/calque_violet.png);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+  margin-right: .25em;
+}
+
+.pratique-bleu .js-accordion__header::before, .pratique-bleu .js-noanim-accordion__header::before {
+  background-image: url(../images/calque_bleu.png);
+}
+
+.demarches-violet .js-accordion__header::before, .demarches-violet .js-noanim-accordion__header::before {
+  background-image: url(../images/calque_violet.png);
+}
+
+.etudiant-rose .js-accordion__header::before, .etudiant-rose .js-noanim-accordion__header::before {
+  background-image: url(../images/calque_rose.png);
+}
+
+.js-accordion_bleu__header::before,
+.js-noanim-accordion__header::before {
+  content: '';
+  display: inline-block;
+  width: .9em;
+  height: .9em;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+  margin-right: .25em;
+}
+
+[aria-expanded="true"].js-accordion__header::before,
+[aria-expanded="true"].js-noanim-accordion__header::before {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.js-accordion__header[aria-selected="true"]:after,
+.js-noanim-accordion__header[aria-selected="true"]:after {
+  content: "";
+  position: relative;
+  border-bottom: .4em solid transparent;
+  border-top: .4em solid transparent;
+  margin-left: .5em;
+  top: .1em;
+  border-left: .7em solid;
+  display: inline-block;
+  speak: none;
+}
+
+.js-accordion__title,
+.js-noanim-accordion__title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.js-accordion__panel {
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: visibility 0s ease, max-height 1s ease, opacity 1s ease;
+  transition: visibility 0s ease, max-height 1s ease, opacity 1s ease;
+  max-height: 100em;
+  /* magic number for max-height = enough height */
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+/* This is the hidden state */
+[aria-hidden=true].js-accordion__panel {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-delay: 1s, 0s, 0s;
+  transition-delay: 1s, 0s, 0s;
+  margin: 0;
+  padding: 0;
+}
+
+.js-noanim-accordion__panel {
+  display: block;
+}
+
+[aria-hidden=true].js-noanim-accordion__panel {
+  display: none;
+}
+
+

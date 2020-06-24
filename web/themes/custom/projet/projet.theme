@@ -1,0 +1,28 @@
+<?php
+/**
+ * Use language code for the language switcher
+ *
+ * @param $variables
+ */
+function projet_preprocess_links__language_block(&$variables) {
+  foreach ($variables['links'] as $i => $link) {
+    // @var \Drupal\language\Entity\ConfigurableLanguage $linkLanguage
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->get('id');
+  }
+}
+
+function projet_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button
+  $form['keys']['#attributes']['title'] = t('Search'); //Adds a mousehover title to input box
+  /*$form['keys']['#attributes']['placeholder'] = 'Enter a search term'; // Adds a placeholder -- KO */
+}
+
+function projet_preprocess_input(&$variables) {
+  // Set a placeholder for all search form elements.
+  if ($variables['attributes']['type'] == 'search') {
+    $variables['attributes']['placeholder'] = t('Search term(s) here)');
+  }
+}
+
+?>
