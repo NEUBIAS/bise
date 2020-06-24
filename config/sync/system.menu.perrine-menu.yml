@@ -1,8 +1,0 @@
-uuid: 95f8cd2b-d29e-44a5-86c3-160b1dc8f3dc
-langcode: en
-status: true
-dependencies: {  }
-id: perrine-menu
-label: 'Perrine menu'
-description: ''
-locked: false
