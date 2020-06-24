@@ -32,10 +32,11 @@ dependencies:
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
     - field.field.node.software.field_workflow_steps
+    - image.style.medium
     - node.type.software
   module:
     - ds
-    - responsive_image
+    - image
     - text
     - user
 third_party_settings:
@@ -105,12 +106,12 @@ content:
       link: true
     third_party_settings: {  }
   field_image:
-    type: responsive_image
+    type: image
     weight: 6
     region: right
     label: hidden
     settings:
-      responsive_image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
   field_type:
