@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_has_format
     - field.storage.node.field_has_imaging_details
     - field.storage.node.field_image
-    - image.style.thumbnail_100x100_strict_resize
+    - image.style.medium
     - node.type.sample_data
   module:
     - image
@@ -488,7 +488,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: thumbnail_100x100_strict_resize
+            image_style: medium
             image_link: content
           group_column: ''
           group_columns: {  }
