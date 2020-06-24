@@ -11591,7 +11591,7 @@ menus:
     description: 'Some advices to curators'
     enabled: '1'
     expanded: '0'
-    weight: '-48'
+    weight: '-47'
     langcode: en
     uuid: 3d82d9f3-abc8-4b65-a6ab-551bfd89d34b
   -
@@ -11615,6 +11615,6 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-50'
+    weight: '-49'
     langcode: en
     uuid: bc85b185-3b07-4537-b651-8dde8ab15d00
