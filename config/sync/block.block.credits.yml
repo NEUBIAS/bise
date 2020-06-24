@@ -1,0 +1,21 @@
+uuid: 33e78358-3503-48c1-8c69-bc632f0e4e40
+langcode: en
+status: false
+dependencies:
+  theme:
+    - projet
+id: credits
+theme: projet
+region: bot_bar
+weight: -8
+provider: null
+plugin: 'block_content:11ae5660-6a8e-43fe-b597-5ef5fc18665e'
+settings:
+  id: 'block_content:11ae5660-6a8e-43fe-b597-5ef5fc18665e'
+  label: 'Neubias Cost Action CA15124'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

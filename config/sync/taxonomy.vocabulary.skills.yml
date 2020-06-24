@@ -5,5 +5,4 @@ dependencies: {  }
 name: skills
 vid: skills
 description: 'your own definition in the neubias ecosystem'
-hierarchy: 0
 weight: 0

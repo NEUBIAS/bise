@@ -1,0 +1,21 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'projet'
+description: 'Thème Projet'
+package: 'Bootstrap'
+
+regions:
+  top_bar: 'Top bar'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Header'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  bot_bar: 'Bot bar'
+
+libraries:
+  - 'projet/global-styling'

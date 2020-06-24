@@ -1,0 +1,17 @@
+{
+  "name": "wf-html-vis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "cytoscape": "^3.14.0",
+    "cytoscape-dagre": "^2.2.2",
+    "cytoscape-node-html-label": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

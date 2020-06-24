@@ -1,0 +1,47 @@
+steps = [
+  {
+    "id": "5",
+    "field_current_workflow_step_": "1423",
+    "field_current_workflow_step__1": "MeVisLab XMarkerShortestPath module (Dijsktra shortest path)",
+    "field_previous_workflow_step_1": "670, 784",
+    "field_previous_workflow_step": "Skeletonize3D, Local Thickness",
+    "parent_id": "1432",
+    "field_step_opera": "Analysis"
+  },
+  {
+    "id": "4",
+    "field_current_workflow_step_": "784",
+    "field_current_workflow_step__1": "Local Thickness",
+    "field_previous_workflow_step_1": "989",
+    "field_previous_workflow_step": "ilastik - Carving",
+    "parent_id": "1432",
+    "field_step_opera": "Object feature extraction"
+  },
+  {
+    "id": "3",
+    "field_current_workflow_step_": "670",
+    "field_current_workflow_step__1": "Skeletonize3D",
+    "field_previous_workflow_step_1": "989",
+    "field_previous_workflow_step": "ilastik - Carving",
+    "parent_id": "1432",
+    "field_step_opera": "Skeletonisation"
+  },
+  {
+    "id": "1",
+    "field_current_workflow_step_": "795",
+    "field_current_workflow_step__1": "Enhance Local Contrast (CLAHE)",
+    "field_previous_workflow_step_1": "",
+    "field_previous_workflow_step": "",
+    "parent_id": "1432",
+    "field_step_opera": "Homogeneity"
+  },
+  {
+    "id": "2",
+    "field_current_workflow_step_": "989",
+    "field_current_workflow_step__1": "ilastik - Carving",
+    "field_previous_workflow_step_1": "795",
+    "field_previous_workflow_step": "Enhance Local Contrast (CLAHE)",
+    "parent_id": "1432",
+    "field_step_opera": "Watershed segmentation"
+  }
+]

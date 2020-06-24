@@ -5,5 +5,4 @@ dependencies: {  }
 name: EDAM-Bioimaging-Format
 vid: edam_bioimaging_format
 description: 'Bioimaging formats. EDAM-Bioimaging is an extension to the EDAM ontology'
-hierarchy: 0
 weight: 0

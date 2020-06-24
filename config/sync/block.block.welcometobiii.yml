@@ -1,0 +1,28 @@
+uuid: bcfe0109-f3f2-4b1a-a87e-17a1f70d137b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - projet
+id: welcometobiii
+theme: projet
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:db1e4f51-2d9f-4a38-835f-17db38c0e009'
+settings:
+  id: 'block_content:db1e4f51-2d9f-4a38-835f-17db38c0e009'
+  label: 'Welcome to Biii'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,39 @@
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://bisescratch.lndo.site/themes/custom/projet/favicon.ico'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  projet: 8000
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: true
+  node_user_picture: false
+fluid_container: 1
+table_responsive: '-1'
+breadcrumb_home: 1
+region_wells:
+  top_bar: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+  bot_bar: ''
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
+logo:
+  path: themes/custom/projet/img/biii_temp.png
+  url: ''
+  use_default: false

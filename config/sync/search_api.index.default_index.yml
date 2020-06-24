@@ -2,21 +2,27 @@ uuid: 5cc640c8-9e35-478f-b084-cb7d509c570b
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
+    - user
+    - taxonomy
+    - search_api
   config:
-    - field.storage.node.field_tags
-    - field.storage.node.body
+    - field.storage.node.field_author_s_
+    - field.storage.user.field_first_name
+    - field.storage.node.field_free_tagging
+    - field.storage.node.field_has_author
     - field.storage.node.field_has_function
     - field.storage.node.field_has_topic
-    - field.storage.node.field_free_tagging
-    - field.storage.user.field_first_name
     - field.storage.user.field_name
+    - field.storage.taxonomy_term.field_synonyms
+    - field.storage.node.field_tags
+    - field.storage.node.body
+    - field.storage.node.field_has_entry_curator
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
-  module:
-    - user
-    - search_api
-    - node
-    - taxonomy
+    - core.entity_view_mode.taxonomy_term.full
+    - core.entity_view_mode.user.compact
 _core:
   default_config_hash: CeQvQFFCLtBV14W1topZP19nFUlS3bSckwuryffgkgk
 id: default_index
@@ -24,45 +30,6 @@ name: 'Default content index'
 description: 'Default content index created by the Database Search Defaults module'
 read_only: false
 field_settings:
-  rendered_item:
-    label: 'Rendered item'
-    property_path: rendered_item
-    type: text
-    configuration:
-      roles:
-        anonymous: anonymous
-      view_mode:
-        'entity:node':
-          article: search_index
-          page: search_index
-  node_grants:
-    label: 'Node access information'
-    property_path: search_api_node_grants
-    type: string
-    indexed_locked: true
-    type_locked: true
-    hidden: true
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: text
-    boost: !!float 2
-  status:
-    label: 'Publishing status'
-    datasource_id: 'entity:node'
-    property_path: status
-    type: boolean
-    indexed_locked: true
-    type_locked: true
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_tags
   author:
     label: 'Author name'
     datasource_id: 'entity:node'
@@ -70,22 +37,40 @@ field_settings:
     type: text
     dependencies:
       module:
+        - node
         - user
-  uid:
-    label: 'Author ID'
+  field_author_s_:
+    label: Author(s)
     datasource_id: 'entity:node'
-    property_path: uid
-    type: integer
-    indexed_locked: true
-    type_locked: true
-  format:
-    label: 'Body » Text format'
-    datasource_id: 'entity:node'
-    property_path: 'body:format'
+    property_path: field_author_s_
     type: text
     dependencies:
       config:
-        - field.storage.node.body
+        - field.storage.node.field_author_s_
+  field_first_name:
+    label: 'First name'
+    datasource_id: 'entity:user'
+    property_path: field_first_name
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_first_name
+  field_free_tagging:
+    label: 'Additional keywords'
+    datasource_id: 'entity:node'
+    property_path: field_free_tagging
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_free_tagging
+  field_has_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_has_author
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_author
   field_has_function:
     label: 'has function'
     datasource_id: 'entity:node'
@@ -104,35 +89,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_has_topic
-  processed:
-    label: 'Body » Processed text'
-    datasource_id: 'entity:node'
-    property_path: 'body:processed'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
-  field_free_tagging:
-    label: 'Additional keywords'
-    datasource_id: 'entity:node'
-    property_path: field_free_tagging
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_free_tagging
-  name:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: text
-  field_first_name:
-    label: 'First name'
-    datasource_id: 'entity:user'
-    property_path: field_first_name
-    type: text
-    dependencies:
-      config:
-        - field.storage.user.field_first_name
   field_name:
     label: 'Name (true name)'
     datasource_id: 'entity:user'
@@ -141,6 +97,164 @@ field_settings:
     dependencies:
       config:
         - field.storage.user.field_name
+  field_synonyms:
+    label: 'has function » Taxonomy term » Synonyms'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_function:entity:field_synonyms'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_function
+        - field.storage.taxonomy_term.field_synonyms
+      module:
+        - taxonomy
+  field_synonyms_1:
+    label: 'has topic » Taxonomy term » Synonyms'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_topic:entity:field_synonyms'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_topic
+        - field.storage.taxonomy_term.field_synonyms
+      module:
+        - taxonomy
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  format:
+    label: 'Body » Text format'
+    datasource_id: 'entity:node'
+    property_path: 'body:format'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  name_1:
+    label: 'Entry Curator » User » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_entry_curator:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_has_entry_curator
+      module:
+        - user
+  name_function:
+    label: 'has function » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_function:entity:name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_has_function
+      module:
+        - taxonomy
+  name_topic:
+    label: 'has topic » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_has_topic:entity:name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_has_topic
+      module:
+        - taxonomy
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  processed:
+    label: 'Body » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'body:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  rendered_item:
+    label: 'Rendered item'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          article: search_index
+          book: search_index
+          forum: search_index
+          forum2: search_index
+          page: search_index
+          sample_data: search_index
+          software: search_index
+        'entity:taxonomy_term':
+          biological_problems: full
+          edam_bioimaging: full
+          edam_bioimaging_data: full
+          edam_bioimaging_format: full
+          edam_bioimaging_operation: full
+          edam_bioimaging_topic: full
+          execution_platform_os_: full
+          format_for_training_material: full
+          forums: full
+          image_dimension: ''
+          implementation_type: full
+          level_of_user_interaction: full
+          licence_openness: full
+          programming_language: full
+          skills: full
+          software_artifact: full
+          tags: full
+        'entity:user':
+          user: compact
+  status:
+    label: 'Publishing status'
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Author ID'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -161,32 +275,19 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  add_url:
+    weights:
+      preprocess_index: -30
   aggregated_field:
     weights:
       add_properties: 20
+  content_access:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -50
   entity_status:
     weights:
       preprocess_index: -10
-  transliteration:
-    all_fields: false
-    fields:
-      - rendered_item
-      - title
-    weights:
-      preprocess_index: -4
-      preprocess_query: -7
-  rendered_item:
-    weights:
-      add_properties: 0
-      pre_index_save: -10
-  ignorecase:
-    all_fields: false
-    fields:
-      - rendered_item
-      - title
-    weights:
-      preprocess_index: -5
-      preprocess_query: -8
   highlight:
     highlight: always
     highlight_partial: false
@@ -200,22 +301,59 @@ processor_settings:
   html_filter:
     all_fields: false
     fields:
+      - author
+      - field_author_s_
+      - field_first_name
+      - field_free_tagging
+      - field_has_author
+      - field_has_function
+      - field_has_topic
+      - field_name
+      - field_synonyms
+      - field_synonyms_1
+      - field_tags
+      - format
+      - name
+      - name_1
+      - name_function
+      - name_topic
+      - processed
       - rendered_item
+      - title
     title: true
     alt: true
     tags:
+      b: 2
       h1: 5
       h2: 3
       h3: 2
-      string: 2
-      b: 2
+      strong: 2
     weights:
-      preprocess_index: -3
-      preprocess_query: -6
-  content_access:
+      preprocess_index: -48
+      preprocess_query: -46
+  ignorecase:
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
     weights:
-      preprocess_index: -6
-      preprocess_query: -4
+      preprocess_index: -50
+      preprocess_query: -48
+  language_with_fallback: {  }
+  rendered_item:
+    weights:
+      add_properties: 0
+      pre_index_save: -10
+  stemmer:
+    all_fields: false
+    fields:
+      - rendered_item
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: -36
+      preprocess_query: -36
   stopwords:
     all_fields: false
     fields:
@@ -257,44 +395,47 @@ processor_settings:
       - will
       - with
     weights:
-      preprocess_index: -5
-      preprocess_query: -10
+      preprocess_index: -38
+      preprocess_query: -38
   tokenizer:
     all_fields: true
     fields:
-      - rendered_item
-      - title
-      - field_tags
       - author
-      - format
+      - field_author_s_
+      - field_first_name
+      - field_free_tagging
+      - field_has_author
       - field_has_function
       - field_has_topic
-      - processed
-      - field_free_tagging
-      - name
-      - field_first_name
       - field_name
+      - field_synonyms
+      - field_synonyms_1
+      - field_tags
+      - format
+      - name
+      - name_1
+      - name_function
+      - name_topic
+      - processed
+      - rendered_item
+      - title
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -2
-      preprocess_query: -5
-  add_url:
-    weights:
-      preprocess_index: -30
-  stemmer:
+      preprocess_index: -40
+      preprocess_query: -40
+  transliteration:
     all_fields: false
     fields:
       - rendered_item
-    exceptions:
-      texan: texa
-      mexican: mexic
+      - title
     weights:
-      preprocess_index: 0
-      preprocess_query: 0
+      preprocess_index: -42
+      preprocess_query: -42
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50

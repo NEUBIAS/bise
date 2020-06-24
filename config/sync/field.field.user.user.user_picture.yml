@@ -23,18 +23,18 @@ settings:
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: '2 MB'
-  max_resolution: 85x85
+  max_resolution: 120x120
   min_resolution: ''
   alt_field: false
   alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
-    alt: ''
+    uuid: 04acbfa2-9a39-4c6f-8bd5-356806e5a29e
+    alt: 'tagger avatar'
     title: ''
-    width: null
-    height: null
+    width: 327
+    height: 340
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

@@ -1,0 +1,30 @@
+uuid: ccb704a1-d133-4085-8c68-eba6a7230fe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.search-by-taxonomy
+  module:
+    - system
+  theme:
+    - projet
+id: parseedambioimaging
+theme: projet
+region: content
+weight: -8
+provider: null
+plugin: 'system_menu_block:search-by-taxonomy'
+settings:
+  id: 'system_menu_block:search-by-taxonomy'
+  label: 'Parse Edam Bio imaging'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /browse_ontology
+    negate: false
+    context_mapping: {  }
