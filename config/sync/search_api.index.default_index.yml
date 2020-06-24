@@ -284,7 +284,7 @@ processor_settings:
   content_access:
     weights:
       preprocess_index: -6
-      preprocess_query: -38
+      preprocess_query: -50
   entity_status:
     weights:
       preprocess_index: -10
@@ -330,15 +330,15 @@ processor_settings:
       strong: 2
     weights:
       preprocess_index: -48
-      preprocess_query: -50
+      preprocess_query: -46
   ignorecase:
     all_fields: false
     fields:
       - rendered_item
       - title
     weights:
-      preprocess_index: -44
-      preprocess_query: -46
+      preprocess_index: -50
+      preprocess_query: -48
   language_with_fallback: {  }
   rendered_item:
     weights:
@@ -396,7 +396,7 @@ processor_settings:
       - with
     weights:
       preprocess_index: -38
-      preprocess_query: -40
+      preprocess_query: -38
   tokenizer:
     all_fields: true
     fields:
@@ -424,7 +424,7 @@ processor_settings:
     minimum_word_size: '3'
     weights:
       preprocess_index: -40
-      preprocess_query: -42
+      preprocess_query: -40
   transliteration:
     all_fields: false
     fields:
@@ -432,7 +432,7 @@ processor_settings:
       - title
     weights:
       preprocess_index: -42
-      preprocess_query: -44
+      preprocess_query: -42
 tracker_settings:
   default:
     indexing_order: fifo
