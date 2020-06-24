@@ -2,27 +2,27 @@ uuid: 5cc640c8-9e35-478f-b084-cb7d509c570b
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_free_tagging
-    - field.storage.node.field_has_author
-    - field.storage.node.field_author_s_
-    - field.storage.node.body
-    - field.storage.node.field_has_entry_curator
-    - field.storage.node.field_has_function
-    - field.storage.taxonomy_term.field_synonyms
-    - field.storage.node.field_has_topic
-    - field.storage.node.field_tags
-    - field.storage.user.field_first_name
-    - field.storage.user.field_name
-    - search_api.server.default_server
-    - core.entity_view_mode.node.search_index
-    - core.entity_view_mode.taxonomy_term.full
-    - core.entity_view_mode.user.compact
   module:
     - node
     - user
     - taxonomy
     - search_api
+  config:
+    - field.storage.node.field_author_s_
+    - field.storage.user.field_first_name
+    - field.storage.node.field_free_tagging
+    - field.storage.node.field_has_author
+    - field.storage.node.field_has_function
+    - field.storage.node.field_has_topic
+    - field.storage.user.field_name
+    - field.storage.taxonomy_term.field_synonyms
+    - field.storage.node.field_tags
+    - field.storage.node.body
+    - field.storage.node.field_has_entry_curator
+    - search_api.server.default_server
+    - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.taxonomy_term.full
+    - core.entity_view_mode.user.compact
 _core:
   default_config_hash: CeQvQFFCLtBV14W1topZP19nFUlS3bSckwuryffgkgk
 id: default_index
@@ -284,7 +284,7 @@ processor_settings:
   content_access:
     weights:
       preprocess_index: -6
-      preprocess_query: -4
+      preprocess_query: -38
   entity_status:
     weights:
       preprocess_index: -10
@@ -301,7 +301,25 @@ processor_settings:
   html_filter:
     all_fields: false
     fields:
+      - author
+      - field_author_s_
+      - field_first_name
+      - field_free_tagging
+      - field_has_author
+      - field_has_function
+      - field_has_topic
+      - field_name
+      - field_synonyms
+      - field_synonyms_1
+      - field_tags
+      - format
+      - name
+      - name_1
+      - name_function
+      - name_topic
+      - processed
       - rendered_item
+      - title
     title: true
     alt: true
     tags:
@@ -309,18 +327,18 @@ processor_settings:
       h1: 5
       h2: 3
       h3: 2
-      string: 2
+      strong: 2
     weights:
-      preprocess_index: -3
-      preprocess_query: -6
+      preprocess_index: -48
+      preprocess_query: -50
   ignorecase:
     all_fields: false
     fields:
       - rendered_item
       - title
     weights:
-      preprocess_index: -5
-      preprocess_query: -8
+      preprocess_index: -44
+      preprocess_query: -46
   language_with_fallback: {  }
   rendered_item:
     weights:
@@ -334,8 +352,8 @@ processor_settings:
       mexican: mexic
       texan: texa
     weights:
-      preprocess_index: 0
-      preprocess_query: 0
+      preprocess_index: -36
+      preprocess_query: -36
   stopwords:
     all_fields: false
     fields:
@@ -377,8 +395,8 @@ processor_settings:
       - will
       - with
     weights:
-      preprocess_index: -5
-      preprocess_query: -10
+      preprocess_index: -38
+      preprocess_query: -40
   tokenizer:
     all_fields: true
     fields:
@@ -405,16 +423,16 @@ processor_settings:
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -2
-      preprocess_query: -5
+      preprocess_index: -40
+      preprocess_query: -42
   transliteration:
     all_fields: false
     fields:
       - rendered_item
       - title
     weights:
-      preprocess_index: -4
-      preprocess_query: -7
+      preprocess_index: -42
+      preprocess_query: -44
 tracker_settings:
   default:
     indexing_order: fifo
