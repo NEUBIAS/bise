@@ -24,6 +24,7 @@ module:
   color: 0
   colorbox: 0
   comment: 0
+  conditional_fields: 0
   config: 0
   contact: 0
   context: 0
