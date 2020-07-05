@@ -34,6 +34,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -55,6 +56,7 @@ module:
   layout_discovery: 0
   libraries: 0
   link: 0
+  linkchecker: 0
   markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
