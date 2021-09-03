@@ -10,7 +10,7 @@ branch: neubias/bise master
 branch: neubias/bise dev  
 [![Build Status](https://travis-ci.org/NeuBIAS/bise.svg?branch=dev)](https://travis-ci.org/NeuBIAS/bise)
 
-<https://test/biii.eu>
+<https://test.biii.eu>
 
 DEVELOPMENT PROCESS:
 
