@@ -139,6 +139,7 @@
         "drupal/coder": "^8.2",
         "drupal/drupal-extension": "master-dev",
         "drupal/field_group": "^3.0",
+        "pear/archive_tar": "^1.4.14",
         "php-coveralls/php-coveralls": "^2.0"
     },
     "conflict": {
