@@ -54,3 +54,5 @@ drush/sites/*.site.yml
 *.sql.gz
 /.editorconfig
 /.gitattributes
+/.idea/*
+.idea/*
