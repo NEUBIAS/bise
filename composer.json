@@ -119,7 +119,7 @@
         "drupal/spambot": "1.x-dev",
         "drupal/structure_sync": "^2.0",
         "drupal/synonyms": "2.0.x-dev",
-        "drupal/taxonomy_import": "^1.0",
+        "drupal/taxonomy_import": "^2.0",
         "drupal/taxonomy_menu": "3.3",
         "drupal/token": "^1.1",
         "drupal/token_filter": "^1.0",
