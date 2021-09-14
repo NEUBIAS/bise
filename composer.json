@@ -73,7 +73,7 @@
         "drupal/admin_toolbar": "2.x-dev",
         "drupal/adminimal_admin_toolbar": "1.x-dev",
         "drupal/auto_height": "^1.1",
-        "drupal/backup_migrate": "^4.0",
+        "drupal/backup_migrate": "^5.0",
         "drupal/betterlogin": "1.x-dev",
         "drupal/blazy": "^2.0@RC",
         "drupal/block_class": "1.x-dev",

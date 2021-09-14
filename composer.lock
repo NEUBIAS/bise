@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f53f03165633515ba35436403862e94",
+    "content-hash": "47d568e8df4cfb95d527eca01fffea60",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2033,26 +2033,29 @@
         },
         {
             "name": "drupal/backup_migrate",
-            "version": "4.2.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/backup_migrate.git",
-                "reference": "8.x-4.2"
+                "reference": "5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/backup_migrate-8.x-4.2.zip",
-                "reference": "8.x-4.2",
-                "shasum": "137c9e30ad6311f9fb121dca165b8fb35a097353"
+                "url": "https://ftp.drupal.org/files/projects/backup_migrate-5.0.1.zip",
+                "reference": "5.0.1",
+                "shasum": "22b7adf43277d906233957bbad946a5ae3093cbf"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "suggest": {
+                "defuse/php-encryption": "Optional encryption of saved backups."
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.2",
-                    "datestamp": "1625854034",
+                    "version": "5.0.1",
+                    "datestamp": "1625856246",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2061,18 +2064,17 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "Ronan Dowling",
-                    "homepage": "https://www.drupal.org/u/ronan",
-                    "role": "Maintainer"
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/189065/committers",
+                    "role": "Developer"
                 },
                 {
-                    "name": "Alex Andrascu",
-                    "homepage": "https://www.drupal.org/u/alex-andrascu",
-                    "role": "Maintainer"
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
                 },
                 {
                     "name": "dgorton",
