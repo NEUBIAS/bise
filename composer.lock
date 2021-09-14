@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2edd762bc30c8a82fffb153f237cbf2",
+    "content-hash": "07cf3af328b8caf0a6fcec70e05f4489",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5765,17 +5765,17 @@
         },
         {
             "name": "drupal/taxonomy_menu",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/taxonomy_menu.git",
-                "reference": "8.x-3.3"
+                "reference": "8.x-3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/taxonomy_menu-8.x-3.3.zip",
-                "reference": "8.x-3.3",
-                "shasum": "26492e3210430d44822de242449baa8e658568cf"
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_menu-8.x-3.4.zip",
+                "reference": "8.x-3.4",
+                "shasum": "c0c8890a7c07f9af8a6f0509d2e9ea678f95aab1"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -5783,7 +5783,7 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.3",
+                    "version": "8.x-3.4",
                     "datestamp": "1545492780",
                     "security-coverage": {
                         "status": "covered",

@@ -120,7 +120,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/synonyms": "2.0.x-dev",
         "drupal/taxonomy_import": "^2.0",
-        "drupal/taxonomy_menu": "3.3",
+        "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.1",
         "drupal/token_filter": "^1.0",
         "drupal/views_accordion": "1.x-dev",
