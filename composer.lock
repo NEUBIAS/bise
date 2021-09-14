@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21864b8fec3b0a7455aa692a3f8280f0",
+    "content-hash": "02c9cbbfe699a9bcdcc842608695368d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5642,29 +5642,29 @@
         },
         {
             "name": "drupal/synonyms",
-            "version": "1.0.0-alpha3",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/synonyms.git",
-                "reference": "8.x-1.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/synonyms-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "0306a9dfb279c0594246b49658309c1686e984a9"
+                "reference": "67404e0a04b43b3cc0092d3faa9e4d6a715a262d"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/synonyms_list_field": "*"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha3",
-                    "datestamp": "1609623594",
+                    "version": "2.0.0-beta1+1-dev",
+                    "datestamp": "1622577245",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -5690,11 +5690,12 @@
                     "homepage": "https://www.drupal.org/user/2268520"
                 }
             ],
-            "description": "Provides synonyms feature for content entities.",
+            "description": "Provides synonyms feature for all entities.",
             "homepage": "https://www.drupal.org/project/synonyms",
             "support": {
                 "source": "https://git.drupalcode.org/project/synonyms"
-            }
+            },
+            "time": "2021-06-01T19:51:29+00:00"
         },
         {
             "name": "drupal/taxonomy_import",
@@ -13534,6 +13535,7 @@
         "drupal/module_filter": 20,
         "drupal/popular_tags": 15,
         "drupal/spambot": 20,
+        "drupal/synonyms": 20,
         "drupal/views_accordion": 20,
         "drupal/drupal-extension": 20
     },
