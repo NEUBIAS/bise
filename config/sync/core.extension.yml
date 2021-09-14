@@ -52,7 +52,6 @@ module:
   httpbl: 0
   image: 0
   image_captcha: 0
-  kint: 0
   layout_discovery: 0
   libraries: 0
   link: 0
