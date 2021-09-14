@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883f55a4c91a7d8c181ea35cf17950d7",
+    "content-hash": "a24377f9a06e3b6b37fe7bc2d25545f0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -121,6 +121,45 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "bower-asset/jquery",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:jquery/jquery-dist.git",
+                "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/e786e3d9707ffd9b0dd330ca135b66344dcef85a",
+                "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/jquery-autoheight",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bW9ubw/jquery-autoheight.git",
+                "reference": "93362eb502aa7408575ea499be2c167e432c5992"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bW9ubw/jquery-autoheight/zipball/93362eb502aa7408575ea499be2c167e432c5992",
+                "reference": "93362eb502aa7408575ea499be2c167e432c5992"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.11.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/leaflet",
