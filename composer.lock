@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b80898ff87bfb3af33cb25aa405fb49",
+    "content-hash": "3f53f03165633515ba35436403862e94",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5411,26 +5411,26 @@
         },
         {
             "name": "drupal/search_autocomplete",
-            "version": "1.3.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_autocomplete.git",
-                "reference": "8.x-1.3"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "1e166bf8af0959fb4ea49e065632066bd4b4473d"
+                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "d7386e17f7bc8a2c52b516c0f23d3699b263c41d"
             },
             "require": {
-                "drupal/core": "^8"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1591039059",
+                    "version": "2.0.1",
+                    "datestamp": "1591039197",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
