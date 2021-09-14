@@ -132,6 +132,7 @@
         "drush/drush": "^9.0.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
+        "kint-php/kint": "^3.3",
         "npm-asset/chosen-js": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0",
         "phpunit/phpunit": "^8.4"
