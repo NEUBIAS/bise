@@ -17,7 +17,7 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },        
+        },
         {
             "type": "package",
             "package": {
@@ -176,31 +176,34 @@
         ]
     },
     "extra": {
-    "installer-types": [
-        "npm-asset",
-        "bower-asset"
-    ],        
-    "drupal-scaffold": {
-        "locations": {
-            "web-root": "web/"
-        }
-    },
-    "installer-paths": {
-        "web/core": ["type:drupal-core"],
-        "web/libraries/chosen": ["npm-asset/chosen-js"],
-        "web/libraries/autoheight": ["bower-asset/jquery-autoheight"],
-        "web/libraries/{$name}": [
-            "type:drupal-library",
-            "type:npm-asset",
-            "type:bower-asset"
+        "installer-types": [
+            "npm-asset",
+            "bower-asset"
         ],
-        "web/modules/contrib/{$name}": ["type:drupal-module"],
-        "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-        "web/themes/contrib/{$name}": ["type:drupal-theme"],
-        "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-        "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-        "web/themes/custom/{$name}": ["type:drupal-custom-theme"], 
-        "web/libraries/colorbox": ["npm-asset/jquery-colorbox"]
-    }            
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/.htaccess": false
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/chosen": ["npm-asset/chosen-js"],
+            "web/libraries/autoheight": ["bower-asset/jquery-autoheight"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
+            ],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/libraries/colorbox": ["npm-asset/jquery-colorbox"]
+        }
     }
 }
