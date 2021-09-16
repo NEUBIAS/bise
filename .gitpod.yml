@@ -5,11 +5,11 @@ tasks:
   - name: Drupal start
     init: |
       wget -O web/sites/default/settings.local.php https://www.dropbox.com/s/yxrzeaw3fl4vi7n/settings.local.php
-      wget https://www.dropbox.com/s/3dgun9osw5te17b/20210916dev.sql.gz
+      wget $BIII_DATABASE_URL
       lando start
       lando composer install
       git checkout web/.htaccess
-      lando db-import 20210916dev.sql.gz
+      lando db-import $(echo $BIII_DATABASE_URL | sed -e 's/.*\///')
       lando drush cr
       #lando drush si -y --account-pass=admin --site-name='gitpod_lando' demo_umami
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
