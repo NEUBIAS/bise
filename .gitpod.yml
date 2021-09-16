@@ -6,7 +6,13 @@ tasks:
     init: |
       lando start
       lando composer install
-      lando drush si -y --account-pass=admin --site-name='gitpod_lando' demo_umami
+      git checkout web/.htaccess
+      lando drush cr
+      wget https://www.dropbox.com/s/3dgun9osw5te17b/20210916dev.sql.gz
+      wget -O web/sites/default/settings.local.php https://www.dropbox.com/s/yxrzeaw3fl4vi7n/settings.local.php
+      lando db-import 20210916dev.sql.gz
+      lando drush cr
+      #lando drush si -y --account-pass=admin --site-name='gitpod_lando' demo_umami
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
 
 vscode:
