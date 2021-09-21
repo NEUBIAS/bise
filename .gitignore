@@ -57,5 +57,3 @@ drush/sites/*.site.yml
 .lando.local.yml
 /.idea/*
 .idea/*
-.ovhconfig
-
