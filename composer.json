@@ -15,6 +15,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "dinbror/blazy",
@@ -62,14 +66,14 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
+        "bower-asset/jquery-autoheight": "^1.0",
+        "bower-asset/leaflet": "^1.7",
+        "composer/installers": "^1.12",
         "dinbror/blazy": "^1.8",
-        "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "2.x-dev",
         "drupal/adminimal_admin_toolbar": "1.x-dev",
         "drupal/auto_height": "^1.1",
-        "drupal/backup_migrate": "^4.0",
+        "drupal/backup_migrate": "^5.0",
         "drupal/betterlogin": "1.x-dev",
         "drupal/blazy": "^2.0@RC",
         "drupal/block_class": "1.x-dev",
@@ -77,57 +81,63 @@
         "drupal/bootstrap": "3.x-dev",
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/bootstrap_library": "^1.11",
+        "drupal/broken_link": "^3.1",
         "drupal/captcha": "^1.0",
         "drupal/chosen": "^2.5",
         "drupal/colorbox": "1.x-dev",
+        "drupal/conditional_fields": "^4.0",
         "drupal/console": "^1.0.2",
         "drupal/context": "4.x-dev",
         "drupal/contribute": "^5.0@beta",
-        "drupal/core": "^8.9.1",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-recommended": "^8.9",
         "drupal/ctools": "^3.0",
-        "drupal/devel": "^2.0",
+        "drupal/devel": "^4.0",
         "drupal/ds": "^3.1",
         "drupal/entity_browser": "^2.0",
         "drupal/eva": "^2.0",
         "drupal/feeds": "^3.0",
         "drupal/fontawesome": "2.x-dev",
         "drupal/google_analytics": "^3.0",
-        "drupal/honeypot": "^1.27",
+        "drupal/honeypot": "^2.0",
         "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^3.0",
-        "drupal/markdown": "^1.2",
+        "drupal/linkchecker": "1.x-dev",
+        "drupal/markdown": "^2.0",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/menu_token": "^1.0",
         "drupal/module_filter": "3.x-dev",
         "drupal/paragraphs": "^1.5",
         "drupal/pathauto": "^1.1",
         "drupal/popular_tags": "^1.0@alpha",
-        "drupal/recaptcha": "^2.3",
+        "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.0",
         "drupal/restui": "^1.1",
         "drupal/search_api": "^1.7",
-        "drupal/search_autocomplete": "^1.1",
+        "drupal/search_autocomplete": "^2.0",
         "drupal/shs": "^1.0",
-        "drupal/social_media": "^1.8",
+        "drupal/social_media": "^1.9",
         "drupal/spambot": "1.x-dev",
-        "drupal/structure_sync": "^1.11",
-        "drupal/synonyms": "^1.0",
-        "drupal/taxonomy_import": "^1.0",
-        "drupal/taxonomy_menu": "3.3",
+        "drupal/structure_sync": "^2.0",
+        "drupal/synonyms": "2.0.x-dev",
+        "drupal/taxonomy_import": "^2.0",
+        "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.1",
         "drupal/token_filter": "^1.0",
         "drupal/views_accordion": "1.x-dev",
         "drupal/views_bulk_edit": "^2.0",
-        "drupal/views_bulk_operations": "^2.0",
+        "drupal/views_bulk_operations": "^3.0",
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "^1.0",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^10.0.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
-        "phpunit/phpunit": "^8.4",
-        "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3"
+        "kint-php/kint": "^3.3",
+        "league/commonmark": "^1.6",
+        "michelf/php-markdown": "^1.9",
+        "npm-asset/chosen-js": "^1.8",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "phpunit/phpunit": "^8.4"
     },
     "require-dev": {
         "behat/mink-extension": "v2.2",
@@ -136,6 +146,7 @@
         "drupal/coder": "^8.2",
         "drupal/drupal-extension": "master-dev",
         "drupal/field_group": "^3.0",
+        "pear/archive_tar": "^1.4.14",
         "php-coveralls/php-coveralls": "^2.0"
     },
     "conflict": {
@@ -149,8 +160,7 @@
     "autoload": {
         "classmap": [
             "scripts/composer/ScriptHandler.php"
-        ],
-        "files": ["load.environment.php"]
+        ]
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -168,28 +178,34 @@
         ]
     },
     "extra": {
+        "installer-types": [
+            "npm-asset",
+            "bower-asset"
+        ],
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/.htaccess": false
+            }
+        },
         "installer-paths": {
-            "web/libraries/colorbox": [
-                "npm-asset/jquery-colorbox"
-            ],
-            "web/core": [
-                "type:drupal-core"
-            ],
+            "web/core": ["type:drupal-core"],
+            "web/libraries/chosen": ["npm-asset/chosen-js"],
+            "web/libraries/autoheight": ["bower-asset/jquery-autoheight"],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
             ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/libraries/colorbox": ["npm-asset/jquery-colorbox"]
         }
     }
 }
