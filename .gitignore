@@ -52,3 +52,8 @@ drush/bise.aliases.drushrc.php
 drushrc.php
 drush/sites/*.site.yml
 *.sql.gz
+/.editorconfig
+/.gitattributes
+.lando.local.yml
+/.idea/*
+.idea/*
