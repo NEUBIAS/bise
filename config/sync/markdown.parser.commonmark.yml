@@ -6,9 +6,80 @@ weight: 0
 enabled: true
 render_strategy:
   type: filter_output
-  custom_allowed_html: null
-  plugins: {  }
+  custom_allowed_html: ''
+  plugins:
+    bootstrap: true
+    commonmark: true
+    commonmark-external-links: false
+    commonmark-footnotes: false
+    commonmark-heading-permalink: false
+    commonmark-strikethrough: false
+    commonmark-table: false
+    commonmark-task-list: false
 settings:
   allow_unsafe_links: true
+  enable_em: true
+  enable_strong: true
   html_input: allow
-extensions: {  }
+  max_nesting_level: 0
+  use_asterisk: true
+  use_underscore: true
+extensions:
+  -
+    id: commonmark-attributes
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-autolink
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-disallowed-raw-html
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-emoji
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-external-links
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-footnotes
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-heading-permalink
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-mention
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-smart-punctuation
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-strikethrough
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-table
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-table-of-contents
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-task-list
+    weight: 0
+    enabled: false
