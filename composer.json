@@ -103,7 +103,7 @@
         "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^3.0",
         "drupal/linkchecker": "1.x-dev",
-        "drupal/markdown": "^2.0",
+        "drupal/markdown": "2.0.0-rc1",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/menu_token": "^1.0",
         "drupal/module_filter": "3.x-dev",
