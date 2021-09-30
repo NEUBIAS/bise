@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8151a475cb2866e7e4ca4d580cb872b",
+    "content-hash": "e91e42e66d85557423b5d9a2d866f703",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4715,21 +4715,14 @@
         },
         {
             "name": "drupal/markdown",
-            "version": "2.0.0-rc2",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/markdown.git",
-                "reference": "8.x-2.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/markdown-8.x-2.0-rc2.zip",
-                "reference": "8.x-2.0-rc2",
-                "shasum": "aff43545f37bff0b0da8699cfa7cccd510f42832"
+                "reference": "fc81cf8b0ec76a10623a8f1a7a0c2512bf305014"
             },
             "require": {
                 "composer/semver": "^1.0 || ^2.0",
-                "drupal/core": "^8",
                 "php": ">=5.5.9"
             },
             "suggest": {
@@ -4737,12 +4730,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-2.0-rc2",
-                    "datestamp": "1614629477",
+                    "version": "8.x-2.0-rc2+1-dev",
+                    "datestamp": "1616191083",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -13816,6 +13812,7 @@
         "drupal/fontawesome": 20,
         "drupal/httpbl": 20,
         "drupal/linkchecker": 20,
+        "drupal/markdown": 20,
         "drupal/module_filter": 20,
         "drupal/popular_tags": 15,
         "drupal/spambot": 20,
@@ -13827,5 +13824,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
