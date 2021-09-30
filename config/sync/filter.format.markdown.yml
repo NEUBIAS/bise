@@ -14,9 +14,11 @@ filters:
     status: true
     weight: 0
     settings:
-      override: false
       id: _missing_parser
+      weight: 0
       enabled: true
+      settings: {  }
+      override: true
       render_strategy:
         type: filter_output
         custom_allowed_html: null
