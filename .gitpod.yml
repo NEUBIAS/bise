@@ -13,6 +13,7 @@ tasks:
       lando drush cr
       #lando drush si -y --account-pass=admin --site-name='gitpod_lando' demo_umami
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
+      lando ssh --service appserver --user root --command "apt-get update && apt install vim -y"
 
 vscode:
   extensions:
