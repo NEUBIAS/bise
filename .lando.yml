@@ -3,3 +3,4 @@ recipe: drupal8
 config:
   webroot: web
   php: '7.2'
+  composer_version: '2.1.8'
