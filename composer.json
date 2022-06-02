@@ -86,7 +86,6 @@
         "drupal/chosen": "^2.5",
         "drupal/colorbox": "1.x-dev",
         "drupal/conditional_fields": "^4.0",
-        "drupal/console": "^1.0.2",
         "drupal/context": "4.x-dev",
         "drupal/contribute": "^5.0@beta",
         "drupal/core-composer-scaffold": "^9",
