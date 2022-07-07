@@ -5679,17 +5679,17 @@
         },
         {
             "name": "drupal/taxonomy_import",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/taxonomy_import.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/taxonomy_import-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "06eb3a188300c7ce80c9eafced7077d619b6ada2"
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_import-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "da575c84b1120512f86a1d3ed00da5a76fd11ffc"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -5697,8 +5697,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1632842021",
+                    "version": "2.0.5",
+                    "datestamp": "1634827639",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
