@@ -91,7 +91,7 @@
         "drupal/contribute": "^5.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.9",
-        "drupal/ctools": "^3.0",
+        "drupal/ctools": "^3.8",
         "drupal/devel": "^4.0",
         "drupal/ds": "^3.1",
         "drupal/entity_browser": "^2.0",
