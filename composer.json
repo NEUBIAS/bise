@@ -108,7 +108,7 @@
         "drupal/menu_token": "^9.1@alpha",
         "drupal/module_filter": "3.x-dev",
         "drupal/paragraphs": "^1.5",
-        "drupal/pathauto": "^1.1",
+        "drupal/pathauto": "^1.10",
         "drupal/popular_tags": "^1.0@alpha",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.0",
