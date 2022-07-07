@@ -124,6 +124,7 @@
         "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.10",
         "drupal/token_filter": "^1.4",
+        "drupal/upgrade_status": "^3.14",
         "drupal/views_accordion": "1.x-dev",
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^3.0",
