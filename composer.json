@@ -88,7 +88,7 @@
         "drupal/conditional_fields": "^4.0",
         "drupal/console": "^1.0.2",
         "drupal/context": "4.x-dev",
-        "drupal/contribute": "^5.0@beta",
+        "drupal/contribute": "^1.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.9",
         "drupal/ctools": "^3.8",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97b8d6c5d1187467c132ce89fd7d3412",
+    "content-hash": "f9dbd81b21aa0b411971abc0fa7a674b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3251,26 +3251,26 @@
         },
         {
             "name": "drupal/contribute",
-            "version": "5.0.0-beta3",
+            "version": "1.0.0-beta9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/contribute.git",
-                "reference": "8.x-5.0-beta3"
+                "reference": "8.x-1.0-beta9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/contribute-8.x-5.0-beta3.zip",
-                "reference": "8.x-5.0-beta3",
-                "shasum": "8ee067c4b9472b51af90b9481e4302527080129c"
+                "url": "https://ftp.drupal.org/files/projects/contribute-8.x-1.0-beta9.zip",
+                "reference": "8.x-1.0-beta9",
+                "shasum": "01f07484505c5e64ecc05fcb695281d5094ec814"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0-beta3",
-                    "datestamp": "1515761285",
+                    "version": "8.x-1.0-beta9",
+                    "datestamp": "1648052605",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -3279,16 +3279,22 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "adriancid",
-                    "homepage": "https://www.drupal.org/user/1962106"
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "develCuy",
-                    "homepage": "https://www.drupal.org/user/125473"
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "joshua1234511",
+                    "homepage": "https://www.drupal.org/user/3362218"
                 },
                 {
                     "name": "jrockowitz",
