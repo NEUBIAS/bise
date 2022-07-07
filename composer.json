@@ -115,7 +115,7 @@
         "drupal/restui": "^1.1",
         "drupal/search_api": "^1.23",
         "drupal/search_autocomplete": "^2.0",
-        "drupal/shs": "^1.0",
+        "drupal/shs": "^2.0@RC",
         "drupal/social_media": "^1.9",
         "drupal/spambot": "1.x-dev",
         "drupal/structure_sync": "^2.0",
