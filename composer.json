@@ -111,7 +111,7 @@
         "drupal/pathauto": "^1.10",
         "drupal/popular_tags": "^1.0@alpha",
         "drupal/recaptcha": "^3.0",
-        "drupal/redirect": "^1.0",
+        "drupal/redirect": "^1.7",
         "drupal/restui": "^1.1",
         "drupal/search_api": "^1.7",
         "drupal/search_autocomplete": "^2.0",
