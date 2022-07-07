@@ -5349,17 +5349,17 @@
         },
         {
             "name": "drupal/search_autocomplete",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_autocomplete.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "d7386e17f7bc8a2c52b516c0f23d3699b263c41d"
+                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "b4dbad3506effaa67b633a2e1f4cf2eacff409ef"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -5367,8 +5367,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1591039197",
+                    "version": "2.0.2",
+                    "datestamp": "1649542388",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5383,10 +5383,6 @@
                 {
                     "name": "Dom.",
                     "homepage": "https://www.drupal.org/user/801982"
-                },
-                {
-                    "name": "MrSzymon",
-                    "homepage": "https://www.drupal.org/user/3524044"
                 }
             ],
             "description": "Provides autocompletion feature for fields in your Drupal site. This module ships with pre-existing autocompletion configurations.",
