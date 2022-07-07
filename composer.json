@@ -101,7 +101,7 @@
         "drupal/google_analytics": "^3.0",
         "drupal/honeypot": "^2.0",
         "drupal/httpbl": "1.x-dev",
-        "drupal/libraries": "^3.0",
+        "drupal/libraries": "^3.0@beta",
         "drupal/linkchecker": "1.x-dev",
         "drupal/markdown": "2.x-dev@dev",
         "drupal/menu_breadcrumb": "^1.11",
