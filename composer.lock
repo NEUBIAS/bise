@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44f57dddae01b3e3289195f95a202f92",
+    "content-hash": "a001d18b583b58098549eec20d471a78",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1921,30 +1921,26 @@
         },
         {
             "name": "drupal/auto_height",
-            "version": "1.1.0",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/auto_height.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/auto_height-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "5f1373368e45dc4073d3245e27bd99da4d76286e"
+                "reference": "58ad3835c25e82098eec58e5286547288431c120"
             },
             "require": {
-                "drupal/core": "~8.0",
-                "drupal/libraries": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1483437543",
+                    "version": "2.0.x-dev",
+                    "datestamp": "1635861256",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -1957,6 +1953,11 @@
                     "name": "Binu Varghese",
                     "homepage": "https://www.drupal.org/u/binu-varghese",
                     "email": "myinbox.binu@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Szczepan Musial (lamp5)",
+                    "homepage": "https://www.drupal.org/u/lamp5",
                     "role": "Maintainer"
                 }
             ],
@@ -4766,27 +4767,27 @@
         },
         {
             "name": "drupal/menu_token",
-            "version": "1.0.0-alpha3",
+            "version": "9.1.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_token.git",
-                "reference": "8.x-1.0-alpha3"
+                "reference": "9.1.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_token-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "900549b00d9ea83474fd4bc7d77104257dba6c78"
+                "url": "https://ftp.drupal.org/files/projects/menu_token-9.1.0-alpha1.zip",
+                "reference": "9.1.0-alpha1",
+                "shasum": "60da78642c347ec589eeda83149f6e50968ebf93"
             },
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8 || ^9",
                 "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-alpha3",
-                    "datestamp": "1573517280",
+                    "version": "9.1.0-alpha1",
+                    "datestamp": "1638424643",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -4795,7 +4796,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -4814,6 +4815,10 @@
                 {
                     "name": "fubhy",
                     "homepage": "https://www.drupal.org/user/761344"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "nhaarish",
@@ -14036,6 +14041,7 @@
     "stability-flags": {
         "drupal/admin_toolbar": 20,
         "drupal/adminimal_admin_toolbar": 20,
+        "drupal/auto_height": 20,
         "drupal/betterlogin": 20,
         "drupal/blazy": 5,
         "drupal/block_class": 20,
@@ -14049,6 +14055,7 @@
         "drupal/libraries": 10,
         "drupal/linkchecker": 20,
         "drupal/markdown": 20,
+        "drupal/menu_token": 15,
         "drupal/module_filter": 20,
         "drupal/popular_tags": 15,
         "drupal/spambot": 20,
