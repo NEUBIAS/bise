@@ -37,7 +37,7 @@ filters:
           filter_align: false
           filter_caption: false
       extensions: {  }
-    filterFormat: markdownnew
+    filterFormat: null
   token_filter:
     id: token_filter
     provider: token_filter
