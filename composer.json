@@ -69,6 +69,7 @@
         "bower-asset/jquery-autoheight": "^1.0",
         "bower-asset/leaflet": "^1.7",
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
         "drupal/admin_toolbar": "2.x-dev",
         "drupal/adminimal_admin_toolbar": "1.x-dev",
