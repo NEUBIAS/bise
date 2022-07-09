@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac984f026b4103ef349c3d17cd6d1a5a",
+    "content-hash": "b36d3039aaf8cdbc6564f8cc69d01236",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6040,29 +6040,26 @@
         },
         {
             "name": "drupal/zircon",
-            "version": "1.0.0-rc1",
+            "version": "dev-9.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/zircon.git",
-                "reference": "8.x-1.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/zircon-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "34e90da2dbe85a9242d810b888161e33c18afaf6"
+                "reference": "068ee7176b54d8a8a2d449b02182587592355ad6"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-9.1.x": "9.1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1449326836",
+                    "version": "9.1.x-dev",
+                    "datestamp": "1644996192",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -6100,7 +6097,7 @@
                     "homepage": "https://www.drupal.org/user/3531072"
                 }
             ],
-            "description": "A flexible, recolorable theme with many regions and a responsive, mobile-first layout.",
+            "description": "A flexible, recolorable theme with many regions and a responsive, mobile-first layout with Drupal 9 support.",
             "homepage": "https://www.drupal.org/project/zircon",
             "support": {
                 "source": "https://git.drupalcode.org/project/zircon"
@@ -11081,7 +11078,8 @@
         "drupal/popular_tags": 15,
         "drupal/shs": 5,
         "drupal/spambot": 20,
-        "drupal/synonyms": 20
+        "drupal/synonyms": 20,
+        "drupal/zircon": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

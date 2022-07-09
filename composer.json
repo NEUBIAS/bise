@@ -129,7 +129,7 @@
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^3.0",
         "drupal/views_parity_row": "^1.8",
-        "drupal/zircon": "^1.0",
+        "drupal/zircon": "9.1.x-dev@dev",
         "drush/drush": "^10.0.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
