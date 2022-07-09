@@ -86,7 +86,6 @@
         "drupal/chosen": "^2.5",
         "drupal/colorbox": "1.x-dev",
         "drupal/conditional_fields": "^4.0",
-        "drupal/console": "^1.0.2",
         "drupal/context": "4.x-dev",
         "drupal/contribute": "^1.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
@@ -97,13 +96,14 @@
         "drupal/entity_browser": "^2.0",
         "drupal/eva": "^2.0",
         "drupal/feeds": "^3.0",
+        "drupal/field_group": "^3.2",
         "drupal/fontawesome": "2.x-dev",
         "drupal/google_analytics": "^3.0",
         "drupal/honeypot": "^2.0",
         "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^3.0@beta",
         "drupal/linkchecker": "1.x-dev",
-        "drupal/markdown": "2.x-dev@dev",
+        "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/menu_token": "^9.1@alpha",
         "drupal/module_filter": "3.x-dev",
@@ -125,7 +125,7 @@
         "drupal/token": "^1.10",
         "drupal/token_filter": "^1.4",
         "drupal/upgrade_status": "^3.14",
-        "drupal/views_accordion": "1.x-dev",
+        "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^3.0",
         "drupal/views_parity_row": "^1.8",
@@ -138,8 +138,6 @@
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0"
-    },
-    "require-dev": {
     },
     "conflict": {
         "drupal/drupal": "*"
