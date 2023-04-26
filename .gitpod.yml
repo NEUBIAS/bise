@@ -1,5 +1,5 @@
-image:
-  file: .gitpod.Dockerfile
+image: devwithlando/gitpod:1
+# https://github.com/lando/drupal-dev-environment/blob/9.4.x/.gitpod.yml
 
 tasks:
   - name: Drupal start
@@ -7,6 +7,7 @@ tasks:
       wget -O web/sites/default/settings.local.php https://www.dropbox.com/s/yxrzeaw3fl4vi7n/settings.local.php
       wget $BIII_DATABASE_URL
       lando start
+      lando rebuild
       lando composer install
       git checkout web/.htaccess
       lando db-import $(echo $BIII_DATABASE_URL | sed -e 's/.*\///')
