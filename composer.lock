@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9210898f2a519b54010d757e2622b57",
+    "content-hash": "7fccff9c00057d4af9c4d4aa7965cc8c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1666,29 +1666,32 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "dev-2.x",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "449f32dd7e5c9a1ae68cb4b2b2809ddddb28d949"
+                "reference": "3.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.2.1.zip",
+                "reference": "3.2.1",
+                "shasum": "7a4bfb716e269be4ca03b7f04e29e4439ec6cf93"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9"
+                "drupal/core": "^8.8.0 || ^9.0"
             },
             "require-dev": {
                 "drupal/admin_toolbar_tools": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.x-dev",
-                    "datestamp": "1629883329",
+                    "version": "3.2.1",
+                    "datestamp": "1665044276",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -1719,12 +1722,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "fethi.krout",
-                    "homepage": "https://www.drupal.org/user/3206765"
-                },
-                {
                     "name": "matio89",
                     "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "Musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
                 },
                 {
                     "name": "romainj",
@@ -1740,8 +1743,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            },
-            "time": "2021-08-25T09:20:50+00:00"
+            }
         },
         {
             "name": "drupal/adminimal_admin_toolbar",
@@ -2166,26 +2168,29 @@
         },
         {
             "name": "drupal/bootstrap",
-            "version": "dev-3.x",
+            "version": "3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap.git",
-                "reference": "3a75453802245c4d0f243c8c86525bcf1137821c"
+                "reference": "8.x-3.24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.24.zip",
+                "reference": "8.x-3.24",
+                "shasum": "112e9925fd6d694f41b388a81748d1175c776969"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-theme",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.23+6-dev",
-                    "datestamp": "1631314588",
+                    "version": "8.x-3.24",
+                    "datestamp": "1648749397",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2217,8 +2222,7 @@
                 "docs": "https://drupal-bootstrap.org",
                 "issues": "https://www.drupal.org/project/issues/bootstrap",
                 "irc": "irc://irc.freenode.org/drupal-bootstrap"
-            },
-            "time": "2021-09-10T22:57:13+00:00"
+            }
         },
         {
             "name": "drupal/bootstrap_layouts",
@@ -11078,14 +11082,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/admin_toolbar": 20,
-        "drupal/adminimal_admin_toolbar": 20,
         "drupal/auto_height": 20,
         "drupal/betterlogin": 20,
         "drupal/blazy": 5,
         "drupal/block_class": 20,
         "drupal/block_visibility_groups": 20,
-        "drupal/bootstrap": 20,
         "drupal/colorbox": 20,
         "drupal/conditional_fields": 15,
         "drupal/context": 20,
