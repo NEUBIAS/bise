@@ -8,5 +8,5 @@ RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes && echo 'eval 
 #RUN mkdir -p ~/.lando && echo "proxy: 'ON'\nproxyHttpPort: '8080'\nproxyHttpsPort: '4443'\nbindAddress: '0.0.0.0'\nproxyBindAddress: '0.0.0.0'" > ~/.lando/config.yml
 #RUN sudo apt-get install docker-compose-plugin
 RUN sudo groupadd docker && sudo usermod -aG docker $USER
-RUN curl -OL https://github.com/lando/lando/releases/download/v3.4.2/lando-x64-v3.4.2.deb && sudo dpkg -i --ignore-depends docker-ce,iptables lando-x64-v3.4.2.deb && rm -rf lando-x64-v3.4.2.deb
+RUN curl -OL https://github.com/lando/lando/releases/download/v3.11.0/lando-x64-v3.11.0.deb && sudo dpkg -i --ignore-depends docker-ce,iptables lando-x64-v3.11.0.deb && rm -rf lando-x64-v3.11.0.deb
 RUN mkdir -p ~/.lando && echo "proxy: 'ON'\nproxyHttpPort: '8080'\nproxyHttpsPort: '4443'\nbindAddress: '0.0.0.0'\nproxyBindAddress: '0.0.0.0'" > ~/.lando/config.yml
