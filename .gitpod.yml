@@ -7,14 +7,33 @@ tasks:
       wget -O web/sites/default/settings.local.php https://www.dropbox.com/s/yxrzeaw3fl4vi7n/settings.local.php
       wget $BIII_DATABASE_URL
       lando start
-      lando rebuild
+      lando composer require drush/drush
       lando composer install
       git checkout web/.htaccess
+      lando rebuild -y
       lando db-import $(echo $BIII_DATABASE_URL | sed -e 's/.*\///')
       lando drush cr
       #lando drush si -y --account-pass=admin --site-name='gitpod_lando' demo_umami
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
-      lando ssh --service appserver --user root --command "apt-get update && apt install vim -y"
+      #lando ssh --service appserver --user root --command "apt-get update && apt install vim -y"
+
+ports:
+  - port: 3306
+    onOpen: ignore
+  - port: 80
+    onOpen: ignore
+  - port: 443
+    onOpen: ignore
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: false
+    addBadge: true
 
 vscode:
   extensions:
