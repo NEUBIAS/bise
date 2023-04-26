@@ -1,6 +1,6 @@
 uuid: cb9f33b2-5b0d-4d88-947e-b493b2e55493
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - markdown
@@ -14,12 +14,12 @@ filters:
     status: true
     weight: 0
     settings:
-      override: true
       id: _missing_parser
+      weight: 0
       enabled: true
       settings: {  }
       render_strategy:
         type: filter_output
         custom_allowed_html: null
         plugins: {  }
-    filterFormat: null
+      override: true
