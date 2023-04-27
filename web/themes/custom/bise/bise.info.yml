@@ -4,7 +4,8 @@ base theme: zircon
 description: 'Theme for Bioimage Information Search Engine'
 package: Core
 # version: 8.0.0-rc1
-core: 8.x
+# core: 8.x
+core_version_requirement: ^8 || ^9
 libraries:
   - bise/global-styling
 regions:
