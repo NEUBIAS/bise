@@ -23,3 +23,4 @@ filters:
         custom_allowed_html: null
         plugins: {  }
       override: true
+    filterFormat: null
