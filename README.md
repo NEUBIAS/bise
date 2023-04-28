@@ -1,4 +1,4 @@
-# Bioimage Infromation Search Engine (BISE)
+# BioImage Informatics Index (Biii)
 
 [![Image.sc forum](https://img.shields.io/badge/dynamic/json.svg?label=forum&url=https%3A%2F%2Fforum.image.sc%2Ftags%2Fbiii.json&query=%24.topic_list.tags.0.topic_count&colorB=brightgreen&suffix=%20topics&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABPklEQVR42m3SyyqFURTA8Y2BER0TDyExZ+aSPIKUlPIITFzKeQWXwhBlQrmFgUzMMFLKZeguBu5y+//17dP3nc5vuPdee6299gohUYYaDGOyyACq4JmQVoFujOMR77hNfOAGM+hBOQqB9TjHD36xhAa04RCuuXeKOvwHVWIKL9jCK2bRiV284QgL8MwEjAneeo9VNOEaBhzALGtoRy02cIcWhE34jj5YxgW+E5Z4iTPkMYpPLCNY3hdOYEfNbKYdmNngZ1jyEzw7h7AIb3fRTQ95OAZ6yQpGYHMMtOTgouktYwxuXsHgWLLl+4x++Kx1FJrjLTagA77bTPvYgw1rRqY56e+w7GNYsqX6JfPwi7aR+Y5SA+BXtKIRfkfJAYgj14tpOF6+I46c4/cAM3UhM3JxyKsxiOIhH0IO6SH/A1Kb1WBeUjbkAAAAAElFTkSuQmCC)](https://forum.image.sc/tag/biii)
 
@@ -12,14 +12,15 @@ branch: neubias/bise dev
 
 <https://test.biii.eu>
 
-DEVELOPMENT PROCESS:
+## DEVELOPMENT PROCESS:
 
-For administrator: no change in drupal should be done directly on test.biii.eu (dev) or biii.eu (prod). 
+For administrator: no change in drupal should be done directly on test.biii.eu (*dev* branch) or biii.eu (*master* and *production* branch). 
 Instead, please follow the process detailed in our wiki, as set up by Kota Miura: 
 
 https://github.com/NEUBIAS/bise/wiki/BISE-development
 
 A summary is provided here for your convenience: 
+
 ```
   with local test.biii(dev)
         import production database. (lando db-import)
@@ -35,5 +36,7 @@ A summary is provided here for your convenience:
         if working, push to upstream production. 
     pull from inside the SERVER production, import configuration changes, drush cr
 ```
+
 ---
-A bit of development history: the project biii started with a classic "Drupal-composer/drupal-project" ([see here](https://github.com/drupal-composer/drupal-project)) in 2017, and then in 2021, the framework switched to the "drupal/core-recommended"([see here](https://github.com/drupal/core-recommended)) project.  
+
+A brief history: the project **Biii** started with a classic "Drupal-composer/drupal-project" ([see here](https://github.com/drupal-composer/drupal-project)) in 2017, and then in 2021, the framework switched to the "drupal/core-recommended"([see here](https://github.com/drupal/core-recommended)) project. The name of this database was initally named "BISE" in 2016, and then restored it's prehistoric name "Biii" (2013-2016) in 2019.  
