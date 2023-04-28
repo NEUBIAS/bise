@@ -1,0 +1,40 @@
+check_links_types: 1
+default_url_scheme: 'http://'
+base_path: ''
+extract:
+  from_a: true
+  from_audio: false
+  from_embed: false
+  from_iframe: false
+  from_img: false
+  from_object: false
+  from_video: false
+  filter_blacklist:
+    filter_caption: filter_caption
+    filter_autop: filter_autop
+    filter_align: filter_align
+    editor_file_reference: '0'
+    filter_htmlcorrector: '0'
+    filter_html_escape: '0'
+    filter_url: '0'
+    filter_html_image_secure: '0'
+    filter_html: '0'
+    markdown: '0'
+    token_filter: '0'
+check:
+  connections_max: 8
+  connections_max_per_domain: 2
+  disable_link_check_for_urls: "example.com\nexample.net\nexample.org"
+  library: core
+  interval: 2419200
+  useragent: 'Drupal (+https://drupal.org/)'
+error:
+  action_status_code_301: 0
+  action_status_code_404: 0
+  ignore_response_codes: "200\r\n206\r\n302\r\n304\r\n401\r\n403"
+  impersonate_account: Perrine
+logging:
+  level: 6
+_core:
+  default_config_hash: FzFKuqOuk667AkDorrqvXkc_-M4D-Ac1XeGGusxS1JU
+scan_blocks: null

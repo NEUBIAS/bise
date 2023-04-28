@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.workflow_step.field_current_workflow_step_
     - field.field.paragraph.workflow_step.field_previous_workflow_step
+    - field.field.paragraph.workflow_step.field_show_workflow_steps
     - field.field.paragraph.workflow_step.field_step_opera
     - field.field.paragraph.workflow_step.field_title_of_the_setp
     - paragraphs.paragraphs_type.workflow_step
@@ -56,3 +57,5 @@ content:
     region: top
 hidden:
   field_previous_workflow_step: true
+  field_show_workflow_steps: true
+  search_api_excerpt: true

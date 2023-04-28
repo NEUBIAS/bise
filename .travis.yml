@@ -7,6 +7,7 @@ sudo: true
 php:
   #  - 5.6
   - 7.1
+  - 7.2
   - 7.3
 
 services:
@@ -16,19 +17,19 @@ env:
   global:
     - MODULE=custom
   matrix:
-    - DRUPAL_CORE=8.7.x
-    - DRUPAL_CORE=8.8.x
-    #- DRUPAL_CORE=8.9.x
+    #- DRUPAL_CORE=8.7.x
+    #- DRUPAL_CORE=8.8.x
+    - DRUPAL_CORE=8.9.x
 
 matrix:
   fast_finish: true
   # Start using PHP7.3 with Core 8.8 not before.
   # Core 8.8+ no longer supports PHP5.
   exclude:
-    - php: 7.3
-      env: DRUPAL_CORE=8.7.x
-    - php: 5.6
-      env: DRUPAL_CORE=8.8.x
+    #- php: 7.3
+      #env: DRUPAL_CORE=8.7.x
+    #- php: 5.6
+      #env: DRUPAL_CORE=8.8.x
     - php: 5.6
       env: DRUPAL_CORE=8.9.x
 
