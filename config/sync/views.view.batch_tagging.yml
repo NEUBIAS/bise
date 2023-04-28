@@ -18,7 +18,6 @@ description: 'Allow confirmed tagger to batch tag a set of tools'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -242,23 +241,7 @@ display:
           form_step: true
           buttons: true
           action_title: Action
-          selected_actions:
-            node_assign_owner_action: 0
-            node_unpromote_action: 0
-            node_publish_action: 0
-            node_make_sticky_action: 0
-            node_make_unsticky_action: 0
-            node_unpublish_action: 0
-            node_save_action: 0
-            node_promote_action: 0
-            node_unpublish_by_keyword_action: 0
-            pathauto_update_alias: 0
-            views_bulk_edit: views_bulk_edit
-            views_bulk_operations_delete_entity: 0
-          preconfiguration:
-            views_bulk_edit:
-              label_override: ''
-              get_bundles_from_results: 1
+          selected_actions: {  }
           plugin_id: views_bulk_operations_bulk_form
       filters:
         status:
@@ -271,6 +254,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         field_has_author_value:
           id: field_has_author_value
@@ -299,6 +284,8 @@ display:
               administrator: '0'
               confirmed_ta: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -345,6 +332,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -397,6 +386,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

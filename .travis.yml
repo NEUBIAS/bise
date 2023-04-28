@@ -1,32 +1,110 @@
 language: php
-dist: trusty
-sudo: required
 
-services:
-  - docker
+# The Travis CI container mode has random functional test fails, so we must use
+# sudo here.
+sudo: true
 
 php:
+  #  - 5.6
   - 7.1
+  - 7.2
+  - 7.3
+
+services:
+  - mysql
 
 env:
   global:
-    - DRUPAL_BASE_URL="http://127.0.0.1:8080"
+    - MODULE=custom
   matrix:
-    - JOB=job:check-coding-standards
-    - JOB=job:run-unit-tests
-    #- JOB=job:run-behat-tests
+    #- DRUPAL_CORE=8.7.x
+    #- DRUPAL_CORE=8.8.x
+    - DRUPAL_CORE=8.9.x
 
-before_install:
-  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+matrix:
+  fast_finish: true
+  # Start using PHP7.3 with Core 8.8 not before.
+  # Core 8.8+ no longer supports PHP5.
+  exclude:
+    #- php: 7.3
+      #env: DRUPAL_CORE=8.7.x
+    #- php: 5.6
+      #env: DRUPAL_CORE=8.8.x
+    - php: 5.6
+      env: DRUPAL_CORE=8.9.x
 
-install:
-  - composer --verbose install
+# Be sure to cache composer downloads.
+cache:
+  directories:
+    - $HOME/.composer
 
 before_script:
-  - cp .travis/RoboFile.php .
+  - echo $MODULE
+
+  # Remove Xdebug as we don't need it and it causes
+  # PHP Fatal error:  Maximum function nesting level of '256' reached.
+  # We also don't care if that file exists or not on PHP 7.
+  - phpenv config-rm xdebug.ini || true
+
+  # Navigate out of module directory to prevent blown stack by recursive module
+  # lookup.
+  - cd ..
+
+  # Create database.
+  - mysql -e "create database $MODULE"
+  # Export database variable for kernel tests.
+  - export SIMPLETEST_DB=mysql://root:@127.0.0.1/$MODULE
+
+  # Download Drupal 8 core from the Github mirror because it is faster.
+  - travis_retry git clone --branch $DRUPAL_CORE --depth 1 https://github.com/drupal/drupal.git
+  - cd drupal
+  # Store the path to Drupal root.
+  - DRUPAL_ROOT=$(pwd)
+  - echo $DRUPAL_ROOT
+
+  # Make a directory for our module and copy the built source into it.
+  - mkdir $DRUPAL_ROOT/modules/$MODULE
+  - cp -R $TRAVIS_BUILD_DIR/* $DRUPAL_ROOT/modules/$MODULE/
+
+  # Run composer self-update and install.
+  - travis_retry composer self-update && travis_retry composer install
+  # If running Core 8.6 or 8.7 the following script will upgrade to phpunit 6
+  # which is required in PHP7. The script has now been deleted from Core 8.8.
+  - if [[ $DRUPAL_CORE == "8.6.x" || $DRUPAL_CORE == "8.7.x" ]]; then
+    travis_retry composer run-script drupal-phpunit-upgrade;
+    fi
+
+  # Run composer update in the module directory in order to fetch dependencies.
+  - travis_retry composer update -d $DRUPAL_ROOT/modules/$MODULE
+
+  # Install drush
+  - travis_retry composer require drush/drush:^9.0
+
+  # Coder is already installed as part of composer install. We just need to set
+  # the installed_paths to pick up the Drupal standards.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --config-set installed_paths $DRUPAL_ROOT/vendor/drupal/coder/coder_sniffer
+
+  # Start a web server on port 8888, run in the background.
+  - php -S localhost:8888 &
+
+  # Export web server URL for browser tests.
+  - export SIMPLETEST_BASE_URL=http://localhost:8888
 
 script:
-  - vendor/bin/robo $JOB
+  # Run the PHPUnit tests.
+  - ./vendor/bin/phpunit -c ./core/phpunit.xml.dist --verbose --group=devel,devel-generate,devel_generate,webprofiler ./modules/$MODULE
 
-after_success:
-  - test $JOB = "job:run-unit-tests" && travis_retry php vendor/bin/php-coveralls -v
+  # Check for coding standards. First change directory to our module.
+  - cd $DRUPAL_ROOT/modules/$MODULE
+
+  # List all the sniffs that were used.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --version
+  - $DRUPAL_ROOT/vendor/bin/phpcs -i
+  - $DRUPAL_ROOT/vendor/bin/phpcs -e
+  - $DRUPAL_ROOT/vendor/bin/phpcs --standard=drupal,drupalPractice -e
+
+  # Show the violations in detail and do not fail for any errors or warnings.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --standard=drupal,drupalPractice --ignore=vendor --report-width=130 --colors --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 .
+
+  # Run again to give a summary and total count.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --standard=drupal,drupalPractice --ignore=vendor --report-width=130 --colors --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 --report=summary .

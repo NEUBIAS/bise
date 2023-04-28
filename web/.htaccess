@@ -3,7 +3,7 @@
 #
 
 # Protect files and directories from prying eyes.
-<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -27,16 +27,9 @@ AddEncoding gzip svgz
 # Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
 # changed at runtime.
 
-# PHP 5, Apache 1 and 2.
-<IfModule mod_php5.c>
+# PHP 7, Apache 1 and 2.
+<IfModule mod_php7.c>
   php_value assert.active                   0
-  php_flag session.auto_start               off
-  php_value mbstring.http_input             pass
-  php_value mbstring.http_output            pass
-  php_flag mbstring.encoding_translation    off
-  # PHP 5.6 has deprecated $HTTP_RAW_POST_DATA and produces warnings if this is
-  # not set.
-  php_value always_populate_raw_post_data   -1
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -132,13 +125,13 @@ AddEncoding gzip svgz
   RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
 
   # Redirect request to image files under /sites/default/files/ to the production server. (Kota)
-  # If the request is to the files directory. 
-  RewriteCond %{REQUEST_URI} ^/sites/default/files/(.*)$ 
-  # and the environment is not production 
-  RewriteCond %{HTTP_HOST} !^biii.eu$ [NC] 
-  RewriteCond %{REQUEST_FILENAME} !-f 
-  RewriteCond %{REQUEST_FILENAME} !-d 
-# Redirect the request to the production server. 
+  # If the request is to the files directory.
+  RewriteCond %{REQUEST_URI} ^/sites/default/files/(.*)$
+  # and the environment is not production
+  RewriteCond %{HTTP_HOST} !^biii.eu$ [NC]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # Redirect the request to the production server.
   RewriteRule ^(sites/default/files/.*\.(?:jpg|jpeg|JPG|png|PNG|gif|GIF|txt|csv|ico))$ https://biii.eu/$1 [L]
 
   # Pass all requests not referring directly to files in the filesystem to
@@ -147,7 +140,6 @@ AddEncoding gzip svgz
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
   RewriteRule ^ index.php [L]
-
 
   # For security reasons, deny access to other PHP files on public sites.
   # Note: The following URI conditions are not anchored at the start (^),
@@ -178,9 +170,9 @@ AddEncoding gzip svgz
     RewriteCond %{REQUEST_FILENAME}\.gz -s
     RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
 
-    # Serve correct content types, and prevent mod_deflate double gzip.
-    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
-    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+    # Serve correct content types, and prevent double compression.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1,E=no-brotli:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1,E=no-brotli:1]
 
     <FilesMatch "(\.js\.gz|\.css\.gz)$">
       # Serve correct encoding type.
@@ -198,16 +190,3 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
-
-# to redirect request to files under site/default/files to production site. 
-#<ifmodule mod_rewrite.c="">
-    #RewriteEngine on
-    #RewriteCond %{REQUEST_FILENAME} -f [OR]
-    #RewriteCond %{REQUEST_FILENAME} -d
-    #RewriteRule (.*) - [L]
-## Request resides in your 'sites/default/files' folder.
-    #RewriteCond %{REQUEST_URI} ^/sites/default/files/(.*)$
-## Redirect request to your development or production server.
-    #RewriteRule ^/sites/default/files/(.*)$ https://biii.eu/sites/default/files/$1 [L]
-#</ifmodule>
-

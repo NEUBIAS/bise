@@ -14,4 +14,12 @@ filters:
     status: true
     weight: 0
     settings:
-      markdown_library: php-markdown
+      id: _missing_parser
+      weight: 0
+      enabled: true
+      settings: {  }
+      render_strategy:
+        type: filter_output
+        custom_allowed_html: null
+        plugins: {  }
+    filterFormat: null

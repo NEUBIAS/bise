@@ -1,0 +1,30 @@
+uuid: 52911668-a0a4-42d7-9f91-1a5d4756d711
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - projet
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: projet_local_actions
+theme: projet
+region: header
+weight: -8
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

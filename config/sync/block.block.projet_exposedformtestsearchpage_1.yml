@@ -1,0 +1,23 @@
+uuid: f72c062e-c5ac-4372-9a1d-fa78321d4b0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.testsearch
+  module:
+    - views
+  theme:
+    - projet
+id: projet_exposedformtestsearchpage_1
+theme: projet
+region: top_bar
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:testsearch-page_1'
+settings:
+  id: 'views_exposed_filter_block:testsearch-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

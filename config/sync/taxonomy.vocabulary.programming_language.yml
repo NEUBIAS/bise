@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Programming Language'
 vid: programming_language
 description: 'list of programming language'
-hierarchy: 0
 weight: 0

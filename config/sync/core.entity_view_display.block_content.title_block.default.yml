@@ -1,0 +1,13 @@
+uuid: 33f87a7a-99dc-4eb4-b025-40f24bb1bb71
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_block
+id: block_content.title_block.default
+targetEntityType: block_content
+bundle: title_block
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

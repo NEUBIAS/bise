@@ -31,10 +31,12 @@ dependencies:
     - field.field.node.software.field_platform
     - field.field.node.software.field_supported_image_dimension
     - field.field.node.software.field_type
+    - field.field.node.software.field_workflow_steps
+    - image.style.medium
     - node.type.software
   module:
     - ds
-    - responsive_image
+    - image
     - text
     - user
 third_party_settings:
@@ -45,6 +47,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           left: div
           right: div
@@ -70,6 +73,10 @@ third_party_settings:
         weight: 0
         label: hidden
         formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
 id: node.software.teaser
 targetEntityType: node
 bundle: software
@@ -99,12 +106,12 @@ content:
       link: true
     third_party_settings: {  }
   field_image:
-    type: responsive_image
+    type: image
     weight: 6
     region: right
     label: hidden
     settings:
-      responsive_image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
   field_type:
@@ -147,3 +154,4 @@ hidden:
   field_platform: true
   field_supported_image_dimension: true
   field_workflow_steps: true
+  search_api_excerpt: true

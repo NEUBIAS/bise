@@ -14,7 +14,7 @@ dependencies:
     - node.type.book
     - node.type.sample_data
     - node.type.software
-    - system.menu.perrine-menu
+    - system.menu.main
     - taxonomy.vocabulary.biological_problems
     - taxonomy.vocabulary.edam_bioimaging_operation
     - taxonomy.vocabulary.edam_bioimaging_topic
@@ -26,6 +26,8 @@ dependencies:
   module:
     - image
     - node
+    - rest
+    - serialization
     - shs
     - taxonomy
     - user
@@ -36,7 +38,6 @@ description: 'List all content'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -218,11 +219,11 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '{{ type }}'
             absolute: false
             external: false
-            replace_spaces: false
+            replace_spaces: true
             path_case: none
             trim_whitespace: false
             alt: ''
@@ -257,7 +258,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -744,6 +745,8 @@ display:
               administrator: '0'
               confirmed_ta: '0'
             reduce: true
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -769,6 +772,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         title:
           id: title
@@ -794,6 +799,8 @@ display:
             remember_roles:
               authenticated: authenticated
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -842,6 +849,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -894,6 +903,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -946,6 +957,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -998,6 +1011,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: 'Type (field_type)'
@@ -1053,6 +1068,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1092,7 +1109,7 @@ display:
             identifier: field_license_openness_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               administrator: administrator
@@ -1105,6 +1122,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1118,7 +1137,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: shs_chosen
+          type: shs
           limit: true
           vid: licence_openness
           hierarchy: false
@@ -1157,6 +1176,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1209,6 +1230,8 @@ display:
             placeholder_text_multiple: 'Choose some options'
             placeholder_text_single: 'Choose an option'
             no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1294,12 +1317,556 @@ display:
       menu:
         type: normal
         title: 'Advanced Search'
-        menu_name: perrine-menu
         description: 'All database content with filters'
-        parent: ''
-        weight: 0
         expanded: false
-        enabled: true
+        parent: ''
+        weight: -48
+        context: '0'
+        menu_name: main
+      filters:
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            sample_data: sample_data
+            software: software
+            book: book
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            reduce: true
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '!='
+          value: None
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+        field_has_function_target_id:
+          id: field_has_function_target_id
+          table: node__field_has_function
+          field: field_has_function_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_function_target_id_op
+            label: 'For which operation?'
+            description: 'Select the function of the content you are looking for'
+            use_operator: false
+            operator: field_has_function_target_id_op
+            identifier: field_has_function_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: true
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: edam_bioimaging_operation
+          hierarchy: true
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_has_topic_target_id_1:
+          id: field_has_topic_target_id_1
+          table: node__field_has_topic
+          field: field_has_topic_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_topic_target_id_1_op
+            label: 'for which topic?'
+            description: 'broad domain or field of interest, of study, application, work, data, or technology'
+            use_operator: false
+            operator: field_has_topic_target_id_1_op
+            identifier: field_has_topic_target_id_1
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: edam_bioimaging_topic
+          hierarchy: true
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_supported_image_dimension_target_id:
+          id: field_supported_image_dimension_target_id
+          table: node__field_supported_image_dimension
+          field: field_supported_image_dimension_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_supported_image_dimension_target_id_op
+            label: 'Supported image dimension '
+            description: ''
+            use_operator: false
+            operator: field_supported_image_dimension_target_id_op
+            identifier: field_supported_image_dimension_target_id
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: image_dimension
+          hierarchy: false
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_type_target_id:
+          id: field_type_target_id
+          table: node__field_type
+          field: field_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_type_target_id_op
+            label: Type
+            description: 'Type of tool you are looking for'
+            use_operator: false
+            operator: field_type_target_id_op
+            identifier: field_type_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+              anonymous: '0'
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: 'Type (field_type)'
+            description: null
+            identifier: field_type_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: software_artifact
+          hierarchy: false
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_has_interaction_level_target_id:
+          id: field_has_interaction_level_target_id
+          table: node__field_has_interaction_level
+          field: field_has_interaction_level_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_interaction_level_target_id_op
+            label: 'Interaction level'
+            description: ''
+            use_operator: false
+            operator: field_has_interaction_level_target_id_op
+            identifier: field_has_interaction_level_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: level_of_user_interaction
+          hierarchy: false
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_license_openness_target_id:
+          id: field_license_openness_target_id
+          table: node__field_license_openness
+          field: field_license_openness_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_license_openness_target_id_op
+            label: 'License/Openness '
+            description: ''
+            use_operator: false
+            operator: field_license_openness_target_id_op
+            identifier: field_license_openness_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+              anonymous: '0'
+            reduce: false
+            chosen_override: false
+            disable_search: true
+            search_contains: true
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: licence_openness
+          hierarchy: true
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_has_programming_language_target_id:
+          id: field_has_programming_language_target_id
+          table: node__field_has_programming_language
+          field: field_has_programming_language_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_programming_language_target_id_op
+            label: 'Programming language'
+            description: 'Language used to write the tool (let blank if no preference)'
+            use_operator: false
+            operator: field_has_programming_language_target_id_op
+            identifier: field_has_programming_language_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: administrator
+              confirmed_ta: confirmed_ta
+              anonymous: '0'
+            reduce: false
+            chosen_override: false
+            disable_search: false
+            search_contains: false
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: programming_language
+          hierarchy: false
+          error_message: true
+          plugin_id: shs_chosen_taxonomy_index_tid
+        field_has_biological_terms_target_id:
+          id: field_has_biological_terms_target_id
+          table: node__field_has_biological_terms
+          field: field_has_biological_terms_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_has_biological_terms_target_id_op
+            label: 'specific biological term'
+            description: 'Let blank if your term does not appear in the list'
+            use_operator: false
+            operator: field_has_biological_terms_target_id_op
+            identifier: field_has_biological_terms_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              confirmed_ta: '0'
+            reduce: false
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: biological_problems
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -1307,6 +1874,36 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_has_function'
+        - 'config:field.storage.node.field_has_interaction_level'
+        - 'config:field.storage.node.field_has_topic'
+        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_is_dependent_of'
+        - 'config:field.storage.node.field_license_openness'
+        - 'config:field.storage.node.field_type'
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: all-content-rest
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
         - user
         - 'user.node_grants:view'
         - user.permissions
