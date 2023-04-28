@@ -1,0 +1,21 @@
+uuid: 3e3af1dd-27e3-45d2-b288-55919fc97d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_workflow_steps
+    - paragraphs.paragraphs_type.workflow_step
+id: paragraph.workflow_step.field_show_workflow_steps
+field_name: field_show_workflow_steps
+entity_type: paragraph
+bundle: workflow_step
+label: 'Show Workflow Steps'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
