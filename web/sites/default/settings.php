@@ -1,5 +1,7 @@
 <?php
 
+// @codingStandardsIgnoreFile
+
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -74,7 +76,7 @@
  * specific needs.
  *
  * @code
- * $databases['default']['default'] = array (
+ * $databases['default']['default'] = [
  *   'database' => 'databasename',
  *   'username' => 'sqlusername',
  *   'password' => 'sqlpassword',
@@ -83,10 +85,10 @@
  *   'driver' => 'mysql',
  *   'prefix' => '',
  *   'collation' => 'utf8mb4_general_ci',
- * );
+ * ];
  * @endcode
  */
-$databases = array();
+$databases = [];
 
 /**
  * Customizing database settings.
@@ -102,6 +104,16 @@ $databases = array();
  * specify a database file name in a directory that is writable by the
  * webserver.  For most other drivers, you must specify a
  * username, password, host, and database name.
+ *
+ * Drupal core implements drivers for mysql, pgsql, and sqlite. Other drivers
+ * can be provided by contributed or custom modules. To use a contributed or
+ * custom driver, the "namespace" property must be set to the namespace of the
+ * driver. The code in this namespace must be autoloadable prior to connecting
+ * to the database, and therefore, prior to when module root namespaces are
+ * added to the autoloader. To add the driver's namespace to the autoloader,
+ * set the "autoload" property to the PSR-4 base directory of the driver's
+ * namespace. This is optional for projects managed with Composer if the
+ * driver's namespace is in Composer's autoloader.
  *
  * Transaction support is enabled by default for all drivers that support it,
  * including MySQL. To explicitly disable it, set the 'transactions' key to
@@ -154,13 +166,13 @@ $databases = array();
  * The 'default' element is mandatory and holds the prefix for any tables
  * not specified elsewhere in the array. Example:
  * @code
- *   'prefix' => array(
+ *   'prefix' => [
  *     'default'   => 'main_',
  *     'users'     => 'shared_',
  *     'sessions'  => 'shared_',
  *     'role'      => 'shared_',
  *     'authmap'   => 'shared_',
- *   ),
+ *   ],
  * @endcode
  * You can also use a reference to a schema/database as a prefix. This may be
  * useful if your Drupal installation exists in a schema that is not the default
@@ -168,13 +180,13 @@ $databases = array();
  * time.
  * Example:
  * @code
- *   'prefix' => array(
+ *   'prefix' => [
  *     'default'   => 'main.',
  *     'users'     => 'shared.',
  *     'sessions'  => 'shared.',
  *     'role'      => 'shared.',
  *     'authmap'   => 'shared.',
- *   );
+ *   ];
  * @endcode
  * NOTE: MySQL and SQLite's definition of a schema is a database.
  *
@@ -183,14 +195,14 @@ $databases = array();
  * example, to enable MySQL SELECT queries to exceed the max_join_size system
  * variable, and to reduce the database connection timeout to 5 seconds:
  * @code
- * $databases['default']['default'] = array(
- *   'init_commands' => array(
+ * $databases['default']['default'] = [
+ *   'init_commands' => [
  *     'big_selects' => 'SET SQL_BIG_SELECTS=1',
- *   ),
- *   'pdo' => array(
+ *   ],
+ *   'pdo' => [
  *     PDO::ATTR_TIMEOUT => 5,
- *   ),
- * );
+ *   ],
+ * ];
  * @endcode
  *
  * WARNING: The above defaults are designed for database portability. Changing
@@ -205,51 +217,51 @@ $databases = array();
  *
  * Sample Database configuration format for PostgreSQL (pgsql):
  * @code
- *   $databases['default']['default'] = array(
+ *   $databases['default']['default'] = [
  *     'driver' => 'pgsql',
  *     'database' => 'databasename',
  *     'username' => 'sqlusername',
  *     'password' => 'sqlpassword',
  *     'host' => 'localhost',
  *     'prefix' => '',
- *   );
+ *   ];
  * @endcode
  *
  * Sample Database configuration format for SQLite (sqlite):
  * @code
- *   $databases['default']['default'] = array(
+ *   $databases['default']['default'] = [
  *     'driver' => 'sqlite',
  *     'database' => '/path/to/databasefilename',
- *   );
+ *   ];
+ * @endcode
+ *
+ * Sample Database configuration format for a driver in a contributed module:
+ * @code
+ *   $databases['default']['default'] = [
+ *     'driver' => 'mydriver',
+ *     'namespace' => 'Drupal\mymodule\Driver\Database\mydriver',
+ *     'autoload' => 'modules/mymodule/src/Driver/Database/mydriver/',
+ *     'database' => 'databasename',
+ *     'username' => 'sqlusername',
+ *     'password' => 'sqlpassword',
+ *     'host' => 'localhost',
+ *     'prefix' => '',
+ *   ];
  * @endcode
  */
 
 /**
  * Location of the site configuration files.
  *
- * The $config_directories array specifies the location of file system
- * directories used for configuration data. On install, the "sync" directory is
- * created. This is used for configuration imports. The "active" directory is
- * not created by default since the default storage for active configuration is
- * the database rather than the file system. (This can be changed. See "Active
- * configuration settings" below).
+ * The $settings['config_sync_directory'] specifies the location of file system
+ * directory used for syncing configuration data. On install, the directory is
+ * created. This is used for configuration imports.
  *
- * The default location for the "sync" directory is inside a randomly-named
- * directory in the public files path. The setting below allows you to override
- * the "sync" location.
- *
- * If you use files for the "active" configuration, you can tell the
- * Configuration system where this directory is located by adding an entry with
- * array key CONFIG_ACTIVE_DIRECTORY.
- *
- * Example:
- * @code
- *   $config_directories = array(
- *     CONFIG_SYNC_DIRECTORY => '/directory/outside/webroot',
- *   );
- * @endcode
+ * The default location for this directory is inside a randomly-named
+ * directory in the public files path. The setting below allows you to set
+ * its location.
  */
-$config_directories = array();
+#$config_directories = array();
 
 /**
  * Settings:
@@ -357,11 +369,10 @@ $settings['update_free_access'] = FALSE;
  * configuration requires the IP addresses of all remote proxies to be
  * specified in $settings['reverse_proxy_addresses'] to work correctly.
  *
- * Enable this setting to get Drupal to determine the client IP from
- * the X-Forwarded-For header (or $settings['reverse_proxy_header'] if set).
- * If you are unsure about this setting, do not have a reverse proxy,
- * or Drupal operates in a shared hosting environment, this setting
- * should remain commented out.
+ * Enable this setting to get Drupal to determine the client IP from the
+ * X-Forwarded-For header. If you are unsure about this setting, do not have a
+ * reverse proxy, or Drupal operates in a shared hosting environment, this
+ * setting should remain commented out.
  *
  * In order for this setting to be used you must specify every possible
  * reverse proxy IP address in $settings['reverse_proxy_addresses'].
@@ -377,11 +388,35 @@ $settings['update_free_access'] = FALSE;
  * Specify every reverse proxy IP address in your environment.
  * This setting is required if $settings['reverse_proxy'] is TRUE.
  */
-# $settings['reverse_proxy_addresses'] = array('a.b.c.d', ...);
+# $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
 
 /**
- * Set this value if your proxy server sends the client IP in a header
- * other than X-Forwarded-For.
+ * Reverse proxy trusted headers.
+ *
+ * Sets which headers to trust from your reverse proxy.
+ *
+ * Common values are:
+ * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
+ * - \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
+ *
+ * Note the default value of
+ * @code
+ * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
+ * @endcode
+ * is not secure by default. The value should be set to only the specific
+ * headers the reverse proxy uses. For example:
+ * @code
+ * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
+ * @endcode
+ * This would trust the following headers:
+ * - X_FORWARDED_FOR
+ * - X_FORWARDED_HOST
+ * - X_FORWARDED_PROTO
+ * - X_FORWARDED_PORT
+ *
+ * @see \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
+ * @see \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
+ * @see \Symfony\Component\HttpFoundation\Request::setTrustedProxies
  */
 # $settings['reverse_proxy_header'] = 'X_CLUSTER_CLIENT_IP';
 
@@ -571,10 +606,10 @@ $settings['file_private_path'] = 'sites/default/files/private';
  * The "en" part of the variable name, is dynamic and can be any langcode of
  * any added language. (eg locale_custom_strings_de for german).
  */
-# $settings['locale_custom_strings_en'][''] = array(
+# $settings['locale_custom_strings_en'][''] = [
 #   'forum'      => 'Discussion board',
 #   '@count min' => '@count minutes',
-# );
+# ];
 
 /**
  * A custom theme for the offline page:
@@ -687,7 +722,7 @@ $settings['file_private_path'] = 'sites/default/files/private';
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/bise.services.yml';
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 /**
  * Override the default service container class.
@@ -720,9 +755,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/bise.services.
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = array(
+ * $settings['trusted_host_patterns'] = [
  *   '^www\.example\.com$',
- * );
+ * ];
  * @endcode
  * will allow the site to only run from www.example.com.
  *
@@ -733,12 +768,12 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/bise.services.
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = array(
+ * $settings['trusted_host_patterns'] = [
  *   '^example\.com$',
  *   '^.+\.example\.com$',
  *   '^example\.org$',
  *   '^.+\.example\.org$',
- * );
+ * ];
  * @endcode
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
@@ -751,7 +786,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/bise.services.
  * with common frontend tools and recursive scanning of directories looking for
  * extensions.
  *
- * @see file_scan_directory()
+ * @see \Drupal\Core\File\FileSystemInterface::scanDirectory()
  * @see \Drupal\Core\Extension\ExtensionDiscovery::scanDirectory()
  */
 $settings['file_scan_ignore_directories'] = [
@@ -770,12 +805,37 @@ $settings['file_scan_ignore_directories'] = [
 $settings['entity_update_batch_size'] = 50;
 
 /**
+ * Entity update backup.
+ *
+ * This is used to inform the entity storage handler that the backup tables as
+ * well as the original entity type and field storage definitions should be
+ * retained after a successful entity update process.
+ */
+$settings['entity_update_backup'] = TRUE;
+
+/**
+ * Node migration type.
+ *
+ * This is used to force the migration system to use the classic node migrations
+ * instead of the default complete node migrations. The migration system will
+ * use the classic node migration only if there are existing migrate_map tables
+ * for the classic node migrations and they contain data. These tables may not
+ * exist if you are developing custom migrations and do not want to use the
+ * complete node migrations. Set this to TRUE to force the use of the classic
+ * node migrations.
+ */
+$settings['migrate_node_migrate_type_classic'] = FALSE;
+
+/**
  * Load local development override configuration, if available.
  *
- * Use settings.local.php to override variables on secondary (staging,
- * development, etc) installations of this site. Typically used to disable
- * caching, JavaScript/CSS compression, re-routing of outgoing emails, and
- * other things that should not happen on development and testing sites.
+ * Create a settings.local.php file to override variables on secondary (staging,
+ * development, etc.) installations of this site.
+ *
+ * Typical uses of settings.local.php include:
+ * - Disabling caching.
+ * - Disabling JavaScript/CSS compression.
+ * - Rerouting outgoing emails.
  *
  * Keep this code block at the end of this file to take full effect.
  */
@@ -784,5 +844,6 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-$config_directories['sync'] = '../config/sync';
+#$config_directories['sync'] = '../config/sync';
+$settings['config_sync_directory'] = '../config/sync';
 $settings['install_profile'] = 'standard';

@@ -16,6 +16,6 @@ parameters:
     supportsCredentials: false
   http.response.debug_cacheability_headers: true
   twig.config:
-    debug: true
-    auto_reload: true
-    cache: false
+    debug: false
+    auto_reload: false
+    cache: true
