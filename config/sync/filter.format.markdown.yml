@@ -22,3 +22,4 @@ filters:
         type: filter_output
         custom_allowed_html: null
         plugins: {  }
+    filterFormat: null
