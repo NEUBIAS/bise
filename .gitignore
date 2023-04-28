@@ -58,3 +58,5 @@ drush/sites/*.site.yml
 /.idea/*
 .idea/*
 .ovhconfig
+*.gz
+php73.ovhconfig

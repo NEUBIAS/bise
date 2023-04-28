@@ -73,7 +73,6 @@ permissions:
   - 'switch shortcut sets'
   - 'use text format full_html'
   - 'use text format markdown'
-  - 'use text format markdownnew'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view forum revisions'
