@@ -105,7 +105,6 @@
         "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.x-dev",
-        "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "^9.1@alpha",
         "drupal/module_filter": "3.x-dev",
