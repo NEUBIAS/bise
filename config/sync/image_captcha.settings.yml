@@ -1,7 +1,7 @@
 image_captcha_fonts_preview_map_cache: {  }
 image_captcha_fonts:
-  - modules/contrib/captcha/image_captcha/fonts/Tesox/tesox.ttf
-  - modules/contrib/captcha/image_captcha/fonts/Tuffy/Tuffy.ttf
+  - 93aff9384590ba3dfc5016582d39a5220435b22a8a12271aaee869b9cbdf7891
+  - 41c10afec522f4850ec2a21eeac3cc590a8d3800c3065f7293101d63f580d3eb
 image_captcha_font_size: 30
 image_captcha_character_spacing: '1.2'
 image_captcha_image_allowed_chars: aAbBCdEeFfGHhijKLMmNPQRrSTtWXYZ23456789
