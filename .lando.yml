@@ -1,5 +1,15 @@
 name: bisescratch
 recipe: drupal8
+compose:
+  - docker-compose.network-mtu.yml
 config:
   webroot: web
-  php: '7.2'
+  php: '7.4'
+  composer_version: '2.1.8'
+services:
+  appserver:
+    ssl: false
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database

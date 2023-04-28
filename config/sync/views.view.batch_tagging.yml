@@ -241,12 +241,7 @@ display:
           form_step: true
           buttons: true
           action_title: Action
-          selected_actions:
-            -
-              action_id: views_bulk_edit
-              preconfiguration:
-                label_override: ''
-                get_bundles_from_results: 1
+          selected_actions: {  }
           plugin_id: views_bulk_operations_bulk_form
       filters:
         status:

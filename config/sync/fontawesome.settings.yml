@@ -10,3 +10,4 @@ use_light_file: true
 use_brands_file: true
 _core:
   default_config_hash: xkiAxMZI1OSzOitvmPaeNT7bl9Kd4mZfMQl7W8k0auk
+load_assets: true
