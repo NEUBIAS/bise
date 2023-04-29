@@ -113,7 +113,7 @@
         "drupal/recaptcha": "^3.2",
         "drupal/redirect": "^1.7",
         "drupal/restui": "^1.21",
-        "drupal/search_api": "^1.23",
+        "drupal/search_api": "^1.29",
         "drupal/search_autocomplete": "^2.0",
         "drupal/shs": "^2.0@RC",
         "drupal/social_media": "^1.9",
@@ -145,7 +145,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true,
+            "drupal/search_api": true
+        }
     },
     "autoload": {
         "classmap": [
