@@ -1922,7 +1922,8 @@
             "homepage": "https://www.drupal.org/project/auto_height",
             "support": {
                 "source": "https://git.drupalcode.org/project/auto_height"
-            }
+            },
+            "time": "2021-11-02T13:52:52+00:00"
         },
         {
             "name": "drupal/backup_migrate",
@@ -6176,7 +6177,8 @@
             "homepage": "https://www.drupal.org/project/zircon",
             "support": {
                 "source": "https://git.drupalcode.org/project/zircon"
-            }
+            },
+            "time": "2022-02-16T07:22:44+00:00"
         },
         {
             "name": "drush/drush",
