@@ -90,8 +90,9 @@
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/context": "4.x-dev",
         "drupal/contribute": "^1.0@beta",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/ctools": "^3.8",
         "drupal/devel": "^4.2",
         "drupal/devel_kint_extras": "^1.0",
@@ -214,6 +215,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "8.9.20"
+        "drupal/core-dev": "^9"
     }
 }
