@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "878779345d6338e91f63a1a5044149aa",
+    "content-hash": "c1452d5d1808e4dc854a4410d0ded0c3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4301,58 +4301,6 @@
                 "source": "https://git.drupalcode.org/project/honeypot",
                 "issues": "https://www.drupal.org/project/issues/honeypot"
             }
-        },
-        {
-            "name": "drupal/httpbl",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/httpbl.git",
-                "reference": "90e366916fa5a620f41d09ac87c0d8d33ce7e413"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1657921319",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Bryan Lewellen",
-                    "homepage": "https://www.drupal.org/u/bryrock",
-                    "email": "bryrock@346823.no-reply.drupal.org",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/140286/committers"
-                },
-                {
-                    "name": "praseodym",
-                    "homepage": "https://www.drupal.org/user/18413"
-                }
-            ],
-            "description": "An implementation of Project Honey Pot's http:BL.",
-            "homepage": "http://drupal.org/project/httpbl",
-            "support": {
-                "source": "https://git.drupalcode.org/project/httpbl"
-            },
-            "time": "2018-11-16T20:37:22+00:00"
         },
         {
             "name": "drupal/jquery_ui",
@@ -14855,7 +14803,6 @@
         "drupal/conditional_fields": 15,
         "drupal/context": 20,
         "drupal/contribute": 10,
-        "drupal/httpbl": 20,
         "drupal/linkchecker": 20,
         "drupal/menu_breadcrumb": 15,
         "drupal/menu_token": 15,
