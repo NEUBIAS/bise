@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bffee24ef590bd0c8626e3763db3823a",
+    "content-hash": "914c56829ee246f6d10426cf503bc91e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3846,21 +3846,21 @@
         },
         {
             "name": "drupal/dynamic_entity_reference",
-            "version": "1.14.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dynamic_entity_reference.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "bb8088fc7144f2fa13d625274f0b70fa01cd7679"
+                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "4155c11eac17ccd485888e6e5c52858358726415"
             },
             "require": {
                 "drupal/core": "^9.3",
-                "php": ">=7.3"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "drupal/diff": "1.x-dev",
@@ -3871,8 +3871,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1642425209",
+                    "version": "8.x-1.16",
+                    "datestamp": "1644273068",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6176,32 +6176,33 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "3.13.0",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
-                "reference": "8.x-3.13"
+                "reference": "4.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-8.x-3.13.zip",
-                "reference": "8.x-3.13",
-                "shasum": "70583d08b91be3b5e008f571589425c2176eb73b"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.2.3.zip",
+                "reference": "4.2.3",
+                "shasum": "56014a68924b358caca5c41cd74b995fc0cc5e13"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.4 || ^10",
+                "php": ">=7.4.0"
             },
             "require-dev": {
-                "drush/drush": "^10"
+                "drush/drush": "^11"
             },
             "suggest": {
-                "drush/drush": "^9 || ^10"
+                "drush/drush": "^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.13",
-                    "datestamp": "1619697066",
+                    "version": "4.2.3",
+                    "datestamp": "1673360841",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6209,7 +6210,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
