@@ -102,7 +102,6 @@
         "drupal/fontawesome": "^2.18",
         "drupal/google_analytics": "^3.0",
         "drupal/honeypot": "^2.0",
-        "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.x-dev",
         "drupal/menu_breadcrumb": "^2.0@alpha",
