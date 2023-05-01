@@ -16,7 +16,7 @@ mode: default
 content:
   comment_body:
     type: text_default
-    label: visually_hidden
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
