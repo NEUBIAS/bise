@@ -79,39 +79,39 @@ bundle: book
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 100
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   field_author_s_:
-    weight: 106
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 106
     region: content
   field_content_type:
-    weight: 112
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 112
     region: content
   field_date:
-    weight: 108
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 108
     region: content
   field_doi:
-    weight: 105
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -120,10 +120,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 105
     region: content
   field_event:
-    weight: 116
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -132,35 +132,35 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 116
     region: content
   field_expected:
-    weight: 115
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 115
     region: content
   field_format:
-    weight: 111
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 111
     region: content
   field_free_tagging:
-    weight: 120
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 120
     region: content
   field_has_executable:
-    weight: 121
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -169,10 +169,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 121
     region: content
   field_has_image_data:
-    weight: 119
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -181,18 +181,18 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 119
     region: content
   field_has_license:
-    weight: 114
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 114
     region: content
   field_has_practical_exercices:
-    weight: 118
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -201,10 +201,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 118
     region: content
   field_has_slides:
-    weight: 117
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -213,49 +213,49 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 117
     region: content
   field_is_training_material_of:
-    weight: 102
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 102
     region: content
   field_parent:
-    weight: 113
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 113
     region: content
   field_prerequisites:
-    weight: 109
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 109
     region: content
   field_topics_covered:
-    weight: 110
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 110
     region: content
   field_trainer_s_presenter_s_:
-    weight: 107
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 107
     region: content
   field_url:
-    weight: 104
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -264,11 +264,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 104
     region: content
   links:
-    weight: 101
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 101
+    region: content
 hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 79c643bd-1e2d-41cf-8f43-6337193b3860
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comments2023
+    - field.storage.comment.comment_body
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+id: comment.comments2023.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comments2023
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

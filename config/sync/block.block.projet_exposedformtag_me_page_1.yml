@@ -16,20 +16,20 @@ plugin: 'views_exposed_filter_block:tag_me_-page_1'
 settings:
   id: 'views_exposed_filter_block:tag_me_-page_1'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
 visibility:
   request_path:
     id: request_path
-    pages: tag-me-
     negate: false
     context_mapping: {  }
+    pages: tag-me-
   user_role:
     id: user_role
-    roles:
-      administrator: administrator
-      confirmed_ta: confirmed_ta
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      confirmed_ta: confirmed_ta
