@@ -114,7 +114,6 @@ module:
   paragraphs: 11
   standard: 1000
 theme:
-  seven: 0
   bootstrap: 0
   projet: 0
   claro: 0
