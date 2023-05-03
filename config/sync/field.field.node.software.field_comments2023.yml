@@ -1,0 +1,33 @@
+uuid: 56b381c2-2db2-4ca1-9a70-bdf8e8b10df8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comments2023
+    - node.type.software
+  module:
+    - comment
+id: node.software.field_comments2023
+field_name: field_comments2023
+entity_type: node
+bundle: software
+label: Comments
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment
