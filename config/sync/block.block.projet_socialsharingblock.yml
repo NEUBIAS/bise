@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
+    - node
     - social_media
   theme:
     - projet
@@ -16,11 +16,14 @@ plugin: social_sharing_block
 settings:
   id: social_sharing_block
   label: 'Social Sharing block'
-  provider: social_media
   label_display: '0'
+  provider: social_media
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       article: article
       book: book
@@ -28,6 +31,3 @@ visibility:
       page: page
       sample_data: sample_data
       software: software
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'

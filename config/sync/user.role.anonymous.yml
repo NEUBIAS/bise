@@ -1,7 +1,18 @@
 uuid: 15c25cb0-0f0f-47ce-ba68-c3e8a170874d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - aggregator
+    - book
+    - comment
+    - contact
+    - contextual
+    - node
+    - search_autocomplete
+    - shortcut
+    - statistics
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -17,11 +28,7 @@ permissions:
   - 'access printer-friendly version'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'access synonyms entity autocomplete'
   - 'access user profiles'
-  - 'search content'
-  - 'use advanced search'
   - 'use search autocomplete'
-  - 'use text format markdown'
   - 'view all revisions'
   - 'view post access counter'
