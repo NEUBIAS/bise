@@ -1,7 +1,21 @@
 uuid: 15c25cb0-0f0f-47ce-ba68-c3e8a170874d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.markdown
+  module:
+    - aggregator
+    - book
+    - comment
+    - contact
+    - contextual
+    - filter
+    - node
+    - search_autocomplete
+    - shortcut
+    - statistics
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
