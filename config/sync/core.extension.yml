@@ -6,6 +6,7 @@ module:
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   aggregator: 0
+  antibot: 0
   auto_height: 0
   automated_cron: 0
   backup_migrate: 0
@@ -57,6 +58,7 @@ module:
   libraries: 0
   link: 0
   linkchecker: 0
+  markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
