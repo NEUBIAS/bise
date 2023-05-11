@@ -597,6 +597,24 @@ display:
       display_extenders: {  }
       path: search
       exposed_block: true
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'No results where found, sorry about that. You may want to try the <a href="http://biii.eu/all-content"> Advanced Search </a>.'
+            format: basic_html
+          plugin_id: text
+      defaults:
+        empty: false
+        title: false
+      title: 'Search Results'
     cache_metadata:
       max-age: -1
       contexts:
