@@ -72,12 +72,16 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: type
+              rendered: true
+              rendered_strip: false
           row_class: ''
           default_row_class: true
           override: true
           sticky: false
-          caption: 'Search results'
+          caption: ''
           summary: ''
           description: ''
           columns:
@@ -628,6 +632,7 @@ display:
         title: false
         header: false
         fields: false
+        sorts: false
       title: 'Search Results'
       header:
         area:
@@ -1161,6 +1166,7 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
