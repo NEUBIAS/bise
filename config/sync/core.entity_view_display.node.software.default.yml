@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.software.body
     - field.field.node.software.field_attribution_instructions
-    - field.field.node.software.field_comments2023
     - field.field.node.software.field_free_tagging
     - field.field.node.software.field_give_feedback_on_this_soft
     - field.field.node.software.field_has_author
@@ -51,8 +49,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes:
-          layout_class: {  }
+        label: ''
         wrappers:
           header: div
           left: div
@@ -62,7 +59,8 @@ third_party_settings:
         attributes: ''
         link_attribute: ''
         link_custom: ''
-        label: ''
+        classes:
+          layout_class: {  }
     regions:
       header:
         - field_image
@@ -85,6 +83,8 @@ third_party_settings:
         - field_has_biological_terms
         - field_free_tagging
         - field_has_entry_curator
+        - node_post_date
+        - node_changed_date
       footer:
         - field_workflow_steps
         - field_has_location
@@ -95,61 +95,72 @@ third_party_settings:
         - field_has_doi
         - field_has_comparison
         - field_attribution_instructions
-        - field_comments2023
+        - field_give_feedback_on_this_soft
+    fields:
+      node_changed_date:
+        plugin_id: node_changed_date
+        weight: 19
+        label: inline
+        formatter: ds_post_date_short
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 18
+        label: inline
+        formatter: ds_post_date_short
 id: node.software.default
 targetEntityType: node
 bundle: software
 mode: default
 content:
   body:
-    type: text_default
     label: above
+    type: text_default
+    weight: 12
     settings: {  }
     third_party_settings: {  }
-    weight: 12
     region: right
   field_attribution_instructions:
-    type: text_default
+    weight: 28
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 26
+    type: text_default
     region: footer
-  field_comments2023:
-    type: comment_default
-    label: visually_hidden
+  field_free_tagging:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_give_feedback_on_this_soft:
+    weight: 29
+    label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 27
+    type: comment_default
     region: footer
-  field_free_tagging:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 16
-    region: right
   field_has_author:
-    type: string
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: left
   field_has_biological_terms:
-    type: entity_reference_label
+    weight: 15
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 15
+    type: entity_reference_label
     region: right
   field_has_comparison:
-    type: link
+    weight: 27
     label: above
     settings:
       trim_length: 80
@@ -158,10 +169,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 25
+    type: link
     region: footer
   field_has_documentation:
-    type: link
+    weight: 22
     label: above
     settings:
       trim_length: 80
@@ -170,10 +181,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 20
+    type: link
     region: footer
   field_has_doi:
-    type: link
+    weight: 26
     label: above
     settings:
       trim_length: 80
@@ -182,51 +193,51 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 24
+    type: link
     region: footer
   field_has_entry_curator:
-    type: author
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    type: author
     region: right
   field_has_function:
-    type: entity_reference_label
+    weight: 13
     label: above
     settings:
       link: true
     third_party_settings:
       ds:
         ds_limit: ''
-    weight: 13
+    type: entity_reference_label
     region: right
   field_has_implementation:
-    type: entity_reference_label
+    weight: 5
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    type: entity_reference_label
     region: left
   field_has_interaction_level:
-    type: entity_reference_label
+    weight: 9
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    type: entity_reference_label
     region: left
   field_has_license:
-    type: string
+    weight: 11
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    type: string
     region: left
   field_has_location:
-    type: link
+    weight: 21
     label: above
     settings:
       trim_length: 80
@@ -235,18 +246,18 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 19
+    type: link
     region: footer
   field_has_programming_language:
-    type: entity_reference_label
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    type: entity_reference_label
     region: left
   field_has_reference_publication:
-    type: link
+    weight: 23
     label: above
     settings:
       trim_length: 80
@@ -255,18 +266,18 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 21
+    type: link
     region: footer
   field_has_topic:
-    type: entity_reference_label
+    weight: 14
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 14
+    type: entity_reference_label
     region: right
   field_has_usage_example:
-    type: link
+    weight: 24
     label: above
     settings:
       trim_length: 80
@@ -275,10 +286,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 22
+    type: link
     region: footer
   field_image:
-    type: colorbox
+    weight: 0
     label: hidden
     settings:
       colorbox_node_style: large
@@ -289,75 +300,74 @@ content:
       colorbox_caption: auto
       colorbox_caption_custom: ''
     third_party_settings: {  }
-    weight: 0
+    type: colorbox
     region: header
   field_is_compatible_with:
-    type: entity_reference_label
+    weight: 7
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    type: entity_reference_label
     region: left
   field_is_covered_by_training_mat:
-    type: entity_reference_label
+    weight: 25
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 23
+    type: entity_reference_label
     region: footer
   field_is_dependent_of:
-    type: entity_reference_label
+    weight: 3
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    type: entity_reference_label
     region: left
   field_license_openness:
-    type: entity_reference_label
+    weight: 10
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    type: entity_reference_label
     region: left
   field_platform:
-    type: entity_reference_label
+    weight: 4
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    type: entity_reference_label
     region: left
   field_supported_image_dimension:
-    type: entity_reference_label
+    weight: 8
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    type: entity_reference_label
     region: left
   field_type:
-    type: entity_reference_label
+    weight: 1
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    type: entity_reference_label
     region: left
   field_workflow_steps:
     type: entity_reference_revisions_entity_view
+    weight: 20
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 18
     region: footer
 hidden:
-  field_give_feedback_on_this_soft: true
   links: true
   search_api_excerpt: true
   what_links_here_entity_view_1: true
