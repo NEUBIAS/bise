@@ -614,7 +614,22 @@ display:
       defaults:
         empty: false
         title: false
+        header: false
       title: 'Search Results'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'The following table gives you a limited number of fields, you will get further info by clicking on the name of the tool. They are sorted by relevance, which is a simple score counting the number of time your search term appears in the tool description. If the search term appears in title or in tags, it will count twice. '
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
