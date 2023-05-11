@@ -357,6 +357,7 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+            reset: true
           entity_type: node
           bundle: software
     region: content
