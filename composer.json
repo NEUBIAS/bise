@@ -73,6 +73,7 @@
         "dinbror/blazy": "^1.8",
         "drupal/admin_toolbar": "3.2.1",
         "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/antibot": "^2.0",
         "drupal/auto_height": "2.0.x-dev@dev",
         "drupal/backup_migrate": "^5.0",
         "drupal/betterlogin": "1.x-dev",
@@ -145,7 +146,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
     },
     "autoload": {
         "classmap": [
