@@ -41,7 +41,7 @@
   var updateWorkflowVis = function () {
 
     // $.getJSON('http://test.biii.eu/wfsteps?_format=json', function(data) {
-    $.getJSON('http://biii.eu/wfsteps?_format=json', function (data) {
+    $.getJSON('//biii.eu/wfsteps?_format=json', function (data) {
 
       // $.getJSON(json_node_url + "?_format=json ", function(data) {
       //console.log(data);
