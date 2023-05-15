@@ -1,36 +1,7 @@
 uuid: 35961347-8fd5-4a2c-82d1-9f42807a9fc3
 langcode: en
 status: true
-dependencies:
-  config:
-    - filter.format.basic_html
-    - filter.format.full_html
-    - filter.format.markdown
-    - filter.format.restricted_html
-    - node.type.article
-    - node.type.book
-    - node.type.forum
-    - node.type.forum2
-    - node.type.page
-    - node.type.sample_data
-    - node.type.software
-  module:
-    - aggregator
-    - book
-    - captcha
-    - comment
-    - contact
-    - contextual
-    - file
-    - filter
-    - fontawesome
-    - node
-    - quickedit
-    - search_autocomplete
-    - shortcut
-    - statistics
-    - system
-    - tour
+dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated

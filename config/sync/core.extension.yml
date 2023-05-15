@@ -50,7 +50,6 @@ module:
   help: 0
   history: 0
   honeypot: 0
-  httpbl: 0
   image: 0
   image_captcha: 0
   layout_discovery: 0
@@ -98,6 +97,7 @@ module:
   tour: 0
   tracker: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_accordion: 0
   views_bulk_edit: 0

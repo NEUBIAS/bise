@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: 2TnP0TViNExHGuA7Cdr4L3uxhYGNzKyL0XnoAhtSHMQ
 form_ids:
   - 'comment_*'
   - user_login_form
@@ -7,3 +5,5 @@ form_ids:
   - user_register_form
   - 'contact_message_*'
 show_form_ids: false
+_core:
+  default_config_hash: 2TnP0TViNExHGuA7Cdr4L3uxhYGNzKyL0XnoAhtSHMQ
