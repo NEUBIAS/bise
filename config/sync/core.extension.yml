@@ -4,6 +4,7 @@ module:
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   aggregator: 0
+  antibot: 0
   auto_height: 0
   automated_cron: 0
   backup_migrate: 0
@@ -49,13 +50,13 @@ module:
   help: 0
   history: 0
   honeypot: 0
-  httpbl: 0
   image: 0
   image_captcha: 0
   layout_discovery: 0
   libraries: 0
   link: 0
   linkchecker: 0
+  markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
@@ -96,6 +97,7 @@ module:
   tour: 0
   tracker: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_accordion: 0
   views_bulk_edit: 0

@@ -103,9 +103,9 @@
         "drupal/fontawesome": "^2.18",
         "drupal/google_analytics": "^3.0",
         "drupal/honeypot": "^2.0",
-        "drupal/httpbl": "1.x-dev",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.x-dev",
+        "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "^9.1@alpha",
         "drupal/module_filter": "3.x-dev",
@@ -125,7 +125,7 @@
         "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.10",
         "drupal/token_filter": "^1.4",
-        "drupal/upgrade_status": "^3.14",
+        "drupal/upgrade_status": "^3.19",
         "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^3.0",
@@ -135,7 +135,8 @@
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
         "kint-php/kint": "^3.3",
-        "league/commonmark": "^1.6",
+        "laminas/laminas-servicemanager": "^3.20",
+        "league/commonmark": "^1",
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0"
@@ -203,6 +204,16 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "web/libraries/colorbox": ["npm-asset/jquery-colorbox"]
+        },
+        "enable-patching": "true",
+        "composer-exit-on-patch-failure": "true",
+        "patches": {
+            "drupal/markdown": {
+                "Error when using markdown module with PHP 8.1 on Drupal 9.3: https://www.drupal.org/project/markdown/issues/3265416": "https://www.drupal.org/files/issues/2022-11-08/3265416-markdown-php-81-14.patch"
+            }
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "8.9.20"
     }
 }

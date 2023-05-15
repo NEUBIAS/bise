@@ -1,0 +1,48 @@
+uuid: 190e77c1-33f5-43e5-836b-e960b8acbc3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - markdown
+    - token_filter
+name: Markdown
+format: markdown
+weight: 0
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  markdown:
+    id: markdown
+    provider: markdown
+    status: true
+    weight: -15
+    settings:
+      override: false
+      id: commonmark
+      enabled: true
+      render_strategy:
+        type: filter_output
+        custom_allowed_html: ''
+        plugins:
+          bootstrap: true
+          commonmark: true
+          commonmark-external-links: false
+          commonmark-footnotes: false
+          commonmark-heading-permalink: false
+          commonmark-strikethrough: false
+          commonmark-table: false
+          commonmark-task-list: false
+          filter_align: false
+          filter_caption: false
+    filterFormat: null
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: 0
+    settings:
+      replace_empty: '0'
