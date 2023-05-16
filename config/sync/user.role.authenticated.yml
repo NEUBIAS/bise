@@ -1,7 +1,35 @@
 uuid: 35961347-8fd5-4a2c-82d1-9f42807a9fc3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.book
+    - node.type.forum
+    - node.type.forum2
+    - node.type.page
+    - node.type.sample_data
+    - node.type.software
+  module:
+    - aggregator
+    - book
+    - captcha
+    - comment
+    - contact
+    - contextual
+    - file
+    - filter
+    - fontawesome
+    - node
+    - quickedit
+    - search_autocomplete
+    - shortcut
+    - statistics
+    - system
+    - tour
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -20,7 +48,6 @@ permissions:
   - 'access printer-friendly version'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'access synonyms entity autocomplete'
   - 'access tour'
   - 'access user contact forms'
   - 'access user profiles'
@@ -29,11 +56,8 @@ permissions:
   - 'create book content'
   - 'create forum content'
   - 'create forum2 content'
-  - 'create programming_language content'
   - 'create sample_data content'
-  - 'create scientific_publication content'
   - 'create software content'
-  - 'create training_material content'
   - 'delete own article content'
   - 'delete own book content'
   - 'delete own forum content'
@@ -42,31 +66,20 @@ permissions:
   - 'delete own sample_data content'
   - 'delete own software content'
   - 'edit any forum2 content'
-  - 'edit any programming_language content'
-  - 'edit any scientific_publication content'
-  - 'edit any training_material content'
   - 'edit own article content'
   - 'edit own book content'
   - 'edit own comments'
   - 'edit own forum content'
   - 'edit own forum2 content'
   - 'edit own page content'
-  - 'edit own programming_language content'
   - 'edit own sample_data content'
-  - 'edit own scientific_publication content'
   - 'edit own software content'
-  - 'edit own training_material content'
-  - 'edit terms in edam_bioimaging_operations'
-  - 'edit terms in edam_bioimaging_topics'
   - 'post comments'
-  - 'search content'
   - 'select account cancellation method'
   - 'skip CAPTCHA'
-  - 'use advanced search'
   - 'use search autocomplete'
   - 'use text format basic_html'
   - 'use text format full_html'
-  - 'use text format markdown'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view article revisions'
@@ -76,8 +89,5 @@ permissions:
   - 'view own unpublished content'
   - 'view page revisions'
   - 'view post access counter'
-  - 'view programming_language revisions'
   - 'view sample_data revisions'
-  - 'view scientific_publication revisions'
   - 'view software revisions'
-  - 'view training_material revisions'

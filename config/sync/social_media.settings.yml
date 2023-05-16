@@ -6,7 +6,9 @@ social_media:
     api_event: href
     default_img: 1
     weight: 1
-    attributes: "target|_blank\nclass|facebook-share"
+    attributes: |-
+      target|_blank
+      class|facebook-share
   facebook_msg:
     enable: 1
     api_url: 'FB.ui({method: ''send'',link: ''[current-page:url]''})'
@@ -16,7 +18,9 @@ social_media:
     text: 'Facebook messenger'
     default_img: 1
     weight: 2
-    attributes: "target|_blank\nclass|facebook-msg"
+    attributes: |-
+      target|_blank
+      class|facebook-msg
   linkedin:
     enable: 1
     api_url: 'http://www.linkedin.com/shareArticle?mini=true&url=[current-page:url]&title=[current-page:title]&source=[current-page:url]'
@@ -24,7 +28,9 @@ social_media:
     text: Linkedin
     default_img: 1
     weight: 3
-    attributes: "target|_blank\nclass|linkedin"
+    attributes: |-
+      target|_blank
+      class|linkedin
   twitter:
     enable: 1
     api_url: 'https://twitter.com/intent/tweet?url=[current-page:url]&status=[current-page:title]+[current-page:url]'
@@ -32,7 +38,9 @@ social_media:
     text: Twitter
     default_img: 1
     weight: 4
-    attributes: "target|_blank\nclass|twitter"
+    attributes: |-
+      target|_blank
+      class|twitter
   pinterest:
     enable: 1
     api_url: 'https://www.pinterest.com/pin/create/button/?url=[current-page:url]&description=[current-page:title]'
@@ -40,7 +48,9 @@ social_media:
     text: Pinterest
     default_img: 1
     weight: 5
-    attributes: "target|_blank\nclass|pinterest"
+    attributes: |-
+      target|_blank
+      class|pinterest
   google_plus:
     enable: 0
     text: 'Google Plus'
@@ -48,7 +58,9 @@ social_media:
     api_event: href
     default_img: 1
     weight: 6
-    attributes: "target|_blank\nclass|google-plus"
+    attributes: |-
+      target|_blank
+      class|google-plus
   email:
     enable: 1
     api_url: 'mailto:?subject=[current-page:title]&body=Check out this site [current-page:url]'

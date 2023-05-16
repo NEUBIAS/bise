@@ -17,31 +17,31 @@ bundle: workflow_step
 mode: default
 content:
   field_current_workflow_step_:
+    type: chosen_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_previous_workflow_step:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 3
     region: content
-  field_step_opera:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_step_opera:
     type: synonyms_select
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_title_of_the_setp:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true
