@@ -22,13 +22,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_synonyms:
+    type: string_textfield
     weight: 31
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   name:
     type: string_textfield
     weight: -5

@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: dp50LLB10ui-pYgDqHSZdREslQ7DqY71aF20tyaas6I
 determine_menu: true
 disable_admin_page: true
 append_current_page: true
@@ -14,5 +16,3 @@ menu_breadcrumb_menus:
   main:
     enabled: 1
     weight: -10
-_core:
-  default_config_hash: dp50LLB10ui-pYgDqHSZdREslQ7DqY71aF20tyaas6I
