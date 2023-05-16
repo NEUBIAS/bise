@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.software.body
     - field.field.node.software.field_attribution_instructions
+    - field.field.node.software.field_comments2023
     - field.field.node.software.field_free_tagging
     - field.field.node.software.field_give_feedback_on_this_soft
     - field.field.node.software.field_has_author
@@ -95,7 +97,7 @@ third_party_settings:
         - field_has_doi
         - field_has_comparison
         - field_attribution_instructions
-        - field_give_feedback_on_this_soft
+        - field_comments2023
     fields:
       node_changed_date:
         plugin_id: node_changed_date
@@ -126,15 +128,7 @@ content:
     third_party_settings: {  }
     weight: 28
     region: footer
-  field_free_tagging:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 16
-    region: right
-  field_give_feedback_on_this_soft:
+  field_comments2023:
     type: comment_default
     label: above
     settings:
@@ -143,6 +137,14 @@ content:
     third_party_settings: {  }
     weight: 29
     region: footer
+  field_free_tagging:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: right
   field_has_author:
     type: string
     label: above
@@ -368,6 +370,7 @@ content:
     weight: 20
     region: footer
 hidden:
+  field_give_feedback_on_this_soft: true
   links: true
   search_api_excerpt: true
   what_links_here_entity_view_1: true

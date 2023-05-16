@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.software.body
     - field.field.node.software.field_attribution_instructions
+    - field.field.node.software.field_comments2023
     - field.field.node.software.field_free_tagging
     - field.field.node.software.field_give_feedback_on_this_soft
     - field.field.node.software.field_has_author
@@ -149,6 +150,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_comments2023:
+    type: comment_default
+    weight: 37
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_free_tagging:
     type: entity_reference_autocomplete
