@@ -5,14 +5,18 @@ favicon:
   path: ''
   url: 'http://bisescratch.lndo.site/themes/custom/projet/favicon.ico'
   use_default: true
-schemas:
-  bootstrap: 8000
-  projet: 8000
 features:
   comment_user_picture: false
   comment_user_verification: false
   favicon: true
   node_user_picture: false
+logo:
+  path: themes/custom/projet/img/biii_temp.png
+  url: ''
+  use_default: false
+schemas:
+  bootstrap: 8000
+  projet: 8000
 fluid_container: 1
 table_responsive: '-1'
 breadcrumb_home: 1
@@ -33,7 +37,3 @@ cdn_cache_ttl_assets: '0'
 cdn_cache_ttl_library: '0'
 reset_http_request_cache: ''
 table: ''
-logo:
-  path: themes/custom/projet/img/biii_temp.png
-  url: ''
-  use_default: false
