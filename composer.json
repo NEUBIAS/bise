@@ -153,7 +153,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "drupal/core-project-message": true
         }
     },
     "autoload": {
