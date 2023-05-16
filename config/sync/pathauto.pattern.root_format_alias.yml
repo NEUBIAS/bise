@@ -12,12 +12,12 @@ pattern: '/[term:name]'
 selection_criteria:
   5fb84ac1-2b9c-4680-992c-0add72f2388b:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      edam_bioimaging_format: edam_bioimaging_format
     negate: false
+    uuid: 5fb84ac1-2b9c-4680-992c-0add72f2388b
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 5fb84ac1-2b9c-4680-992c-0add72f2388b
+    bundles:
+      edam_bioimaging_format: edam_bioimaging_format
 selection_logic: and
 weight: -5
 relationships: {  }
