@@ -71,7 +71,7 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
-        "drupal/admin_toolbar": "3.2.1",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/antibot": "^2.0",
         "drupal/auto_height": "2.0.x-dev@dev",
@@ -90,8 +90,9 @@
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/context": "4.x-dev",
         "drupal/contribute": "^1.0@beta",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/ctools": "^3.8",
         "drupal/devel": "^4.2",
         "drupal/devel_kint_extras": "^1.0",
@@ -105,7 +106,6 @@
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.x-dev",
-        "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "^9.1@alpha",
         "drupal/module_filter": "3.x-dev",
@@ -128,14 +128,14 @@
         "drupal/upgrade_status": "^3.19",
         "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_edit": "^2.0",
-        "drupal/views_bulk_operations": "^3.0",
+        "drupal/views_bulk_operations": "^4.2",
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "9.1.x-dev@dev",
         "drush/drush": "^10.0.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
         "kint-php/kint": "^3.3",
-        "laminas/laminas-servicemanager": "^3.20",
+        "laminas/laminas-servicemanager": "^3.7",
         "league/commonmark": "^1",
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
@@ -147,7 +147,15 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true,
+            "drupal/core-project-message": true
+        }
     },
     "autoload": {
         "classmap": [
@@ -208,6 +216,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "8.9.20"
+        "drupal/core-dev": "^9"
     }
 }

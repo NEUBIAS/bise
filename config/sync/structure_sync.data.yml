@@ -1,3 +1,89 @@
+blocks: {  }
+menus:
+  -
+    menu_name: account
+    title: 'Create an account'
+    parent: null
+    uri: 'internal:/user/register'
+    link_title: ''
+    description: 'Create your account to comment, tag, participate to forums etc..'
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 32f45b97-ec5e-46ea-a99a-839ef80fdc82
+  -
+    menu_name: account
+    title: 'Add new content'
+    parent: null
+    uri: 'internal:/node/add'
+    link_title: ''
+    description: 'Create new content (software, book, etc..)'
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 40a99ac2-65d3-4277-a800-d771e30bf12a
+  -
+    menu_name: search-button
+    title: Search
+    parent: null
+    uri: 'internal:/testsearch'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 4516e406-d47b-4279-a801-f93d40b0b03b
+  -
+    menu_name: account
+    title: 'Edit my account'
+    parent: user.page
+    uri: 'internal:/user/[current-user:uid]/edit'
+    link_title: ''
+    description: 'Change your email, affiliations... or add missing information.'
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: aa2cbdf3-1c57-4ea9-94c3-38efebeff8b2
+  -
+    menu_name: main
+    title: 'How to curate (read first)'
+    parent: null
+    uri: 'entity:node/1154'
+    link_title: null
+    description: 'Some advices to curators'
+    enabled: true
+    expanded: false
+    weight: -47
+    langcode: en
+    uuid: 3d82d9f3-abc8-4b65-a6ab-551bfd89d34b
+  -
+    menu_name: account
+    title: 'My activity'
+    parent: user.page
+    uri: 'internal:/user/[current-user:uid]/activity'
+    link_title: ''
+    description: 'Find the entries you have edited'
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 2ad2a24e-6fb5-4281-b5d8-e23c79ba88d2
+  -
+    menu_name: main
+    title: About
+    parent: null
+    uri: 'entity:node/1'
+    link_title: null
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: bc85b185-3b07-4537-b651-8dde8ab15d00
 taxonomies:
   biological_problems:
     -
@@ -11532,89 +11618,3 @@ taxonomies:
       weight: '0'
       parent: '0'
       uuid: fd3bde71-4296-4378-8988-d97638fa589c
-blocks: {  }
-menus:
-  -
-    menu_name: account
-    title: 'Create an account'
-    parent: null
-    uri: 'internal:/user/register'
-    link_title: ''
-    description: 'Create your account to comment, tag, participate to forums etc..'
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 32f45b97-ec5e-46ea-a99a-839ef80fdc82
-  -
-    menu_name: account
-    title: 'Add new content'
-    parent: null
-    uri: 'internal:/node/add'
-    link_title: ''
-    description: 'Create new content (software, book, etc..)'
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 40a99ac2-65d3-4277-a800-d771e30bf12a
-  -
-    menu_name: search-button
-    title: Search
-    parent: null
-    uri: 'internal:/testsearch'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 4516e406-d47b-4279-a801-f93d40b0b03b
-  -
-    menu_name: account
-    title: 'Edit my account'
-    parent: user.page
-    uri: 'internal:/user/[current-user:uid]/edit'
-    link_title: ''
-    description: 'Change your email, affiliations... or add missing information.'
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: aa2cbdf3-1c57-4ea9-94c3-38efebeff8b2
-  -
-    menu_name: main
-    title: 'How to curate (read first)'
-    parent: null
-    uri: 'entity:node/1154'
-    link_title: null
-    description: 'Some advices to curators'
-    enabled: '1'
-    expanded: '0'
-    weight: '-47'
-    langcode: en
-    uuid: 3d82d9f3-abc8-4b65-a6ab-551bfd89d34b
-  -
-    menu_name: account
-    title: 'My activity'
-    parent: user.page
-    uri: 'internal:/user/[current-user:uid]/activity'
-    link_title: ''
-    description: 'Find the entries you have edited'
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 2ad2a24e-6fb5-4281-b5d8-e23c79ba88d2
-  -
-    menu_name: main
-    title: About
-    parent: null
-    uri: 'entity:node/1'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-49'
-    langcode: en
-    uuid: bc85b185-3b07-4537-b651-8dde8ab15d00
