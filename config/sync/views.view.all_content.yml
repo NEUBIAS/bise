@@ -1315,6 +1315,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: 'Advanced Search'
       filters:
         type_1:
           id: type_1
@@ -1857,6 +1858,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         filters: false
         filter_groups: false
       display_extenders: {  }

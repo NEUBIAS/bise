@@ -13,7 +13,7 @@ field_name: field_topics_covered
 entity_type: node
 bundle: book
 label: 'Topics covered'
-description: 'Should be Edam bio imaging topics and operations , as suggested in the autocompletion. If you need to add other words, add them in the next field "Free topics" that will be considered for edam insertion then. Programming Language is also added here as a topic (to be discussed)'
+description: 'Should be Edam bio imaging topics and operations , as suggested in the autocompletion. If you need to add other words, add them in the next field "Additional Keywords" that will be considered for edam insertion then. Programming Language is also added here as a topic (to be discussed)'
 required: false
 translatable: false
 default_value: {  }

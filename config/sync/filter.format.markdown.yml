@@ -41,7 +41,7 @@ filters:
           filter_align: false
           filter_caption: false
       override: false
-    filterFormat: null
+    filterFormat: markdown
   token_filter:
     id: token_filter
     provider: token_filter
