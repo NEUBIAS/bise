@@ -3079,6 +3079,14 @@
                     "homepage": "https://www.drupal.org/user/55674"
                 },
                 {
+                    "name": "saurabh-2k17",
+                    "homepage": "https://www.drupal.org/user/3622252"
+                },
+                {
+                    "name": "szhu",
+                    "homepage": "https://www.drupal.org/user/3525295"
+                },
+                {
                     "name": "thalles",
                     "homepage": "https://www.drupal.org/user/3589086"
                 }
@@ -5616,8 +5624,12 @@
                 },
                 {
                     "name": "Jack Over",
-                    "homepage": "https://www.drupal.org/user/252386",
+                    "homepage": "https://www.drupal.org/user/953390",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "takim",
+                    "homepage": "https://www.drupal.org/user/252386"
                 }
             ],
             "description": "Share current page to social media",
