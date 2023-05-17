@@ -1,11 +1,11 @@
-name: bisescratch
+name: bisedev
 recipe: drupal8
 compose:
   - docker-compose.network-mtu.yml
 config:
   webroot: web
-  php: '7.4'
-  composer_version: '2.1.8'
+  php: '8.0'
+  composer_version: '2.5.5'
 services:
   appserver:
     ssl: false
