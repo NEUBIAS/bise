@@ -20,6 +20,7 @@ Instead, please follow the process detailed in our wiki, as set up by Kota Miura
 https://github.com/NEUBIAS/bise/wiki/BISE-development
 
 A summary is provided here for your convenience: 
+
 ```
   with local test.biii(dev)
         import production database. (lando db-import)
@@ -35,5 +36,7 @@ A summary is provided here for your convenience:
         if working, push to upstream production. 
     pull from inside the SERVER production, import configuration changes, drush cr
 ```
+
 ---
+
 A brief history: the project **Biii** started with a classic "Drupal-composer/drupal-project" ([see here](https://github.com/drupal-composer/drupal-project)) in 2017, and then in 2021, the framework switched to the "drupal/core-recommended"([see here](https://github.com/drupal/core-recommended)) project. The name of this database was initally named "BISE" in 2016, and then restored it's prehistoric name "Biii" (2013-2016) in 2019.  

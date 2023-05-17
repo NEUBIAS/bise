@@ -9,34 +9,30 @@
 
 # Ignore core when managing all of a project's dependencies with Composer
 # including Drupal core.
-web/core
+# core
 
-# Ignore add-on modules, instead handled by Composer. 
-# added by Kota
-web/modules/contrib
-web/themes/contrib
-web/profiles/contrib
-web/libraries
-
-# Core's dependencies are managed with Composer.
-vendor
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+/vendor/
 
 # Ignore configuration files that may contain sensitive information.
-web/sites/*/settings.local.php
-web/sites/*/services*.yml
+sites/*/settings*.php
+sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-web/sites/*/files
-web/sites/*/private
+sites/*/files
+sites/*/private
 
 # Ignore SimpleTest multi-site environment.
-web/sites/simpletest
+sites/simpletest
 
 # If you prefer to store your .gitignore file in the sites/ folder, comment
 # or delete the previous settings and uncomment the following ones, instead.
 
 # Ignore configuration files that may contain sensitive information.
-*/settings*.php
+# */settings*.php
 
 # Ignore paths that contain user-generated content.
 # */files
@@ -44,18 +40,3 @@ web/sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
-*.DS_Store
-private
-.env
-.env-template
-drush/bise.aliases.drushrc.php
-drushrc.php
-drush/sites/*.site.yml
-*.sql.gz
-/.editorconfig
-/.gitattributes
-.lando.local.yml
-/.idea/*
-.idea/*
-*.gz
-.ovhconfig
