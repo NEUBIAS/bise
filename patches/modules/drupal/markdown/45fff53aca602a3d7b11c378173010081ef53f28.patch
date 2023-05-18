@@ -1,0 +1,40 @@
+From 45fff53aca602a3d7b11c378173010081ef53f28 Mon Sep 17 00:00:00 2001
+From: "oleksandr.trotsenko@gmail.com" <oleksandr.trotsenko@gmail.com>
+Date: Wed, 31 Aug 2022 13:24:53 -0500
+Subject: [PATCH] Issue #3254077 by bucefal91: Excluding the guzzle exception
+ from serialization in the annotation class.
+
+---
+ src/Annotation/InstallableLibrary.php | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/src/Annotation/InstallableLibrary.php b/src/Annotation/InstallableLibrary.php
+index ea27965..934df3b 100644
+--- a/src/Annotation/InstallableLibrary.php
++++ b/src/Annotation/InstallableLibrary.php
+@@ -433,6 +433,22 @@ class InstallableLibrary extends AnnotationObject {
+     return $version && Semver::satisfies($version, '@stable');
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function __sleep() {
++    $vars = parent::__sleep();
++
++    // We are not interested in serializing the last seen Guzzle exception. So
++    // let us exclude it.
++    $index = array_search('requestException', $vars);
++    if ($index !== FALSE) {
++      unset($vars[$index]);
++    }
++
++    return $vars;
++  }
++
+   /**
+    * Requests a URL.
+    *
+-- 
+GitLab
+
