@@ -28,7 +28,8 @@ body {
 /****************/
 .full_header {
   background: url(../img/header.jpg) no-repeat 0 0;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .top {
   overflow: hidden; }
@@ -59,7 +60,7 @@ body {
 
 #navbar {
   clear: both;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none; }
 #navbar a {
   color: #fff; }

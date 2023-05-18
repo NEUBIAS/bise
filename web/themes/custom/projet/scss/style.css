@@ -51,7 +51,8 @@ body {
 .top input{
   border-radius: 8px 0 0 8px !important;
   height: 36px !important;
-  border: 0px!important;
+  border: 1px solid!important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -95,6 +96,8 @@ body {
 .full_header {
   background: url(../img/header.jpg) no-repeat 0 0;
   background-size: cover;
+  background-position: bottom;
+
 }
 .region-top-bar{
   display: flex;
@@ -174,8 +177,8 @@ body {
 #navbar a:hover,
 #navbar a:focus,
 #navbar a.is-active {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #ff8686;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 #navbar .expanded.open a.dropdown-toggle {
   color: #000;
