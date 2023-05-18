@@ -45,10 +45,14 @@ body {
 /****************/
 
 /* Search field */
+.block-views-exposed-filter-blocktestsearch-page-1{
+  display:flex;
+}
 .top input{
-  border-radius: 12px 0 0 12px !important;
+  border-radius: 8px 0 0 8px !important;
   height: 36px !important;
-  border-color: rgba(0, 0, 0, 0.5) !important;
+  border: 0px!important;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -58,6 +62,33 @@ body {
   font-size: 12px !important;
   background-color: rgba(0, 0, 0, 0.5) !important;
   border-color: rgba(0, 0, 0, 0.5) !important;
+  border: none !important;
+  text-transform: uppercase !important;
+  transition: all 0.2s ease;
+
+}
+
+#edit-submit-testsearch:hover{
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Advanced search button */
+.top .block-views-exposed-filter-blocktestsearch-page-1 a{
+  height: 36px !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  padding: 9px 12px 8px 12px;
+  transition: all 0.2s ease;
+
+}
+
+.top .block-views-exposed-filter-blocktestsearch-page-1 a:hover{
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  text-decoration: none !important;
 
 }
 
@@ -88,7 +119,7 @@ body {
   margin: 20px auto;
 }
 .top .block-views-exposed-filter-blocktestsearch-page-1 {
-  margin-left: 128px;
+  margin-left: 256px;
   clear: both;
   /* left: 50%; */
   /* margin: 0 0 0 -175px; */
@@ -130,12 +161,15 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   font-size: 1.1em;
   border: none;
+
 }
 #navbar .navbar-collapse {
   border: none;
 }
 #navbar a {
   color: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+
 }
 #navbar a:hover,
 #navbar a:focus,
