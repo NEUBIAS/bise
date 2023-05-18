@@ -217,6 +217,9 @@
             "drupal/markdown": {
                 "Error when using markdown module with PHP 8.1 on Drupal 9.3: https://www.drupal.org/project/markdown/issues/3265416": "https://www.drupal.org/files/issues/2022-11-08/3265416-markdown-php-81-14.patch",
                 "Excluding the guzzle exception from serialization in the annotation class. https://www.drupal.org/project/markdown/issues/3254077": "patches/modules/drupal/markdown/45fff53aca602a3d7b11c378173010081ef53f28.patch"
+            },
+            "drupal/core": {
+                "CORS breaks with cache proxies and same origin usage. https://www.drupal.org/project/drupal/issues/3001809": "https://www.drupal.org/files/issues/2022-06-15/3001809-56.patch"
             }
         }
     },
