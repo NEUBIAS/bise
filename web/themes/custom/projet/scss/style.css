@@ -43,6 +43,24 @@ body {
 /****************/
 /* basics */
 /****************/
+
+/* Search field */
+.top input{
+  border-radius: 12px 0 0 12px !important;
+  height: 36px !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+#edit-submit-testsearch{
+  border-radius: 0 8px 8px 0 !important;
+  height: 36px !important;
+  font-size: 12px !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+
+}
+
 .full_header {
   background: url(../img/header.jpg) no-repeat 0 0;
   background-size: cover;
