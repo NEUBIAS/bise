@@ -45,19 +45,18 @@ body {
 /****************/
 
 /* Search field */
-.block-views-exposed-filter-blocktestsearch-page-1{
-  display:flex;
+.block-views-exposed-filter-blocktestsearch-page-1 {
+  display: flex;
 }
-.top input{
+.top input {
   border-radius: 8px 0 0 8px !important;
   height: 36px !important;
-  border: 1px solid!important;
+  border: 1px solid !important;
   border-color: rgba(0, 0, 0, 0.5) !important;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-
-#edit-submit-testsearch{
+#edit-submit-testsearch {
   border-radius: 0 8px 8px 0 !important;
   height: 36px !important;
   font-size: 12px !important;
@@ -66,15 +65,14 @@ body {
   border: none !important;
   text-transform: uppercase !important;
   transition: all 0.2s ease;
-
 }
 
-#edit-submit-testsearch:hover{
+#edit-submit-testsearch:hover {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Advanced search button */
-.top .block-views-exposed-filter-blocktestsearch-page-1 a{
+.top .block-views-exposed-filter-blocktestsearch-page-1 a {
   height: 36px !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
@@ -84,22 +82,19 @@ body {
   color: white !important;
   padding: 9px 12px 8px 12px;
   transition: all 0.2s ease;
-
 }
 
-.top .block-views-exposed-filter-blocktestsearch-page-1 a:hover{
+.top .block-views-exposed-filter-blocktestsearch-page-1 a:hover {
   background-color: rgba(0, 0, 0, 0.7) !important;
   text-decoration: none !important;
-
 }
 
 .full_header {
   background: url(../img/header.jpg) no-repeat 0 0;
   background-size: cover;
   background-position: bottom;
-
 }
-.region-top-bar{
+.region-top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +159,6 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   font-size: 1.1em;
   border: none;
-
 }
 #navbar .navbar-collapse {
   border: none;
@@ -172,7 +166,6 @@ body {
 #navbar a {
   color: rgba(0, 0, 0, 0.8);
   transition: all 0.2s ease;
-
 }
 #navbar a:hover,
 #navbar a:focus,
@@ -212,10 +205,8 @@ footer a {
 /* Extra Small Devices, Phones */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-  .top .logo{
-    width:50%;
-
+  .top .logo {
+    width: 50%;
   }
   #navbar ul.menu li ul.dropdown-menu li {
     background-color: #3c3c3c;
@@ -554,3 +545,73 @@ footer a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/**** Cards ****/
+/* Title */
+.path-frontpage .block-views h2 {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+/* Card layout */
+.views-view-grid .views-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Cards */
+.path-frontpage .block-views .views-view-grid .views-col {
+  background-color: #fafafa;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  padding: 0px;
+}
+
+.path-frontpage .block-views .views-view-grid .views-col:hover{
+  border: 1px solid #bababa;
+
+}
+/* card images */
+.path-frontpage
+  .block-views
+  .views-view-grid
+  .views-col
+  .views-field-field-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin-bottom: 24px;
+  border-radius: 4px 4px 0 0;
+  height: 128px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.views-view-grid *{
+  transition: all 0.2s ease !important;
+}
+
+.views-view-grid h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px;
+}
+
+.views-view-grid a:hover {
+  text-decoration: None !important;
+  color: #ff8686 !important;
+  background-color: transparent !important;
+}
+
+.field-content a {
+  margin: 8px;
+}
+
+.field-content a:hover {
+  text-decoration: None !important;
+  color: #ff8686 !important;
+  background-color: transparent !important;
+}
