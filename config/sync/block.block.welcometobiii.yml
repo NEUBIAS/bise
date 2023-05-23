@@ -15,14 +15,14 @@ plugin: 'block_content:db1e4f51-2d9f-4a38-835f-17db38c0e009'
 settings:
   id: 'block_content:db1e4f51-2d9f-4a38-835f-17db38c0e009'
   label: 'Welcome to Biii'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

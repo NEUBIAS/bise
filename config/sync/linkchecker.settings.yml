@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: FzFKuqOuk667AkDorrqvXkc_-M4D-Ac1XeGGusxS1JU
+scan_blocks: null
 check_links_types: 1
 default_url_scheme: 'http://'
 base_path: ''
@@ -24,7 +27,10 @@ extract:
 check:
   connections_max: 8
   connections_max_per_domain: 2
-  disable_link_check_for_urls: "example.com\nexample.net\nexample.org"
+  disable_link_check_for_urls: |-
+    example.com
+    example.net
+    example.org
   library: core
   interval: 2419200
   useragent: 'Drupal (+https://drupal.org/)'
@@ -35,6 +41,3 @@ error:
   impersonate_account: Perrine
 logging:
   level: 6
-_core:
-  default_config_hash: FzFKuqOuk667AkDorrqvXkc_-M4D-Ac1XeGGusxS1JU
-scan_blocks: null

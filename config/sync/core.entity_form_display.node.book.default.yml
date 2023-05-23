@@ -39,225 +39,225 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 26
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_author_s_:
+    type: string_textfield
     weight: 125
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_content_type:
+    type: entity_reference_autocomplete
     weight: 131
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_date:
+    type: datetime_default
     weight: 127
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_doi:
+    type: link_default
     weight: 124
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_event:
+    type: link_default
     weight: 135
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_expected:
-    weight: 134
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 134
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_format:
+    type: entity_reference_autocomplete
     weight: 130
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_free_tagging:
+    type: entity_reference_autocomplete
     weight: 139
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_has_executable:
+    type: link_default
     weight: 140
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_image_data:
+    type: link_default
     weight: 138
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_license:
-    weight: 133
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: string_textfield
+    weight: 133
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_has_practical_exercices:
+    type: link_default
     weight: 137
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_slides:
+    type: link_default
     weight: 136
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_is_training_material_of:
+    type: entity_reference_autocomplete
     weight: 31
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_parent:
+    type: entity_reference_autocomplete
     weight: 132
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_prerequisites:
+    type: text_textarea
     weight: 128
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_topics_covered:
+    type: entity_reference_autocomplete
     weight: 129
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_trainer_s_presenter_s_:
+    type: string_textfield
     weight: 126
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_url:
+    type: link_default
     weight: 123
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   path:
     type: path
     weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   promote:
     type: boolean_checkbox
+    weight: 15
+    region: content
     settings:
       display_label: true
-    weight: 15
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
+    weight: 121
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
+    weight: 16
+    region: content
     settings:
       display_label: true
-    weight: 16
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: -5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   url_redirects:
     weight: 50
     region: content

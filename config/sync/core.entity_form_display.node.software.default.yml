@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.software.body
     - field.field.node.software.field_attribution_instructions
+    - field.field.node.software.field_comments2023
     - field.field.node.software.field_free_tagging
     - field.field.node.software.field_give_feedback_on_this_soft
     - field.field.node.software.field_has_author
@@ -55,16 +56,16 @@ third_party_settings:
         - field_license_openness
         - field_has_entry_curator
         - field_workflow_steps
+      label: Main
+      region: content
       parent_name: ''
       weight: 0
       format_type: details
       format_settings:
-        required_fields: true
-        id: ''
         classes: ''
+        id: ''
         open: false
-      label: Main
-      region: content
+        required_fields: true
     group_links:
       children:
         - field_has_location
@@ -74,32 +75,32 @@ third_party_settings:
         - field_has_comparison
         - field_has_doi
         - field_is_covered_by_training_mat
+      label: Links
+      region: content
       parent_name: ''
       weight: 1
       format_type: details
       format_settings:
-        open: false
-        required_fields: true
         classes: ''
         id: ''
-      label: Links
-      region: content
+        open: false
+        required_fields: true
     group_tags:
       children:
         - field_has_function
         - field_has_topic
         - field_has_biological_terms
         - field_free_tagging
+      label: Tags
+      region: content
       parent_name: ''
       weight: 2
       format_type: details
       format_settings:
-        open: false
-        required_fields: true
         classes: ''
         id: ''
-      label: Tags
-      region: content
+        open: false
+        required_fields: true
     group_usages:
       children:
         - field_is_dependent_of
@@ -111,16 +112,16 @@ third_party_settings:
         - field_supported_image_dimension
         - field_has_interaction_level
         - field_attribution_instructions
+      label: Usages
+      region: content
       parent_name: ''
       weight: 3
       format_type: details
       format_settings:
-        open: false
-        required_fields: true
         classes: ''
         id: ''
-      label: Usages
-      region: content
+        open: false
+        required_fields: true
 id: node.software.default
 targetEntityType: node
 bundle: software
@@ -129,43 +130,49 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 3
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_attribution_instructions:
+    type: text_textfield
     weight: 36
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+  field_comments2023:
+    type: comment_default
+    weight: 37
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_free_tagging:
+    type: entity_reference_autocomplete
     weight: 31
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_give_feedback_on_this_soft:
+    type: comment_default
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: comment_default
-    region: content
   field_has_author:
     type: string_textfield
     weight: 4
@@ -175,164 +182,165 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_has_biological_terms:
+    type: entity_reference_autocomplete
     weight: 30
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_has_comparison:
+    type: link_default
     weight: 13
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_documentation:
+    type: link_default
     weight: 11
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_doi:
+    type: link_default
     weight: 14
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_entry_curator:
+    type: entity_reference_autocomplete
     weight: 7
+    region: content
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
       match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_has_function:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 28
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_has_implementation:
+    type: options_buttons
     weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_has_interaction_level:
+    type: options_buttons
     weight: 35
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_has_license:
+    type: string_textfield
     weight: 31
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_has_location:
+    type: link_default
     weight: 8
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_has_programming_language:
-    weight: 32
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 32
     region: content
-  field_has_reference_publication:
-    weight: 9
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_has_topic:
-    weight: 29
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+  field_has_reference_publication:
+    type: link_default
+    weight: 9
     region: content
-  field_has_usage_example:
-    weight: 12
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
+  field_has_topic:
+    type: options_select
+    weight: 29
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_has_usage_example:
+    type: link_default
+    weight: 12
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_image:
+    type: image_image
     weight: 5
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_is_compatible_with:
+    type: chosen_select
     weight: 33
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_is_covered_by_training_mat:
+    type: chosen_select
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_is_dependent_of:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 28
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_license_openness:
+    type: options_buttons
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_platform:
+    type: options_buttons
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_supported_image_dimension:
+    type: options_buttons
     weight: 34
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_type:
+    type: options_buttons
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_workflow_steps:
     type: entity_reference_paragraphs
     weight: 8
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -343,9 +351,12 @@ content:
     third_party_settings:
       conditional_fields:
         cc1c01ca-8da8-4ad5-9dce-27cce39d9d8c:
+          entity_type: node
+          bundle: software
           dependee: field_type
           settings:
             state: visible
+            reset: true
             condition: value
             grouping: AND
             values_set: 1
@@ -357,35 +368,31 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-            reset: true
-          entity_type: node
-          bundle: software
-    region: content
   status:
     type: boolean_checkbox
+    weight: 7
+    region: content
     settings:
       display_label: true
-    weight: 7
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   url_redirects:
     weight: 6
     region: content

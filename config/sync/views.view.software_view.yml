@@ -22,51 +22,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ul
-          wrapper_class: item-list
-          class: ''
-      row:
-        type: fields
+      title: 'list of software'
       fields:
         title:
           id: title
@@ -75,6 +36,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -130,9 +94,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         nid:
           id: nid
           table: tracker_node
@@ -140,6 +101,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: node
           label: ''
           exclude: false
           alter:
@@ -182,55 +144,94 @@ display:
           empty_zero: false
           hide_alter_empty: true
           link_to_node: false
-          plugin_id: node
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            software: software
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: 'list of software'
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            software: software
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -241,51 +242,11 @@ display:
         - user.permissions
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: software
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: true
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            nid: nid
-          info:
-            title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            nid:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      defaults:
-        style: false
-        row: false
-        fields: false
-      row:
-        type: fields
-        options: {  }
       fields:
         title:
           id: title
@@ -294,6 +255,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -349,9 +313,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         nid:
           id: nid
           table: tracker_node
@@ -359,6 +320,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: node
           label: identifier
           exclude: false
           alter:
@@ -401,7 +363,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           link_to_node: false
-          plugin_id: node
         field_has_function:
           id: field_has_function
           table: node__field_has_function
@@ -409,6 +370,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'has function'
           exclude: false
           alter:
@@ -464,7 +426,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_has_topic:
           id: field_has_topic
           table: node__field_has_topic
@@ -472,6 +433,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'has topic'
           exclude: false
           alter:
@@ -527,7 +489,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_is_dependent_of:
           id: field_is_dependent_of
           table: node__field_is_dependent_of
@@ -535,6 +496,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Requires
           exclude: false
           alter:
@@ -590,7 +552,46 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            nid: nid
+          default: '-1'
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: true
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_extenders: {  }
+      path: software
     cache_metadata:
       max-age: -1
       contexts:
@@ -604,33 +605,11 @@ display:
         - 'config:field.storage.node.field_has_topic'
         - 'config:field.storage.node.field_is_dependent_of'
   rest_export_1:
-    display_plugin: rest_export
     id: rest_export_1
     display_title: 'REST export'
+    display_plugin: rest_export
     position: 2
     display_options:
-      display_extenders: {  }
-      path: soft
-      style:
-        type: serializer
-      defaults:
-        style: false
-        row: false
-        fields: false
-      row:
-        type: data_field
-        options:
-          field_options:
-            title:
-              alias: ''
-              raw_output: false
-      pager:
-        type: none
-        options:
-          offset: 0
-      auth:
-        - basic_auth
-        - cookie
       fields:
         title:
           id: title
@@ -639,6 +618,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -694,9 +676,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         nid:
           id: nid
           table: tracker_node
@@ -704,6 +683,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: node
           label: ''
           exclude: false
           alter:
@@ -746,7 +726,28 @@ display:
           empty_zero: false
           hide_alter_empty: true
           link_to_node: false
-          plugin_id: node
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: serializer
+      row:
+        type: data_field
+        options:
+          field_options:
+            title:
+              alias: ''
+              raw_output: false
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_extenders: {  }
+      path: soft
+      auth:
+        - basic_auth
+        - cookie
     cache_metadata:
       max-age: -1
       contexts:

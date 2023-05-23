@@ -13,37 +13,37 @@ mode: default
 content:
   checked:
     type: timestamp_ago
-    weight: 1
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    label: inline
+    weight: 1
     region: content
   description:
+    settings: {  }
+    third_party_settings: {  }
     weight: 3
     region: content
+  feed_icon:
     settings: {  }
     third_party_settings: {  }
-  feed_icon:
     weight: 5
     region: content
+  image:
     settings: {  }
     third_party_settings: {  }
-  image:
     weight: 2
     region: content
+  items:
     settings: {  }
     third_party_settings: {  }
-  items:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   link:
     type: uri_link
-    weight: 4
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    label: inline
+    weight: 4
     region: content
 hidden:
   more_link: true
