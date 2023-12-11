@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3b9d5a6e9ea9dd03d1baa4ddf398ef9",
+    "content-hash": "5a3c1a8f8a3246111dc2c14a0b074f94",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -988,6 +988,16 @@
                 "source": "https://github.com/consolidation/site-process/tree/4.2.1"
             },
             "time": "2022-10-18T13:19:35+00:00"
+        },
+        {
+            "name": "cure53/dompurify",
+            "version": "3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cure53/DOMPurify.git",
+                "reference": "3.0.6"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "cweagans/composer-patches",
