@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.full_html
-    - filter.format.markdown
     - filter.format.restricted_html
     - node.type.article
     - node.type.book
@@ -15,7 +14,6 @@ dependencies:
     - node.type.sample_data
     - node.type.software
   module:
-    - aggregator
     - book
     - captcha
     - comment
@@ -25,7 +23,6 @@ dependencies:
     - filter
     - fontawesome
     - node
-    - quickedit
     - search_autocomplete
     - shortcut
     - statistics
@@ -44,8 +41,6 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access fontawesome additional settings'
-  - 'access in-place editing'
-  - 'access news feeds'
   - 'access printer-friendly version'
   - 'access shortcuts'
   - 'access site-wide contact form'
@@ -81,7 +76,6 @@ permissions:
   - 'use search autocomplete'
   - 'use text format basic_html'
   - 'use text format full_html'
-  - 'use text format markdown'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view article revisions'

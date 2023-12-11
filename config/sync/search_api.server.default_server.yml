@@ -18,3 +18,4 @@ backend_config:
     suggest_suffix: true
     suggest_words: true
   database_text: ''
+  phrase: disabled

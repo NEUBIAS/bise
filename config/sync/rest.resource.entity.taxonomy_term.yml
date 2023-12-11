@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - serialization
     - taxonomy
     - user
@@ -17,9 +16,8 @@ configuration:
     - POST
     - PATCH
   formats:
-    - hal_json
-    - json
-    - xml
+    1: json
+    2: xml
   authentication:
     - basic_auth
     - cookie
