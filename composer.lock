@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0aeb57a10ff0df4f894b0fa6f9f8620",
+    "content-hash": "3460cb66906ca7f5187e9c134304ff15",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3339,58 +3339,6 @@
                 "source": "https://gitlab.com/drupalspoons/devel",
                 "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
                 "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
-            }
-        },
-        {
-            "name": "drupal/devel_kint_extras",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/devel_kint_extras.git",
-                "reference": "1.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel_kint_extras-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "c9f485f6f2562710d2bd2c62f0073aa0049f5c8c"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/devel": "^4.0 || ^5.0",
-                "kint-php/kint": "^3.3 || ^4.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1663760998",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Chojnacki",
-                    "homepage": "https://www.drupal.org/u/janchojnacki"
-                },
-                {
-                    "name": "Other contributors",
-                    "homepage": "https://www.drupal.org/node/3164492/committers"
-                }
-            ],
-            "description": "Shows methods and statics available for an object when using Kint with Devel",
-            "homepage": "https://www.drupal.org/project/devel_kint_extras",
-            "support": {
-                "source": "http://git.drupal.org/project/devel_kint_extras.git",
-                "issues": "https://www.drupal.org/project/issues/devel_kint_extras",
-                "chat": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
