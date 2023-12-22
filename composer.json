@@ -107,7 +107,7 @@
         "drupal/core-recommended": "^9",
         "drupal/ctools": "^4.0",
         "drupal/devel": "^5.1",
-        "drupal/ds": "^3.1",
+        "drupal/ds": "^3.16",
         "drupal/dynamic_entity_reference": "^2.0@alpha",
         "drupal/entity_browser": "^2.0",
         "drupal/eva": "^3.0",
