@@ -1,4 +1,5 @@
 <?php
+use Drupal\Core\Form\FormStateInterface;
 /**
  * Use language code for the language switcher
  *
@@ -12,7 +13,7 @@ function projet_preprocess_links__language_block(&$variables) {
   }
 }
 
-function projet_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function projet_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button
   $form['keys']['#attributes']['title'] = t('Search'); //Adds a mousehover title to input box
   /*$form['keys']['#attributes']['placeholder'] = 'Enter a search term'; // Adds a placeholder -- KO */
