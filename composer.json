@@ -63,71 +63,81 @@
                     "composer/installers": "^1.2"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cure53/dompurify",
+                "version": "3.0.6",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/cure53/DOMPurify.git",
+                    "type": "git",
+                    "reference": "3.0.6"
+                }
+            }
         }
+
     ],
     "require": {
         "bower-asset/jquery-autoheight": "^1.0",
         "bower-asset/leaflet": "^1.7",
         "composer/installers": "^1.9",
+        "cure53/dompurify": "^3.0",
         "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
-        "drupal/admin_toolbar": "3.2.1",
-        "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/adminimal_admin_toolbar": "1.x-dev@dev",
         "drupal/antibot": "^2.0",
         "drupal/auto_height": "2.0.x-dev@dev",
         "drupal/backup_migrate": "^5.0",
         "drupal/betterlogin": "1.x-dev",
         "drupal/blazy": "^2.0@RC",
         "drupal/block_class": "1.x-dev",
-        "drupal/block_visibility_groups": "1.x-dev",
         "drupal/bootstrap": "^3.23",
         "drupal/bootstrap_layouts": "^5.1",
-        "drupal/bootstrap_library": "^1.11",
-        "drupal/broken_link": "^3.1",
-        "drupal/captcha": "^1.10",
-        "drupal/chosen": "^2.5",
-        "drupal/colorbox": "1.x-dev",
+        "drupal/captcha": "^2.0",
+        "drupal/chosen": "^4.0",
+        "drupal/ckeditor": "^1.0",
+        "drupal/colorbox": "^2.0",
         "drupal/conditional_fields": "^4.0@alpha",
-        "drupal/context": "4.x-dev",
-        "drupal/contribute": "^1.0@beta",
+        "drupal/context": "^5.0@RC",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
-        "drupal/ctools": "^3.8",
-        "drupal/devel": "^4.2",
-        "drupal/devel_kint_extras": "^1.0",
-        "drupal/ds": "^3.1",
-        "drupal/dynamic_entity_reference": "^1.16",
+        "drupal/ctools": "^4.0",
+        "drupal/devel": "^5.1",
+        "drupal/ds": "^3.16",
+        "drupal/dynamic_entity_reference": "^2.0@alpha || ^3.1",
         "drupal/entity_browser": "^2.0",
         "drupal/eva": "^3.0",
         "drupal/feeds": "^3.0",
         "drupal/field_group": "^3.2",
         "drupal/fontawesome": "^2.18",
-        "drupal/google_analytics": "^3.0",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^4.0",
-        "drupal/linkchecker": "1.x-dev",
+        "drupal/linkchecker": "1.1 || ^2.0@alpha",
         "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^2.0@alpha",
-        "drupal/menu_token": "^9.1@alpha",
-        "drupal/module_filter": "3.x-dev",
+        "drupal/menu_token": "9.1.x-dev@dev",
+        "drupal/module_filter": "^4.0",
         "drupal/paragraphs": "^1.5",
         "drupal/pathauto": "^1.10",
         "drupal/recaptcha": "^3.2",
         "drupal/redirect": "^1.7",
         "drupal/restui": "^1.21",
         "drupal/search_api": "^1.29",
-        "drupal/search_autocomplete": "^2.0",
+        "drupal/search_autocomplete": "^3.0",
         "drupal/shs": "^2.0@RC",
-        "drupal/social_media": "^1.9",
+        "drupal/social_media": "^2.0",
         "drupal/spambot": "^1.2",
         "drupal/structure_sync": "^2.0",
-        "drupal/synonyms": "2.0.x-dev",
+        "drupal/synonyms": "^2.1",
         "drupal/taxonomy_import": "^2.0",
         "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.10",
-        "drupal/token_filter": "^1.4",
-        "drupal/upgrade_status": "^3.19",
+        "drupal/token_filter": "^2.1",
+        "drupal/upgrade_status": "^4.0",
         "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
@@ -215,7 +225,6 @@
         "composer-exit-on-patch-failure": "true",
         "patches": {
             "drupal/markdown": {
-                "Error when using markdown module with PHP 8.1 on Drupal 9.3: https://www.drupal.org/project/markdown/issues/3265416": "https://www.drupal.org/files/issues/2022-11-08/3265416-markdown-php-81-14.patch",
                 "Excluding the guzzle exception from serialization in the annotation class. https://www.drupal.org/project/markdown/issues/3254077": "patches/modules/drupal/markdown/45fff53aca602a3d7b11c378173010081ef53f28.patch"
             },
             "drupal/core": {
@@ -224,6 +233,7 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^9"
+        "drupal/core-dev": "^9",
+        "palantirnet/drupal-rector": "^0.18.4"
     }
 }

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
-    - filter.format.markdown
     - filter.format.restricted_html
     - node.type.article
     - node.type.book
@@ -14,7 +13,6 @@ dependencies:
     - node.type.sample_data
     - node.type.software
   module:
-    - aggregator
     - book
     - captcha
     - comment
@@ -38,14 +36,10 @@ permissions:
   - 'access tour'
   - 'access user profiles'
   - 'add content to books'
-  - 'administer aggregator_feed display'
-  - 'administer aggregator_feed fields'
-  - 'administer aggregator_feed form display'
   - 'administer book outlines'
   - 'administer comment display'
   - 'administer display modes'
   - 'administer forums'
-  - 'administer news feeds'
   - 'administer nodes'
   - 'administer synonyms'
   - 'administer url aliases'
@@ -94,7 +88,6 @@ permissions:
   - 'skip comment approval'
   - 'switch shortcut sets'
   - 'use text format full_html'
-  - 'use text format markdown'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view forum revisions'

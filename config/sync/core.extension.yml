@@ -5,7 +5,6 @@ module:
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
-  aggregator: 0
   antibot: 0
   auto_height: 0
   automated_cron: 0
@@ -24,7 +23,6 @@ module:
   chosen_field: 0
   chosen_lib: 0
   ckeditor: 0
-  color: 0
   colorbox: 0
   comment: 0
   conditional_fields: 0
@@ -48,7 +46,6 @@ module:
   file: 0
   filter: 0
   fontawesome: 0
-  hal: 0
   help: 0
   history: 0
   honeypot: 0
@@ -58,7 +55,6 @@ module:
   libraries: 0
   link: 0
   linkchecker: 0
-  markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
@@ -71,8 +67,6 @@ module:
   path: 0
   path_alias: 0
   pathauto: 0
-  quickedit: 0
-  rdf: 0
   recaptcha: 0
   redirect: 0
   responsive_image: 0
