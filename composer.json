@@ -117,7 +117,7 @@
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.1 || ^2.0@alpha",
-        "drupal/markdown": "^3.0@RC",
+        "drupal/markdown": "^3.0",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "9.1.x-dev@dev",
         "drupal/module_filter": "^4.0",
@@ -148,7 +148,7 @@
         "jackmoore/colorbox": "master",
         "kint-php/kint": "^3.3",
         "laminas/laminas-servicemanager": "^3.20",
-        "league/commonmark": "^1",
+        "league/commonmark": "^1.0",
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0"
@@ -224,9 +224,7 @@
         "enable-patching": "true",
         "composer-exit-on-patch-failure": "true",
         "patches": {
-            "drupal/markdown": {
-                "Excluding the guzzle exception from serialization in the annotation class. https://www.drupal.org/project/markdown/issues/3254077": "patches/modules/drupal/markdown/45fff53aca602a3d7b11c378173010081ef53f28.patch"
-            },
+
             "drupal/core": {
                 "CORS breaks with cache proxies and same origin usage. https://www.drupal.org/project/drupal/issues/3001809": "https://www.drupal.org/files/issues/2022-06-15/3001809-56.patch"
             }
