@@ -116,7 +116,7 @@
         "drupal/fontawesome": "^2.18",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^4.0",
-        "drupal/linkchecker": "1.x-dev",
+        "drupal/linkchecker": "1.1 || ^2.0@alpha",
         "drupal/markdown": "^3.0@RC",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "9.1.x-dev@dev",
