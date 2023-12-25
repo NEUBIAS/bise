@@ -99,7 +99,7 @@
         "drupal/captcha": "^2.0",
         "drupal/chosen": "^4.0",
         "drupal/ckeditor": "^1.0",
-        "drupal/colorbox": "1.x-dev",
+        "drupal/colorbox": "^2.0",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/context": "^5.0@RC",
         "drupal/core-composer-scaffold": "^9",
