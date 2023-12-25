@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - aggregator
     - book
     - comment
     - contact
@@ -24,7 +23,6 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
-  - 'access news feeds'
   - 'access printer-friendly version'
   - 'access shortcuts'
   - 'access site-wide contact form'

@@ -13,7 +13,6 @@ dependencies:
     - node.type.sample_data
     - node.type.software
   module:
-    - aggregator
     - book
     - captcha
     - comment
@@ -37,14 +36,10 @@ permissions:
   - 'access tour'
   - 'access user profiles'
   - 'add content to books'
-  - 'administer aggregator_feed display'
-  - 'administer aggregator_feed fields'
-  - 'administer aggregator_feed form display'
   - 'administer book outlines'
   - 'administer comment display'
   - 'administer display modes'
   - 'administer forums'
-  - 'administer news feeds'
   - 'administer nodes'
   - 'administer synonyms'
   - 'administer url aliases'
