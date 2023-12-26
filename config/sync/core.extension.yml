@@ -55,6 +55,7 @@ module:
   libraries: 0
   link: 0
   linkchecker: 0
+  markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
