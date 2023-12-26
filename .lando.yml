@@ -1,4 +1,4 @@
-name: bisedev
+name: bisescratch
 recipe: drupal8
 compose:
   - docker-compose.network-mtu.yml
