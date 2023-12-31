@@ -28,7 +28,8 @@ body {
 /****************/
 .full_header {
   background: url(../img/header.jpg) no-repeat 0 0;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .top {
   overflow: hidden; }
