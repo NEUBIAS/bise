@@ -1,9 +1,11 @@
+_core:
+  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
-  aggregator: 0
+  antibot: 0
   auto_height: 0
   automated_cron: 0
   backup_migrate: 0
@@ -21,7 +23,6 @@ module:
   chosen_field: 0
   chosen_lib: 0
   ckeditor: 0
-  color: 0
   colorbox: 0
   comment: 0
   conditional_fields: 0
@@ -45,31 +46,27 @@ module:
   file: 0
   filter: 0
   fontawesome: 0
-  hal: 0
   help: 0
   history: 0
   honeypot: 0
-  httpbl: 0
   image: 0
   image_captcha: 0
   layout_discovery: 0
   libraries: 0
   link: 0
   linkchecker: 0
-  markdown: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
   migrate: 0
   module_filter: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
   pathauto: 0
-  quickedit: 0
-  rdf: 0
   recaptcha: 0
   redirect: 0
   responsive_image: 0
@@ -97,6 +94,7 @@ module:
   tour: 0
   tracker: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_accordion: 0
   views_bulk_edit: 0
@@ -112,11 +110,7 @@ module:
   paragraphs: 11
   standard: 1000
 theme:
-  stable: 0
-  classy: 0
-  seven: 0
   bootstrap: 0
   projet: 0
-_core:
-  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+  claro: 0
 profile: standard

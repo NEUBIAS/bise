@@ -2,11 +2,6 @@ uuid: 5cc640c8-9e35-478f-b084-cb7d509c570b
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - user
-    - taxonomy
-    - search_api
   config:
     - field.storage.node.field_author_s_
     - field.storage.user.field_first_name
@@ -23,6 +18,11 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - core.entity_view_mode.taxonomy_term.full
     - core.entity_view_mode.user.compact
+  module:
+    - node
+    - user
+    - taxonomy
+    - search_api
 _core:
   default_config_hash: CeQvQFFCLtBV14W1topZP19nFUlS3bSckwuryffgkgk
 id: default_index
@@ -196,7 +196,7 @@ field_settings:
     type: text
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:node':
           article: search_index
@@ -289,16 +289,19 @@ processor_settings:
     weights:
       preprocess_index: -10
   highlight:
-    highlight: always
-    highlight_partial: false
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
+    highlight: always
+    highlight_partial: false
   html_filter:
+    weights:
+      preprocess_index: -48
+      preprocess_query: -46
     all_fields: false
     fields:
       - author
@@ -328,33 +331,33 @@ processor_settings:
       h2: 3
       h3: 2
       strong: 2
-    weights:
-      preprocess_index: -48
-      preprocess_query: -46
   ignorecase:
+    weights:
+      preprocess_index: -50
+      preprocess_query: -48
     all_fields: false
     fields:
       - rendered_item
       - title
-    weights:
-      preprocess_index: -50
-      preprocess_query: -48
   language_with_fallback: {  }
   rendered_item:
     weights:
       add_properties: 0
       pre_index_save: -10
   stemmer:
+    weights:
+      preprocess_index: -36
+      preprocess_query: -36
     all_fields: false
     fields:
       - rendered_item
     exceptions:
       mexican: mexic
       texan: texa
-    weights:
-      preprocess_index: -36
-      preprocess_query: -36
   stopwords:
+    weights:
+      preprocess_index: -38
+      preprocess_query: -38
     all_fields: false
     fields:
       - rendered_item
@@ -394,10 +397,10 @@ processor_settings:
       - was
       - will
       - with
-    weights:
-      preprocess_index: -38
-      preprocess_query: -38
   tokenizer:
+    weights:
+      preprocess_index: -40
+      preprocess_query: -40
     all_fields: true
     fields:
       - author
@@ -422,21 +425,19 @@ processor_settings:
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
-    weights:
-      preprocess_index: -40
-      preprocess_query: -40
   transliteration:
+    weights:
+      preprocess_index: -42
+      preprocess_query: -42
     all_fields: false
     fields:
       - rendered_item
       - title
-    weights:
-      preprocess_index: -42
-      preprocess_query: -42
 tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
 server: default_server

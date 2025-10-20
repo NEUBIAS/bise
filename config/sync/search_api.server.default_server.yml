@@ -12,9 +12,10 @@ description: 'Default database server created by the Database Search Defaults mo
 backend: search_api_db
 backend_config:
   database: 'default:default'
-  database_text: ''
   min_chars: 3
+  matching: partial
+  phrase: disabled
   autocomplete:
     suggest_suffix: true
     suggest_words: true
-  matching: partial
+  database_text: ''

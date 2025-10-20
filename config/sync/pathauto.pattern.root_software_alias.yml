@@ -10,15 +10,15 @@ type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
   688e97d2-88a7-4946-8d13-c3555e7705f8:
-    id: node_type
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 688e97d2-88a7-4946-8d13-c3555e7705f8
+    context_mapping:
+      node: node
     bundles:
       book: book
       sample_data: sample_data
       software: software
-    negate: false
-    context_mapping:
-      node: node
-    uuid: 688e97d2-88a7-4946-8d13-c3555e7705f8
 selection_logic: and
 weight: -5
 relationships: {  }

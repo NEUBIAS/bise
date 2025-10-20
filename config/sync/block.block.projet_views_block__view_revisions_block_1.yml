@@ -5,7 +5,7 @@ dependencies:
   config:
     - views.view.view_revisions
   module:
-    - ctools
+    - node
     - views
   theme:
     - projet
@@ -18,16 +18,16 @@ plugin: 'views_block:view_revisions-block_1'
 settings:
   id: 'views_block:view_revisions-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
-  context_mapping: {  }
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      software: software
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      software: software

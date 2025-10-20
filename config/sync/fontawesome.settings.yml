@@ -1,5 +1,8 @@
+_core:
+  default_config_hash: xkiAxMZI1OSzOitvmPaeNT7bl9Kd4mZfMQl7W8k0auk
 tag: i
 method: svg
+load_assets: true
 use_cdn: true
 external_svg_location: 'https://use.fontawesome.com/releases/v5.11.0/js/all.js'
 use_shim: true
@@ -8,5 +11,3 @@ use_solid_file: true
 use_regular_file: true
 use_light_file: true
 use_brands_file: true
-_core:
-  default_config_hash: xkiAxMZI1OSzOitvmPaeNT7bl9Kd4mZfMQl7W8k0auk

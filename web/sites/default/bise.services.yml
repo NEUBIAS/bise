@@ -9,13 +9,13 @@ parameters:
     # Configure requests allowed from specific origins.
     allowedOrigins: ['*']
     # Sets the Access-Control-Expose-Headers header.
-    exposedHeaders: true
+    exposedHeaders: ['*']
     # Sets the Access-Control-Max-Age header.
     maxAge: false
     # Sets the Access-Control-Allow-Credentials header.
     supportsCredentials: false
   http.response.debug_cacheability_headers: true
   twig.config:
-    debug: true
-    auto_reload: true
-    cache: false
+    debug: false
+    auto_reload: false
+    cache: true

@@ -59,19 +59,19 @@ mode: print
 content:
   body:
     type: text_default
-    weight: 2
-    region: second
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: second
   field_trainer_s_presenter_s_:
     type: string
-    weight: 1
-    region: first
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: first
 hidden:
   field_author_s_: true
   field_content_type: true

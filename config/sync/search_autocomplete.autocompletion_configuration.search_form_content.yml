@@ -1,11 +1,12 @@
+uuid: 619f81cc-9c99-46da-a025-a093503cdc23
 langcode: en
+status: true
+dependencies: {  }
 _core:
   default_config_hash: GbwamktrK8GXKxWeEk8m8o_PWXbPj2vOiFqIANDYIEc
 id: search_form_content
-uuid: 619f81cc-9c99-46da-a025-a093503cdc23
 label: 'Search Form (content tab)'
 selector: ''
-status: true
 minChar: 3
 autoSubmit: true
 autoRedirect: true
@@ -17,6 +18,6 @@ moreResultsLabel: 'View all results containg term [search-phrase].'
 moreResultsValue: '[search-phrase]'
 moreResultsLink: ''
 source: 'autocompletion_callbacks_words::words_autocompletion_callback'
-theme: basic-blue.css
+theme: basic.css
 editable: true
 deletable: false
