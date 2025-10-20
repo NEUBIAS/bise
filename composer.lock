@@ -2674,29 +2674,30 @@
         },
         {
             "name": "drupal/conditional_fields",
-            "version": "4.0.0-alpha5",
+            "version": "4.0.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/conditional_fields.git",
-                "reference": "4.0.0-alpha5"
+                "reference": "4.0.0-alpha6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/conditional_fields-4.0.0-alpha5.zip",
-                "reference": "4.0.0-alpha5",
-                "shasum": "f0788b3cc91b390c3ebbdf544ecb2e78c57eb183"
+                "url": "https://ftp.drupal.org/files/projects/conditional_fields-4.0.0-alpha6.zip",
+                "reference": "4.0.0-alpha6",
+                "shasum": "0438e4e0e372cd68578679dfce3c990f8a12a4d7"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^9 || ^10 || ^11"
             },
             "require-dev": {
-                "drupal/paragraphs": "*"
+                "drupal/entity_reference_revisions": "1.x-dev",
+                "drupal/paragraphs": "^1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0-alpha5",
-                    "datestamp": "1695850051",
+                    "version": "4.0.0-alpha6",
+                    "datestamp": "1733933531",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2709,8 +2710,16 @@
             ],
             "authors": [
                 {
+                    "name": "benjifisher",
+                    "homepage": "https://www.drupal.org/user/683300"
+                },
+                {
                     "name": "colan",
                     "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "dqd",
+                    "homepage": "https://www.drupal.org/user/1001934"
                 },
                 {
                     "name": "ergonlogic",
@@ -2753,10 +2762,11 @@
                     "homepage": "https://www.drupal.org/user/3589086"
                 }
             ],
-            "description": "Define dependencies between fields based on their states and values.",
+            "description": "Enables conditional field behaviors.",
             "homepage": "https://www.drupal.org/project/conditional_fields",
             "support": {
-                "source": "https://git.drupalcode.org/project/conditional_fields"
+                "source": "https://git.drupalcode.org/project/conditional_fields",
+                "issues": "https://www.drupal.org/project/issues/conditional_fields"
             }
         },
         {
