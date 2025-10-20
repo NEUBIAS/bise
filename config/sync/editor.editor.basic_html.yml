@@ -1,4 +1,4 @@
-uuid: b44fcf58-18a7-42fb-84db-3822f7b029aa
+uuid: f4961436-33c8-4236-a779-4baa071c92b9
 langcode: en
 status: true
 dependencies:
@@ -11,16 +11,22 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
-      - heading
       - bold
       - italic
       - '|'
       - link
-      - blockQuote
-      - code
+      - '|'
       - bulletedList
       - numberedList
+      - '|'
+      - blockQuote
+      - drupalInsertImage
+      - '|'
+      - heading
+      - '|'
       - sourceEditing
+      - '|'
+      - code
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -40,7 +46,6 @@ settings:
         - '<blockquote cite>'
         - '<ul type>'
         - '<ol type>'
-        - '<img src alt data-entity-type data-entity-uuid data-align data-caption width height>'
         - '<h2 id>'
         - '<h3 id>'
         - '<h4 id>'
@@ -49,4 +54,13 @@ settings:
     ckeditor5_list:
       reversed: false
       startIndex: true
-image_upload: {  }
+    ckeditor5_imageResize:
+      allow_resize: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0
