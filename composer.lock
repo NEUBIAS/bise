@@ -2377,27 +2377,27 @@
         },
         {
             "name": "drupal/chosen",
-            "version": "4.0.0",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/chosen.git",
-                "reference": "4.0.0"
+                "reference": "4.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/chosen-4.0.0.zip",
-                "reference": "4.0.0",
-                "shasum": "6355b49a1dc90f372d38b0e100745e387cad3423"
+                "url": "https://ftp.drupal.org/files/projects/chosen-4.0.3.zip",
+                "reference": "4.0.3",
+                "shasum": "72a4090b4b21ff7341d1f2e05866b25feede3188"
             },
             "require": {
                 "drupal/chosen_lib": "*",
-                "drupal/core": "^9.2 || ^10"
+                "drupal/core": "^9.2 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0",
-                    "datestamp": "1680955162",
+                    "version": "4.0.3",
+                    "datestamp": "1725307446",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2418,11 +2418,11 @@
                     "homepage": "https://www.drupal.org/user/1305230"
                 },
                 {
-                    "name": "Dave Reid",
+                    "name": "dave reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
-                    "name": "Hydra",
+                    "name": "hydra",
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
@@ -2434,7 +2434,7 @@
                     "homepage": "https://www.drupal.org/user/1763952"
                 },
                 {
-                    "name": "Pol",
+                    "name": "pol",
                     "homepage": "https://www.drupal.org/user/47194"
                 },
                 {
@@ -2454,25 +2454,19 @@
         },
         {
             "name": "drupal/chosen_lib",
-            "version": "4.0.0",
+            "version": "4.0.3",
             "require": {
                 "drupal/chosen": "^4",
-                "drupal/core": "^9.2 || ^10",
-                "php": ">=5.6.0"
+                "drupal/core": "^9.2 || ^10 || ^11"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0",
-                    "datestamp": "1680955162",
+                    "version": "4.0.3",
+                    "datestamp": "1725307446",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
@@ -2490,11 +2484,11 @@
                     "homepage": "https://www.drupal.org/user/1305230"
                 },
                 {
-                    "name": "Dave Reid",
+                    "name": "dave reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
-                    "name": "Hydra",
+                    "name": "hydra",
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
@@ -2506,7 +2500,7 @@
                     "homepage": "https://www.drupal.org/user/1763952"
                 },
                 {
-                    "name": "Pol",
+                    "name": "pol",
                     "homepage": "https://www.drupal.org/user/47194"
                 },
                 {
@@ -2518,7 +2512,7 @@
                     "homepage": "https://www.drupal.org/user/235438"
                 }
             ],
-            "description": "This module provides the basic integration with the Chosen jQuery plugin.",
+            "description": "Add <a href=\"https://github.com/JJJ/chosen\">chosen</a> library definition.",
             "homepage": "https://www.drupal.org/project/chosen",
             "support": {
                 "source": "https://git.drupalcode.org/project/chosen"
