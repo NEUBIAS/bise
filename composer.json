@@ -143,7 +143,7 @@
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "9.1.x-dev@dev",
-        "drush/drush": "^10.0.0",
+        "drush/drush": "^11.0.0",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
         "laminas/laminas-servicemanager": "^3.20",
