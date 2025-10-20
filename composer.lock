@@ -3678,20 +3678,20 @@
         },
         {
             "name": "drupal/eva",
-            "version": "3.0.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eva.git",
-                "reference": "3.0.0"
+                "reference": "3.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eva-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "51b56ed55ab6edb7376afc34c88825b6373d4a80"
+                "url": "https://ftp.drupal.org/files/projects/eva-3.1.1.zip",
+                "reference": "3.1.1",
+                "shasum": "11df2285cc479033637b9aac2fe65f681e5ed38b"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^9.5.11 || ^10 || ^11"
             },
             "suggest": {
                 "drupal/token": "Enable the argument token browser"
@@ -3699,8 +3699,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1667476964",
+                    "version": "3.1.1",
+                    "datestamp": "1732295600",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
