@@ -847,4 +847,4 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 
 #$config_directories['sync'] = '../config/sync';
 $settings['config_sync_directory'] = '../config/sync';
-$settings['install_profile'] = 'standard';
+$settings['installed_profile'] = 'standard';
