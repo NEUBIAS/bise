@@ -49,6 +49,7 @@ third_party_settings:
       children:
         - title
         - field_type
+        - field_is_dependent_of
         - uid
         - body
         - field_has_author
@@ -103,7 +104,6 @@ third_party_settings:
         required_fields: true
     group_usages:
       children:
-        - field_is_dependent_of
         - field_platform
         - field_has_implementation
         - field_has_license
@@ -129,7 +129,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -175,7 +175,7 @@ content:
     third_party_settings: {  }
   field_has_author:
     type: string_textfield
-    weight: 4
+    weight: 5
     region: content
     settings:
       size: 60
@@ -217,7 +217,7 @@ content:
     third_party_settings: {  }
   field_has_entry_curator:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -289,7 +289,7 @@ content:
     third_party_settings: {  }
   field_image:
     type: image_image
-    weight: 5
+    weight: 6
     region: content
     settings:
       progress_indicator: throbber
@@ -309,13 +309,13 @@ content:
     third_party_settings: {  }
   field_is_dependent_of:
     type: chosen_select
-    weight: 28
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_license_openness:
     type: options_buttons
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -339,7 +339,7 @@ content:
     third_party_settings: {  }
   field_workflow_steps:
     type: entity_reference_paragraphs
-    weight: 8
+    weight: 9
     region: content
     settings:
       title: Paragraph
@@ -385,7 +385,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
