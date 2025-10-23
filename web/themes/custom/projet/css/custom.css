@@ -1,4 +1,7 @@
 /* Targets a specific EVA with the class 'my-bold-eva' */
-.kota-bold-eva .view-title {
+/*.kota-bold-eva .view-title {
+  font-weight: bold;
+}*/
+.kota-bold-eva {
   font-weight: bold;
 }
