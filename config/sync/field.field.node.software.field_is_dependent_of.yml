@@ -10,7 +10,7 @@ field_name: field_is_dependent_of
 entity_type: node
 bundle: software
 label: Requires
-description: "<li> for plugins,  ex: software platform where it can be used (example: ImageJ, Icy…), <\\li>\r\n<li>for workflows, indicates the list of tools used<\\li>\r\nanother required software for the first one to run correctly. For example, an ImageJ plugin requires ImageJ.\r\n\r\n<li>If you can not find the software entry, please create the missing entry <a href=\"/node/add/software\" target=\"_blank\">Add New Software Entry</a></li>\r\n"
+description: "<li>In the case of component, it means dependencies  ex: software platform where the plugin runs (example: ImageJ, Icy…), <\\li>\r\n<li>For workflows, add the list of components and collections used.<\\li>\r\n<li> For example, \"ImageJ\", \"Gaussian blur in ImageJ\", \"Analyze Particles\"<\\li>\r\n\r\n<li>If you can not find the required element in biii, please create the missing entry <a href=\"/node/add/software\" target=\"_blank\">Add New Software Entry</a></li>\r\n"
 required: false
 translatable: false
 default_value: {  }
@@ -22,6 +22,7 @@ settings:
       software: software
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

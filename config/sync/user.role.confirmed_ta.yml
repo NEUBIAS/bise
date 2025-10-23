@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - filter.format.markdown
     - filter.format.restricted_html
     - node.type.article
     - node.type.book
@@ -88,6 +89,7 @@ permissions:
   - 'skip comment approval'
   - 'switch shortcut sets'
   - 'use text format full_html'
+  - 'use text format markdown'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view forum revisions'

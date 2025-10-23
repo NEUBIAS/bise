@@ -1,9 +1,10 @@
 uuid: ebb99325-6c6b-4cbc-9770-a7fa34e640ad
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.field_type
+    - node.type.software
   module:
     - eva
     - node
@@ -22,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Uses/Contains
+      title: Uses_or_Contains
       fields:
         title:
           id: title
@@ -151,10 +152,26 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: full
         options:
           offset: 0
           items_per_page: 5
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: true
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -191,10 +208,10 @@ display:
           exposed: false
           granularity: second
       arguments:
-        field_part_of_target_id:
-          id: field_part_of_target_id
-          table: node__field_part_of
-          field: field_part_of_target_id
+        field_is_dependent_of_target_id:
+          id: field_is_dependent_of_target_id
+          table: node__field_is_dependent_of
+          field: field_is_dependent_of_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -218,11 +235,16 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:node'
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            bundles:
+              software: software
+            access: false
+            operation: view
+            multiple: 0
           break_phrase: false
           not: false
       filters:
@@ -258,7 +280,17 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_is_dependent_of:
+          id: field_is_dependent_of
+          table: node__field_is_dependent_of
+          field: field_is_dependent_of
+          relationship: none
+          group_type: group
+          admin_label: 'field_is_dependent_of: Content'
+          plugin_id: standard
+          required: true
+      css_class: kota-bold-eva
       use_more: false
       use_more_always: true
       use_more_text: more
@@ -271,6 +303,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -288,6 +321,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -298,7 +332,7 @@ display:
     display_plugin: entity_view
     position: 2
     display_options:
-      title: Uses
+      title: Backlinks
       display_extenders: {  }
       entity_type: node
       bundles:
@@ -310,6 +344,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
