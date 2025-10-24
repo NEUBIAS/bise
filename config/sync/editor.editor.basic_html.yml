@@ -11,22 +11,23 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - heading
       - bold
       - italic
-      - '|'
+      - specialCharacters
+      - horizontalLine
+      - removeFormat
       - link
       - '|'
       - bulletedList
       - numberedList
       - '|'
+      - code
+      - codeBlock
       - blockQuote
       - drupalInsertImage
       - '|'
-      - heading
-      - '|'
       - sourceEditing
-      - '|'
-      - code
   plugins:
     ckeditor5_heading:
       enabled_headings:
