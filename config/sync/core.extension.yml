@@ -51,6 +51,9 @@ module:
   honeypot: 0
   image: 0
   image_captcha: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   layout_discovery: 0
   libraries: 0
   link: 0
