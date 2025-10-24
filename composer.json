@@ -144,6 +144,7 @@
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "9.1.x-dev@dev",
         "drush/drush": "^11.0.0",
+        "erusev/parsedown": "^1.7",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
         "laminas/laminas-servicemanager": "^3.20",
