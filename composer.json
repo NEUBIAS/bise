@@ -98,6 +98,7 @@
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/captcha": "^2.0",
         "drupal/chosen": "^4.0",
+        "drupal/ckeditor": "^1.0",
         "drupal/colorbox": "^2.0",
         "drupal/composer_deploy": "^1.10",
         "drupal/conditional_fields": "^4.0@alpha",
