@@ -91,22 +91,23 @@ third_party_settings:
         - field_workflow_steps
         - field_has_location
         - field_has_documentation
+        - field_attribution_instructions
         - field_has_reference_publication
         - field_has_usage_example
         - field_is_covered_by_training_mat
         - field_has_doi
         - field_has_comparison
-        - field_attribution_instructions
+        - what_links_here_entity_view_1
         - field_comments2023
     fields:
-      node_changed_date:
-        plugin_id: node_changed_date
-        weight: 19
-        label: inline
-        formatter: ds_post_date_short
       node_post_date:
         plugin_id: node_post_date
         weight: 18
+        label: inline
+        formatter: ds_post_date_short
+      node_changed_date:
+        plugin_id: node_changed_date
+        weight: 19
         label: inline
         formatter: ds_post_date_short
 id: node.software.default
@@ -126,7 +127,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 28
+    weight: 23
     region: footer
   field_comments2023:
     type: comment_default
@@ -135,7 +136,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 29
+    weight: 30
     region: footer
   field_free_tagging:
     type: entity_reference_label
@@ -171,7 +172,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 27
+    weight: 28
     region: footer
   field_has_documentation:
     type: link
@@ -195,7 +196,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 26
+    weight: 27
     region: footer
   field_has_entry_curator:
     type: author
@@ -268,7 +269,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: footer
   field_has_topic:
     type: entity_reference_label
@@ -288,7 +289,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: footer
   field_image:
     type: colorbox
@@ -318,7 +319,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: footer
   field_is_dependent_of:
     type: entity_reference_label
@@ -369,8 +370,12 @@ content:
     third_party_settings: {  }
     weight: 20
     region: footer
+  what_links_here_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: footer
 hidden:
   field_give_feedback_on_this_soft: true
   links: true
   search_api_excerpt: true
-  what_links_here_entity_view_1: true

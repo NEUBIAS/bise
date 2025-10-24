@@ -1,0 +1,84 @@
+uuid: b9c2f2fd-aece-4b51-914c-e973b7d8f56b
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - markdown_easy
+    - token_filter
+name: Markdown_easy
+format: markdown_easy
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -49
+    settings:
+      allowed_html: '<br> <p> <h1> <h2> <h3> <h4> <h5> <h6> <del> <a title href> <img alt src title> <th class rowspan colspan> <td class rowspan colspan> <input checked="checked" disabled="disabled" type> <strong> <em> <code class="language-*"> <pre> <blockquote> <ul> <ol reversed start> <li> <hr> <table> <tr> <thead> <tbody> <tfoot> <caption>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  markdown_easy:
+    id: markdown_easy
+    provider: markdown_easy
+    status: true
+    weight: -50
+    settings:
+      flavor: github
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -43
+    settings:
+      filter_url_length: 72
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: -42
+    settings:
+      replace_empty: false
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: -47
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -45
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: -46
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: -44
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -48
+    settings: {  }

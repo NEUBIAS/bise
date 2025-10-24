@@ -5,7 +5,7 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.full_html
-    - filter.format.markdown
+    - filter.format.markdown_easy
     - filter.format.restricted_html
     - node.type.article
     - node.type.book
@@ -77,7 +77,7 @@ permissions:
   - 'use search autocomplete'
   - 'use text format basic_html'
   - 'use text format full_html'
-  - 'use text format markdown'
+  - 'use text format markdown_easy'
   - 'use text format restricted_html'
   - 'view all revisions'
   - 'view article revisions'

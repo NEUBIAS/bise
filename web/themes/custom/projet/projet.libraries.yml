@@ -9,3 +9,4 @@ global-styling:
   css:
     theme:
       scss/style.css: {}
+      css/custom.css: {}

@@ -22,7 +22,7 @@ module:
   chosen: 0
   chosen_field: 0
   chosen_lib: 0
-  ckeditor: 0
+  ckeditor5: 0
   colorbox: 0
   comment: 0
   conditional_fields: 0
@@ -51,11 +51,15 @@ module:
   honeypot: 0
   image: 0
   image_captcha: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_draggable: 0
+  jquery_ui_menu: 0
   layout_discovery: 0
   libraries: 0
   link: 0
   linkchecker: 0
-  markdown: 0
+  markdown_easy: 0
   menu_breadcrumb: 0
   menu_token: 0
   menu_ui: 0
