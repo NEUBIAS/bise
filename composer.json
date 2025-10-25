@@ -98,6 +98,7 @@
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/captcha": "^2.0",
         "drupal/chosen": "^4.0",
+        "drupal/ckeditor": "^1.0",
         "drupal/colorbox": "^2.0",
         "drupal/composer_deploy": "^1.10",
         "drupal/conditional_fields": "^4.0@alpha",
@@ -117,7 +118,6 @@
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "1.1 || ^2.0@alpha",
-        "drupal/markdown": "^3.0",
         "drupal/markdown_easy": "^2.0",
         "drupal/menu_breadcrumb": "^2.0@alpha",
         "drupal/menu_token": "9.1.x-dev@dev",
@@ -150,7 +150,8 @@
         "laminas/laminas-servicemanager": "^3.20",
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
-        "oomphinc/composer-installers-extender": "^2.0"
+        "oomphinc/composer-installers-extender": "^2.0",
+        "symfony/polyfill-php72": "^1.31"
     },
     "conflict": {
         "drupal/drupal": "*"

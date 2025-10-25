@@ -2,14 +2,11 @@ uuid: 15c25cb0-0f0f-47ce-ba68-c3e8a170874d
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.markdown
   module:
     - book
     - comment
     - contact
     - contextual
-    - filter
     - node
     - search_autocomplete
     - shortcut
@@ -31,6 +28,5 @@ permissions:
   - 'access site-wide contact form'
   - 'access user profiles'
   - 'use search autocomplete'
-  - 'use text format markdown'
   - 'view all revisions'
   - 'view post access counter'
