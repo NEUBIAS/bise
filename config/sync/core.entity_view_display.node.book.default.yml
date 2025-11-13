@@ -25,6 +25,7 @@ dependencies:
     - field.field.node.book.field_url
     - node.type.book
   module:
+    - colorbox
     - datetime
     - ds
     - link
@@ -33,44 +34,71 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: layout_twocol
-      library: layout_discovery/twocol
+      id: ds_2col_stacked_fluid
+      library: ds/ds_2col_stacked_fluid
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
+        classes:
+          layout_class: {  }
         wrappers:
-          top: div
-          first: div
-          second: div
-          bottom: div
+          header: div
+          left: div
+          right: div
+          footer: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        label: ''
     regions:
-      top:
+      left:
         - body
-        - links
+        - field_topics_covered
         - field_is_training_material_of
-        - field_title
-        - field_url
-        - field_doi
         - field_author_s_
         - field_trainer_s_presenter_s_
-        - field_date
+        - field_url
+        - node_links
+        - field_has_slides
+        - field_has_image_data
+      right:
         - field_prerequisites
-        - field_topics_covered
         - field_format
         - field_content_type
-        - field_parent
-        - field_has_license
         - field_expected
-        - field_event
-        - field_has_slides
         - field_has_practical_exercices
-        - field_has_image_data
+        - field_doi
+        - field_has_license
+        - field_parent
+        - field_event
+        - field_date
         - field_free_tagging
+        - field_has_executable
+        - node_post_date
+        - node_author
+        - node_changed_date
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 6
+        label: hidden
+        formatter: default
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 21
+        label: above
+        formatter: ds_post_date_long
+      node_author:
+        plugin_id: node_author
+        weight: 22
+        label: above
+        formatter: author_linked
+      node_changed_date:
+        plugin_id: node_changed_date
+        weight: 23
+        label: above
+        formatter: ds_post_date_long
 _core:
   default_config_hash: 7UKHHzhlAE0hzKaKG_KHqUXXOp85mAQ1nZTOep8quTc
 id: node.book.default
@@ -80,36 +108,35 @@ mode: default
 content:
   body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
+    weight: 0
+    region: left
   field_author_s_:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 106
-    region: content
+    weight: 3
+    region: left
   field_content_type:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
-    region: content
+    weight: 11
+    region: right
   field_date:
-    type: datetime_default
+    type: datetime_plain
     label: above
     settings:
       timezone_override: ''
-      format_type: medium
     third_party_settings: {  }
-    weight: 108
-    region: content
+    weight: 18
+    region: right
   field_doi:
     type: link
     label: above
@@ -120,8 +147,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 105
-    region: content
+    weight: 14
+    region: right
   field_event:
     type: link
     label: above
@@ -132,8 +159,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 116
-    region: content
+    weight: 17
+    region: right
   field_expected:
     type: number_integer
     label: above
@@ -141,24 +168,24 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 115
-    region: content
+    weight: 12
+    region: right
   field_format:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 111
-    region: content
+    weight: 10
+    region: right
   field_free_tagging:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 120
-    region: content
+    weight: 19
+    region: right
   field_has_executable:
     type: link
     label: above
@@ -169,8 +196,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 121
-    region: content
+    weight: 20
+    region: right
   field_has_image_data:
     type: link
     label: above
@@ -181,16 +208,16 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 119
-    region: content
+    weight: 8
+    region: left
   field_has_license:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 114
-    region: content
+    weight: 15
+    region: right
   field_has_practical_exercices:
     type: link
     label: above
@@ -201,8 +228,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 118
-    region: content
+    weight: 13
+    region: right
   field_has_slides:
     type: link
     label: above
@@ -213,47 +240,50 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 117
-    region: content
+    weight: 7
+    region: left
   field_is_training_material_of:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
-    region: content
+    weight: 2
+    region: left
   field_parent:
-    type: entity_reference_label
+    type: colorbox_view_modes
     label: above
     settings:
-      link: true
+      colorbox_view_mode: ''
+      colorbox_modal_view_mode: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
     third_party_settings: {  }
-    weight: 113
-    region: content
+    weight: 16
+    region: right
   field_prerequisites:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 109
-    region: content
+    weight: 9
+    region: right
   field_topics_covered:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 110
-    region: content
+    weight: 1
+    region: left
   field_trainer_s_presenter_s_:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 107
-    region: content
+    weight: 4
+    region: left
   field_url:
     type: link
     label: above
@@ -264,11 +294,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 104
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-hidden: {  }
+    weight: 5
+    region: left
+hidden:
+  links: true
+  search_api_excerpt: true

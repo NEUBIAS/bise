@@ -295,13 +295,13 @@ content:
     type: colorbox
     label: hidden
     settings:
-      colorbox_node_style: large
-      colorbox_node_style_first: ''
       colorbox_image_style: ''
       colorbox_gallery: post
       colorbox_gallery_custom: ''
       colorbox_caption: auto
       colorbox_caption_custom: ''
+      colorbox_node_style: large
+      colorbox_node_style_first: ''
     third_party_settings: {  }
     weight: 0
     region: header
