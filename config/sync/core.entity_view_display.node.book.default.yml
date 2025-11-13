@@ -34,8 +34,8 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: ds_2col_stacked_fluid
-      library: ds/ds_2col_stacked_fluid
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
       disable_css: false
       entity_classes: all_classes
       settings:

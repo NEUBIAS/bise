@@ -6,7 +6,52 @@ dependencies:
     - comment.type.comment
     - field.field.comment.comment.comment_body
   module:
+    - ds
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col
+      library: ds/ds_3col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          middle: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - comment_title
+      middle:
+        - comment_body
+      right:
+        - comment_post_date
+        - comment_author
+        - links
+    fields:
+      comment_author:
+        plugin_id: comment_author
+        weight: 3
+        label: inline
+        formatter: default
+      comment_post_date:
+        plugin_id: comment_post_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_long
+      comment_title:
+        plugin_id: comment_title
+        weight: 0
+        label: inline
+        formatter: default
 _core:
   default_config_hash: 1yBeJcGufCbnbSolmaYgTIXZWYUaO7kw6xszGA8TYs8
 id: comment.comment.default
@@ -19,12 +64,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
+    weight: 1
+    region: middle
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
+    weight: 4
+    region: right
 hidden:
   search_api_excerpt: true
