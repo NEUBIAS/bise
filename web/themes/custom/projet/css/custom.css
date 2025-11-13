@@ -5,3 +5,7 @@
 .kota-bold-eva {
   font-weight: bold;
 }
+/* adjust display suite two column padding */
+.ds-2col-stacked .group-left {
+      padding: 0 15px; /* Adds 15px padding to the left and right of the column content */
+}
