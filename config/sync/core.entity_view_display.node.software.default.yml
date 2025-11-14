@@ -375,6 +375,11 @@ content:
     third_party_settings: {  }
     weight: 28
     region: footer
+  which_workflow_links_here_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   field_give_feedback_on_this_soft: true
   links: true

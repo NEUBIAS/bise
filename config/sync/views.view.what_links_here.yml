@@ -155,7 +155,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 10
           total_pages: null
           id: 0
           tags:
@@ -208,14 +208,16 @@ display:
           exposed: false
           granularity: second
       arguments:
-        field_is_dependent_of_target_id:
-          id: field_is_dependent_of_target_id
-          table: node__field_is_dependent_of
-          field: field_is_dependent_of_target_id
-          relationship: none
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: field_is_dependent_of
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
           default_action: default
           exception:
             value: all
