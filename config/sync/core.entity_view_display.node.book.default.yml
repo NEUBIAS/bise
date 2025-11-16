@@ -61,19 +61,19 @@ third_party_settings:
         - node_links
         - field_has_slides
         - field_has_image_data
+        - field_has_practical_exercices
+        - field_has_executable
       right:
         - field_prerequisites
+        - field_expected
         - field_format
         - field_content_type
-        - field_expected
-        - field_has_practical_exercices
         - field_doi
         - field_has_license
-        - field_parent
         - field_event
         - field_date
+        - field_parent
         - field_free_tagging
-        - field_has_executable
         - node_post_date
         - node_author
         - node_changed_date
@@ -126,7 +126,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 14
     region: right
   field_date:
     type: datetime_plain
@@ -146,7 +146,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: right
   field_event:
     type: link
@@ -175,7 +175,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 13
     region: right
   field_free_tagging:
     type: entity_reference_label
@@ -183,7 +183,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: right
   field_has_executable:
     type: link
@@ -195,8 +195,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 20
-    region: right
+    weight: 10
+    region: left
   field_has_image_data:
     type: link
     label: above
@@ -215,7 +215,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: right
   field_has_practical_exercices:
     type: link
@@ -227,8 +227,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 13
-    region: right
+    weight: 9
+    region: left
   field_has_slides:
     type: link
     label: above
@@ -255,14 +255,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 16
+    weight: 19
     region: right
   field_prerequisites:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 11
     region: right
   field_topics_covered:
     type: entity_reference_label
