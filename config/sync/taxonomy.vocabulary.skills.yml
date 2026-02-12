@@ -6,3 +6,4 @@ name: skills
 vid: skills
 description: 'your own definition in the neubias ecosystem'
 weight: 0
+new_revision: false

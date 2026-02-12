@@ -6,3 +6,4 @@ name: 'Execution platform (OS)'
 vid: execution_platform_os_
 description: 'OS on which to use this software'
 weight: 0
+new_revision: false

@@ -6,3 +6,4 @@ name: EDAM-Bioimaging-Format
 vid: edam_bioimaging_format
 description: 'Bioimaging formats. EDAM-Bioimaging is an extension to the EDAM ontology'
 weight: 0
+new_revision: false

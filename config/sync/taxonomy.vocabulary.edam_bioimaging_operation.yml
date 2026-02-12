@@ -6,3 +6,4 @@ name: EDAM-Bioimaging-Operation
 vid: edam_bioimaging_operation
 description: 'Edam extension for BioImaging- operation class'
 weight: 0
+new_revision: false

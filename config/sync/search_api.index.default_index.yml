@@ -3,26 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_author_s_
-    - field.storage.user.field_first_name
-    - field.storage.node.field_free_tagging
-    - field.storage.node.field_has_author
-    - field.storage.node.field_has_function
-    - field.storage.node.field_has_topic
-    - field.storage.user.field_name
-    - field.storage.taxonomy_term.field_synonyms
-    - field.storage.node.field_tags
-    - field.storage.node.body
-    - field.storage.node.field_has_entry_curator
-    - search_api.server.default_server
     - core.entity_view_mode.node.search_index
     - core.entity_view_mode.taxonomy_term.full
     - core.entity_view_mode.user.compact
+    - field.storage.node.body
+    - field.storage.node.field_author_s_
+    - field.storage.node.field_free_tagging
+    - field.storage.node.field_has_author
+    - field.storage.node.field_has_entry_curator
+    - field.storage.node.field_has_function
+    - field.storage.node.field_has_topic
+    - field.storage.node.field_tags
+    - field.storage.taxonomy_term.field_synonyms
+    - field.storage.user.field_first_name
+    - field.storage.user.field_name
+    - search_api.server.default_server
   module:
     - node
-    - user
     - taxonomy
-    - search_api
+    - user
 _core:
   default_config_hash: CeQvQFFCLtBV14W1topZP19nFUlS3bSckwuryffgkgk
 id: default_index
@@ -76,7 +75,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_has_function
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.node.field_has_function
@@ -85,7 +84,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_has_topic
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.node.field_has_topic
@@ -158,7 +157,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_has_function:entity:name'
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.node.field_has_function
@@ -169,7 +168,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_has_topic:entity:name'
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.node.field_has_topic
@@ -241,7 +240,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       module:
         - node

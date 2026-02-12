@@ -6,3 +6,4 @@ name: 'Implementation type'
 vid: implementation_type
 description: 'Type of implementation'
 weight: 0
+new_revision: false

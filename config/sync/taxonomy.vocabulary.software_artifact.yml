@@ -6,3 +6,4 @@ name: 'Software artifact'
 vid: software_artifact
 description: 'Type of software'
 weight: 0
+new_revision: false

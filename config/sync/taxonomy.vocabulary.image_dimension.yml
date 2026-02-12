@@ -6,3 +6,4 @@ name: 'image dimension'
 vid: image_dimension
 description: 'type of data based on dimension description'
 weight: 0
+new_revision: false

@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_is_dependent_of
     - field.storage.node.field_supported_image_dimension
     - image.style.medium
-    - image.style.thumbnail
     - search_api.index.default_index
   module:
     - image
@@ -440,6 +439,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -454,7 +454,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty: {  }
       sorts: {  }

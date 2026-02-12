@@ -32,3 +32,4 @@ hidden:
   field_slideshow: true
   field_soft: true
   field_tags: true
+  search_api_excerpt: true

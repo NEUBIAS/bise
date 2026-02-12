@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Level of user interaction'
 vid: level_of_user_interaction
-description: ''
+description: null
 weight: 0
+new_revision: false

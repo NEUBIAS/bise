@@ -51,3 +51,4 @@ hidden:
   field_slideshow: true
   field_soft: true
   links: true
+  search_api_excerpt: true

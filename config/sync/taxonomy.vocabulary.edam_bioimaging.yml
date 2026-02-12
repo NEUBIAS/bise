@@ -6,3 +6,4 @@ name: EDAM-Bioimaging
 vid: edam_bioimaging
 description: 'Bioimaging operations, data types, formats, identifiers and topics. EDAM-Bioimaging is an extension to the EDAM ontology'
 weight: 0
+new_revision: false

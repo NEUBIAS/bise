@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.paragraph_jsonview
 label: paragraph_jsonview
+description: ''
 targetEntityType: paragraph
 cache: true

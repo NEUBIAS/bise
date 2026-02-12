@@ -25,3 +25,4 @@ content:
     region: content
 hidden:
   links: true
+  search_api_excerpt: true

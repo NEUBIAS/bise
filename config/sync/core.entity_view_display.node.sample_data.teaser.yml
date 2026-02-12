@@ -40,3 +40,4 @@ hidden:
   field_has_imaging_details: true
   field_has_location: true
   field_image: true
+  search_api_excerpt: true

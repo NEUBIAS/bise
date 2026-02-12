@@ -57,6 +57,7 @@ permissions:
   - 'create software content'
   - 'delete own article content'
   - 'delete own book content'
+  - 'delete own files'
   - 'delete own forum content'
   - 'delete own forum2 content'
   - 'delete own page content'

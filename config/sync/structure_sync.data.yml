@@ -1,3 +1,4 @@
+langcode: en
 blocks: {  }
 menus:
   -
@@ -2163,7 +2164,7 @@ taxonomies:
       tid: '4060'
       langcode: en
       name: Data
-      description__value: 'Information, represented in an information artefact (data record) that is ''understandable'' by dedicated computational tools that can use the data as input or produce it as output.'
+      description__value: "Information, represented in an information artefact (data record) that is 'understandable' by dedicated computational tools that can use the data as input or produce it as output."
       description__format: null
       weight: '0'
       parent: '0'
@@ -2920,7 +2921,7 @@ taxonomies:
       tid: '4187'
       langcode: en
       name: 'Active contours'
-      description__value: '''Active contours'' is an energy-minimizing deformable parametric contour, that is typically used to segment image regions enclosed by edges.'
+      description__value: "'Active contours' is an energy-minimizing deformable parametric contour, that is typically used to segment image regions enclosed by edges."
       description__format: null
       weight: '0'
       parent: '4756'
@@ -3186,7 +3187,7 @@ taxonomies:
       tid: '4012'
       langcode: en
       name: Dilation
-      description__value: 'Dilation is a morphogical operation in which an object''s size increases by the radius of a structuring element.'
+      description__value: "Dilation is a morphogical operation in which an object's size increases by the radius of a structuring element."
       description__format: null
       weight: '0'
       parent: '4168'
@@ -3286,7 +3287,7 @@ taxonomies:
       tid: '4204'
       langcode: en
       name: 'Filament tracing'
-      description__value: 'Filament tracing operations are image analysis operations in which there is an image of a filamentous structure (it may be a tree-like structure, a filament network or a agglomeration of single ''stick-like'' filaments)  as input and outputs data that represent the filament, most commonly a skeleton representation of the filaments and their diameters or surfaces.'
+      description__value: "Filament tracing operations are image analysis operations in which there is an image of a filamentous structure (it may be a tree-like structure, a filament network or a agglomeration of single 'stick-like' filaments)  as input and outputs data that represent the filament, most commonly a skeleton representation of the filaments and their diameters or surfaces."
       description__format: null
       weight: '0'
       parent: '4111'
@@ -4322,7 +4323,7 @@ taxonomies:
       tid: '4159'
       langcode: en
       name: 'Watershed segmentation'
-      description__value: 'Watershed is the term that commonly refers to a mathematical morphology operation that treats a grayscale image as a topographic map and segments the image. The segmentation is performed by a succesive ''flooding'' operation from minima in the image starting from different points and separates the image in different catchment basins.|Needs a comment about the relation between the Watershed and Region growing.'
+      description__value: "Watershed is the term that commonly refers to a mathematical morphology operation that treats a grayscale image as a topographic map and segments the image. The segmentation is performed by a succesive 'flooding' operation from minima in the image starting from different points and separates the image in different catchment basins.|Needs a comment about the relation between the Watershed and Region growing."
       description__format: null
       weight: '0'
       parent: '4004'
@@ -7292,7 +7293,7 @@ taxonomies:
       vid: tags
       tid: '4821'
       langcode: en
-      name: 'Dijkstra''s Shortest Path'
+      name: "Dijkstra's Shortest Path"
       description__value: null
       description__format: null
       weight: '0'
@@ -9812,7 +9813,7 @@ taxonomies:
       vid: tags
       tid: '4250'
       langcode: en
-      name: 'Pearson''s coefficient'
+      name: "Pearson's coefficient"
       description__value: null
       description__format: null
       weight: '0'

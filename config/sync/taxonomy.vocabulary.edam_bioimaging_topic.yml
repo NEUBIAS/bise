@@ -6,3 +6,4 @@ name: EDAM-Bioimaging-Topic
 vid: edam_bioimaging_topic
 description: 'Edam extension for BioImaging- topic class'
 weight: 0
+new_revision: false

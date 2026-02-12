@@ -41,3 +41,4 @@ content:
     region: content
 hidden:
   comment_forum: true
+  search_api_excerpt: true

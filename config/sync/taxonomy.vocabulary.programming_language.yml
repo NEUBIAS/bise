@@ -6,3 +6,4 @@ name: 'Programming Language'
 vid: programming_language
 description: 'list of programming language'
 weight: 0
+new_revision: false
