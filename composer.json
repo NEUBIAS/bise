@@ -102,9 +102,9 @@
         "drupal/composer_deploy": "^1.10",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/context": "^5.0@RC",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-project-message": "^10",
+        "drupal/core-recommended": "^10",
         "drupal/ctools": "^4.0",
         "drupal/devel": "^5.1",
         "drupal/ds": "^3.16",
@@ -138,16 +138,14 @@
         "drupal/taxonomy_menu": "^3.4",
         "drupal/token": "^1.10",
         "drupal/token_filter": "^2.1",
-        "drupal/upgrade_status": "^4.0",
         "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_edit": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_parity_row": "^1.8",
         "drupal/zircon": "9.1.x-dev@dev",
-        "drush/drush": "^11.0.0",
+        "drush/drush": "^12",
         "harvesthq/chosen": "^1.8",
         "jackmoore/colorbox": "master",
-        "laminas/laminas-servicemanager": "^3.20",
         "michelf/php-markdown": "^1.9",
         "npm-asset/chosen-js": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0"
@@ -167,7 +165,10 @@
             "drupal/core-project-message": true,
             "oomphinc/composer-installers-extender": true,
             "drupal/search_api": true,
-            "drupal/console-extend-plugin": true
+            "drupal/console-extend-plugin": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
         }
     },
     "autoload": {
@@ -222,15 +223,10 @@
         },
         "enable-patching": "true",
         "composer-exit-on-patch-failure": "true",
-        "patches": {
-
-            "drupal/core": {
-                "CORS breaks with cache proxies and same origin usage. https://www.drupal.org/project/drupal/issues/3001809": "https://www.drupal.org/files/issues/2022-06-15/3001809-56.patch"
-            }
-        }
+        "patches": {}
     },
     "require-dev": {
-        "drupal/core-dev": "^9",
+        "drupal/core-dev": "^10",
         "palantirnet/drupal-rector": "^0.18.4"
     }
 }
