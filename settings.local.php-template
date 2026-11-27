@@ -32,3 +32,23 @@ $config['system.performance']['js']['preprocess'] = FALSE;
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 $settings['skip_permissions_hardening'] = TRUE;
+
+/**
+ * Outgoing email (registration, password reset, notifications).
+ *
+ * The servers have no local Sendmail, so mail goes out through an
+ * authenticated SMTP account, using the mailer in Drupal core.
+ * Fill in real values only in the server's settings.local.php,
+ * which is never committed. See README, "Outgoing email".
+ */
+// $config['system.mail']['interface']['default'] = 'symfony_mailer';
+// $config['system.mail']['mailer_dsn'] = [
+//   'scheme' => 'smtps',   // 'smtps' = TLS on port 465, 'smtp' = STARTTLS on 587
+//   'host' => 'SMTP_HOST',
+//   'port' => 465,
+//   'user' => 'SMTP_USER',
+//   'password' => 'SMTP_PASSWORD',
+//   'options' => [],
+// ];
+// Sender address: one the SMTP account is allowed to send as.
+// $config['system.site']['mail'] = 'SENDER_ADDRESS';
