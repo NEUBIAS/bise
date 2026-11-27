@@ -37,6 +37,15 @@ A summary is provided here for your convenience:
     pull from inside the SERVER production, import configuration changes, drush cr
 ```
 
+## Outgoing email
+
+biii.eu sends registration, password-reset and notification emails. The servers have no local Sendmail, so each server sends through an SMTP account, using the mailer in Drupal core (`symfony_mailer`, in Drupal 10.6 and 11, on Lando or DDEV alike).
+
+- Credentials live only in `web/sites/default/settings.local.php` on each server. Never commit them. Copy the "Outgoing email" block from `settings.local.php-template` and fill it in.
+- The sender address (`system.site` `mail`) must be one the SMTP account may send as; otherwise mail is rejected or lands in spam.
+- After a change: `drush cr`, then request a password reset on the site. Failures show in `drush watchdog:show --type=mail`.
+- Local DDEV catches all mail in Mailpit, so a local test does not prove delivery from the server.
+
 ---
 
 A brief history: the project **Biii** started with a classic "Drupal-composer/drupal-project" ([see here](https://github.com/drupal-composer/drupal-project)) in 2017, and then in 2021, the framework switched to the "drupal/core-recommended"([see here](https://github.com/drupal/core-recommended)) project. The name of this database was initally named "BISE" in 2016, and then restored it's prehistoric name "Biii" (2013-2016) in 2019.  
